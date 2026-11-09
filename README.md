@@ -4,7 +4,21 @@
 
 仓库随附 26 张机构卡片，涵盖云台、底盘、轮组或轮腿，以及补充机构。服务采用 SQLite FTS5 词法检索，通过只读 HTTP 返回 JSON。模型生成由调用方负责。
 
-## 快速启动
+## 下载启动包
+
+下载 [带机构索引的启动包](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/download/v0.2.0/RoboMaster-CAD-RAG-v0.2.0.zip) · [Release 与 SHA-256](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/tag/v0.2.0)。
+
+1. 准备 Python 3.11+，其 SQLite 需支持 FTS5。
+2. 完整解压 ZIP，在解压目录运行下面的命令。Windows 也可双击 `start-rag.cmd`。默认端口为 8765，可以加 `--port 8766` 改用其他端口。
+3. 在浏览器打开 [本机健康检查](http://127.0.0.1:8765/health)。正常结果的 `models` 为 26。启动终端中按 Ctrl+C 停止服务。
+
+~~~powershell
+python -B tools/http_service.py --port 8765
+~~~
+
+启动包已包含 26 张机构卡片和预建 SQLite 索引，无需安装 Python 第三方库或先运行 `index`。如需下载模型文件，请按“数据与资产”准备本地附件。
+
+## 从源码启动
 
 需要 Python 3.11+ 和包含 FTS5 的 SQLite。检索和 HTTP 服务使用 Python 标准库。克隆后，在仓库根目录执行。
 
