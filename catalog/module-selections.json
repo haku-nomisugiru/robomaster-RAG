@@ -1,0 +1,326 @@
+[
+  {
+    "id": "rm-1883259-001",
+    "name": "工程机器人底盘总装",
+    "source_id": "bbs-1883259",
+    "entry_path": "assets/1883259/567baba7c0784ef2/底盘总装.SLDASM",
+    "category": "chassis",
+    "summary": "来自原帖模型包的工程机器人底盘总装，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883259-002",
+    "name": "工程机器人悬挂总装",
+    "source_id": "bbs-1883259",
+    "entry_path": "assets/1883259/567baba7c0784ef2/悬挂总装.SLDASM",
+    "category": "suspension",
+    "summary": "来自原帖模型包的工程机器人悬挂总装，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883259-003",
+    "name": "工程机器人机械臂大臂总装",
+    "source_id": "bbs-1883259",
+    "entry_path": "assets/1883259/567baba7c0784ef2/大臂总装.SLDASM",
+    "category": "robotic_arm",
+    "summary": "来自原帖模型包的工程机器人机械臂大臂总装，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883259-004",
+    "name": "工程机器人侧取抬升模块",
+    "source_id": "bbs-1883259",
+    "entry_path": "assets/1883259/567baba7c0784ef2/15°侧取抬升模块.SLDASM",
+    "category": "lifting",
+    "summary": "来自原帖模型包的工程机器人侧取抬升模块，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883259-005",
+    "name": "工程机器人直取抬升模块",
+    "source_id": "bbs-1883259",
+    "entry_path": "assets/1883259/567baba7c0784ef2/直取抬升模块.SLDASM",
+    "category": "lifting",
+    "summary": "来自原帖模型包的工程机器人直取抬升模块，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883384-006",
+    "name": "2026哨兵底盘",
+    "source_id": "bbs-1883384",
+    "entry_path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/26赛季哨兵开源图纸（溪地避震轮组）/26联盟赛哨兵底盘.SLDASM",
+    "category": "chassis",
+    "summary": "来自原帖模型包的2026哨兵底盘，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883384-007",
+    "name": "舵步底盘",
+    "source_id": "bbs-1883384",
+    "entry_path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+    "category": "chassis",
+    "summary": "来自原帖模型包的舵步底盘，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1883384-008",
+    "name": "2026哨兵鹅颈云台",
+    "source_id": "bbs-1883384",
+    "entry_path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/26赛季哨兵开源图纸（溪地避震轮组）/26联盟赛哨兵鹅颈云台.SLDASM",
+    "category": "gimbal",
+    "summary": "来自原帖模型包的2026哨兵鹅颈云台，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-776744-009",
+    "name": "串联腿步兵底盘总装",
+    "source_id": "bbs-776744",
+    "entry_path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/底盘总装.SLDASM",
+    "category": "chassis",
+    "summary": "来自原帖模型包的串联腿步兵底盘总装，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-776744-010",
+    "name": "串联腿装配方案2",
+    "source_id": "bbs-776744",
+    "entry_path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/串联腿装配方案2.SLDASM",
+    "category": "wheel_leg",
+    "summary": "来自原帖模型包的串联腿装配方案2，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-776744-011",
+    "name": "步兵云台Yaw轴装配",
+    "source_id": "bbs-776744",
+    "entry_path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/yaw轴装配.SLDASM",
+    "category": "gimbal",
+    "summary": "来自原帖模型包的步兵云台Yaw轴装配，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-776744-012",
+    "name": "步兵云台Pitch轴装配",
+    "source_id": "bbs-776744",
+    "entry_path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/pitch装配.SLDASM",
+    "category": "gimbal",
+    "summary": "来自原帖模型包的步兵云台Pitch轴装配，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-803685-013",
+    "name": "工程机器人底盘V2",
+    "source_id": "bbs-803685",
+    "entry_path": "assets/803685/ac8d43afad2ed818/chassis/chassis_v2.2025.10.1.SLDASM",
+    "category": "chassis",
+    "summary": "来自原帖模型包的工程机器人底盘V2，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-803685-014",
+    "name": "3508双电机舵轮模块",
+    "source_id": "bbs-803685",
+    "entry_path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+    "category": "swerve",
+    "summary": "来自原帖模型包的3508双电机舵轮模块，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-803685-015",
+    "name": "机械臂L4关节装配",
+    "source_id": "bbs-803685",
+    "entry_path": "assets/803685/ac8d43afad2ed818/Robotic arm/Robotic arm v2/L4.2025.10.1.SLDASM",
+    "category": "robotic_arm",
+    "summary": "来自原帖模型包的机械臂L4关节装配，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-803685-016",
+    "name": "机械臂L6关节装配",
+    "source_id": "bbs-803685",
+    "entry_path": "assets/803685/ac8d43afad2ed818/Robotic arm/Robotic arm v2/L6_v2.2025.10.1.SLDASM",
+    "category": "robotic_arm",
+    "summary": "来自原帖模型包的机械臂L6关节装配，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1936175-017",
+    "name": "P15.8轻型减速箱改三乙",
+    "source_id": "bbs-1936175",
+    "entry_path": "assets/1936175/14a57d21d32dc32e/二六式轻型P15.8减速箱改三乙.step",
+    "category": "gearbox",
+    "summary": "来自原帖模型包的P15.8轻型减速箱改三乙，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1936175-018",
+    "name": "P15.8重型减速箱改五丙",
+    "source_id": "bbs-1936175",
+    "entry_path": "assets/1936175/ddcbb1bf3f5b5d73/二六式重型P15.8减速箱改五丙.step",
+    "category": "gearbox",
+    "summary": "来自原帖模型包的P15.8重型减速箱改五丙，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-816172-019",
+    "name": "工程机器人抓取机构",
+    "source_id": "bbs-816172",
+    "entry_path": "assets/816172/9e9a8671de6abeae/银矿抓取.SLDASM",
+    "category": "gripper",
+    "summary": "来自原帖模型包的工程机器人抓取机构，按文件名和所在模型包识别，接口、配置及运动关系待检查。",
+    "source_features": [],
+    "limitations": [
+      "功能边界为基于文件名的初步分类，需在装配上下文中复核。"
+    ]
+  },
+  {
+    "id": "rm-1935523-001",
+    "name": "全向轮悬挂总成",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "category": "suspension",
+    "summary": "全向轮悬挂机构；STEP中可追溯上下臂、轮组及避震子装配。",
+    "source_features": [
+      "作者说明采用上下臂限位及避震布局，报告辊子抖动问题。"
+    ],
+    "limitations": []
+  },
+  {
+    "id": "rm-1935523-021",
+    "name": "90避震器子装配",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "scope": "definition",
+    "definition_id": "0:1:1:2",
+    "category": "suspension",
+    "summary": "来源悬挂STEP中名称可识别的90避震器子装配；保留原文件与定义定位。",
+    "source_features": [],
+    "limitations": [
+      "该子装配从原STEP中定位，原生配合和独立依赖未验证。"
+    ]
+  },
+  {
+    "id": "rm-1935523-022",
+    "name": "悬挂连接子装配",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "scope": "definition",
+    "definition_id": "0:1:1:7",
+    "category": "suspension",
+    "summary": "来源悬挂STEP中名称可识别的悬挂连接子装配；保留原文件与定义定位。",
+    "source_features": [],
+    "limitations": [
+      "该子装配从原STEP中定位，原生配合和独立依赖未验证。"
+    ]
+  },
+  {
+    "id": "rm-1935523-023",
+    "name": "悬挂上臂子装配",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "scope": "definition",
+    "definition_id": "0:1:1:14",
+    "category": "suspension",
+    "summary": "来源悬挂STEP中名称可识别的悬挂上臂子装配；保留原文件与定义定位。",
+    "source_features": [],
+    "limitations": [
+      "该子装配从原STEP中定位，原生配合和独立依赖未验证。"
+    ]
+  },
+  {
+    "id": "rm-1935523-024",
+    "name": "全向轮轮组子装配",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "scope": "definition",
+    "definition_id": "0:1:1:18",
+    "category": "wheel",
+    "summary": "来源悬挂STEP中名称可识别的全向轮轮组子装配；保留原文件与定义定位。",
+    "source_features": [],
+    "limitations": [
+      "该子装配从原STEP中定位，原生配合和独立依赖未验证。"
+    ]
+  },
+  {
+    "id": "rm-1935523-025",
+    "name": "轮毂子装配",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "scope": "definition",
+    "definition_id": "0:1:1:19",
+    "category": "wheel",
+    "summary": "来源悬挂STEP中名称可识别的轮毂子装配；保留原文件与定义定位。",
+    "source_features": [],
+    "limitations": [
+      "该子装配从原STEP中定位，原生配合和独立依赖未验证。"
+    ]
+  },
+  {
+    "id": "rm-1935523-026",
+    "name": "悬挂下臂子装配",
+    "source_id": "bbs-1935523",
+    "entry_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+    "scope": "definition",
+    "definition_id": "0:1:1:34",
+    "category": "suspension",
+    "summary": "来源悬挂STEP中名称可识别的悬挂下臂子装配；保留原文件与定义定位。",
+    "source_features": [],
+    "limitations": [
+      "该子装配从原STEP中定位，原生配合和独立依赖未验证。"
+    ]
+  }
+]

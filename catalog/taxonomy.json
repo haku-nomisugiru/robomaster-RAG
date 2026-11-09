@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "sections": {
+    "gimbal": {
+      "label": "云台",
+      "categories": [
+        "gimbal"
+      ],
+      "parameters": [
+        "axis_count",
+        "yaw_range_deg",
+        "pitch_range_deg",
+        "payload_kg",
+        "base_mount",
+        "payload_mount",
+        "drive_model",
+        "slip_ring"
+      ]
+    },
+    "chassis": {
+      "label": "底盘",
+      "categories": [
+        "chassis"
+      ],
+      "parameters": [
+        "drive_layout",
+        "wheelbase_mm",
+        "track_width_mm",
+        "ground_clearance_mm",
+        "envelope_mm",
+        "wheel_module_mount",
+        "gimbal_mount",
+        "suspension_travel_mm"
+      ]
+    },
+    "wheel_or_leg": {
+      "label": "轮子或轮腿",
+      "categories": [
+        "wheel",
+        "swerve",
+        "wheel_leg",
+        "suspension"
+      ],
+      "parameters": [
+        "wheel_diameter_mm",
+        "wheel_width_mm",
+        "steering_range_deg",
+        "leg_link_lengths_mm",
+        "suspension_travel_mm",
+        "drive_model",
+        "gear_ratio",
+        "chassis_mount"
+      ]
+    }
+  },
+  "policy": "Each primary card has one functional section. Suspension belongs to wheel_or_leg. Generic gearboxes and manipulators remain supplementary; original CAD paths and IDs stay unchanged."
+}

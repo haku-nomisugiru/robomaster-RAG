@@ -1,0 +1,159 @@
+[
+  {
+    "thread_id": 54153,
+    "team": "香港科技大学 ENTERPRIZE",
+    "published_date": "2024-09-22",
+    "categories": [
+      "swerve",
+      "chassis"
+    ],
+    "summary": "无CNC舵轮模块及配套底盘，采用6020转向电机，强调低成本和快拆维护。",
+    "caveats": [
+      "成本、158mm高度与兼容性来自作者陈述，需对实际模型另行测量。"
+    ],
+    "notice": "仅限RoboMaster战队之间技术交流，不得商用。"
+  },
+  {
+    "thread_id": 814006,
+    "team": "合肥工业大学苍穹／西交利物浦（太仓）Omnix",
+    "published_date": "2025-10-15",
+    "categories": [
+      "feeding",
+      "gearbox"
+    ],
+    "summary": "中心供弹组件，使用自制减速箱压低机构高度，并保留退弹坡与反转功能。",
+    "caveats": [
+      "原帖称2025-10-26补充SW2024原生件；STEP和原生包不能仅凭文件名认定同一几何版本。",
+      "射频、寿命和稳定性为作者陈述，未进行本地实物验证。"
+    ],
+    "notice": "页面许可与正文适用范围按原帖记录，不自动授予模型再分发许可。"
+  },
+  {
+    "thread_id": 759790,
+    "team": "Torches（作者）",
+    "published_date": "2025-07-08",
+    "categories": [
+      "feeding",
+      "aerial"
+    ],
+    "summary": "无人机用轻型中心供弹，作者给出2006电机配置及转子贴特氟龙胶带要求。",
+    "caveats": [
+      "40Hz及220g均为作者陈述；原帖未找到明确许可。"
+    ],
+    "notice": "未发现明确许可；保留来源，公共再分发状态未确认。"
+  },
+  {
+    "thread_id": 1884198,
+    "team": "内谁（作者）",
+    "published_date": "2026-05-28",
+    "categories": [
+      "feeding"
+    ],
+    "summary": "九齿中心供弹，原帖给出轴承、垫片及光轴替换建议。",
+    "caveats": [
+      "原始模型与作者建议修改分开记录；289mm为作者陈述。"
+    ],
+    "notice": "仅供参赛队交流，未经授权禁止以其他形式使用或传播。"
+  },
+  {
+    "thread_id": 1892264,
+    "team": "同济大学 SuperPower",
+    "published_date": "2026-06-17",
+    "categories": [
+      "feeding",
+      "hopper"
+    ],
+    "summary": "大弹丸中心供弹多实体模型及设计指南，包含弹舱布局与故障分析。",
+    "caveats": [
+      "多实体模型不等同于有配合的运动装配。",
+      "原帖报告特定组合的5000次拨弹测试，同时说明部分结论尚未充分验证。"
+    ],
+    "notice": "仅限RoboMaster参赛队队内交流，不得商用；转载注明出处。"
+  },
+  {
+    "thread_id": 1937989,
+    "team": "浙江大学 Hello World",
+    "published_date": null,
+    "categories": [
+      "gimbal"
+    ],
+    "summary": "Omni与Balance两种步兵云台版本，作者称Yaw轴以上接口通用，提供原生设计与STEP。",
+    "caveats": [
+      "原帖提醒不建议轻化组件，否则可能影响配合。",
+      "接口通用性需绑定实际版本与配置检查。"
+    ],
+    "notice": "仅限RoboMaster参赛队交流，不得商用，使用注明来源。"
+  },
+  {
+    "thread_id": 814003,
+    "team": "合肥工业大学 苍穹",
+    "published_date": "2025-10-15",
+    "categories": [
+      "suspension",
+      "chassis"
+    ],
+    "summary": "滑轨自适应垂直悬挂底盘，开源的是2022赛季原始方案。",
+    "caveats": [
+      "原帖照片还包含23/24赛季改版，不能当作开源CAD版本。",
+      "文件不包含云台。"
+    ],
+    "notice": "页面许可及使用范围以原帖为准。"
+  },
+  {
+    "thread_id": 582155,
+    "team": "太原工业学院 火线",
+    "published_date": "2025-08-02",
+    "categories": [
+      "aerial",
+      "gimbal",
+      "frame"
+    ],
+    "summary": "提供独立机架、分区赛云台及国赛云台STEP，机架不变而云台版本不同。",
+    "caveats": [
+      "作者提示图纸可能存在问题，正文方案说明尚待完善。"
+    ],
+    "notice": "仅限参赛队队内交流，不得商用，转载注明出处。"
+  },
+  {
+    "thread_id": 1970334,
+    "team": "夜雨声幽（作者）",
+    "published_date": null,
+    "categories": [
+      "feeding"
+    ],
+    "summary": "全CNC中心供弹主体及修订底板，提供原生包和单独STEP更新件。",
+    "caveats": [
+      "底板更新件与主体包需要分别记录版本；轴承分流片安装存在变形卡滞注意事项。"
+    ],
+    "notice": "页面许可及使用范围以原帖为准。"
+  },
+  {
+    "thread_id": 1935523,
+    "team": "东北农业大学 TCP",
+    "published_date": null,
+    "categories": [
+      "suspension",
+      "wheel"
+    ],
+    "summary": "全向轮悬挂独立STEP，使用上下臂限位及避震布局。",
+    "caveats": [
+      "作者报告硬质圆柱辊子导致抖动，整套加工与减速器成本仍需考虑。",
+      "上述特点为原帖陈述，接口与运动范围尚未本地验证。"
+    ],
+    "notice": "使用范围与许可按原帖记录，公共再分发未确认。"
+  },
+  {
+    "thread_id": 715915,
+    "team": "西南交通大学 Helios",
+    "published_date": "2025-08-16",
+    "categories": [
+      "feeding"
+    ],
+    "summary": "17mm旋转拨叉中心供弹，原帖讨论低弹量卡滞、退弹和易损件寿命。",
+    "caveats": [
+      "标题TypeB但附件文件名TypeC，版本命名不一致待核验。",
+      "作者指出实际上场为TypeA，不能将其比赛验证状态继承给开源版本。"
+    ],
+    "notice": "使用范围与许可按原帖记录，公共再分发未确认。"
+  }
+]

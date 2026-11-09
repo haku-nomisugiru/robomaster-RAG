@@ -1,0 +1,90 @@
+[
+  {
+    "source_id": "bbs-1883259",
+    "thread_id": 1883259,
+    "asset_id": "bbs-1883259-567baba7c0784ef2",
+    "name": "RM2025辽宁科技大学COD战队工程机器人机械开源.zip",
+    "status": "downloaded",
+    "path": "raw/downloads/1883259/RM2025辽宁科技大学COD战队工程机器人机械开源.zip",
+    "sha256": "567baba7c0784ef2d8d816cc2ba2cd856df73d7aa1a2cbba063411ade947295a",
+    "bytes": 310837258,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-1883384",
+    "thread_id": 1883384,
+    "asset_id": "bbs-1883384-c12065c927fd3010",
+    "name": "RM2026COD战队哨兵舵步机器人机械开源.zip",
+    "status": "downloaded",
+    "path": "raw/downloads/1883384/RM2026COD战队哨兵舵步机器人机械开源.zip",
+    "sha256": "c12065c927fd3010bbf1d0e270650170a23cc919cd604097dc5593fd9388dcba",
+    "bytes": 1036014164,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-1936175",
+    "thread_id": 1936175,
+    "asset_id": "bbs-1936175-14a57d21d32dc32e",
+    "name": "二六式轻型P15.8减速箱改三乙.step",
+    "status": "downloaded",
+    "path": "raw/downloads/1936175/二六式轻型P15.8减速箱改三乙.step",
+    "sha256": "14a57d21d32dc32ee2c576591eb3333a3a8e6be11e1b53197fa45be45dd80247",
+    "bytes": 7407413,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-1936175",
+    "thread_id": 1936175,
+    "asset_id": "bbs-1936175-ddcbb1bf3f5b5d73",
+    "name": "二六式重型P15.8减速箱改五丙.step",
+    "status": "downloaded",
+    "path": "raw/downloads/1936175/二六式重型P15.8减速箱改五丙.step",
+    "sha256": "ddcbb1bf3f5b5d73a592de455b978b6636681389e8ec34448df4927b1f140a19",
+    "bytes": 4421027,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-776744",
+    "thread_id": 776744,
+    "asset_id": "bbs-776744-dbddc93678d72a49",
+    "name": "[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队.zip",
+    "status": "downloaded",
+    "path": "raw/downloads/776744/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队.zip",
+    "sha256": "dbddc93678d72a49bb8183d17d9fc61adcf90dba0402d069e456c8947db5eefd",
+    "bytes": 375185506,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-803685",
+    "thread_id": 803685,
+    "asset_id": "bbs-803685-ac8d43afad2ed818",
+    "name": "【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+    "status": "downloaded",
+    "path": "raw/downloads/803685/【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+    "sha256": "ac8d43afad2ed818b017863be9c39f6cd98c4051c675e79c505e1ef9dcde17b6",
+    "bytes": 504032226,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-816172",
+    "thread_id": 816172,
+    "asset_id": "bbs-816172-9e9a8671de6abeae",
+    "name": "三代车构型设计V2.0.zip",
+    "status": "downloaded",
+    "path": "raw/downloads/816172/三代车构型设计V2.0.zip",
+    "sha256": "9e9a8671de6abeae1ffd9515d975580493aec6da947b7e68f5b6d082fa23134e",
+    "bytes": 10577337,
+    "forum_checksum_verified": false
+  },
+  {
+    "source_id": "bbs-1935523",
+    "thread_id": 1935523,
+    "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+    "name": "a4c6124428_步兵悬挂.step",
+    "status": "downloaded",
+    "path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+    "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+    "bytes": 17587950,
+    "forum_checksum_verified": false
+  }
+]

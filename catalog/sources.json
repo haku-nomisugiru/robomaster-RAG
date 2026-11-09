@@ -1,0 +1,127 @@
+[
+  {
+    "source_id": "bbs-1935523",
+    "thread_id": 1935523,
+    "url": "https://bbs.robomaster.com/article/1935523",
+    "title": "【RM2026-全向轮步兵悬挂及低成本全向轮辊子方案开源】-东北农业大学-TCP战队",
+    "body_path": "raw/pages/1935523/article.txt",
+    "page_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+    "seed": {
+      "thread_id": 1935523,
+      "team": "东北农业大学 TCP",
+      "published_date": null,
+      "categories": [
+        "suspension",
+        "wheel"
+      ],
+      "summary": "全向轮悬挂独立STEP，使用上下臂限位及避震布局。",
+      "caveats": [
+        "作者报告硬质圆柱辊子导致抖动，整套加工与减速器成本仍需考虑。",
+        "上述特点为原帖陈述，接口与运动范围尚未本地验证。"
+      ],
+      "notice": "使用范围与许可按原帖记录，公共再分发未确认。"
+    }
+  },
+  {
+    "source_id": "bbs-1883259",
+    "thread_id": 1883259,
+    "url": "https://bbs.robomaster.com/article/1883259",
+    "title": "【RM2025-工程机器人机械结构开源】辽宁科技大学-COD战队",
+    "snapshot_kind": "local_download_description",
+    "body_path": "raw/downloads/1883259/说明.md",
+    "page_sha256": "3d75fd564e1c1dc6fc3df975cc3ae7d159b7630914485db38e8a487bca8e9ee3",
+    "seed": {
+      "team": "待核对",
+      "published_date": null,
+      "caveats": [
+        "功能划分依据文件名称及开源说明，需工程复核。"
+      ],
+      "notice": "以原帖及随附说明的授权为准。"
+    }
+  },
+  {
+    "source_id": "bbs-1883384",
+    "thread_id": 1883384,
+    "url": "https://bbs.robomaster.com/article/1883384",
+    "title": "【RM2026-哨兵舵步机器人机械结构开源】辽宁科技大学-COD战队",
+    "snapshot_kind": "local_download_description",
+    "body_path": "raw/downloads/1883384/说明.md",
+    "page_sha256": "9b7c8296b1b0895d1a10a2d3a07ad171f09bb362edfdfbf69f37016728fb415a",
+    "seed": {
+      "team": "待核对",
+      "published_date": null,
+      "caveats": [
+        "功能划分依据文件名称及开源说明，需工程复核。"
+      ],
+      "notice": "以原帖及随附说明的授权为准。"
+    }
+  },
+  {
+    "source_id": "bbs-1936175",
+    "thread_id": 1936175,
+    "url": "https://bbs.robomaster.com/article/1936175",
+    "title": "[RM2026-低成本3508减速箱开源(轻/重型P15.8)] 青岛大学-未来",
+    "snapshot_kind": "local_download_description",
+    "body_path": "raw/downloads/1936175/说明.md",
+    "page_sha256": "0a1f5f7150a2902b17fd4aec23b0703bfba1405f8f32f87cfb9ac4490fba4173",
+    "seed": {
+      "team": "待核对",
+      "published_date": null,
+      "caveats": [
+        "功能划分依据文件名称及开源说明，需工程复核。"
+      ],
+      "notice": "以原帖及随附说明的授权为准。"
+    }
+  },
+  {
+    "source_id": "bbs-776744",
+    "thread_id": 776744,
+    "url": "https://bbs.robomaster.com/article/776744",
+    "title": "【RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队",
+    "snapshot_kind": "local_download_description",
+    "body_path": "raw/downloads/776744/说明.md",
+    "page_sha256": "e30363963b859e41a651c2fab94c13f8f600eff9f462c43f33848ce3ae567f80",
+    "seed": {
+      "team": "待核对",
+      "published_date": null,
+      "caveats": [
+        "功能划分依据文件名称及开源说明，需工程复核。"
+      ],
+      "notice": "以原帖及随附说明的授权为准。"
+    }
+  },
+  {
+    "source_id": "bbs-803685",
+    "thread_id": 803685,
+    "url": "https://bbs.robomaster.com/article/803685",
+    "title": "[5.8s四级矿] RM2025-香港科技大学-ENTERPRIZE战队轮式机械臂工程开源",
+    "snapshot_kind": "local_download_description",
+    "body_path": "raw/downloads/803685/说明.md",
+    "page_sha256": "a26697477c2394e1d64cefeef5a6f5233c4c58454f8267bb0ff924085c3f4b73",
+    "seed": {
+      "team": "待核对",
+      "published_date": null,
+      "caveats": [
+        "功能划分依据文件名称及开源说明，需工程复核。"
+      ],
+      "notice": "以原帖及随附说明的授权为准。"
+    }
+  },
+  {
+    "source_id": "bbs-816172",
+    "thread_id": 816172,
+    "url": "https://bbs.robomaster.com/article/816172",
+    "title": "RM AWARD 2025 华南理工大学 华南虎战队 陈翀 机器人项目设计流程",
+    "snapshot_kind": "local_download_description",
+    "body_path": "raw/downloads/816172/说明.md",
+    "page_sha256": "57259529659c09544a37f5f16b25af0e83ad5711924b7cc812bcc1890264ebb5",
+    "seed": {
+      "team": "待核对",
+      "published_date": null,
+      "caveats": [
+        "功能划分依据文件名称及开源说明，需工程复核。"
+      ],
+      "notice": "以原帖及随附说明的授权为准。"
+    }
+  }
+]
