@@ -1,0 +1,63 @@
+name: Publish verified release archive
+
+on:
+  push:
+    branches: ["codex/publish-v0.2.0"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-v0.2.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: v0.2.0
+      ASSET: RoboMaster-CAD-RAG-v0.2.0.zip
+      RELEASE_COMMIT: 7aabe60445039af2bc2506ab23a46e683025a5cb
+      PREVIOUS_MAIN: 8ef6aa6e86470f79d6c18639764ed913ae59aa22
+      RELEASE_TITLE: "RoboMaster CAD RAG v0.2.0 · 带索引启动包"
+    steps:
+      - name: Stage and verify the release
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init --quiet
+          git fetch --quiet --no-tags --depth=1 "https://github.com/$GITHUB_REPOSITORY.git" "$GITHUB_SHA"
+          mkdir -p release-files verify
+          git show "FETCH_HEAD:release-payload/$ASSET" > "release-files/$ASSET"
+          git show "FETCH_HEAD:release-payload/$ASSET.sha256" > "release-files/$ASSET.sha256"
+          git show FETCH_HEAD:release-payload/notes.md > release-files/notes.md
+          (cd release-files && sha256sum -c "$ASSET.sha256")
+          head="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq '.object.sha')"
+          test "$head" = "$PREVIOUS_MAIN" || test "$head" = "$RELEASE_COMMIT"
+
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --draft \
+              --target "$RELEASE_COMMIT" --title "$RELEASE_TITLE" --notes-file release-files/notes.md
+          fi
+          target="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json targetCommitish --jq '.targetCommitish')"
+          test "$target" = "$RELEASE_COMMIT"
+          draft="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq '.isDraft')"
+          if [ "$draft" = true ]; then
+            uploaded="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name')"
+            for file in "$ASSET" "$ASSET.sha256"; do
+              if ! grep -Fxq -- "$file" <<< "$uploaded"; then
+                gh release upload "$TAG" "release-files/$file" --repo "$GITHUB_REPOSITORY"
+              fi
+            done
+          fi
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern "$ASSET" --pattern "$ASSET.sha256" --dir verify
+          cmp "release-files/$ASSET.sha256" "verify/$ASSET.sha256"
+          (cd verify && sha256sum -c "$ASSET.sha256")
+          if [ "$draft" = true ]; then
+            gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          fi
+          published="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$TAG" --jq '.object.sha')"
+          test "$published" = "$RELEASE_COMMIT"
