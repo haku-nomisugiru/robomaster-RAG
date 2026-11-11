@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-11-10T18:07:09.778773+00:00",
+  "sources": 25,
+  "sources_with_cad": 14,
+  "downloaded_assets": 25,
+  "files": 2820,
+  "cad_files": 2802,
+  "indexable_cad_paths": 2617,
+  "indexed_cad_paths": 2617,
+  "excluded_cad_paths": 185,
+  "unindexed_eligible_paths": [],
+  "modules": 3468,
+  "curated_cards": 32,
+  "components": 3468,
+  "component_occurrences": 4019,
+  "interface_openings": 21,
+  "component_aliases": 6598,
+  "component_specs": 1290,
+  "components_with_specs": 409,
+  "interface_evidence": {
+    "active": 4,
+    "stale": 0
+  },
+  "step_definition_cards": 851,
+  "step_file_parse_status": {
+    "ok": 36
+  },
+  "native_assembly_status": {
+    "live_configuration_observed": 5,
+    "saved_references_only": 106,
+    "live_branch_observed": 1,
+    "file_only": 64
+  },
+  "primary_sections": {
+    "chassis": 73,
+    "wheel_or_leg": 206,
+    "gimbal": 84
+  },
+  "supplementary_modules": 3105,
+  "module_categories": {
+    "chassis": 73,
+    "suspension": 79,
+    "robotic_arm": 9,
+    "lifting": 77,
+    "gimbal": 84,
+    "wheel_leg": 20,
+    "swerve": 44,
+    "gearbox": 42,
+    "gripper": 1,
+    "wheel": 63,
+    "component": 2177,
+    "motor": 107,
+    "bracket": 127,
+    "gear": 62,
+    "bearing": 192,
+    "fastener": 311
+  },
+  "mechanism_profiles": {
+    "source_reviewed": 25,
+    "cad_only": 248
+  },
+  "retrieval": "fielded_fts5"
+}

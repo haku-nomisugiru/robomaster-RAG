@@ -1,0 +1,92 @@
+{
+  "attachments": [
+    {
+      "path": "raw/downloads/1883259/RM2025辽宁科技大学COD战队工程机器人机械开源.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/1883384/RM2026COD战队哨兵舵步机器人机械开源.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/1936175/二六式轻型P15.8减速箱改三乙.step",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/1936175/二六式重型P15.8减速箱改五丙.step",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/713291/二六式轻型P15.8减速箱改三乙.step",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/713291/二六式重型P15.8减速箱改五丙.step",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/714486/飞坡.rar",
+      "status": "indexed",
+      "cad_files": 6,
+      "omitted_members": 0
+    },
+    {
+      "path": "raw/downloads/716376/RM2025辽宁科技大学COD战队英雄机器人机械开源.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/723307/RM2025辽宁科技大学COD战队空中机器人机械开源.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/723307/说明文档&效果展示.zip",
+      "status": "no_indexable_cad",
+      "omitted_members": 0
+    },
+    {
+      "path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+      "status": "indexed",
+      "cad_files": 514,
+      "omitted_members": 1
+    },
+    {
+      "path": "raw/downloads/761377/2025 HKUST ENTERPRIZE HERO Swerve.rar",
+      "status": "indexed",
+      "cad_files": 69,
+      "omitted_members": 0
+    },
+    {
+      "path": "raw/downloads/776744/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/803685/【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/803691/【RM2025-串联腿步兵机器人机械结构开源】上海交通大学-交龙战队.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/815703/ML1.0.zip",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/816172/24.工程.V3.0尺寸20240620.SLDPRT",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/816172/三代车构型设计V2.0.easm",
+      "status": "already_indexed"
+    },
+    {
+      "path": "raw/downloads/816172/三代车构型设计V2.0.zip",
+      "status": "already_indexed"
+    }
+  ],
+  "excluded_attachment_count": 17
+}

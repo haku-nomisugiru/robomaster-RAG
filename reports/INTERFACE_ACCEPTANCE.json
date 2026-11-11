@@ -1,0 +1,108 @@
+{
+  "checked_at_utc": "2026-11-10T12:40:07.043389+00:00",
+  "passed": true,
+  "counts": {
+    "components": 3468,
+    "component_occurrences": 4019,
+    "interface_evidence": 4,
+    "interface_openings": 21
+  },
+  "retrieval_top_5_matches_frozen_baseline": {
+    "3508双电机舵轮": true,
+    "MGN7 滑轨 气弹簧": true,
+    "工程机器人底盘总装": true,
+    "串联腿装配方案2": true,
+    "全向轮悬挂": true,
+    "悬挂连接法兰": true,
+    "轮毂前夹板": true,
+    "舵步底盘": true,
+    "合工大桌面轮腿": true
+  },
+  "swerve_mount": {
+    "root_card_id": "rm-803685-013",
+    "outer_evidence_id": "if-swerve-outer-mirror-frame",
+    "outer_configuration_evidence": "bom_representative",
+    "outer_path_semantics": "saved_or_unresolved_path",
+    "pairs": [
+      {
+        "frame_evidence_id": "if-swerve-frame-default-rail-a",
+        "hole_pairs": [
+          {
+            "outer_opening": "h14",
+            "frame_opening": "h1",
+            "center_deviation_mm": 3.1776437161565096e-14
+          },
+          {
+            "outer_opening": "h18",
+            "frame_opening": "h3",
+            "center_deviation_mm": 0.0
+          },
+          {
+            "outer_opening": "h19",
+            "frame_opening": "h2",
+            "center_deviation_mm": 2.842170943040401e-14
+          }
+        ],
+        "plane_offset_mm": 0.0,
+        "normal_dot": -1.0,
+        "spacing_mm": [
+          25.0,
+          25.0,
+          50.0
+        ],
+        "frame_configuration_evidence": "bom_representative",
+        "frame_path_semantics": "saved_or_unresolved_path"
+      },
+      {
+        "frame_evidence_id": "if-swerve-frame-default-rail-b",
+        "hole_pairs": [
+          {
+            "outer_opening": "h15",
+            "frame_opening": "h17",
+            "center_deviation_mm": 7.105427357601002e-14
+          },
+          {
+            "outer_opening": "h16",
+            "frame_opening": "h18",
+            "center_deviation_mm": 7.105427357601002e-14
+          },
+          {
+            "outer_opening": "h17",
+            "frame_opening": "h16",
+            "center_deviation_mm": 7.652779469160725e-14
+          }
+        ],
+        "plane_offset_mm": 0.0,
+        "normal_dot": -1.0,
+        "spacing_mm": [
+          25.0,
+          25.0,
+          50.0
+        ],
+        "frame_configuration_evidence": "bom_representative",
+        "frame_path_semantics": "saved_or_unresolved_path"
+      }
+    ],
+    "max_center_deviation_mm": 7.652779469160725e-14,
+    "status": "nominal_geometry_alignment_observed",
+    "fit_to_target_verified": false
+  },
+  "suspension_flange": {
+    "root_card_id": "rm-1935523-001",
+    "parent_card_id": "rm-1935523-022",
+    "evidence_id": "if-tcp-suspension-flange-positive-x",
+    "definition_id": "0:1:1:8",
+    "occurrence_ids": [
+      "0:1:1:1/0:1:1:1:3/0:1:1:7:1",
+      "0:1:1:1/0:1:1:1:3/0:1:1:7:8"
+    ],
+    "diameter_mm_counts": {
+      "4.2": 4,
+      "3.0": 2,
+      "5.0": 1,
+      "6.0": 2
+    },
+    "distance_between_6_mm_centers_mm": 54.99999999999999,
+    "fit_to_target_verified": false
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "checked_at_utc": "2026-11-11T03:57:31.976343+00:00",
+  "passed": true,
+  "port": 8765,
+  "cases": {
+    "function": {
+      "query": "把轮组接到悬挂的机加工法兰",
+      "retrieval": "hybrid",
+      "card_id": "rm-1935523-022",
+      "name": "悬挂连接子装配",
+      "source_url": "https://bbs.robomaster.com/article/1935523",
+      "cad_path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+      "definition_id": "0:1:1:7",
+      "artifact": "file",
+      "artifact_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "bytes": 17587950,
+      "required_checks": [
+        "locate_step_definition",
+        "review_interfaces",
+        "verify_fit_in_target_assembly"
+      ],
+      "fit_to_target_verified": false,
+      "ocp": {
+        "definition_id": "0:1:1:7",
+        "kind": "assembly"
+      },
+      "interface_id": "if-tcp-suspension-flange-positive-x",
+      "interface_definition_id": "0:1:1:8",
+      "opening_count": 9,
+      "two_6mm_opening_spacing_mm": 54.99999999999999
+    },
+    "model": {
+      "query": "3508 舵轮",
+      "card_id": "rm-803685-014",
+      "name": "3508双电机舵轮模块",
+      "source_url": "https://bbs.robomaster.com/article/803685",
+      "cad_path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+      "definition_id": null,
+      "artifact": "file",
+      "artifact_sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+      "bytes": 10047005,
+      "required_checks": [
+        "resolve_native_references",
+        "review_interfaces",
+        "verify_fit_in_target_assembly"
+      ],
+      "fit_to_target_verified": false,
+      "preferred_artifact": "package",
+      "assembly_configuration": "默认",
+      "interface_configuration": "Mirror默认",
+      "interface_id": "if-swerve-outer-mirror-frame",
+      "model_matches": [
+        {
+          "code": "3508",
+          "role": "used_component",
+          "evidence": {
+            "type": "author_pdf",
+            "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+            "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+            "url": "https://bbs.robomaster.com/article/803685",
+            "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+          }
+        }
+      ],
+      "dependency_status": "not_validated"
+    },
+    "geometry": {
+      "reference_id": "rm-1935523-c1ab8d2a2c8db5352",
+      "distance": 0.1607705857221064,
+      "card_id": "rm-1935523-c2d6150f71ed3b656",
+      "name": "轮毂后夹板",
+      "source_url": "https://bbs.robomaster.com/article/1935523",
+      "cad_path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+      "definition_id": "0:1:1:20",
+      "artifact": "file",
+      "artifact_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "bytes": 17587950,
+      "required_checks": [
+        "locate_step_definition",
+        "review_interfaces",
+        "verify_fit_in_target_assembly"
+      ],
+      "fit_to_target_verified": false,
+      "ocp": {
+        "definition_id": "0:1:1:20",
+        "kind": "part"
+      }
+    },
+    "native_package": {
+      "query": "银矿抓取",
+      "card_id": "rm-816172-019",
+      "name": "工程机器人抓取机构",
+      "source_url": "https://bbs.robomaster.com/article/816172",
+      "cad_path": "assets/816172/9e9a8671de6abeae/银矿抓取.SLDASM",
+      "definition_id": null,
+      "artifact": "package",
+      "artifact_sha256": "9e9a8671de6abeae1ffd9515d975580493aec6da947b7e68f5b6d082fa23134e",
+      "bytes": 10577337,
+      "required_checks": [
+        "resolve_native_references",
+        "review_interfaces",
+        "verify_fit_in_target_assembly"
+      ],
+      "fit_to_target_verified": false,
+      "zip_member": "银矿抓取.SLDASM",
+      "zip_member_sha256": "b47653978d733785794d443f1f86d4c043413964b2a9c6f95a5ae16c495f7003",
+      "dependency_status": "not_validated"
+    }
+  },
+  "negative_checks": {
+    "unknown_model": true,
+    "split_archive_not_offered_as_package": true,
+    "mismatched_hash_rejected": true
+  }
+}

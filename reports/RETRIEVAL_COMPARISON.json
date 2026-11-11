@@ -1,0 +1,5090 @@
+{
+  "schema_version": "1.0",
+  "evaluated_at_utc": "2026-11-10T16:41:36.724540+00:00",
+  "passed": true,
+  "metrics": {
+    "function": {
+      "queries": 13,
+      "top_1": 12,
+      "top_5": 13,
+      "mrr_at_5": 0.9487
+    },
+    "model": {
+      "queries": 13,
+      "top_1": 13,
+      "top_5": 13,
+      "mrr_at_5": 1.0
+    },
+    "auto_for_model_query": {
+      "queries": 13,
+      "top_1": 12,
+      "top_5": 12,
+      "mrr_at_5": 0.9231
+    }
+  },
+  "pairs": [
+    {
+      "id": "A1",
+      "label": "分段布置的工程底盘",
+      "targets": [
+        "rm-1883259-001"
+      ],
+      "function": {
+        "query": "电控和电池沿车架前中后三段布置",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "三段",
+                  "布置",
+                  "电控",
+                  "电池",
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "三段",
+                  "中后",
+                  "前中",
+                  "后三",
+                  "和电",
+                  "布置",
+                  "控和",
+                  "段布",
+                  "电控",
+                  "电池",
+                  "车架"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "井字梁中心以铝管布置机械臂安装区域，作者标称车架 590 × 590 mm。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10 页 §3.1 底盘骨架"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "电控和电池分前中后三段布置，轮组为麦轮配纵臂独立悬挂。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10–11 页 §3.2–3.3"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "作者所述车架尺寸可用于方案筛选，机械臂孔组、实际轮距及离地间隙待核验。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10 页 §3.1 底盘骨架"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-013",
+            "name": "工程机器人底盘V2",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "布置",
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "布置",
+                  "车架"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-cb91f7be3de320dfd",
+            "name": "ML1.0",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "电控"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "电控"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761042-c29fea7891c6a18a8",
+            "name": "底盘骨架总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/761042",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "车架"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-009",
+            "name": "串联腿步兵底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "车架"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "rm-1883259-001",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "rm-1883259-001",
+                "role": "card_id",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1883259/567baba7c0784ef2/底盘总装.SLDASM",
+                  "sha256": "4c2cbfbfce25ddd21ec40fe77085ade410c8e7ef8632768121e8c52014b4d61f",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "definition_id": null
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "井字梁中心以铝管布置机械臂安装区域，作者标称车架 590 × 590 mm。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10 页 §3.1 底盘骨架"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "电控和电池分前中后三段布置，轮组为麦轮配纵臂独立悬挂。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10–11 页 §3.2–3.3"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "作者所述车架尺寸可用于方案筛选，机械臂孔组、实际轮距及离地间隙待核验。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10 页 §3.1 底盘骨架"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "卡片 ID",
+      "auto_for_model_query": {
+        "query": "rm-1883259-001",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "001",
+                  "1883259",
+                  "rm"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "井字梁中心以铝管布置机械臂安装区域，作者标称车架 590 × 590 mm。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10 页 §3.1 底盘骨架"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "电控和电池分前中后三段布置，轮组为麦轮配纵臂独立悬挂。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10–11 页 §3.2–3.3"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "作者所述车架尺寸可用于方案筛选，机械臂孔组、实际轮距及离地间隙待核验。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 10 页 §3.1 底盘骨架"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "A2",
+      "label": "麦轮纵臂悬挂",
+      "targets": [
+        "rm-1883259-002"
+      ],
+      "function": {
+        "query": "麦克纳姆轮纵臂两只避震器缓冲",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "克纳",
+                  "姆轮",
+                  "纳姆",
+                  "纵臂",
+                  "避震",
+                  "震器",
+                  "麦克"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "两只",
+                  "只避",
+                  "纵臂",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者描述轮组由板材夹打印件构成，麦轮通过夹紧联轴器与电机连接，轮轴同时使用推力球轴承。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 11 页 §3.3 轮组设计"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "轮组采用纵臂布局，每组两只避震器。与全向轮悬挂、舵下滑轨悬挂分别索引。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 11 页 §3.3 轮组设计"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-021",
+            "name": "90避震器子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "缓冲",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "两只",
+                  "缓冲",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-026",
+            "name": "悬挂下臂子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "两只",
+                  "只避",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "避震"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "两只",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883384-006",
+            "name": "2026哨兵底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "避震"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "避震"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "悬挂总装.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "悬挂总装.SLDASM",
+                "role": "cad_name",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1883259/567baba7c0784ef2/悬挂总装.SLDASM",
+                  "sha256": "0a325e2f369aeef198497fc7c78e18d409a0e59c32ca4e34e0bb379adf853df9",
+                  "url": "https://bbs.robomaster.com/article/1883259"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者描述轮组由板材夹打印件构成，麦轮通过夹紧联轴器与电机连接，轮轴同时使用推力球轴承。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 11 页 §3.3 轮组设计"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "轮组采用纵臂布局，每组两只避震器。与全向轮悬挂、舵下滑轨悬挂分别索引。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 11 页 §3.3 轮组设计"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "CAD 文件名",
+      "auto_for_model_query": {
+        "query": "悬挂总装.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "总装",
+                  "悬挂",
+                  "挂总"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者描述轮组由板材夹打印件构成，麦轮通过夹紧联轴器与电机连接，轮轴同时使用推力球轴承。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 11 页 §3.3 轮组设计"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "轮组采用纵臂布局，每组两只避震器。与全向轮悬挂、舵下滑轨悬挂分别索引。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+                  "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323",
+                  "url": "https://bbs.robomaster.com/article/1883259",
+                  "locator": "PDF 第 11 页 §3.3 轮组设计"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂",
+                  "挂总"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-cd920824e331ee228",
+            "name": "2025 HKUST ENTERPRIZE HERO Swerve HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "总装",
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "总装",
+                  "悬挂"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "总装"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-003",
+            "name": "工程机器人机械臂大臂总装",
+            "category": "robotic_arm",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "总装"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "总装"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "B1",
+      "label": "井字形舵轮底盘",
+      "targets": [
+        "rm-803685-013"
+      ],
+      "function": {
+        "query": "便于安装舵轮的井字形车架",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-013",
+            "name": "工程机器人底盘V2",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "井字",
+                  "字形",
+                  "形车",
+                  "舵轮",
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "井字",
+                  "字形",
+                  "安装",
+                  "形车",
+                  "舵轮",
+                  "装舵",
+                  "车架"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "车架采用井字形框架，作者以方便安装舵轮作为采用该构型的原因。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 7 页 §2.1 底盘"
+                }
+              },
+              {
+                "kind": "version",
+                "text": "入口名含 chassis_v2 与 2025.10.1。具体轮组实例需要在原生装配中确认。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/803685/ac8d43afad2ed818/chassis/chassis_v2.2025.10.1.SLDASM",
+                  "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "chassis_v2.2025.10.1.SLDASM"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "井字",
+                  "形车",
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "井字",
+                  "安装",
+                  "车架"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-009",
+            "name": "串联腿步兵底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "便于",
+                  "安装",
+                  "车架"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761042-c29fea7891c6a18a8",
+            "name": "底盘骨架总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/761042",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "舵轮",
+                  "车架"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "舵轮",
+                  "车架"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "便于",
+                  "舵轮"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "chassis_v2.2025.10.1.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-013",
+            "name": "工程机器人底盘V2",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "chassis_v2.2025.10.1.SLDASM",
+                "role": "cad_name",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/803685/ac8d43afad2ed818/chassis/chassis_v2.2025.10.1.SLDASM",
+                  "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+                  "url": "https://bbs.robomaster.com/article/803685"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "车架采用井字形框架，作者以方便安装舵轮作为采用该构型的原因。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 7 页 §2.1 底盘"
+                }
+              },
+              {
+                "kind": "version",
+                "text": "入口名含 chassis_v2 与 2025.10.1。具体轮组实例需要在原生装配中确认。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/803685/ac8d43afad2ed818/chassis/chassis_v2.2025.10.1.SLDASM",
+                  "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "chassis_v2.2025.10.1.SLDASM"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "CAD 文件名",
+      "auto_for_model_query": {
+        "query": "chassis_v2.2025.10.1.SLDASM",
+        "target_rank": null,
+        "hits": [
+          {
+            "id": "rm-803685-c76c5d04bf8a61038",
+            "name": "gimbal_v2.2025.10.1",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-ce23f0fe6b6e9c7cc",
+            "name": "Engineer_v2.2025.10.1",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-c06ac1920eb371186",
+            "name": "Robotic arm_v2.2025.10.1",
+            "category": "robotic_arm",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-c5d44f70a22e3f099",
+            "name": "J1_lk8010输出轴1cnc_v2.2025.10.1",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-cb010e6e38feede25",
+            "name": "J1_lk8010输出轴2cnc_v2.2025.10.1",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "v2d2025d10d1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "B2",
+      "label": "双驱动舵轮",
+      "targets": [
+        "rm-803685-014"
+      ],
+      "function": {
+        "query": "行走和转向分别用独立驱动",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "行走",
+                  "转向",
+                  "驱动"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "转向"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "独立"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "分别",
+                  "独立"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-005",
+            "name": "工程机器人直取抬升模块",
+            "category": "lifting",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "分别",
+                  "独立"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-cd920824e331ee228",
+            "name": "2025 HKUST ENTERPRIZE HERO Swerve HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "转向"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "驱动"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-004",
+            "name": "工程机器人侧取抬升模块",
+            "category": "lifting",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "独立"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "独立"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "3508 舵轮",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "舵轮"
+                ]
+              }
+            ],
+            "model_matches": [
+              {
+                "code": "3508",
+                "role": "used_component",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-cd920824e331ee228",
+            "name": "2025 HKUST ENTERPRIZE HERO Swerve HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "舵轮"
+                ]
+              }
+            ],
+            "model_matches": [
+              {
+                "code": "3508",
+                "role": "used_component",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "9f037001d456c561cf6253a46ab837d35fe6234d9a496bd7d1ff7bccb219c4a8",
+                  "url": "https://bbs.robomaster.com/article/761377",
+                  "locator": "原帖整车参数表「底盘驱动方式」",
+                  "thread_id": 761377,
+                  "hash_scope": "body_text"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-c5e1dc640f6fcbc5f",
+            "name": "swerve 3508 lower HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "舵轮"
+                ]
+              }
+            ],
+            "model_matches": [
+              {
+                "code": "3508",
+                "role": "cad_name",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/761377/12db7b08b5a9b02a/2025 HKUST ENTERPRIZE HERO Swerve/swerve 3508 lower HKUST.SLDASM",
+                  "sha256": "f8feffef7e2494b62b3c0b1ccbea36d1e1108c09cde2dc02daf2607805046b57",
+                  "url": "https://bbs.robomaster.com/article/761377"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "部件型号＋用途",
+      "expected_role": "used_component",
+      "reject_categories": [
+        "gearbox"
+      ],
+      "auto_for_model_query": {
+        "query": "3508 舵轮",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "3508",
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "3508",
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "3508",
+                  "舵轮"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-cd920824e331ee228",
+            "name": "2025 HKUST ENTERPRIZE HERO Swerve HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "3508",
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "3508",
+                  "舵轮"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-017",
+            "name": "P15.8轻型减速箱改三乙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "3508"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "3508"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "3508"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "3508"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-c5e1dc640f6fcbc5f",
+            "name": "swerve 3508 lower HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "3508"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "舵轮"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "3508"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ]
+    },
+    {
+      "id": "B3",
+      "label": "舵下导向悬挂",
+      "targets": [
+        "rm-803685-014"
+      ],
+      "function": {
+        "query": "用导轨限制轮组竖直运动，气弹簧负责缓冲",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "导轨",
+                  "弹簧",
+                  "气弹",
+                  "竖直"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "弹簧",
+                  "气弹"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1883384-007",
+            "name": "舵步底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "弹簧",
+                  "气弹",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "弹簧",
+                  "气弹",
+                  "轮组"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761042-c2ed254897d8b3e8e",
+            "name": "线性运动取矿机构A型",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/761042",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "运动"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "运动"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "负责",
+                  "运动"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-021",
+            "name": "90避震器子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "缓冲"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "缓冲"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761042-ce916434f1d6c55d4",
+            "name": "线性运动取矿机构B型",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/761042",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "运动"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "运动"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "运动"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "MGN7",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "MGN7",
+                "role": "used_component",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "所用部件型号",
+      "expected_role": "used_component",
+      "auto_for_model_query": {
+        "query": "MGN7",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "mgn7"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "mgn7"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "structure",
+                "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                  "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                  "url": "https://bbs.robomaster.com/article/803685",
+                  "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "C1",
+      "label": "紧凑全向轮悬挂",
+      "targets": [
+        "rm-1935523-001"
+      ],
+      "function": {
+        "query": "把两只避震器布置在下臂，缩短轮组悬挂",
+        "target_rank": 3,
+        "hits": [
+          {
+            "id": "rm-1935523-026",
+            "name": "悬挂下臂子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "下臂",
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "下臂",
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "下臂",
+                  "两只",
+                  "只避",
+                  "悬挂",
+                  "把两",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-021",
+            "name": "90避震器子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "下臂",
+                  "两只",
+                  "布置",
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "下臂",
+                  "悬挂",
+                  "避震"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "下臂",
+                  "两只",
+                  "悬挂",
+                  "把两",
+                  "缩短",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "为缩短机构，作者把两只溪地 90 避震器接到下臂，利用上下臂外形限位；使用短减速箱为避震器让位。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "context",
+                "text": "作者提到使用该方案的步兵轮距为 380 mm。该值属于整车应用，不是这个 STEP 子装配的实测尺寸。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "低成本辊子的结论不适用于整套悬挂；作者明确指出减速箱和机加工件拉高了总成本。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "两只",
+                  "只避",
+                  "悬挂",
+                  "轮组",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-022",
+            "name": "悬挂连接子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "组悬",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂",
+                  "轮组"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "function_refined": {
+        "query": "把两只避震器布置在下臂，缩短轮组悬挂总成",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "总成",
+                  "悬挂",
+                  "挂总"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "下臂",
+                  "悬挂",
+                  "避震"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "下臂",
+                  "两只",
+                  "总成",
+                  "悬挂",
+                  "把两",
+                  "缩短",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "为缩短机构，作者把两只溪地 90 避震器接到下臂，利用上下臂外形限位；使用短减速箱为避震器让位。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "context",
+                "text": "作者提到使用该方案的步兵轮距为 380 mm。该值属于整车应用，不是这个 STEP 子装配的实测尺寸。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "低成本辊子的结论不适用于整套悬挂；作者明确指出减速箱和机加工件拉高了总成本。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-026",
+            "name": "悬挂下臂子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "下臂",
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "下臂",
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "下臂",
+                  "两只",
+                  "只避",
+                  "悬挂",
+                  "把两",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂",
+                  "挂总"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "两只",
+                  "只避",
+                  "悬挂",
+                  "轮组",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-021",
+            "name": "90避震器子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "下臂",
+                  "两只",
+                  "布置",
+                  "悬挂",
+                  "避震",
+                  "震器"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-022",
+            "name": "悬挂连接子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "组悬",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂",
+                  "轮组"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "rm-1935523-001",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "rm-1935523-001",
+                "role": "card_id",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+                  "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "definition_id": null
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "为缩短机构，作者把两只溪地 90 避震器接到下臂，利用上下臂外形限位；使用短减速箱为避震器让位。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "context",
+                "text": "作者提到使用该方案的步兵轮距为 380 mm。该值属于整车应用，不是这个 STEP 子装配的实测尺寸。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "低成本辊子的结论不适用于整套悬挂；作者明确指出减速箱和机加工件拉高了总成本。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "卡片 ID",
+      "auto_for_model_query": {
+        "query": "rm-1935523-001",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "001",
+                  "1935523",
+                  "rm"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "为缩短机构，作者把两只溪地 90 避震器接到下臂，利用上下臂外形限位；使用短减速箱为避震器让位。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "context",
+                "text": "作者提到使用该方案的步兵轮距为 380 mm。该值属于整车应用，不是这个 STEP 子装配的实测尺寸。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "低成本辊子的结论不适用于整套悬挂；作者明确指出减速箱和机加工件拉高了总成本。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「一、前言」"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "C2",
+      "label": "悬挂连接法兰",
+      "targets": [
+        "rm-1935523-022"
+      ],
+      "function": {
+        "query": "把轮组接到悬挂的机加工法兰",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-022",
+            "name": "悬挂连接子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "加工",
+                  "工法",
+                  "悬挂",
+                  "机加",
+                  "法兰",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "加工",
+                  "工法",
+                  "悬挂",
+                  "机加",
+                  "法兰",
+                  "轮组"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者称轮组和悬挂之间以机加工法兰连接，并把打印件列为待探索方向。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "STEP 可定位连接子装配；孔组尺寸与替换后的承载能力待核验。",
+                "evidence": {
+                  "type": "step_inspection",
+                  "path": "reports/step-inspection.jsonl",
+                  "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+                  "definition_id": "0:1:1:7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "STEP 定义 0:1:1:7"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-023",
+            "name": "悬挂上臂子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂",
+                  "挂的",
+                  "的机"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "加工",
+                  "悬挂",
+                  "接到",
+                  "机加"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761377-cd920824e331ee228",
+            "name": "2025 HKUST ENTERPRIZE HERO Swerve HKUST",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/761377",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂",
+                  "轮组"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-002",
+            "name": "工程机器人悬挂总装",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "悬挂"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "悬挂",
+                  "轮组"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "rm-1935523-022",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-022",
+            "name": "悬挂连接子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "rm-1935523-022",
+                "role": "card_id",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+                  "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "definition_id": "0:1:1:7"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者称轮组和悬挂之间以机加工法兰连接，并把打印件列为待探索方向。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "STEP 可定位连接子装配；孔组尺寸与替换后的承载能力待核验。",
+                "evidence": {
+                  "type": "step_inspection",
+                  "path": "reports/step-inspection.jsonl",
+                  "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+                  "definition_id": "0:1:1:7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "STEP 定义 0:1:1:7"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "STEP 子装配卡片 ID",
+      "auto_for_model_query": {
+        "query": "rm-1935523-022",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-022",
+            "name": "悬挂连接子装配",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "022",
+                  "1935523",
+                  "rm"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者称轮组和悬挂之间以机加工法兰连接，并把打印件列为待探索方向。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、2、悬挂设计」"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "STEP 可定位连接子装配；孔组尺寸与替换后的承载能力待核验。",
+                "evidence": {
+                  "type": "step_inspection",
+                  "path": "reports/step-inspection.jsonl",
+                  "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+                  "definition_id": "0:1:1:7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "STEP 定义 0:1:1:7"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "C3",
+      "label": "低成本自制辊子轮组",
+      "targets": [
+        "rm-1935523-024"
+      ],
+      "function": {
+        "query": "聚氨酯空心辊子配铜套和圆柱销",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-024",
+            "name": "全向轮轮组子装配",
+            "category": "wheel",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "圆柱",
+                  "柱销",
+                  "氨酯",
+                  "聚氨",
+                  "辊子",
+                  "铜套"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "和圆",
+                  "圆柱",
+                  "套和",
+                  "柱销",
+                  "氨酯",
+                  "空心",
+                  "聚氨",
+                  "辊子",
+                  "酯空",
+                  "铜套"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者选用聚氨酯空心棒料、铜套和圆柱销组成辊子；换用铜套用于解决此前钢套脱出摩擦问题。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、方案1、自制辊子」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者观察到硬质圆柱辊子会使轮廓更接近多边形，运行时抖动较注胶辊子明显。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、方案1、自制辊子／缺点」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-025",
+            "name": "轮毂子装配",
+            "category": "wheel",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "辊子"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "辊子"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "辊子"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-c70b41bca20273f7c",
+            "name": "直径80聚氨酯轮.2025.10.1",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "氨酯",
+                  "聚氨"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "氨酯",
+                  "聚氨"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-c149adb7e92800885",
+            "name": "直径80聚氨酯轮带轴承板.2025.10.1",
+            "category": "bearing",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "氨酯",
+                  "聚氨"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "氨酯",
+                  "聚氨"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "rm-1935523-024",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-024",
+            "name": "全向轮轮组子装配",
+            "category": "wheel",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "rm-1935523-024",
+                "role": "card_id",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+                  "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "definition_id": "0:1:1:18"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者选用聚氨酯空心棒料、铜套和圆柱销组成辊子；换用铜套用于解决此前钢套脱出摩擦问题。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、方案1、自制辊子」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者观察到硬质圆柱辊子会使轮廓更接近多边形，运行时抖动较注胶辊子明显。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、方案1、自制辊子／缺点」"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "STEP 子装配卡片 ID",
+      "auto_for_model_query": {
+        "query": "rm-1935523-024",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1935523-024",
+            "name": "全向轮轮组子装配",
+            "category": "wheel",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "024",
+                  "1935523",
+                  "rm"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者选用聚氨酯空心棒料、铜套和圆柱销组成辊子；换用铜套用于解决此前钢套脱出摩擦问题。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、方案1、自制辊子」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者观察到硬质圆柱辊子会使轮廓更接近多边形，运行时抖动较注胶辊子明显。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "raw/pages/1935523/article.txt",
+                  "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7",
+                  "url": "https://bbs.robomaster.com/article/1935523",
+                  "locator": "原帖「二、方案1、自制辊子／缺点」"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "D",
+      "label": "气弹簧舵步底盘",
+      "targets": [
+        "rm-1883384-007"
+      ],
+      "function": {
+        "query": "气弹簧轮组用于舵步底盘",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883384-007",
+            "name": "舵步底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘",
+                  "步底",
+                  "舵步"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘",
+                  "弹簧",
+                  "步底",
+                  "气弹",
+                  "簧轮",
+                  "舵步",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘",
+                  "弹簧",
+                  "步底",
+                  "气弹",
+                  "簧轮",
+                  "舵步",
+                  "轮组"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "version",
+                "text": "原帖是 26 赛季开源汇总，这张卡的 CAD 入口实际归在 25 赛季舵步目录。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384",
+                  "locator": "25赛季舵步开源图纸（气弹簧轮组）/25舵步"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "跨版本有同名轮组，复用时需核对原生引用与包内相对路径。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384",
+                  "locator": "舵步底盘.SLDASM 与所属版本目录"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-014",
+            "name": "3508双电机舵轮模块",
+            "category": "swerve",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "弹簧",
+                  "气弹"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "于舵",
+                  "弹簧",
+                  "气弹",
+                  "用于"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883384-006",
+            "name": "2026哨兵底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘",
+                  "轮组"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘",
+                  "轮组"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘",
+                  "用于",
+                  "轮组"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761042-c29fea7891c6a18a8",
+            "name": "底盘骨架总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/761042",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘",
+                  "用于"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "舵步底盘.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883384-007",
+            "name": "舵步底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "舵步底盘.SLDASM",
+                "role": "cad_name",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "version",
+                "text": "原帖是 26 赛季开源汇总，这张卡的 CAD 入口实际归在 25 赛季舵步目录。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384",
+                  "locator": "25赛季舵步开源图纸（气弹簧轮组）/25舵步"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "跨版本有同名轮组，复用时需核对原生引用与包内相对路径。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384",
+                  "locator": "舵步底盘.SLDASM 与所属版本目录"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1883384-cdb36fd4f68480dbf",
+            "name": "舵步底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "舵步底盘.SLDASM",
+                "role": "cad_name",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/26赛季舵步开源图纸（溪地避震轮组）/舵步底盘.SLDASM",
+                  "sha256": "9a71a3a0142bcbc0db0f650ac445c864c0e93e49d2a778825375cdf1bfab4299",
+                  "url": "https://bbs.robomaster.com/article/1883384"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "CAD 文件名",
+      "auto_for_model_query": {
+        "query": "舵步底盘.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1883384-007",
+            "name": "舵步底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘",
+                  "步底",
+                  "舵步"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘",
+                  "步底",
+                  "舵步"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘",
+                  "步底",
+                  "舵步"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "version",
+                "text": "原帖是 26 赛季开源汇总，这张卡的 CAD 入口实际归在 25 赛季舵步目录。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384",
+                  "locator": "25赛季舵步开源图纸（气弹簧轮组）/25舵步"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "跨版本有同名轮组，复用时需核对原生引用与包内相对路径。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+                  "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+                  "url": "https://bbs.robomaster.com/article/1883384",
+                  "locator": "舵步底盘.SLDASM 与所属版本目录"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1883384-006",
+            "name": "2026哨兵底盘",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883384",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-761042-c29fea7891c6a18a8",
+            "name": "底盘骨架总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/761042",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-013",
+            "name": "工程机器人底盘V2",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-009",
+            "name": "串联腿步兵底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "底盘"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "底盘"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "E",
+      "label": "同轴嵌套串联腿",
+      "targets": [
+        "rm-776744-010"
+      ],
+      "function": {
+        "query": "大小腿绕同一轴线回转的嵌套传动",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-776744-010",
+            "name": "串联腿装配方案2",
+            "category": "wheel_leg",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "传动",
+                  "回转",
+                  "大小",
+                  "小腿",
+                  "嵌套"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "一轴",
+                  "同一",
+                  "回转",
+                  "大小",
+                  "小腿",
+                  "嵌套",
+                  "线回",
+                  "绕同",
+                  "转的",
+                  "轴线"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "context",
+                "text": "作者技术说明以嵌套轴系解释大腿和小腿驱动部分绕同一轴线回转的整车腿部方案。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/说明文档/RM2025中国石油大学（华东）RPS战队开源说明文档.pdf",
+                  "sha256": "45720f6b1fba992435ddd99adab219e245a8efd0ad3146d39be7e7fe0d06451e",
+                  "url": "https://bbs.robomaster.com/article/776744",
+                  "locator": "PDF 第 25–26 页 §3.1.2 串联腿部结构设计"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "本条原生文件名为方案 2，文档中的整车参数需核对版本后才能用于此装配。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/串联腿装配方案2.SLDASM",
+                  "sha256": "0147711660ee315fa47eb19331b5c039d429c5d38c7a8421199b30ce8dfc5af7",
+                  "url": "https://bbs.robomaster.com/article/776744",
+                  "locator": "串联腿装配方案2.SLDASM"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-025",
+            "name": "轮毂子装配",
+            "category": "wheel",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "同一"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-011",
+            "name": "步兵云台Yaw轴装配",
+            "category": "gimbal",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "回转"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "回转"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-003",
+            "name": "工程机器人机械臂大臂总装",
+            "category": "robotic_arm",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "传动"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "传动"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-015",
+            "name": "机械臂L4关节装配",
+            "category": "robotic_arm",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "传动",
+                  "回转"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "串联腿装配方案2.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-776744-010",
+            "name": "串联腿装配方案2",
+            "category": "wheel_leg",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "串联腿装配方案2.SLDASM",
+                "role": "cad_name",
+                "evidence": {
+                  "type": "cad_file_inventory",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/串联腿装配方案2.SLDASM",
+                  "sha256": "0147711660ee315fa47eb19331b5c039d429c5d38c7a8421199b30ce8dfc5af7",
+                  "url": "https://bbs.robomaster.com/article/776744"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "context",
+                "text": "作者技术说明以嵌套轴系解释大腿和小腿驱动部分绕同一轴线回转的整车腿部方案。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/说明文档/RM2025中国石油大学（华东）RPS战队开源说明文档.pdf",
+                  "sha256": "45720f6b1fba992435ddd99adab219e245a8efd0ad3146d39be7e7fe0d06451e",
+                  "url": "https://bbs.robomaster.com/article/776744",
+                  "locator": "PDF 第 25–26 页 §3.1.2 串联腿部结构设计"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "本条原生文件名为方案 2，文档中的整车参数需核对版本后才能用于此装配。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/串联腿装配方案2.SLDASM",
+                  "sha256": "0147711660ee315fa47eb19331b5c039d429c5d38c7a8421199b30ce8dfc5af7",
+                  "url": "https://bbs.robomaster.com/article/776744",
+                  "locator": "串联腿装配方案2.SLDASM"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "CAD 文件名",
+      "auto_for_model_query": {
+        "query": "串联腿装配方案2.SLDASM",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-776744-010",
+            "name": "串联腿装配方案2",
+            "category": "wheel_leg",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "2",
+                  "串联",
+                  "方案",
+                  "联腿",
+                  "腿装",
+                  "装配",
+                  "配方"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "2",
+                  "串联",
+                  "方案",
+                  "联腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "2",
+                  "串联",
+                  "方案",
+                  "联腿",
+                  "腿装",
+                  "装配",
+                  "配方"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "context",
+                "text": "作者技术说明以嵌套轴系解释大腿和小腿驱动部分绕同一轴线回转的整车腿部方案。",
+                "evidence": {
+                  "type": "author_pdf",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/说明文档/RM2025中国石油大学（华东）RPS战队开源说明文档.pdf",
+                  "sha256": "45720f6b1fba992435ddd99adab219e245a8efd0ad3146d39be7e7fe0d06451e",
+                  "url": "https://bbs.robomaster.com/article/776744",
+                  "locator": "PDF 第 25–26 页 §3.1.2 串联腿部结构设计"
+                }
+              },
+              {
+                "kind": "fit_note",
+                "text": "本条原生文件名为方案 2，文档中的整车参数需核对版本后才能用于此装配。",
+                "evidence": {
+                  "type": "cad_inventory",
+                  "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/串联腿装配方案2.SLDASM",
+                  "sha256": "0147711660ee315fa47eb19331b5c039d429c5d38c7a8421199b30ce8dfc5af7",
+                  "url": "https://bbs.robomaster.com/article/776744",
+                  "locator": "串联腿装配方案2.SLDASM"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-009",
+            "name": "串联腿步兵底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "串联",
+                  "联腿"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "串联",
+                  "联腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "串联",
+                  "联腿"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-cb91f7be3de320dfd",
+            "name": "ML1.0",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "串联",
+                  "联腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "串联",
+                  "装配"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-803685-013",
+            "name": "工程机器人底盘V2",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/803685",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "方案",
+                  "装配"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-005",
+            "name": "工程机器人直取抬升模块",
+            "category": "lifting",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "方案",
+                  "装配"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "F",
+      "label": "桌面串联轮腿",
+      "targets": [
+        "rm-815703-cb91f7be3de320dfd"
+      ],
+      "function": {
+        "query": "桌面上做串联轮腿的电控调试和研发验证",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-815703-cb91f7be3de320dfd",
+            "name": "ML1.0",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "串联",
+                  "控调",
+                  "桌面",
+                  "电控",
+                  "联轮",
+                  "调试",
+                  "轮腿",
+                  "验证"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "串联",
+                  "发验",
+                  "和研",
+                  "控调",
+                  "桌面",
+                  "电控",
+                  "研发",
+                  "试和",
+                  "调试",
+                  "轮腿",
+                  "验证"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "role",
+                "text": "作者将该平台定位为桌面级电控调试和研发验证，采用交龙开源轮腿构型并调整了部分参数。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「开源背景」「开源内容」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者披露部分连杆轴系轴向承载有限，适用范围是桌面练习。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「注意事项」"
+                }
+              },
+              {
+                "kind": "locator",
+                "text": "SolidWorks 原生装配「ML1.0」。按包内路径定位。",
+                "evidence": {
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "type": "cad_inventory",
+                  "path": "assets/815703/77a1ee1dfef0faaa/ML1.0.SLDASM",
+                  "sha256": "9da31ca3bb998a8f85b506cdb9f63a5da8efd4160105559ac8ca83cc5ea7ea5b",
+                  "locator": "包内 CAD 路径"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-009",
+            "name": "串联腿步兵底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "串联"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "串联",
+                  "轮腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "串联"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-010",
+            "name": "串联腿装配方案2",
+            "category": "wheel_leg",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "串联"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "串联",
+                  "轮腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "串联"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-001",
+            "name": "工程机器人底盘总装",
+            "category": "chassis",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "电控"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "电控"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "轮腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "轮腿"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "ML1.0",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-815703-cb91f7be3de320dfd",
+            "name": "ML1.0",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "ML1.0",
+                "role": "module_model",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「五.模型图纸文件」ML1.0.zip",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "role",
+                "text": "作者将该平台定位为桌面级电控调试和研发验证，采用交龙开源轮腿构型并调整了部分参数。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「开源背景」「开源内容」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者披露部分连杆轴系轴向承载有限，适用范围是桌面练习。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「注意事项」"
+                }
+              },
+              {
+                "kind": "locator",
+                "text": "SolidWorks 原生装配「ML1.0」。按包内路径定位。",
+                "evidence": {
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "type": "cad_inventory",
+                  "path": "assets/815703/77a1ee1dfef0faaa/ML1.0.SLDASM",
+                  "sha256": "9da31ca3bb998a8f85b506cdb9f63a5da8efd4160105559ac8ca83cc5ea7ea5b",
+                  "locator": "包内 CAD 路径"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "整机型号",
+      "expected_role": "module_model",
+      "auto_for_model_query": {
+        "query": "ML1.0",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-815703-cb91f7be3de320dfd",
+            "name": "ML1.0",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "ml1d0"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "ml1d0"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "ml1d0"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "role",
+                "text": "作者将该平台定位为桌面级电控调试和研发验证，采用交龙开源轮腿构型并调整了部分参数。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「开源背景」「开源内容」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者披露部分连杆轴系轴向承载有限，适用范围是桌面练习。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c",
+                  "thread_id": 815703,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "locator": "原帖「注意事项」"
+                }
+              },
+              {
+                "kind": "locator",
+                "text": "SolidWorks 原生装配「ML1.0」。按包内路径定位。",
+                "evidence": {
+                  "url": "https://bbs.robomaster.com/article/815703",
+                  "type": "cad_inventory",
+                  "path": "assets/815703/77a1ee1dfef0faaa/ML1.0.SLDASM",
+                  "sha256": "9da31ca3bb998a8f85b506cdb9f63a5da8efd4160105559ac8ca83cc5ea7ea5b",
+                  "locator": "包内 CAD 路径"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-c1b1334430d8c343f",
+            "name": "ML1.0-DM4310",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "ml1d0"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "ml1d0"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-c2be1e796eb401f75",
+            "name": "ML1.0-Crank",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "ml1d0"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "ml1d0"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-c31a551f841771896",
+            "name": "ML1.0-battery",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "ml1d0"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "ml1d0"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-c34d8cf9124cc18c0",
+            "name": "ML1.0-m3x8flat",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "ml1d0"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "ml1d0"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "G1",
+      "label": "轻型减速箱",
+      "targets": [
+        "rm-1936175-017"
+      ],
+      "function": {
+        "query": "替代 Hexroll 又受安装厚度限制的小型减速机构",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1936175-017",
+            "name": "P15.8轻型减速箱改三乙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "减速",
+                  "型减"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "hexroll",
+                  "减速",
+                  "厚度",
+                  "型减",
+                  "安装",
+                  "装厚"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "hexroll",
+                  "减速",
+                  "厚度",
+                  "安装",
+                  "替代"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "fit_note",
+                "text": "作者将轻型定位为 Hexroll 替代方案，称安装孔位一致，但高度、厚度有差异，内部齿轮也不通用。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／食用方式」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告轻型版背隙较大。孔位声明、成本与负载表现为作者经验，配合需重新量测。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／性能」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "减速",
+                  "型减"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "减速",
+                  "型减"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "减速",
+                  "安装"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-005",
+            "name": "工程机器人直取抬升模块",
+            "category": "lifting",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "机构"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "安装",
+                  "机构"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-001",
+            "name": "全向轮悬挂总成",
+            "category": "suspension",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "减速"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "减速",
+                  "机构"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1935523-025",
+            "name": "轮毂子装配",
+            "category": "wheel",
+            "source_url": "https://bbs.robomaster.com/article/1935523",
+            "matches": [
+              {
+                "field": "description",
+                "terms": [
+                  "厚度"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "P15.8 Hexroll",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1936175-017",
+            "name": "P15.8轻型减速箱改三乙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [],
+            "model_matches": [
+              {
+                "code": "P15.8",
+                "role": "model_family",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖附件「二六式轻型P15.8减速箱改三乙.step」",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text"
+                }
+              },
+              {
+                "code": "Hexroll",
+                "role": "reference_product",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／食用方式」第 1–2 项",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "fit_note",
+                "text": "作者将轻型定位为 Hexroll 替代方案，称安装孔位一致，但高度、厚度有差异，内部齿轮也不通用。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／食用方式」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告轻型版背隙较大。孔位声明、成本与负载表现为作者经验，配合需重新量测。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／性能」"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "系列型号＋对照产品",
+      "expected_role": "model_family",
+      "auto_for_model_query": {
+        "query": "P15.8 Hexroll",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1936175-017",
+            "name": "P15.8轻型减速箱改三乙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "hexroll",
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "hexroll",
+                  "p15d8"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "fit_note",
+                "text": "作者将轻型定位为 Hexroll 替代方案，称安装孔位一致，但高度、厚度有差异，内部齿轮也不通用。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／食用方式」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者报告轻型版背隙较大。孔位声明、成本与负载表现为作者经验，配合需重新量测。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「轻型减速箱／性能」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "p15d8"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    },
+    {
+      "id": "G2",
+      "label": "重型减速箱",
+      "targets": [
+        "rm-1936175-018"
+      ],
+      "function": {
+        "query": "用角接触和碗组轴承支撑轮腿减速传动",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "减速"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "减速",
+                  "承支",
+                  "接触",
+                  "支撑",
+                  "碗组",
+                  "组轴",
+                  "腿减",
+                  "角接",
+                  "轮腿",
+                  "轴承"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "减速",
+                  "承支",
+                  "接触",
+                  "支撑",
+                  "用角",
+                  "碗组",
+                  "组轴",
+                  "角接",
+                  "轮腿",
+                  "轴承"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者描述重型系列采用角接触与碗组轴承组合，齿轮组沿用同帖轻型方案。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「较25赛季款式主要改进方向」「重型减速箱」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者披露粉末冶金齿轮耐磨性一般，背隙受加工公差影响；该版本安装兼容性需要独立量测。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「重型减速箱／性能与食用方式」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-776744-010",
+            "name": "串联腿装配方案2",
+            "category": "wheel_leg",
+            "source_url": "https://bbs.robomaster.com/article/776744",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "传动",
+                  "轮腿"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1883259-003",
+            "name": "工程机器人机械臂大臂总装",
+            "category": "robotic_arm",
+            "source_url": "https://bbs.robomaster.com/article/1883259",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "传动"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "传动",
+                  "减速"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-017",
+            "name": "P15.8轻型减速箱改三乙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "减速"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "减速"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "减速"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rm-815703-cb91f7be3de320dfd",
+            "name": "ML1.0",
+            "category": "component",
+            "source_url": "https://bbs.robomaster.com/article/815703",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "轮腿"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "轮腿"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model": {
+        "query": "P15.8 双轴承支撑",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "keywords",
+                "terms": [
+                  "双轴",
+                  "承支",
+                  "支撑",
+                  "轴承"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "双轴",
+                  "承支",
+                  "支撑",
+                  "轴承"
+                ]
+              }
+            ],
+            "model_matches": [
+              {
+                "code": "P15.8",
+                "role": "model_family",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖附件「二六式重型P15.8减速箱改五丙.step」",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text"
+                }
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者描述重型系列采用角接触与碗组轴承组合，齿轮组沿用同帖轻型方案。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「较25赛季款式主要改进方向」「重型减速箱」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者披露粉末冶金齿轮耐磨性一般，背隙受加工公差影响；该版本安装兼容性需要独立量测。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「重型减速箱／性能与食用方式」"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "locator_kind": "系列型号＋结构",
+      "expected_role": "model_family",
+      "auto_for_model_query": {
+        "query": "P15.8 双轴承支撑",
+        "target_rank": 1,
+        "hits": [
+          {
+            "id": "rm-1936175-018",
+            "name": "P15.8重型减速箱改五丙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "p15d8",
+                  "双轴",
+                  "承支",
+                  "支撑",
+                  "轴承"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "p15d8",
+                  "双轴",
+                  "承支",
+                  "支撑",
+                  "轴承"
+                ]
+              }
+            ],
+            "target_source_facts": [
+              {
+                "kind": "structure",
+                "text": "作者描述重型系列采用角接触与碗组轴承组合，齿轮组沿用同帖轻型方案。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「较25赛季款式主要改进方向」「重型减速箱」"
+                }
+              },
+              {
+                "kind": "tradeoff",
+                "text": "作者披露粉末冶金齿轮耐磨性一般，背隙受加工公差影响；该版本安装兼容性需要独立量测。",
+                "evidence": {
+                  "type": "forum_article_body",
+                  "path": "catalog/open-cad-2025.json",
+                  "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                  "thread_id": 1936175,
+                  "hash_scope": "body_text",
+                  "url": "https://bbs.robomaster.com/article/1936175",
+                  "locator": "原帖「重型减速箱／性能与食用方式」"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rm-1936175-017",
+            "name": "P15.8轻型减速箱改三乙",
+            "category": "gearbox",
+            "source_url": "https://bbs.robomaster.com/article/1936175",
+            "matches": [
+              {
+                "field": "identity",
+                "terms": [
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "keywords",
+                "terms": [
+                  "p15d8"
+                ]
+              },
+              {
+                "field": "description",
+                "terms": [
+                  "p15d8"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "model_role_passed": true,
+      "strict_rejected_categories": [],
+      "auto_rejected_categories": []
+    }
+  ],
+  "boundaries": [
+    {
+      "query": "P15.8",
+      "expected": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ],
+      "note": "系列型号允许返回轻型与重型两个变体",
+      "hits": [
+        {
+          "id": "rm-1936175-017",
+          "name": "P15.8轻型减速箱改三乙",
+          "category": "gearbox",
+          "source_url": "https://bbs.robomaster.com/article/1936175",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "P15.8",
+              "role": "model_family",
+              "evidence": {
+                "type": "forum_article_body",
+                "path": "catalog/open-cad-2025.json",
+                "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                "url": "https://bbs.robomaster.com/article/1936175",
+                "locator": "原帖附件「二六式轻型P15.8减速箱改三乙.step」",
+                "thread_id": 1936175,
+                "hash_scope": "body_text"
+              }
+            }
+          ]
+        },
+        {
+          "id": "rm-1936175-018",
+          "name": "P15.8重型减速箱改五丙",
+          "category": "gearbox",
+          "source_url": "https://bbs.robomaster.com/article/1936175",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "P15.8",
+              "role": "model_family",
+              "evidence": {
+                "type": "forum_article_body",
+                "path": "catalog/open-cad-2025.json",
+                "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                "url": "https://bbs.robomaster.com/article/1936175",
+                "locator": "原帖附件「二六式重型P15.8减速箱改五丙.step」",
+                "thread_id": 1936175,
+                "hash_scope": "body_text"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "Ｐ１５．８",
+      "expected": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ],
+      "note": "全角和半角规范化",
+      "hits": [
+        {
+          "id": "rm-1936175-017",
+          "name": "P15.8轻型减速箱改三乙",
+          "category": "gearbox",
+          "source_url": "https://bbs.robomaster.com/article/1936175",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "P15.8",
+              "role": "model_family",
+              "evidence": {
+                "type": "forum_article_body",
+                "path": "catalog/open-cad-2025.json",
+                "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                "url": "https://bbs.robomaster.com/article/1936175",
+                "locator": "原帖附件「二六式轻型P15.8减速箱改三乙.step」",
+                "thread_id": 1936175,
+                "hash_scope": "body_text"
+              }
+            }
+          ]
+        },
+        {
+          "id": "rm-1936175-018",
+          "name": "P15.8重型减速箱改五丙",
+          "category": "gearbox",
+          "source_url": "https://bbs.robomaster.com/article/1936175",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "P15.8",
+              "role": "model_family",
+              "evidence": {
+                "type": "forum_article_body",
+                "path": "catalog/open-cad-2025.json",
+                "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                "url": "https://bbs.robomaster.com/article/1936175",
+                "locator": "原帖附件「二六式重型P15.8减速箱改五丙.step」",
+                "thread_id": 1936175,
+                "hash_scope": "body_text"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "P15.76",
+      "expected": [],
+      "note": "近似数值拒绝",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "P15d8",
+      "expected": [],
+      "note": "FTS 内部小数编码不能作为型号别名",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "MGN7",
+      "expected": [
+        "rm-803685-014"
+      ],
+      "note": "作者文档中的导轨型号，命中使用它的装配",
+      "hits": [
+        {
+          "id": "rm-803685-014",
+          "name": "3508双电机舵轮模块",
+          "category": "swerve",
+          "source_url": "https://bbs.robomaster.com/article/803685",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "MGN7",
+              "role": "used_component",
+              "evidence": {
+                "type": "author_pdf",
+                "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                "url": "https://bbs.robomaster.com/article/803685",
+                "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "ＭＧＮ７Ｃ",
+      "expected": [
+        "rm-803685-c049da45fd14f85b9",
+        "rm-803685-c179d6f6b324affc2",
+        "rm-803685-c71279e3f67520639"
+      ],
+      "note": "独立 CAD 命名，和 MGN7 分开",
+      "hits": [
+        {
+          "id": "rm-803685-c049da45fd14f85b9",
+          "name": "MGN7C_50mm.2025.10.1",
+          "category": "component",
+          "source_url": "https://bbs.robomaster.com/article/803685",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "MGN7C",
+              "role": "cad_name",
+              "evidence": {
+                "type": "cad_file_inventory",
+                "path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Suspension/MGN7C_50mm.2025.10.1.SLDPRT",
+                "sha256": "ff56919472f6d8ece51ce1eec91487c0b28d64e4b39b39afd8179829f399f81a",
+                "url": "https://bbs.robomaster.com/article/803685"
+              }
+            }
+          ]
+        },
+        {
+          "id": "rm-803685-c179d6f6b324affc2",
+          "name": "MGN7C-滑轨.2025.10.1",
+          "category": "component",
+          "source_url": "https://bbs.robomaster.com/article/803685",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "MGN7C",
+              "role": "cad_name",
+              "evidence": {
+                "type": "cad_file_inventory",
+                "path": "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C-滑轨.2025.10.1.SLDPRT",
+                "sha256": "10bd765339ebdf4cb4797c20f4a63f37f1aff2cd0c0b13fc10b9d53cf8a89b87",
+                "url": "https://bbs.robomaster.com/article/803685"
+              }
+            }
+          ]
+        },
+        {
+          "id": "rm-803685-c71279e3f67520639",
+          "name": "MGN7C-标准滑块.2025.10.1",
+          "category": "component",
+          "source_url": "https://bbs.robomaster.com/article/803685",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "MGN7C",
+              "role": "cad_name",
+              "evidence": {
+                "type": "cad_file_inventory",
+                "path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Suspension/MGN7C-标准滑块.2025.10.1.SLDPRT",
+                "sha256": "38e95452d5e9bcedae34ded7379709040524b3f372e090dd4585bdc2bd9d9326",
+                "url": "https://bbs.robomaster.com/article/803685"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "MGN7CA",
+      "expected": [],
+      "note": "后缀变体拒绝",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "MGN7 MGN7C",
+      "expected": [],
+      "note": "多型号必须在同一卡片都有依据",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "3509 舵轮",
+      "expected": [],
+      "note": "未知型号不给出相似型号",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "ML1.00",
+      "expected": [],
+      "note": "版本字符串保持精确",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "803685",
+      "expected": [],
+      "note": "原帖编号不会从卡片 ID 中被当作型号命中",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "rm-803685-099",
+      "expected": [],
+      "note": "未知卡片 ID 不回退为数字检索",
+      "hits": [],
+      "passed": true
+    },
+    {
+      "query": "3508 MGN7 舵轮",
+      "expected": [
+        "rm-803685-014"
+      ],
+      "note": "同一卡片同时具备两个所用部件型号",
+      "hits": [
+        {
+          "id": "rm-803685-014",
+          "name": "3508双电机舵轮模块",
+          "category": "swerve",
+          "source_url": "https://bbs.robomaster.com/article/803685",
+          "matches": [
+            {
+              "field": "identity",
+              "terms": [
+                "舵轮"
+              ]
+            },
+            {
+              "field": "keywords",
+              "terms": [
+                "舵轮"
+              ]
+            },
+            {
+              "field": "description",
+              "terms": [
+                "舵轮"
+              ]
+            }
+          ],
+          "model_matches": [
+            {
+              "code": "3508",
+              "role": "used_component",
+              "evidence": {
+                "type": "author_pdf",
+                "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                "url": "https://bbs.robomaster.com/article/803685",
+                "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+              }
+            },
+            {
+              "code": "MGN7",
+              "role": "used_component",
+              "evidence": {
+                "type": "author_pdf",
+                "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+                "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0",
+                "url": "https://bbs.robomaster.com/article/803685",
+                "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "Hexroll",
+      "expected": [
+        "rm-1936175-017"
+      ],
+      "note": "返回作者列为对照产品的方案，并标注关系",
+      "hits": [
+        {
+          "id": "rm-1936175-017",
+          "name": "P15.8轻型减速箱改三乙",
+          "category": "gearbox",
+          "source_url": "https://bbs.robomaster.com/article/1936175",
+          "matches": [],
+          "model_matches": [
+            {
+              "code": "Hexroll",
+              "role": "reference_product",
+              "evidence": {
+                "type": "forum_article_body",
+                "path": "catalog/open-cad-2025.json",
+                "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                "url": "https://bbs.robomaster.com/article/1936175",
+                "locator": "原帖「轻型减速箱／食用方式」第 1–2 项",
+                "thread_id": 1936175,
+                "hash_scope": "body_text"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "Hexroll 减速箱",
+      "expected": [
+        "rm-1936175-017"
+      ],
+      "note": "显式登记的纯字母型号或产品名可与功能词组合",
+      "hits": [
+        {
+          "id": "rm-1936175-017",
+          "name": "P15.8轻型减速箱改三乙",
+          "category": "gearbox",
+          "source_url": "https://bbs.robomaster.com/article/1936175",
+          "matches": [
+            {
+              "field": "identity",
+              "terms": [
+                "减速",
+                "速箱"
+              ]
+            },
+            {
+              "field": "keywords",
+              "terms": [
+                "减速",
+                "速箱"
+              ]
+            },
+            {
+              "field": "description",
+              "terms": [
+                "减速",
+                "速箱"
+              ]
+            }
+          ],
+          "model_matches": [
+            {
+              "code": "Hexroll",
+              "role": "reference_product",
+              "evidence": {
+                "type": "forum_article_body",
+                "path": "catalog/open-cad-2025.json",
+                "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488",
+                "url": "https://bbs.robomaster.com/article/1936175",
+                "locator": "原帖「轻型减速箱／食用方式」第 1–2 项",
+                "thread_id": 1936175,
+                "hash_scope": "body_text"
+              }
+            }
+          ]
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "frozen_auto_baseline": {
+    "3508双电机舵轮": true,
+    "MGN7 滑轨 气弹簧": true,
+    "工程机器人底盘总装": true,
+    "串联腿装配方案2": true,
+    "全向轮悬挂": true,
+    "悬挂连接法兰": true,
+    "轮毂前夹板": true,
+    "舵步底盘": true,
+    "合工大桌面轮腿": true
+  }
+}

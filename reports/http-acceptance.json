@@ -1,0 +1,69 @@
+{
+  "checked_at_utc": "2026-10-30T04:12:24.833151+00:00",
+  "base_url": "http://127.0.0.1:8765",
+  "health": {
+    "status": "ok",
+    "models": 26,
+    "retrieval": "lexical",
+    "api_version": "1"
+  },
+  "sections": {
+    "items": [
+      {
+        "id": "gimbal",
+        "label": "云台",
+        "count": 3
+      },
+      {
+        "id": "chassis",
+        "label": "底盘",
+        "count": 5
+      },
+      {
+        "id": "wheel_or_leg",
+        "label": "轮子或轮腿",
+        "count": 10
+      }
+    ]
+  },
+  "queries": [
+    {
+      "query": "云台",
+      "section": "gimbal",
+      "top_id": "rm-1883384-008",
+      "top_name": "2026哨兵鹅颈云台",
+      "passed": true
+    },
+    {
+      "query": "底盘",
+      "section": "chassis",
+      "top_id": "rm-1883259-001",
+      "top_name": "工程机器人底盘总装",
+      "passed": true
+    },
+    {
+      "query": "轮腿",
+      "section": "wheel_or_leg",
+      "top_id": "rm-776744-010",
+      "top_name": "串联腿装配方案2",
+      "passed": true
+    },
+    {
+      "query": "舵轮",
+      "section": "wheel_or_leg",
+      "top_id": "rm-803685-014",
+      "top_name": "3508双电机舵轮模块",
+      "passed": true
+    }
+  ],
+  "download_hash_verified": true,
+  "openapi_paths": [
+    "/health",
+    "/v1/sections",
+    "/v1/search",
+    "/v1/models/{model_id}",
+    "/v1/models/{model_id}/file",
+    "/v1/models/{model_id}/package"
+  ],
+  "start_stop_restart_verified": true
+}

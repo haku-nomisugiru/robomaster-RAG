@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "selections": [
+    {
+      "id": "if-swerve-outer-mirror-frame",
+      "label": "3508 舵轮外件至车架的安装面",
+      "target": {
+        "card_id": "rm-803685-ce2bee0af698aa86a",
+        "path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+        "sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c",
+        "definition_id": null,
+        "configuration": "Mirror默认"
+      },
+      "measurement_input": {
+        "kind": "solidworks_step_export",
+        "path": "reports/interface-evidence/swerve-outer-mirror.step",
+        "sha256": "2e540acc1ceef9120c3aecc4a299665a87263f77ab8c9aabcd9b0af1d8b35062",
+        "definition_id": null,
+        "native_configuration": "Mirror默认",
+        "native_revision": "33.4.0"
+      },
+      "selector": {
+        "face_index": 76,
+        "normal": [
+          -0.0,
+          -1.0,
+          -0.0
+        ],
+        "area_mm2": 13646.665177419969,
+        "centroid_mm": [
+          -19.21345743993108,
+          0.0,
+          -0.3343333159699866
+        ],
+        "opening_indices": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "contexts": [
+        {
+          "card_id": "rm-803685-014",
+          "root_card_id": "rm-803685-014",
+          "sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+          "root_sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+          "definition_id": null,
+          "kind": "solidworks_live",
+          "occurrence_id": "Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+          "role": "舵轮模组内的对外安装件",
+          "root_configuration": "默认",
+          "path_semantics": "resolved_component_path"
+        },
+        {
+          "card_id": "rm-803685-013",
+          "root_card_id": "rm-803685-013",
+          "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+          "root_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+          "definition_id": null,
+          "kind": "solidworks_live",
+          "occurrence_id": "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+          "role": "与车架对齐的舵轮外件实例",
+          "root_configuration": "默认",
+          "path_semantics": "saved_or_unresolved_path"
+        }
+      ],
+      "limitations": [
+        "圆形开口的几何来自选定面；未验证螺纹、孔深或制造公差。",
+        "只覆盖记录中的 SolidWorks 配置与装配实例。"
+      ]
+    },
+    {
+      "id": "if-swerve-frame-default-rail-a",
+      "label": "车架与舵轮对应的第一组安装面",
+      "target": {
+        "card_id": "rm-803685-c436d23f8c29cc095",
+        "path": "assets/803685/ac8d43afad2ed818/chassis/车架/Frame.2025.10.1.SLDPRT",
+        "sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f",
+        "definition_id": null,
+        "configuration": "默认"
+      },
+      "measurement_input": {
+        "kind": "solidworks_step_export",
+        "path": "reports/interface-evidence/swerve-chassis-frame.step",
+        "sha256": "b008c32945e6a6ba528eaab0d77739aab466ce0683b30f0b6c257fcef80daa7a",
+        "definition_id": null,
+        "native_configuration": "默认",
+        "native_revision": "33.4.0"
+      },
+      "selector": {
+        "face_index": 3341,
+        "normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "area_mm2": 2709.4278837970105,
+        "centroid_mm": [
+          -190.0,
+          41.0,
+          -94.99999999999999
+        ],
+        "opening_indices": [
+          1,
+          2,
+          3
+        ]
+      },
+      "contexts": [
+        {
+          "card_id": "rm-803685-013",
+          "root_card_id": "rm-803685-013",
+          "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+          "root_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+          "definition_id": null,
+          "kind": "solidworks_live",
+          "occurrence_id": "Frame.2025.10.1-1",
+          "role": "舵轮对应的车架安装面",
+          "root_configuration": "默认",
+          "path_semantics": "saved_or_unresolved_path"
+        }
+      ],
+      "limitations": [
+        "圆形开口的几何来自选定面；未验证螺纹、孔深或制造公差。",
+        "只覆盖记录中的 SolidWorks 配置与装配实例。"
+      ]
+    },
+    {
+      "id": "if-swerve-frame-default-rail-b",
+      "label": "车架与舵轮对应的第二组安装面",
+      "target": {
+        "card_id": "rm-803685-c436d23f8c29cc095",
+        "path": "assets/803685/ac8d43afad2ed818/chassis/车架/Frame.2025.10.1.SLDPRT",
+        "sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f",
+        "definition_id": null,
+        "configuration": "默认"
+      },
+      "measurement_input": {
+        "kind": "solidworks_step_export",
+        "path": "reports/interface-evidence/swerve-chassis-frame.step",
+        "sha256": "b008c32945e6a6ba528eaab0d77739aab466ce0683b30f0b6c257fcef80daa7a",
+        "definition_id": null,
+        "native_configuration": "默认",
+        "native_revision": "33.4.0"
+      },
+      "selector": {
+        "face_index": 95,
+        "normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "area_mm2": 20721.912429976714,
+        "centroid_mm": [
+          -95.0,
+          41.0,
+          -2.9288314998854045e-14
+        ],
+        "opening_indices": [
+          16,
+          17,
+          18
+        ]
+      },
+      "contexts": [
+        {
+          "card_id": "rm-803685-013",
+          "root_card_id": "rm-803685-013",
+          "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+          "root_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+          "definition_id": null,
+          "kind": "solidworks_live",
+          "occurrence_id": "Frame.2025.10.1-1",
+          "role": "舵轮对应的车架安装面",
+          "root_configuration": "默认",
+          "path_semantics": "saved_or_unresolved_path"
+        }
+      ],
+      "limitations": [
+        "圆形开口的几何来自选定面；未验证螺纹、孔深或制造公差。",
+        "只覆盖记录中的 SolidWorks 配置与装配实例。"
+      ]
+    },
+    {
+      "id": "if-tcp-suspension-flange-positive-x",
+      "label": "步兵悬挂连接板 +X 侧接口",
+      "target": {
+        "card_id": "rm-1935523-cc08defa62bc17d10",
+        "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+        "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+        "definition_id": "0:1:1:8",
+        "configuration": null
+      },
+      "measurement_input": {
+        "kind": "original_step",
+        "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+        "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+        "definition_id": "0:1:1:8"
+      },
+      "selector": {
+        "face_index": 3,
+        "normal": [
+          1.0,
+          -5.55103545778805e-17,
+          1.77532410828808e-17
+        ],
+        "area_mm2": 2854.371311037214,
+        "centroid_mm": [
+          16.6177293685296,
+          -52.17457832162839,
+          -17.25565922929293
+        ],
+        "opening_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "contexts": [
+        {
+          "card_id": "rm-1935523-022",
+          "root_card_id": "rm-1935523-001",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "root_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:7",
+          "kind": "step_xcaf",
+          "occurrence_id": "0:1:1:1/0:1:1:1:3/0:1:1:7:1",
+          "role": "悬挂连接子装配内的连接板"
+        }
+      ],
+      "limitations": [
+        "圆形开口的几何来自选定面；未验证螺纹、孔深或制造公差。",
+        "仅量测定义局部坐标 +X 侧；零件在悬挂连接子装配中重复使用两次，未测对接件。"
+      ]
+    }
+  ]
+}

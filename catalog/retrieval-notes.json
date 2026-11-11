@@ -1,0 +1,996 @@
+{
+  "documents": {
+    "hfut-desktop-leg": {
+      "source_id": "bbs-815703",
+      "type": "forum_article_body",
+      "path": "catalog/open-cad-2025.json",
+      "thread_id": 815703,
+      "sha256": "3c06812817239e4a2d608ac2055769c9772dfb428f0872acb5ccc787d71a4a1c"
+    },
+    "ace-tunnel-engineer": {
+      "source_id": "bbs-761042",
+      "type": "forum_article_body",
+      "path": "catalog/open-cad-2025.json",
+      "thread_id": 761042,
+      "sha256": "58652eaefc147ad7489358eaf0b69f465cd6b869c5f07904f2c4b578ebed7a39"
+    },
+    "hkust-upper-suspension": {
+      "source_id": "bbs-761377",
+      "type": "forum_article_body",
+      "path": "catalog/open-cad-2025.json",
+      "thread_id": 761377,
+      "sha256": "9f037001d456c561cf6253a46ab837d35fe6234d9a496bd7d1ff7bccb219c4a8"
+    },
+    "ramp-simulation": {
+      "source_id": "bbs-714486",
+      "type": "forum_article_body",
+      "path": "catalog/open-cad-2025.json",
+      "thread_id": 714486,
+      "sha256": "4b8c0e5eb601a36cd5a788d93b25d0fb38158d964d12bcced883dce0b4d4785f"
+    },
+    "cod-engineering": {
+      "source_id": "bbs-1883259",
+      "type": "author_pdf",
+      "path": "raw/downloads/1883259/RoboMaster2025工程机器人结构部分说明文档.pdf",
+      "sha256": "15779be3d0d679a96ec1c3a898f4aeae0e2672bf9efd5e2866893f92677fd323"
+    },
+    "enterprize-engineering": {
+      "source_id": "bbs-803685",
+      "type": "author_pdf",
+      "path": "raw/downloads/803685/RM2025-香港科技大学-ENTERPRIZE战队-工程结构说明文档.pdf",
+      "sha256": "33ab9764fd81e9a8cd19300fe3d3b30b3c7ef6410d583e64d40d20af3acf0ee0"
+    },
+    "rps-infantry": {
+      "source_id": "bbs-776744",
+      "type": "author_pdf",
+      "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/说明文档/RM2025中国石油大学（华东）RPS战队开源说明文档.pdf",
+      "sha256": "45720f6b1fba992435ddd99adab219e245a8efd0ad3146d39be7e7fe0d06451e"
+    },
+    "tcp-suspension": {
+      "source_id": "bbs-1935523",
+      "type": "forum_article_body",
+      "path": "raw/pages/1935523/article.txt",
+      "sha256": "72a6688280fc3b9c7a237aae6e5a9e2b7aa79214291d78ce0755bfed8792c7f7"
+    },
+    "future-gearbox": {
+      "source_id": "bbs-1936175",
+      "type": "forum_article_body",
+      "path": "catalog/open-cad-2025.json",
+      "thread_id": 1936175,
+      "sha256": "1a239702c19476920f08d0dfeca54927cb47292dfa4622522a3729c081707488"
+    }
+  },
+  "model_identifiers": {
+    "rm-803685-014": [
+      {"code": "3508", "role": "used_component", "ref": "enterprize-engineering", "locator": "PDF 第 8 页 §2.1.1 舵轮组"},
+      {"code": "MGN7", "role": "used_component", "ref": "enterprize-engineering", "locator": "PDF 第 8 页 §2.1.1 舵轮组"}
+    ],
+    "rm-803685-c049da45fd14f85b9": [
+      {"code": "MGN7C", "role": "cad_name"}
+    ],
+    "rm-803685-c179d6f6b324affc2": [
+      {"code": "MGN7C", "role": "cad_name"}
+    ],
+    "rm-803685-c71279e3f67520639": [
+      {"code": "MGN7C", "role": "cad_name"}
+    ],
+    "rm-815703-cb91f7be3de320dfd": [
+      {"code": "ML1.0", "role": "module_model", "ref": "hfut-desktop-leg", "locator": "原帖「五.模型图纸文件」ML1.0.zip"}
+    ],
+    "rm-761377-cd920824e331ee228": [
+      {"code": "3508", "role": "used_component", "ref": "hkust-upper-suspension", "locator": "原帖整车参数表「底盘驱动方式」"}
+    ],
+    "rm-761377-c5e1dc640f6fcbc5f": [
+      {"code": "3508", "role": "cad_name"}
+    ],
+    "rm-1936175-017": [
+      {"code": "P15.8", "role": "model_family", "ref": "future-gearbox", "locator": "原帖附件「二六式轻型P15.8减速箱改三乙.step」"},
+      {"code": "3508", "role": "used_component", "ref": "future-gearbox", "locator": "原帖「轻型减速箱／食用方式」第 6 项"},
+      {"code": "Hexroll", "role": "reference_product", "ref": "future-gearbox", "locator": "原帖「轻型减速箱／食用方式」第 1–2 项"}
+    ],
+    "rm-1936175-018": [
+      {"code": "P15.8", "role": "model_family", "ref": "future-gearbox", "locator": "原帖附件「二六式重型P15.8减速箱改五丙.step」"},
+      {"code": "3508", "role": "used_component", "ref": "future-gearbox", "locator": "原帖「重型减速箱／食用方式」第 6 项"}
+    ]
+  },
+  "modules": {
+    "rm-815703-cb91f7be3de320dfd": {
+      "summary": "合肥工业大学苍穹战队的 ML1.0 桌面串联式轮腿调试平台。原生 CAD 总装可用于定位桌面验证平台的机械组件。",
+      "aliases": [
+        "合工大桌面轮腿",
+        "桌面串联腿",
+        "ML1.0 桌面轮腿调试平台"
+      ],
+      "keywords": [
+        "电控调试",
+        "串联轮腿",
+        "轮腿验证平台"
+      ],
+      "facts": [
+        {
+          "kind": "role",
+          "text": "作者将该平台定位为桌面级电控调试和研发验证，采用交龙开源轮腿构型并调整了部分参数。",
+          "ref": "hfut-desktop-leg",
+          "locator": "原帖「开源背景」「开源内容」"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者披露部分连杆轴系轴向承载有限，适用范围是桌面练习。",
+          "ref": "hfut-desktop-leg",
+          "locator": "原帖「注意事项」"
+        }
+      ],
+      "reuse_checks": [
+        "核对实际配置和零件依赖，检查连杆轴系承载与对锁件防松。"
+      ]
+    },
+    "rm-761042-c29fea7891c6a18a8": {
+      "summary": "东莞理工学院 ACE 隧道工程的底盘骨架总装。可定位车架、横纵梁及模块化连接的原生装配入口。",
+      "aliases": [
+        "ACE隧道工程底盘骨架",
+        "隧道工程车架"
+      ],
+      "keywords": [
+        "舵轮底盘",
+        "底盘横梁",
+        "纵梁内嵌模块"
+      ],
+      "facts": [
+        {
+          "kind": "context",
+          "text": "作者将舵轮底盘和紧凑轻量的机体用于缩短隧道工程的往返时间。",
+          "ref": "ace-tunnel-engineer",
+          "locator": "原帖「复合构型方案」"
+        }
+      ],
+      "reuse_checks": [
+        "在本版本里核对横纵梁和嵌入件引用、车架外廓、舵轮安装基准。"
+      ]
+    },
+    "rm-761042-c2ed254897d8b3e8e": {
+      "summary": "ACE 隧道工程线性运动取矿机构 A 型。原帖描述整车由线性取矿和多轴机械臂分工，A 型在包内有独立入口。",
+      "aliases": [
+        "ACE线性取矿A型",
+        "线性取矿机构A型"
+      ],
+      "keywords": [
+        "复合构型",
+        "线性运动取矿",
+        "隧道工程"
+      ],
+      "facts": [
+        {
+          "kind": "role",
+          "text": "原帖说明线性运动机构负责取矿，多轴臂负责另一环节，以便分工。",
+          "ref": "ace-tunnel-engineer",
+          "locator": "原帖「复合构型方案」"
+        }
+      ],
+      "reuse_checks": [
+        "打开 A 型原生装配核对部件引用、实际有效行程和末端安装面。"
+      ]
+    },
+    "rm-761042-ce916434f1d6c55d4": {
+      "summary": "ACE 隧道工程线性运动取矿机构 B 型。和 A 型分卡，按包内文件确定版本。",
+      "aliases": [
+        "ACE线性取矿B型",
+        "线性取矿机构B型"
+      ],
+      "keywords": [
+        "复合构型",
+        "线性运动取矿",
+        "隧道工程"
+      ],
+      "facts": [
+        {
+          "kind": "context",
+          "text": "作者说明线性取矿机构面向资源岛的结构场景，承担复合构型的取矿任务。",
+          "ref": "ace-tunnel-engineer",
+          "locator": "原帖「复合构型方案」"
+        }
+      ],
+      "reuse_checks": [
+        "独立核对 B 型零件引用、有效行程和末端接口，并和 A 型对照。"
+      ]
+    },
+    "rm-761377-cd920824e331ee228": {
+      "summary": "香港科技大学 ENTERPRIZE 的 2025 舵轮总装入口。原帖参数表标明使用 3508 舵轮组和舵上悬挂。",
+      "aliases": [
+        "HKUST 2025 舵轮",
+        "3508舵上悬挂",
+        "舵上避震舵轮"
+      ],
+      "keywords": [
+        "舵上悬挂",
+        "3508",
+        "轮组总装"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者在参数表中将底盘驱动方式列为 3508 舵轮组，悬挂方式列为舵上悬挂。",
+          "ref": "hkust-upper-suspension",
+          "locator": "原帖整车参数表「底盘驱动方式」「悬挂方式」"
+        }
+      ],
+      "reuse_checks": [
+        "核对避震器与车架之间的实际安装位置、连接孔和轮组运动包络。"
+      ]
+    },
+    "rm-714486-c5f75d05b327a07a5": {
+      "summary": "飞坡研究附件中的原生仿真装配，可定位坡道和底盘验证用模型。",
+      "aliases": [
+        "飞坡仿真",
+        "坡道测试装配"
+      ],
+      "keywords": [
+        "飞坡姿态",
+        "重心影响",
+        "轮距对照"
+      ],
+      "facts": [
+        {
+          "kind": "context",
+          "text": "原帖把重心位置和轮距作为飞坡姿态的比较变量。这是研究样本，原帖结论的适用范围取决于仿真条件。",
+          "ref": "ramp-simulation",
+          "locator": "原帖「重心对于飞坡的影响」「轮距对于飞坡的影响」"
+        }
+      ],
+      "reuse_checks": [
+        "复查仿真配置、坐标方向、重心假设和运动模型设置。"
+      ]
+    },
+    "rm-1883259-001": {
+      "summary": "辽宁科大 COD 工程底盘。作者说明采用 590 × 590 mm 井字梁车架，配纵臂独立悬挂麦轮组，面向六轴机械臂及双侧存取机构的布置。",
+      "reuse_checks": ["核对车架实际外廓、机械臂底座孔组和四个轮组的安装基准。"],
+      "aliases": [
+        "COD工程底盘",
+        "麦轮工程底盘",
+        "井字梁底盘"
+      ],
+      "keywords": [
+        "三段式电控布置",
+        "快拆电池保护架",
+        "方形车架"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "井字梁中心以铝管布置机械臂安装区域，作者标称车架 590 × 590 mm。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 10 页 §3.1 底盘骨架"
+        },
+        {
+          "kind": "structure",
+          "text": "电控和电池分前中后三段布置，轮组为麦轮配纵臂独立悬挂。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 10–11 页 §3.2–3.3"
+        },
+        {
+          "kind": "fit_note",
+          "text": "作者所述车架尺寸可用于方案筛选，机械臂孔组、实际轮距及离地间隙待核验。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 10 页 §3.1 底盘骨架"
+        }
+      ]
+    },
+    "rm-1883259-002": {
+      "summary": "COD 工程麦轮的纵臂式独立悬挂。每个轮组用两只避震器；适合查找摆臂减振和轮轴卸载的参考结构。",
+      "reuse_checks": ["核对车架固定面、摆臂转轴、避震器眼距及满行程时的轮组间隙。"],
+      "aliases": [
+        "麦轮悬挂",
+        "纵臂悬挂",
+        "双避震器悬挂"
+      ],
+      "keywords": [
+        "独立悬挂",
+        "麦克纳姆轮",
+        "夹紧联轴器",
+        "推力球轴承",
+        "轮轴减弯矩"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者描述轮组由板材夹打印件构成，麦轮通过夹紧联轴器与电机连接，轮轴同时使用推力球轴承。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 11 页 §3.3 轮组设计"
+        },
+        {
+          "kind": "structure",
+          "text": "轮组采用纵臂布局，每组两只避震器。与全向轮悬挂、舵下滑轨悬挂分别索引。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 11 页 §3.3 轮组设计"
+        }
+      ]
+    },
+    "rm-1883259-003": {
+      "summary": "COD 工程取矿主机械臂的大臂装配，可参考该项目的偏置电机、链条传动和臂内走线布置。",
+      "reuse_checks": ["核对大臂与两端关节的配合、传动版本和线缆运动余量。"],
+      "aliases": [
+        "COD大臂",
+        "取矿机械臂",
+        "六轴机械臂大臂"
+      ],
+      "keywords": [
+        "偏置电机",
+        "臂内走线",
+        "链传动",
+        "大臂总装"
+      ],
+      "facts": [
+        {
+          "kind": "role",
+          "text": "六轴主臂承担主要取矿操作，两侧龙门架另负责辅助存取。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 4–5 页 §1.1、§2.1"
+        },
+        {
+          "kind": "context",
+          "text": "项目说明用 Joint3 举例说明偏置电机和外置减速的取舍；大臂入口的具体关节配置仍需打开原装配核对。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 6–7 页 §2.1.2"
+        }
+      ]
+    },
+    "rm-1883259-004": {
+      "summary": "CAD 包内标记为 15° 的侧取抬升模块。项目方案为双侧独立龙门架，辅助取矿和存矿。",
+      "reuse_checks": ["核对侧取角度基准、升降和前伸行程、吸盘安装与障碍物间隙。"],
+      "aliases": [
+        "15度侧取",
+        "侧取龙门架",
+        "侧取抬升"
+      ],
+      "keywords": [
+        "独立前伸",
+        "独立抬升",
+        "齿轮齿条",
+        "真空吸盘"
+      ],
+      "facts": [
+        {
+          "kind": "version",
+          "text": "15° 出自原生文件名，模型中的角度基准与行程待核对。",
+          "ref": "cad",
+          "locator": "入口文件 15°侧取抬升模块.SLDASM"
+        },
+        {
+          "kind": "context",
+          "text": "项目说明描述两侧龙门架可独立前伸和抬升，采用齿轮齿条和橡胶吸盘。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 8–9 页 §2.2 龙门架设计"
+        }
+      ]
+    },
+    "rm-1883259-005": {
+      "summary": "COD 工程的直取抬升模块。用于检索直取方案及可独立前伸、抬升的龙门架思路。",
+      "reuse_checks": ["核对直取方向、安装基准和前伸行程，再和侧取模块比较。"],
+      "aliases": [
+        "直取龙门架",
+        "直取抬升",
+        "正面取矿抬升"
+      ],
+      "keywords": [
+        "前伸机构",
+        "龙门架",
+        "齿轮齿条",
+        "真空吸盘"
+      ],
+      "facts": [
+        {
+          "kind": "version",
+          "text": "CAD 包将直取与 15° 侧取作为不同装配入口；两者安装接口待分别核对。",
+          "ref": "cad",
+          "locator": "入口文件 直取抬升模块.SLDASM"
+        },
+        {
+          "kind": "context",
+          "text": "项目说明描述两侧机构的前伸与升降都采用齿轮齿条，末端用吸盘存取。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 8–9 页 §2.2 龙门架设计"
+        }
+      ]
+    },
+    "rm-1883384-006": {
+      "summary": "辽宁科大 COD 26 赛季联盟赛哨兵底盘，入口位于标注「溪地避震轮组」的版本目录。",
+      "reuse_checks": ["确认 26 赛季实际引用的轮组文件，再核对避震器规格和车架接口。"],
+      "aliases": [
+        "COD哨兵底盘",
+        "26联盟赛哨兵底盘",
+        "2026 COD"
+      ],
+      "keywords": [
+        "溪地避震轮组",
+        "26赛季",
+        "哨兵车架"
+      ],
+      "facts": [
+        {
+          "kind": "version",
+          "text": "包目录将本底盘归在 26 赛季哨兵的溪地避震轮组版本。",
+          "ref": "cad",
+          "locator": "入口文件上级目录"
+        },
+        {
+          "kind": "fit_note",
+          "text": "版本来自目录命名，轮组安装位置及配置需在源装配中核对。",
+          "ref": "cad",
+          "locator": "26联盟赛哨兵底盘.SLDASM"
+        }
+      ]
+    },
+    "rm-1883384-007": {
+      "summary": "辽宁科大 COD 25 赛季舵步底盘，入口位于标注「气弹簧轮组」的舵步目录。",
+      "reuse_checks": ["先消除跨赛季同名舵轮歧义，再量测轮组固定孔和舵步车架接口。"],
+      "aliases": [
+        "COD舵步",
+        "25舵步底盘",
+        "25赛季舵步"
+      ],
+      "keywords": [
+        "气弹簧轮组",
+        "舵步机器人",
+        "舵轮一代"
+      ],
+      "facts": [
+        {
+          "kind": "version",
+          "text": "原帖是 26 赛季开源汇总，这张卡的 CAD 入口实际归在 25 赛季舵步目录。",
+          "ref": "cad",
+          "locator": "25赛季舵步开源图纸（气弹簧轮组）/25舵步"
+        },
+        {
+          "kind": "fit_note",
+          "text": "跨版本有同名轮组，复用时需核对原生引用与包内相对路径。",
+          "ref": "cad",
+          "locator": "舵步底盘.SLDASM 与所属版本目录"
+        }
+      ]
+    },
+    "rm-1883384-008": {
+      "summary": "辽宁科大 COD 26 赛季联盟赛鹅颈云台入口，可按鹅颈构型、队伍和赛季定位原生装配。",
+      "reuse_checks": ["核对配置、底座孔组与期望的水平回转和俯仰空间。"],
+      "aliases": [
+        "COD鹅颈云台",
+        "26联盟赛鹅颈云台",
+        "哨兵鹅颈云台"
+      ],
+      "keywords": [
+        "鹅颈支架",
+        "26赛季",
+        "云台总成"
+      ],
+      "facts": [
+        {
+          "kind": "version",
+          "text": "入口文件名标识 26 联盟赛哨兵鹅颈云台，位于同赛季哨兵版本目录。",
+          "ref": "cad",
+          "locator": "26联盟赛哨兵鹅颈云台.SLDASM"
+        },
+        {
+          "kind": "fit_note",
+          "text": "云台轴系配置和底部安装接口待打开原生装配核对。",
+          "ref": "cad",
+          "locator": "26联盟赛哨兵鹅颈云台.SLDASM"
+        }
+      ]
+    },
+    "rm-776744-009": {
+      "summary": "中国石油大学（华东）RPS 串联腿步兵底盘。作者描述铝方管与碳板车架、通用内嵌铝件，以及可分离的腿部安装模块。",
+      "reuse_checks": ["核对腿部安装基准、快拆件版本和底盘包内的实际依赖。"],
+      "aliases": [
+        "RPS串联腿底盘",
+        "串联腿步兵",
+        "轮腿车架"
+      ],
+      "keywords": [
+        "铝方管碳板",
+        "内嵌铝件",
+        "腿部快拆",
+        "串联腿底盘"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "车架以铝方管和碳板搭建，通过通用内嵌铝件加强连接并提供螺纹安装。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 25 页 §3.1.1 车架设计"
+        },
+        {
+          "kind": "structure",
+          "text": "腿部与关节电机组成模块，经铝方管与车架连接，作者以便于整腿拆装为设计目标。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 43–44 页 §3.4.1"
+        }
+      ]
+    },
+    "rm-776744-010": {
+      "summary": "RPS 原生文件标记为「串联腿装配方案 2」。可查找同轴嵌套、大小腿双关节与串联腿轴系的结构参考。",
+      "reuse_checks": ["核对方案 2 与技术说明的版本对应，确认包外引用、轴线和腿部运动空间。"],
+      "aliases": [
+        "RPS串联腿",
+        "串联腿方案2",
+        "串联腿模块"
+      ],
+      "keywords": [
+        "嵌套差动轴系",
+        "同轴嵌套",
+        "链传动",
+        "大小腿回转"
+      ],
+      "facts": [
+        {
+          "kind": "context",
+          "text": "作者技术说明以嵌套轴系解释大腿和小腿驱动部分绕同一轴线回转的整车腿部方案。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 25–26 页 §3.1.2 串联腿部结构设计"
+        },
+        {
+          "kind": "fit_note",
+          "text": "本条原生文件名为方案 2，文档中的整车参数需核对版本后才能用于此装配。",
+          "ref": "cad",
+          "locator": "串联腿装配方案2.SLDASM"
+        }
+      ]
+    },
+    "rm-776744-011": {
+      "summary": "RPS 步兵云台的 Yaw 单轴原生子装配，供按水平回转轴定位。",
+      "reuse_checks": ["量测水平回转轴线、底面孔组，并检查原生配置。"],
+      "aliases": [
+        "RPS云台Yaw",
+        "偏航轴",
+        "水平回转轴"
+      ],
+      "keywords": [
+        "Yaw轴",
+        "步兵云台轴系"
+      ],
+      "facts": [
+        {
+          "kind": "role",
+          "text": "入口按文件名归类为云台 Yaw 轴，轴承型号、转角和配合状态待在该配置中核对。",
+          "ref": "cad",
+          "locator": "yaw轴装配.SLDASM"
+        }
+      ]
+    },
+    "rm-776744-012": {
+      "summary": "RPS 步兵云台的 Pitch 单轴原生子装配，供按俯仰轴定位。",
+      "reuse_checks": ["量测俯仰轴两侧支承与固定孔组，检查可用行程。"],
+      "aliases": [
+        "RPS云台Pitch",
+        "俯仰轴",
+        "Pitch轴"
+      ],
+      "keywords": [
+        "Pitch装配",
+        "步兵云台轴系"
+      ],
+      "facts": [
+        {
+          "kind": "role",
+          "text": "入口按文件名归类为云台 Pitch 轴，运动范围与安装孔组待在该配置中核对。",
+          "ref": "cad",
+          "locator": "pitch装配.SLDASM"
+        }
+      ]
+    },
+    "rm-803685-013": {
+      "summary": "香港科大 ENTERPRIZE 工程底盘 V2。文档介绍井字形车架及舵轮方案，适合对照工程车架和轮组的布置。",
+      "reuse_checks": ["打开 V2 底盘确认轮组实例、车架接口和同源舵轮的安装包络。"],
+      "aliases": [
+        "港科大工程底盘",
+        "ENTERPRIZE底盘",
+        "chassis v2"
+      ],
+      "keywords": [
+        "井字形车架",
+        "舵轮底盘",
+        "车架布置"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "车架采用井字形框架，作者以方便安装舵轮作为采用该构型的原因。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 7 页 §2.1 底盘"
+        },
+        {
+          "kind": "version",
+          "text": "入口名含 chassis_v2 与 2025.10.1。具体轮组实例需要在原生装配中确认。",
+          "ref": "cad",
+          "locator": "chassis_v2.2025.10.1.SLDASM"
+        }
+      ]
+    },
+    "rm-803685-014": {
+      "summary": "香港科大 ENTERPRIZE 的 3508 双电机舵轮。说明文档给出自研减速箱、光电门转向结构、MGN7 滑轨和气弹簧组成的舵下垂直悬挂。",
+      "reuse_checks": ["量测车架固定孔组、舵轴和轮轴位置，检查气弹簧行程及滑轨侧向约束。"],
+      "aliases": [
+        "3508舵轮",
+        "双电机舵轮",
+        "舵下滑轨悬挂",
+        "行走与转向各用一个驱动",
+        "舵轮模组",
+        "Swerve drive"
+      ],
+      "keywords": [
+        "MGN7",
+        "垂直滑轨悬挂",
+        "直线导轨",
+        "竖直导向",
+        "气弹簧",
+        "光电门",
+        "5寸实心轮胎",
+        "轮毂夹紧",
+        "舵下垂直悬挂"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者将 3508 自制减速箱用于轮驱，3508 光电门方案用于舵上结构。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+        },
+        {
+          "kind": "structure",
+          "text": "舵下悬挂使用 MGN7 滑轨和气弹簧。文档描述以两片轮毂夹住 5 英寸实心轮胎，便于拆换。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 8 页 §2.1.1 舵轮组"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者报告初版滑轨缺少侧面夹持时固定螺钉出现断裂；当前文档版本单组约 2 kg、含走线约 300 mm，实测接口仍待确认。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 8–9 页 §2.1.1 舵轮组"
+        }
+      ]
+    },
+    "rm-803685-015": {
+      "summary": "香港科大 ENTERPRIZE 机械臂 L4 装配。可参考说明文档中 J4 的电气与气路分开回转，以及偏置的万向轴传动。",
+      "reuse_checks": ["核对 L4 入口实际包含的 J4 零件、万向轴布置和气电通路。"],
+      "aliases": [
+        "ENTERPRIZE L4",
+        "L4关节",
+        "J4旋转关节"
+      ],
+      "keywords": [
+        "中空电滑环",
+        "旋转气动接头",
+        "万向轴",
+        "气电分离"
+      ],
+      "facts": [
+        {
+          "kind": "context",
+          "text": "文档描述 L4 空间内的 J4 驱动布置，使用电滑环与旋转气动接头分开过线和过气。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 13 页 §2.4 L3"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者指出偏角的万向节输入输出并非等速。卡片保留该限制供关节选型参考。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 14 页 §2.4 L3"
+        }
+      ]
+    },
+    "rm-803685-016": {
+      "summary": "香港科大 ENTERPRIZE 机械臂 L6 V2 原生入口。对应查找末端滚转关节、腕部紧凑布局及驱动解耦。",
+      "reuse_checks": ["核对 L6 入口的末端连接、驱动件与滚转轴配置。"],
+      "aliases": [
+        "ENTERPRIZE L6",
+        "L6关节",
+        "J6 roll",
+        "末端滚转轴"
+      ],
+      "keywords": [
+        "机械臂手腕",
+        "紧凑腕部",
+        "共用电机",
+        "RPR腕部"
+      ],
+      "facts": [
+        {
+          "kind": "context",
+          "text": "作者在腕部章节说明驱动轮与 J5 俯仰解耦，驱动轮与 J6 滚转共用一个电机。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 14 页 §2.5 Wrist"
+        },
+        {
+          "kind": "fit_note",
+          "text": "本文档描述的是整组腕部。本条 L6 装配中实际包含的组件需核对。",
+          "ref": "cad",
+          "locator": "L6_v2.2025.10.1.SLDASM"
+        }
+      ]
+    },
+    "rm-1936175-017": {
+      "summary": "青岛大学未来战队 P15.8 轻型 3508 减速箱改三乙。适合检索轻型替换、孔位与外廓差异以及较大背隙。",
+      "reuse_checks": ["对照目标 Hexroll 的孔位、安装高度和厚度，分别检查齿轮与电机版本。"],
+      "aliases": [
+        "3508轻型减速箱",
+        "P15.8改三乙",
+        "Hexroll平替"
+      ],
+      "keywords": [
+        "轻型减速箱",
+        "同孔位不同高度",
+        "背隙较大",
+        "安装厚度"
+      ],
+      "facts": [
+        {
+          "kind": "fit_note",
+          "text": "作者将轻型定位为 Hexroll 替代方案，称安装孔位一致，但高度、厚度有差异，内部齿轮也不通用。",
+          "ref": "future-gearbox",
+          "locator": "原帖「轻型减速箱／食用方式」"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者报告轻型版背隙较大。孔位声明、成本与负载表现为作者经验，配合需重新量测。",
+          "ref": "future-gearbox",
+          "locator": "原帖「轻型减速箱／性能」"
+        }
+      ]
+    },
+    "rm-1936175-018": {
+      "summary": "青岛大学未来战队 P15.8 重型 3508 减速箱改五丙。适合检索轮腿用双轴承支撑、齿轮磨损和背隙取舍。",
+      "reuse_checks": ["核对角接触及碗组轴承选型、安装孔与配合间隙，单独评估齿轮磨损。"],
+      "aliases": [
+        "3508重型减速箱",
+        "P15.8改五丙",
+        "轮腿减速箱"
+      ],
+      "keywords": [
+        "角接触轴承",
+        "碗组轴承",
+        "双轴承支撑",
+        "粉末冶金齿轮"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者描述重型系列采用角接触与碗组轴承组合，齿轮组沿用同帖轻型方案。",
+          "ref": "future-gearbox",
+          "locator": "原帖「较25赛季款式主要改进方向」「重型减速箱」"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者披露粉末冶金齿轮耐磨性一般，背隙受加工公差影响；该版本安装兼容性需要独立量测。",
+          "ref": "future-gearbox",
+          "locator": "原帖「重型减速箱／性能与食用方式」"
+        }
+      ]
+    },
+    "rm-816172-019": {
+      "summary": "华南理工华南虎工程机器人资料包内的银矿抓取装配，适合查找银矿末端取放的 CAD 参考。",
+      "reuse_checks": ["确认夹持方式、开口范围、驱动与机械臂末端连接。"],
+      "aliases": [
+        "银矿抓取",
+        "工程取矿夹具",
+        "银矿末端机构"
+      ],
+      "keywords": [
+        "银矿",
+        "夹取",
+        "取放机构"
+      ],
+      "facts": [
+        {
+          "kind": "role",
+          "text": "下载包中存在名为银矿抓取的独立原生装配入口。驱动方式、夹持范围和载荷仍待核对。",
+          "ref": "cad",
+          "locator": "银矿抓取.SLDASM"
+        }
+      ]
+    },
+    "rm-1935523-001": {
+      "summary": "东北农业大学 TCP 紧凑全向轮悬挂。作者将避震器连到下臂，用上下臂轮廓限位，并用短减速箱留出空间。",
+      "reuse_checks": ["核对整套悬挂到车架的孔组、全行程避障和减速箱包络。"],
+      "aliases": [
+        "TCP全向轮悬挂",
+        "紧凑全向轮悬挂",
+        "双避震全向轮",
+        "全向轮避震"
+      ],
+      "keywords": [
+        "上下臂限位",
+        "双溪地90避震",
+        "短减速箱",
+        "窄轮距"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "为缩短机构，作者把两只溪地 90 避震器接到下臂，利用上下臂外形限位；使用短减速箱为避震器让位。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」"
+        },
+        {
+          "kind": "context",
+          "text": "作者提到使用该方案的步兵轮距为 380 mm。该值属于整车应用，不是这个 STEP 子装配的实测尺寸。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「一、前言」"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "低成本辊子的结论不适用于整套悬挂；作者明确指出减速箱和机加工件拉高了总成本。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「一、前言」"
+        }
+      ]
+    },
+    "rm-1935523-021": {
+      "summary": "全向轮悬挂 STEP 中的 90 避震器子装配。可在整份 STEP 内单独定位，用于核对缓冲件布置。",
+      "reuse_checks": ["核对避震器眼距、安装宽度及压缩与伸展行程。"],
+      "aliases": [
+        "90避震器",
+        "溪地避震器",
+        "避震筒"
+      ],
+      "keywords": [
+        "避震器推杆",
+        "避震子装配",
+        "缓冲件"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "XCAF 中可定位避震器子装配及其下属定义。",
+          "ref": "step",
+          "locator": "STEP 定义 0:1:1:2"
+        },
+        {
+          "kind": "context",
+          "text": "作者描述整套悬挂使用两只溪地 90 避震器连接下臂；单个避震器行程和刚度待核对。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」"
+        }
+      ]
+    },
+    "rm-1935523-022": {
+      "summary": "全向轮悬挂中的连接子装配。用于找轮组与悬挂间的法兰转接思路。",
+      "reuse_checks": ["量测法兰两侧安装面、定位特征和完整孔组。"],
+      "aliases": [
+        "悬挂连接法兰",
+        "轮组转接法兰",
+        "轮组悬挂连接件"
+      ],
+      "keywords": [
+        "机加工法兰",
+        "轮组转接",
+        "悬挂安装接口"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者称轮组和悬挂之间以机加工法兰连接，并把打印件列为待探索方向。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」"
+        },
+        {
+          "kind": "fit_note",
+          "text": "STEP 可定位连接子装配；孔组尺寸与替换后的承载能力待核验。",
+          "ref": "step",
+          "locator": "STEP 定义 0:1:1:7"
+        }
+      ]
+    },
+    "rm-1935523-023": {
+      "summary": "全向轮悬挂的上臂子装配。可与下臂定位对照，研究紧凑包络下的机械限位。",
+      "reuse_checks": ["与下臂一起复核限位接触位置、枢轴与最大运动范围。"],
+      "aliases": [
+        "悬挂上摆臂",
+        "全向轮上臂",
+        "上臂限位"
+      ],
+      "keywords": [
+        "上下臂限位",
+        "摆臂轮廓",
+        "悬挂上臂"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "上臂子装配在 STEP 中有单独定义，作者用上下臂外形配合实现限位。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」"
+        },
+        {
+          "kind": "fit_note",
+          "text": "该定义提供静态定位；限位角与行程待复核。",
+          "ref": "step",
+          "locator": "STEP 定义 0:1:1:14"
+        }
+      ]
+    },
+    "rm-1935523-024": {
+      "summary": "TCP 全向轮轮组子装配。重点索引低成本聚氨酯辊子、铜套和圆柱销，以及圆柱辊子引起的抖动取舍。",
+      "reuse_checks": ["核对轴与轮毂接口、辊子尺寸、运动间隙及路面表现。"],
+      "aliases": [
+        "低成本全向轮",
+        "聚氨酯辊子",
+        "全向轮轮组",
+        "自制全向轮"
+      ],
+      "keywords": [
+        "铜套",
+        "圆柱销",
+        "圆柱辊子",
+        "滚子抖动",
+        "辊子总成"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者选用聚氨酯空心棒料、铜套和圆柱销组成辊子；换用铜套用于解决此前钢套脱出摩擦问题。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、方案1、自制辊子」"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者观察到硬质圆柱辊子会使轮廓更接近多边形，运行时抖动较注胶辊子明显。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、方案1、自制辊子／缺点」"
+        }
+      ]
+    },
+    "rm-1935523-025": {
+      "summary": "全向轮轮毂子装配。用于定位同一 STEP 内的轮毂夹板和辊子支承，便于进一步量测。",
+      "reuse_checks": ["对照三片夹板的位置，核对厚度、辊轴孔径与孔组。"],
+      "aliases": [
+        "全向轮轮毂",
+        "轮毂夹板",
+        "轮毂前夹板"
+      ],
+      "keywords": [
+        "轮毂中夹板",
+        "轮毂后夹板",
+        "辊子支承"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "STEP 中可单独定位轮毂子装配及前、中、后夹板定义。",
+          "ref": "step",
+          "locator": "STEP 定义 0:1:1:19–0:1:1:22"
+        },
+        {
+          "kind": "fit_note",
+          "text": "夹板可从源模型量测，夹板孔径、厚度和螺纹目前无量测记录。",
+          "ref": "step",
+          "locator": "STEP 定义 0:1:1:20–0:1:1:22"
+        }
+      ]
+    },
+    "rm-1935523-026": {
+      "summary": "全向轮悬挂下臂子装配。用于检索避震器下端连接与上下臂限位这一局部布局。",
+      "reuse_checks": ["核对避震器下支点、枢轴和限位接触面。"],
+      "aliases": [
+        "悬挂下摆臂",
+        "避震器下端安装",
+        "全向轮下臂"
+      ],
+      "keywords": [
+        "下臂限位",
+        "双避震下支点",
+        "悬挂下臂"
+      ],
+      "facts": [
+        {
+          "kind": "structure",
+          "text": "作者把两只避震器直接连至下臂，以压缩悬挂长度。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」"
+        },
+        {
+          "kind": "fit_note",
+          "text": "下臂在原 STEP 中有独立定义，安装孔和相对运动范围待验证。",
+          "ref": "step",
+          "locator": "STEP 定义 0:1:1:34"
+        }
+      ]
+    }
+  }
+}

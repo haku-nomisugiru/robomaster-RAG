@@ -1,0 +1,308 @@
+{
+  "id": "if-swerve-outer-mirror-frame",
+  "label": "3508 舵轮外件至车架的安装面",
+  "target": {
+    "card_id": "rm-803685-ce2bee0af698aa86a",
+    "path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+    "sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c",
+    "definition_id": null,
+    "configuration": "Mirror默认"
+  },
+  "measurement_input": {
+    "kind": "solidworks_step_export",
+    "path": "reports/interface-evidence/swerve-outer-mirror.step",
+    "sha256": "2e540acc1ceef9120c3aecc4a299665a87263f77ab8c9aabcd9b0af1d8b35062",
+    "definition_id": null,
+    "native_configuration": "Mirror默认",
+    "native_revision": "33.4.0"
+  },
+  "selector": {
+    "face_index": 76,
+    "normal": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "area_mm2": 13646.665177419969,
+    "centroid_mm": [
+      -19.21345743993108,
+      0.0,
+      -0.3343333159699866
+    ],
+    "opening_indices": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "contexts": [
+    {
+      "card_id": "rm-803685-014",
+      "root_card_id": "rm-803685-014",
+      "sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+      "root_sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+      "definition_id": null,
+      "kind": "solidworks_live",
+      "occurrence_id": "Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+      "role": "舵轮模组内的对外安装件",
+      "root_configuration": "默认",
+      "path_semantics": "resolved_component_path"
+    },
+    {
+      "card_id": "rm-803685-013",
+      "root_card_id": "rm-803685-013",
+      "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "root_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "definition_id": null,
+      "kind": "solidworks_live",
+      "occurrence_id": "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+      "role": "与车架对齐的舵轮外件实例",
+      "root_configuration": "默认",
+      "path_semantics": "saved_or_unresolved_path"
+    }
+  ],
+  "limitations": [
+    "圆形开口的几何来自选定面；未验证螺纹、孔深或制造公差。",
+    "只覆盖记录中的 SolidWorks 配置与装配实例。"
+  ],
+  "schema_version": "1.0",
+  "evidence_type": "cad_geometry_measured",
+  "measured_at_utc": "2026-11-10T12:38:28.191673+00:00",
+  "method": {
+    "engine": "OCP/XCAF",
+    "ocp_version": "7.9.3.1",
+    "method": "planar face and analytic circular inner wires",
+    "numeric_geometry_tolerance_mm": 0.0001
+  },
+  "units": {
+    "length": "mm",
+    "area": "mm2"
+  },
+  "manufacturing_tolerance_mm": null,
+  "fit_to_target_verified": false,
+  "geometry": {
+    "step_definition_id": "0:1:1:1",
+    "datum": {
+      "origin_mm": [
+        -67.17514421272205,
+        0.0,
+        8.289665250534503e-15
+      ],
+      "normal": [
+        -0.0,
+        -1.0,
+        -0.0
+      ],
+      "u_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "v_axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "mounting_face": {
+      "face_index": 76,
+      "normal": [
+        -0.0,
+        -1.0,
+        -0.0
+      ],
+      "plane_point_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "centroid_mm": [
+        -19.21345743993108,
+        0.0,
+        -0.3343333159699866
+      ],
+      "area_mm2": 13646.665177419969,
+      "inner_wires": 21
+    },
+    "hole_pattern": {
+      "openings": [
+        {
+          "center_mm": [
+            -67.17514421272206,
+            0.0,
+            -67.17514421272199
+          ],
+          "diameter_mm": 6.200000000000011,
+          "id": "h14",
+          "uv_mm": [
+            -1.4210854715202004e-14,
+            -67.175144212722
+          ]
+        },
+        {
+          "center_mm": [
+            -84.85281374238572,
+            0.0,
+            49.497474683058314
+          ],
+          "diameter_mm": 6.1999999999999975,
+          "id": "h15",
+          "uv_mm": [
+            -17.677669529663675,
+            49.49747468305831
+          ]
+        },
+        {
+          "center_mm": [
+            -67.17514421272206,
+            0.0,
+            67.17514421272199
+          ],
+          "diameter_mm": 6.200000000000011,
+          "id": "h16",
+          "uv_mm": [
+            -1.4210854715202004e-14,
+            67.17514421272197
+          ]
+        },
+        {
+          "center_mm": [
+            -49.497474683058364,
+            0.0,
+            84.8528137423857
+          ],
+          "diameter_mm": 6.199999999999983,
+          "id": "h17",
+          "uv_mm": [
+            17.67766952966368,
+            84.85281374238569
+          ]
+        },
+        {
+          "center_mm": [
+            -49.49747468305835,
+            0.0,
+            -84.85281374238568
+          ],
+          "diameter_mm": 6.199999999999983,
+          "id": "h18",
+          "uv_mm": [
+            17.677669529663696,
+            -84.85281374238569
+          ]
+        },
+        {
+          "center_mm": [
+            -84.85281374238572,
+            0.0,
+            -49.49747468305829
+          ],
+          "diameter_mm": 6.1999999999999975,
+          "id": "h19",
+          "uv_mm": [
+            -17.677669529663675,
+            -49.4974746830583
+          ]
+        }
+      ],
+      "center_distances_mm": [
+        {
+          "from": "h14",
+          "to": "h15",
+          "distance_mm": 118.00423721205942
+        },
+        {
+          "from": "h14",
+          "to": "h16",
+          "distance_mm": 134.35028842544398
+        },
+        {
+          "from": "h14",
+          "to": "h17",
+          "distance_mm": 153.05227865013964
+        },
+        {
+          "from": "h14",
+          "to": "h18",
+          "distance_mm": 25.000000000000018
+        },
+        {
+          "from": "h14",
+          "to": "h19",
+          "distance_mm": 24.999999999999986
+        },
+        {
+          "from": "h15",
+          "to": "h16",
+          "distance_mm": 24.99999999999997
+        },
+        {
+          "from": "h15",
+          "to": "h17",
+          "distance_mm": 50.0
+        },
+        {
+          "from": "h15",
+          "to": "h18",
+          "distance_mm": 138.924439894498
+        },
+        {
+          "from": "h15",
+          "to": "h19",
+          "distance_mm": 98.9949493661166
+        },
+        {
+          "from": "h16",
+          "to": "h17",
+          "distance_mm": 25.000000000000025
+        },
+        {
+          "from": "h16",
+          "to": "h18",
+          "distance_mm": 153.0522786501396
+        },
+        {
+          "from": "h16",
+          "to": "h19",
+          "distance_mm": 118.00423721205941
+        },
+        {
+          "from": "h17",
+          "to": "h18",
+          "distance_mm": 169.70562748477138
+        },
+        {
+          "from": "h17",
+          "to": "h19",
+          "distance_mm": 138.92443989449802
+        },
+        {
+          "from": "h18",
+          "to": "h19",
+          "distance_mm": 50.0
+        }
+      ]
+    },
+    "envelope_mm": {
+      "min": [
+        -94.85281374238575,
+        0.0,
+        -98.08084624088019
+      ],
+      "max": [
+        71.4177848998413,
+        64.0000001,
+        98.08084624088019
+      ],
+      "size": [
+        166.27059864222704,
+        64.0000001,
+        196.16169248176038
+      ],
+      "method": "OCCT BRepBndLib.AddOptimal; static geometry"
+    }
+  }
+}

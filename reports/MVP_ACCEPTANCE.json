@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-10T12:20:48.392142+00:00",
+  "baseline": {
+    "sample_cards": 9,
+    "queries": [
+      {
+        "query": "3508双电机舵轮",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "MGN7 滑轨 气弹簧",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "工程机器人底盘总装",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "串联腿装配方案2",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "全向轮悬挂",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "悬挂连接法兰",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "轮毂前夹板",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "舵步底盘",
+        "top_5_unchanged": true
+      },
+      {
+        "query": "合工大桌面轮腿",
+        "top_5_unchanged": true
+      }
+    ]
+  },
+  "native": {
+    "sample_count": 6,
+    "observed_instances": 1375,
+    "confirmed_links": [
+      {
+        "parent": "rm-1883259-001",
+        "target": "rm-1883259-002",
+        "instances": 2,
+        "observed_referenced_configurations": [
+          "默认"
+        ],
+        "configuration_unknown_instances": 0
+      },
+      {
+        "parent": "rm-803685-013",
+        "target": "rm-803685-014",
+        "instances": 4,
+        "observed_referenced_configurations": [
+          "Mirror默认",
+          "默认"
+        ],
+        "configuration_unknown_instances": 2
+      }
+    ],
+    "D_lightweight_matches": 4,
+    "E_suppressed_outside_package": 139
+  },
+  "step": {
+    "files": 36,
+    "parser": {
+      "engine": "OCP/XCAF",
+      "version": "7.9.3.1",
+      "report_schema": "1.1"
+    },
+    "C_definitions": 47,
+    "C_instances": 87,
+    "C_roller_instances": 28
+  }
+}

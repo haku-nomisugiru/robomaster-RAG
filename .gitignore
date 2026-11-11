@@ -8,11 +8,6 @@ raw/
 assets/
 runtime/
 catalog/*.sqlite3*
-catalog/inventory*.json
-catalog/local-import-errors.json
-catalog/open-cad-2025*.json
-reports/*
-!reports/HTTP_SERVICE.md
 *.log
 *.part
 *.step
@@ -20,5 +15,8 @@ reports/*
 *.sldprt
 *.sldasm
 *.slddrw
+*.glb
+*.ply
+~$*
 *.zip
 *.7z

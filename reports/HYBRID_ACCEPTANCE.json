@@ -1,0 +1,1762 @@
+{
+  "evaluated_at_utc": "2026-11-10T18:09:11.687815+00:00",
+  "passed": true,
+  "metrics": {
+    "original": {
+      "queries": 13,
+      "sqlite": {
+        "top_1": 13,
+        "top_3": 13,
+        "top_5": 13,
+        "mrr_5": 1.0
+      },
+      "chroma": {
+        "top_1": 6,
+        "top_3": 6,
+        "top_5": 8,
+        "mrr_5": 0.4962
+      },
+      "hybrid": {
+        "top_1": 13,
+        "top_3": 13,
+        "top_5": 13,
+        "mrr_5": 1.0
+      }
+    },
+    "paraphrase": {
+      "queries": 4,
+      "sqlite": {
+        "top_1": 3,
+        "top_3": 4,
+        "top_5": 4,
+        "mrr_5": 0.8333
+      },
+      "chroma": {
+        "top_1": 2,
+        "top_3": 2,
+        "top_5": 2,
+        "mrr_5": 0.5
+      },
+      "hybrid": {
+        "top_1": 3,
+        "top_3": 4,
+        "top_5": 4,
+        "mrr_5": 0.8333
+      }
+    },
+    "all": {
+      "queries": 17,
+      "sqlite": {
+        "top_1": 16,
+        "top_3": 17,
+        "top_5": 17,
+        "mrr_5": 0.9608
+      },
+      "chroma": {
+        "top_1": 8,
+        "top_3": 8,
+        "top_5": 10,
+        "mrr_5": 0.4971
+      },
+      "hybrid": {
+        "top_1": 16,
+        "top_3": 17,
+        "top_5": 17,
+        "mrr_5": 0.9608
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "original",
+      "sample": "A1",
+      "query": "电控和电池沿车架前中后三段布置",
+      "targets": [
+        "rm-1883259-001"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 5,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1883259-001",
+          "rm-803685-013",
+          "rm-761042-c258c0d6ef2077880",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-815703-cb91f7be3de320dfd"
+        ],
+        "chroma": [
+          "rm-761042-c7a996c4387d4a1d4",
+          "rm-723307-c6a68312693fcafc8",
+          "rm-716376-c58d0b92d386fa4c3",
+          "rm-716376-cad812f99801ee196",
+          "rm-1883259-001"
+        ],
+        "hybrid": [
+          "rm-1883259-001",
+          "rm-803685-013",
+          "rm-761042-c258c0d6ef2077880",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-815703-cb91f7be3de320dfd"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-1883259-001": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.938335294445512,
+            "term_coverage": 0.7857142857142857
+          },
+          "chroma": {
+            "rank": 5,
+            "distance": 0.45336484909057617
+          }
+        },
+        "rm-803685-013": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9014160815649461,
+            "term_coverage": 0.14285714285714285
+          }
+        },
+        "rm-761042-c258c0d6ef2077880": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.9006739977662829,
+            "term_coverage": 0.21428571428571427
+          }
+        },
+        "rm-761042-c29fea7891c6a18a8": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8821764787856695,
+            "term_coverage": 0.14285714285714285
+          }
+        },
+        "rm-815703-cb91f7be3de320dfd": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8753287317798085,
+            "term_coverage": 0.07142857142857142
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "A2",
+      "query": "麦克纳姆轮纵臂两只避震器缓冲",
+      "targets": [
+        "rm-1883259-002"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 4,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1883259-002",
+          "rm-1935523-021",
+          "rm-1935523-026",
+          "rm-1935523-001",
+          "rm-1883384-006"
+        ],
+        "chroma": [
+          "rm-1883384-c4bc308bb13c897ca",
+          "rm-761042-c50e58198e5717da2",
+          "rm-761042-c91f193cbd38968a4",
+          "rm-1883259-002",
+          "rm-761042-c34be309a1faafe41"
+        ],
+        "hybrid": [
+          "rm-1883259-002",
+          "rm-1935523-021",
+          "rm-1935523-026",
+          "rm-1935523-001",
+          "rm-1883384-c4bc308bb13c897ca"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-1883384-c4bc308bb13c897ca"
+      ],
+      "hybrid_channels": {
+        "rm-1883259-002": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.937996599760932,
+            "term_coverage": 0.6923076923076923
+          },
+          "chroma": {
+            "rank": 4,
+            "distance": 0.4311283826828003
+          }
+        },
+        "rm-1935523-021": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9295748525780071,
+            "term_coverage": 0.3076923076923077
+          },
+          "chroma": {
+            "rank": 12,
+            "distance": 0.46235811710357666,
+            "card_id": "rm-1935523-c657794fca3413de2"
+          }
+        },
+        "rm-1935523-026": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.9187208065341759,
+            "term_coverage": 0.3076923076923077
+          }
+        },
+        "rm-1935523-001": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.9133918992512121,
+            "term_coverage": 0.3076923076923077
+          }
+        },
+        "rm-1883384-c4bc308bb13c897ca": {
+          "sqlite": {
+            "rank": 10,
+            "score": 0.6639407433644892,
+            "term_coverage": 0.15384615384615385
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.42226290702819824
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "B1",
+      "query": "便于安装舵轮的井字形车架",
+      "targets": [
+        "rm-803685-013"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-803685-013",
+          "rm-1883259-001",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-803685-014",
+          "rm-776744-009"
+        ],
+        "chroma": [
+          "rm-803685-013",
+          "rm-1883384-cdb36fd4f68480dbf",
+          "rm-1883259-001",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-761042-c43e4e140bb0f193b"
+        ],
+        "hybrid": [
+          "rm-803685-013",
+          "rm-1883259-001",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-803685-014",
+          "rm-761042-c4c8e0dff37f4395f"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-761042-c4c8e0dff37f4395f"
+      ],
+      "hybrid_channels": {
+        "rm-803685-013": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9391738149539209,
+            "term_coverage": 0.8181818181818182
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.3096555471420288
+          }
+        },
+        "rm-1883259-001": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9214767361870461,
+            "term_coverage": 0.45454545454545453
+          },
+          "chroma": {
+            "rank": 3,
+            "distance": 0.4287245273590088
+          }
+        },
+        "rm-761042-c29fea7891c6a18a8": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.906276602417823,
+            "term_coverage": 0.2727272727272727
+          },
+          "chroma": {
+            "rank": 4,
+            "distance": 0.4318643808364868
+          }
+        },
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8975987517311312,
+            "term_coverage": 0.36363636363636365
+          }
+        },
+        "rm-761042-c4c8e0dff37f4395f": {
+          "sqlite": {
+            "rank": 7,
+            "score": 0.8761133608742396,
+            "term_coverage": 0.18181818181818182
+          },
+          "chroma": {
+            "rank": 7,
+            "distance": 0.4411841034889221
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "B2",
+      "query": "行走和转向分别用独立驱动",
+      "targets": [
+        "rm-803685-014"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": null,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-803685-014",
+          "rm-1883259-004",
+          "rm-1883259-005",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-761042-c5cec362277a5c1d4"
+        ],
+        "chroma": [
+          "rm-803685-c57312afd40aa1e6f",
+          "rm-1883259-004",
+          "rm-761042-cdc2b1078fa68c6dd",
+          "rm-803685-c993e057d1e69b91d",
+          "rm-761042-c450d33d2a26f65cd"
+        ],
+        "hybrid": [
+          "rm-803685-014",
+          "rm-1883259-004",
+          "rm-1883259-005",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-761042-c5cec362277a5c1d4"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9245843479408019,
+            "term_coverage": 0.5454545454545454
+          }
+        },
+        "rm-1883259-004": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.903450454136151,
+            "term_coverage": 0.2727272727272727
+          },
+          "chroma": {
+            "rank": 2,
+            "distance": 0.5521987080574036
+          }
+        },
+        "rm-1883259-005": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.9014538117769927,
+            "term_coverage": 0.2727272727272727
+          },
+          "chroma": {
+            "rank": 10,
+            "distance": 0.5676282048225403
+          }
+        },
+        "rm-761042-c4c8e0dff37f4395f": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8874250336193935,
+            "term_coverage": 0.2727272727272727
+          },
+          "chroma": {
+            "rank": 14,
+            "distance": 0.5701067447662354
+          }
+        },
+        "rm-761042-c5cec362277a5c1d4": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8874250336193935,
+            "term_coverage": 0.2727272727272727
+          },
+          "chroma": {
+            "rank": 15,
+            "distance": 0.5701067447662354
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "B3",
+      "query": "用导轨限制轮组竖直运动，气弹簧负责缓冲",
+      "targets": [
+        "rm-803685-014"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": null,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-803685-014",
+          "rm-1883384-007",
+          "rm-761042-c2ed254897d8b3e8e",
+          "rm-1935523-021",
+          "rm-761042-c4c8e0dff37f4395f"
+        ],
+        "chroma": [
+          "rm-716376-c35dc890a06755885",
+          "rm-716376-c6103e9f97b77e653",
+          "rm-761042-c4f982c1d2334cc7f",
+          "rm-761042-ce41be16f5c9de6d2",
+          "rm-761042-ce119e4803b48fcd4"
+        ],
+        "hybrid": [
+          "rm-803685-014",
+          "rm-1883384-007",
+          "rm-761042-c2ed254897d8b3e8e",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-1935523-021"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9242197430171736,
+            "term_coverage": 0.25
+          },
+          "chroma": {
+            "rank": 8,
+            "distance": 0.4538276791572571
+          }
+        },
+        "rm-1883384-007": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.920921335865799,
+            "term_coverage": 0.1875
+          }
+        },
+        "rm-761042-c2ed254897d8b3e8e": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8984664870246127,
+            "term_coverage": 0.125
+          }
+        },
+        "rm-761042-c4c8e0dff37f4395f": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8922296985649958,
+            "term_coverage": 0.1875
+          }
+        },
+        "rm-1935523-021": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8928311037264849,
+            "term_coverage": 0.0625
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "C1",
+      "query": "把两只避震器布置在下臂，缩短轮组悬挂",
+      "targets": [
+        "rm-1935523-001"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": null,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1935523-001",
+          "rm-1935523-026",
+          "rm-1935523-021",
+          "rm-1883259-002",
+          "rm-1935523-022"
+        ],
+        "chroma": [
+          "rm-1883384-c4bc308bb13c897ca",
+          "rm-761042-c34be309a1faafe41",
+          "rm-1935523-026",
+          "rm-1883259-c8dc07a2397f26d9e",
+          "rm-761042-c42017ac9ff4f35a5"
+        ],
+        "hybrid": [
+          "rm-1935523-001",
+          "rm-1935523-026",
+          "rm-1935523-021",
+          "rm-1883259-002",
+          "rm-1935523-022"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-1935523-001": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.937812706324536,
+            "term_coverage": 0.8666666666666667
+          },
+          "chroma": {
+            "rank": 6,
+            "distance": 0.3499082922935486
+          }
+        },
+        "rm-1935523-026": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9336753186434044,
+            "term_coverage": 0.4666666666666667
+          },
+          "chroma": {
+            "rank": 3,
+            "distance": 0.3299219608306885
+          }
+        },
+        "rm-1935523-021": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.931255005397035,
+            "term_coverage": 0.4
+          },
+          "chroma": {
+            "rank": 18,
+            "distance": 0.3744547367095947,
+            "card_id": "rm-1935523-c657794fca3413de2"
+          }
+        },
+        "rm-1883259-002": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.9301489496622439,
+            "term_coverage": 0.4666666666666667
+          }
+        },
+        "rm-1935523-022": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.9160821515353106,
+            "term_coverage": 0.2
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "C2",
+      "query": "把轮组接到悬挂的机加工法兰",
+      "targets": [
+        "rm-1935523-022"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1935523-022",
+          "rm-1935523-001",
+          "rm-1935523-023",
+          "rm-1883259-002",
+          "rm-761377-cd920824e331ee228"
+        ],
+        "chroma": [
+          "rm-1935523-022",
+          "rm-1935523-c010d7c878c6fefee",
+          "rm-1883259-002",
+          "rm-1883259-c1afcbc74db70bd4b",
+          "rm-761042-c84b7d17f28645bd8"
+        ],
+        "hybrid": [
+          "rm-1935523-022",
+          "rm-1935523-001",
+          "rm-1883259-002",
+          "rm-1935523-023",
+          "rm-1935523-c010d7c878c6fefee"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-1935523-c010d7c878c6fefee"
+      ],
+      "hybrid_channels": {
+        "rm-1935523-022": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9332887728380137,
+            "term_coverage": 0.5
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.33108532428741455
+          }
+        },
+        "rm-1935523-001": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9140269531525475,
+            "term_coverage": 0.4166666666666667
+          }
+        },
+        "rm-1883259-002": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8916595109182879,
+            "term_coverage": 0.25
+          },
+          "chroma": {
+            "rank": 3,
+            "distance": 0.434994637966156
+          }
+        },
+        "rm-1935523-023": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.9096138310172668,
+            "term_coverage": 0.25
+          }
+        },
+        "rm-1935523-c010d7c878c6fefee": {
+          "sqlite": {
+            "rank": 20,
+            "score": 0.6783442352845046,
+            "term_coverage": 0.3333333333333333
+          },
+          "chroma": {
+            "rank": 2,
+            "distance": 0.3742995262145996
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "C3",
+      "query": "聚氨酯空心辊子配铜套和圆柱销",
+      "targets": [
+        "rm-1935523-024"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": null,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1935523-024",
+          "rm-1935523-025",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-1935523-001",
+          "rm-761042-c4c8e0dff37f4395f"
+        ],
+        "chroma": [
+          "rm-761042-cff25b7fd6c4eabf0",
+          "rm-761042-cd0e50d7f37fbcd84",
+          "rm-761042-cd1dce0f217cfcd7f",
+          "rm-761042-cec5b772d36a2c69a",
+          "rm-716376-c4062867ff361e0f5"
+        ],
+        "hybrid": [
+          "rm-1935523-024",
+          "rm-1935523-025",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-1935523-001",
+          "rm-716376-c4062867ff361e0f5"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-716376-c4062867ff361e0f5"
+      ],
+      "hybrid_channels": {
+        "rm-1935523-024": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.940278518280338,
+            "term_coverage": 0.7692307692307693
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.4252856373786926
+          }
+        },
+        "rm-1935523-025": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.8859454744330669,
+            "term_coverage": 0.07692307692307693
+          }
+        },
+        "rm-761042-c29fea7891c6a18a8": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8844225211479754,
+            "term_coverage": 0.15384615384615385
+          }
+        },
+        "rm-1935523-001": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8357148171454998,
+            "term_coverage": 0.07692307692307693
+          }
+        },
+        "rm-716376-c4062867ff361e0f5": {
+          "sqlite": {
+            "rank": 10,
+            "score": 0.6639718410624519,
+            "term_coverage": 0.15384615384615385
+          },
+          "chroma": {
+            "rank": 6,
+            "distance": 0.5272674560546875
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "D",
+      "query": "气弹簧轮组用于舵步底盘",
+      "targets": [
+        "rm-1883384-007"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1883384-007",
+          "rm-803685-014",
+          "rm-761042-cc34992eadfa6db7a",
+          "rm-803685-013",
+          "rm-1883384-006"
+        ],
+        "chroma": [
+          "rm-1883384-007",
+          "rm-1883384-cdb36fd4f68480dbf",
+          "rm-1883384-c386d62d4243ecf63",
+          "rm-1883384-c5667a77a01797a92",
+          "rm-803685-c993e057d1e69b91d"
+        ],
+        "hybrid": [
+          "rm-1883384-007",
+          "rm-803685-014",
+          "rm-803685-013",
+          "rm-761042-cc34992eadfa6db7a",
+          "rm-1883384-006"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-1883384-007": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9395108730044985,
+            "term_coverage": 0.7
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.33969563245773315
+          }
+        },
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9148786039298685,
+            "term_coverage": 0.4
+          },
+          "chroma": {
+            "rank": 12,
+            "distance": 0.4288409948348999
+          }
+        },
+        "rm-803685-013": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8975474596342888,
+            "term_coverage": 0.3
+          },
+          "chroma": {
+            "rank": 11,
+            "distance": 0.42863965034484863
+          }
+        },
+        "rm-761042-cc34992eadfa6db7a": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8987533834068588,
+            "term_coverage": 0.2
+          }
+        },
+        "rm-1883384-006": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8966668104306947,
+            "term_coverage": 0.2
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "E",
+      "query": "大小腿绕同一轴线回转的嵌套传动",
+      "targets": [
+        "rm-776744-010"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-776744-010",
+          "rm-1935523-025",
+          "rm-776744-011",
+          "rm-803685-015",
+          "rm-1883259-003"
+        ],
+        "chroma": [
+          "rm-776744-010",
+          "rm-776744-c22a9485c5c831f69",
+          "rm-776744-ce52cdd9c9cc39641",
+          "rm-1883259-cc819492ea2f54624",
+          "rm-776744-cc771919a6fd1ad04"
+        ],
+        "hybrid": [
+          "rm-776744-010",
+          "rm-1935523-025",
+          "rm-776744-011",
+          "rm-1883259-cc819492ea2f54624",
+          "rm-803685-015"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-1883259-cc819492ea2f54624"
+      ],
+      "hybrid_channels": {
+        "rm-776744-010": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9388878536803575,
+            "term_coverage": 0.7857142857142857
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.2911013960838318
+          }
+        },
+        "rm-1935523-025": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.8550151686297305,
+            "term_coverage": 0.07142857142857142
+          }
+        },
+        "rm-776744-011": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8438928366454345,
+            "term_coverage": 0.07142857142857142
+          }
+        },
+        "rm-1883259-cc819492ea2f54624": {
+          "sqlite": {
+            "rank": 8,
+            "score": 0.6518235542330151,
+            "term_coverage": 0.14285714285714285
+          },
+          "chroma": {
+            "rank": 4,
+            "distance": 0.4541279077529907
+          }
+        },
+        "rm-803685-015": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8405862321680085,
+            "term_coverage": 0.14285714285714285
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "F",
+      "query": "桌面上做串联轮腿的电控调试和研发验证",
+      "targets": [
+        "rm-815703-cb91f7be3de320dfd"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-815703-cb91f7be3de320dfd",
+          "rm-776744-009",
+          "rm-776744-010",
+          "rm-803685-015",
+          "rm-1883259-001"
+        ],
+        "chroma": [
+          "rm-815703-cb91f7be3de320dfd",
+          "rm-776744-010",
+          "rm-776744-c88e9272d3ffa9eda",
+          "rm-776744-cf82b9cb1aa43f070",
+          "rm-803685-cca93740caccc9d75"
+        ],
+        "hybrid": [
+          "rm-815703-cb91f7be3de320dfd",
+          "rm-776744-010",
+          "rm-776744-009",
+          "rm-803685-015",
+          "rm-776744-c88e9272d3ffa9eda"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-776744-c88e9272d3ffa9eda"
+      ],
+      "hybrid_channels": {
+        "rm-815703-cb91f7be3de320dfd": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9418243589835563,
+            "term_coverage": 0.7058823529411765
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.28684306144714355
+          }
+        },
+        "rm-776744-010": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8944280612866082,
+            "term_coverage": 0.11764705882352941
+          },
+          "chroma": {
+            "rank": 2,
+            "distance": 0.46327781677246094
+          }
+        },
+        "rm-776744-009": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.8990082288960828,
+            "term_coverage": 0.11764705882352941
+          }
+        },
+        "rm-803685-015": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8658310800229863,
+            "term_coverage": 0.058823529411764705
+          }
+        },
+        "rm-776744-c88e9272d3ffa9eda": {
+          "sqlite": {
+            "rank": 13,
+            "score": 0.6610859718685408,
+            "term_coverage": 0.11764705882352941
+          },
+          "chroma": {
+            "rank": 3,
+            "distance": 0.4795339107513428
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "G1",
+      "query": "替代 Hexroll 又受安装厚度限制的小型减速机构",
+      "targets": [
+        "rm-1936175-017"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1936175-017",
+          "rm-1936175-018",
+          "rm-761042-cc34992eadfa6db7a",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-761042-c5cec362277a5c1d4"
+        ],
+        "chroma": [
+          "rm-1936175-017",
+          "rm-803685-c0bc626686059dafa",
+          "rm-803685-c3503a02107b45af3",
+          "rm-803685-cf50151962057ae22",
+          "rm-803685-cf67aa9ec9c781ec5"
+        ],
+        "hybrid": [
+          "rm-1936175-017",
+          "rm-1936175-018",
+          "rm-761042-cc34992eadfa6db7a",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-761042-c5cec362277a5c1d4"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-1936175-017": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.936270544400414,
+            "term_coverage": 0.4375
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.3536917567253113
+          }
+        },
+        "rm-1936175-018": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9126371122911372,
+            "term_coverage": 0.1875
+          }
+        },
+        "rm-761042-cc34992eadfa6db7a": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.911276718316783,
+            "term_coverage": 0.1875
+          }
+        },
+        "rm-761042-c4c8e0dff37f4395f": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8570035347748194,
+            "term_coverage": 0.1875
+          }
+        },
+        "rm-761042-c5cec362277a5c1d4": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8570035347748194,
+            "term_coverage": 0.1875
+          }
+        }
+      }
+    },
+    {
+      "group": "original",
+      "sample": "G2",
+      "query": "用角接触和碗组轴承支撑轮腿减速传动",
+      "targets": [
+        "rm-1936175-018"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": null,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-1936175-018",
+          "rm-776744-010",
+          "rm-803685-015",
+          "rm-1883259-003",
+          "rm-1936175-017"
+        ],
+        "chroma": [
+          "rm-776744-010",
+          "rm-1883259-cda29905a081733f6",
+          "rm-1883259-c166f92b5acf1dfaa",
+          "rm-803685-c242162b0221f2b8a",
+          "rm-1883259-cc819492ea2f54624"
+        ],
+        "hybrid": [
+          "rm-1936175-018",
+          "rm-776744-010",
+          "rm-803685-015",
+          "rm-1883259-003",
+          "rm-1936175-017"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-1936175-018": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9396307396650132,
+            "term_coverage": 0.6875
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.31990665197372437
+          }
+        },
+        "rm-776744-010": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9097004414350904,
+            "term_coverage": 0.3125
+          },
+          "chroma": {
+            "rank": 2,
+            "distance": 0.4159647226333618
+          }
+        },
+        "rm-803685-015": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.879441437528169,
+            "term_coverage": 0.125
+          }
+        },
+        "rm-1883259-003": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8711347449902744,
+            "term_coverage": 0.125
+          }
+        },
+        "rm-1936175-017": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.869570012302943,
+            "term_coverage": 0.125
+          }
+        }
+      }
+    },
+    {
+      "group": "paraphrase",
+      "sample": "P1",
+      "query": "行进和改变朝向各由不同的动力单元控制",
+      "targets": [
+        "rm-803685-014"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": null,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-803685-014",
+          "rm-1936175-017",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-803685-016",
+          "rm-815703-cb91f7be3de320dfd"
+        ],
+        "chroma": [
+          "rm-761042-cf7ef0aaba9375eea",
+          "rm-776744-cac667ce5de370118",
+          "rm-761042-c0825d30ec22a23c9",
+          "rm-761042-cd0842241d353f5c4",
+          "rm-761042-c4055e668a17f4139"
+        ],
+        "hybrid": [
+          "rm-803685-014",
+          "rm-1936175-017",
+          "rm-761042-c29fea7891c6a18a8",
+          "rm-803685-016",
+          "rm-815703-cb91f7be3de320dfd"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.8502683463909155,
+            "term_coverage": 0.058823529411764705
+          }
+        },
+        "rm-1936175-017": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.8470246355419664,
+            "term_coverage": 0.058823529411764705
+          }
+        },
+        "rm-761042-c29fea7891c6a18a8": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8445371461381005,
+            "term_coverage": 0.058823529411764705
+          }
+        },
+        "rm-803685-016": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8344535527459171,
+            "term_coverage": 0.058823529411764705
+          }
+        },
+        "rm-815703-cb91f7be3de320dfd": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8339165760055935,
+            "term_coverage": 0.058823529411764705
+          }
+        }
+      }
+    },
+    {
+      "group": "paraphrase",
+      "sample": "P2",
+      "query": "桌面台架上先做两节腿机构的控制联调",
+      "targets": [
+        "rm-815703-cb91f7be3de320dfd"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-815703-cb91f7be3de320dfd",
+          "rm-1883259-005",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-761042-c5cec362277a5c1d4",
+          "rm-816172-019"
+        ],
+        "chroma": [
+          "rm-815703-cb91f7be3de320dfd",
+          "rm-776744-ce70ef2bbce44c49a",
+          "rm-776744-cfc9263cb84f50dbb",
+          "rm-776744-010",
+          "rm-776744-c3d2b71e862b46033"
+        ],
+        "hybrid": [
+          "rm-815703-cb91f7be3de320dfd",
+          "rm-1883259-005",
+          "rm-761042-c4c8e0dff37f4395f",
+          "rm-761042-c5cec362277a5c1d4",
+          "rm-816172-019"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-815703-cb91f7be3de320dfd": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9231763468524009,
+            "term_coverage": 0.25
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.3423027992248535
+          }
+        },
+        "rm-1883259-005": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.8690380035637076,
+            "term_coverage": 0.125
+          }
+        },
+        "rm-761042-c4c8e0dff37f4395f": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8543250080399443,
+            "term_coverage": 0.125
+          }
+        },
+        "rm-761042-c5cec362277a5c1d4": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8543250080399443,
+            "term_coverage": 0.125
+          }
+        },
+        "rm-816172-019": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8372292491028083,
+            "term_coverage": 0.0625
+          }
+        }
+      }
+    },
+    {
+      "group": "paraphrase",
+      "sample": "P3",
+      "query": "同一个转动中心套两路传动，分别带动大腿和小腿",
+      "targets": [
+        "rm-776744-010"
+      ],
+      "target_ranks": {
+        "sqlite": 1,
+        "chroma": 1,
+        "hybrid": 1
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-776744-010",
+          "rm-803685-016",
+          "rm-803685-015",
+          "rm-803685-014",
+          "rm-1935523-025"
+        ],
+        "chroma": [
+          "rm-776744-010",
+          "rm-776744-cf82b9cb1aa43f070",
+          "rm-776744-cadc268abbe85977e",
+          "rm-776744-c95d98f7a6de71d3d",
+          "rm-776744-c5e869662e0e8b36b"
+        ],
+        "hybrid": [
+          "rm-776744-010",
+          "rm-803685-016",
+          "rm-803685-015",
+          "rm-803685-014",
+          "rm-776744-cadc268abbe85977e"
+        ]
+      },
+      "new_hybrid_candidates": [
+        "rm-776744-cadc268abbe85977e"
+      ],
+      "hybrid_channels": {
+        "rm-776744-010": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9308623547442794,
+            "term_coverage": 0.3157894736842105
+          },
+          "chroma": {
+            "rank": 1,
+            "distance": 0.35664957761764526
+          }
+        },
+        "rm-803685-016": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9081462262612162,
+            "term_coverage": 0.15789473684210525
+          }
+        },
+        "rm-803685-015": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.8956445741789606,
+            "term_coverage": 0.15789473684210525
+          },
+          "chroma": {
+            "rank": 14,
+            "distance": 0.488728404045105
+          }
+        },
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.880837361932556,
+            "term_coverage": 0.10526315789473684
+          },
+          "chroma": {
+            "rank": 20,
+            "distance": 0.4987032413482666
+          }
+        },
+        "rm-776744-cadc268abbe85977e": {
+          "sqlite": {
+            "rank": 12,
+            "score": 0.6496584222125479,
+            "term_coverage": 0.05263157894736842
+          },
+          "chroma": {
+            "rank": 3,
+            "distance": 0.4520392417907715
+          }
+        }
+      }
+    },
+    {
+      "group": "paraphrase",
+      "sample": "P4",
+      "query": "用一块机加工件把车轮模组接到减振机构",
+      "targets": [
+        "rm-1935523-022"
+      ],
+      "target_ranks": {
+        "sqlite": 3,
+        "chroma": null,
+        "hybrid": 3
+      },
+      "top_5": {
+        "sqlite": [
+          "rm-803685-014",
+          "rm-1935523-001",
+          "rm-1935523-022",
+          "rm-761042-cc34992eadfa6db7a",
+          "rm-761042-ce916434f1d6c55d4"
+        ],
+        "chroma": [
+          "rm-1883259-cda29905a081733f6",
+          "rm-761042-c34be309a1faafe41",
+          "rm-1883259-c00ba11ae14815453",
+          "rm-1883259-002",
+          "rm-761042-c42017ac9ff4f35a5"
+        ],
+        "hybrid": [
+          "rm-803685-014",
+          "rm-1935523-001",
+          "rm-1935523-022",
+          "rm-761042-cc34992eadfa6db7a",
+          "rm-761042-ce916434f1d6c55d4"
+        ]
+      },
+      "new_hybrid_candidates": [],
+      "hybrid_channels": {
+        "rm-803685-014": {
+          "sqlite": {
+            "rank": 1,
+            "score": 0.9181517881082886,
+            "term_coverage": 0.17647058823529413
+          }
+        },
+        "rm-1935523-001": {
+          "sqlite": {
+            "rank": 2,
+            "score": 0.9114372378793754,
+            "term_coverage": 0.29411764705882354
+          }
+        },
+        "rm-1935523-022": {
+          "sqlite": {
+            "rank": 3,
+            "score": 0.9025013651760392,
+            "term_coverage": 0.11764705882352941
+          }
+        },
+        "rm-761042-cc34992eadfa6db7a": {
+          "sqlite": {
+            "rank": 4,
+            "score": 0.8954851910956424,
+            "term_coverage": 0.11764705882352941
+          }
+        },
+        "rm-761042-ce916434f1d6c55d4": {
+          "sqlite": {
+            "rank": 5,
+            "score": 0.8813019417002671,
+            "term_coverage": 0.11764705882352941
+          }
+        }
+      }
+    }
+  ],
+  "hybrid_top_5_channels": {
+    "sqlite+chroma": 37,
+    "sqlite": 48
+  },
+  "model": [
+    {
+      "query": "rm-1883259-001",
+      "expected": [
+        "rm-1883259-001"
+      ],
+      "actual": [
+        "rm-1883259-001"
+      ],
+      "passed": true
+    },
+    {
+      "query": "悬挂总装.SLDASM",
+      "expected": [
+        "rm-1883259-002"
+      ],
+      "actual": [
+        "rm-1883259-002"
+      ],
+      "passed": true
+    },
+    {
+      "query": "chassis_v2.2025.10.1.SLDASM",
+      "expected": [
+        "rm-803685-013"
+      ],
+      "actual": [
+        "rm-803685-013"
+      ],
+      "passed": true
+    },
+    {
+      "query": "3508 舵轮",
+      "expected": [
+        "rm-803685-014",
+        "rm-761377-cd920824e331ee228",
+        "rm-761377-c5e1dc640f6fcbc5f"
+      ],
+      "actual": [
+        "rm-803685-014",
+        "rm-761377-cd920824e331ee228",
+        "rm-761377-c5e1dc640f6fcbc5f"
+      ],
+      "passed": true
+    },
+    {
+      "query": "MGN7",
+      "expected": [
+        "rm-803685-014"
+      ],
+      "actual": [
+        "rm-803685-014"
+      ],
+      "passed": true
+    },
+    {
+      "query": "rm-1935523-001",
+      "expected": [
+        "rm-1935523-001"
+      ],
+      "actual": [
+        "rm-1935523-001"
+      ],
+      "passed": true
+    },
+    {
+      "query": "rm-1935523-022",
+      "expected": [
+        "rm-1935523-022"
+      ],
+      "actual": [
+        "rm-1935523-022"
+      ],
+      "passed": true
+    },
+    {
+      "query": "rm-1935523-024",
+      "expected": [
+        "rm-1935523-024"
+      ],
+      "actual": [
+        "rm-1935523-024"
+      ],
+      "passed": true
+    },
+    {
+      "query": "舵步底盘.SLDASM",
+      "expected": [
+        "rm-1883384-007",
+        "rm-1883384-cdb36fd4f68480dbf"
+      ],
+      "actual": [
+        "rm-1883384-007",
+        "rm-1883384-cdb36fd4f68480dbf"
+      ],
+      "passed": true
+    },
+    {
+      "query": "串联腿装配方案2.SLDASM",
+      "expected": [
+        "rm-776744-010"
+      ],
+      "actual": [
+        "rm-776744-010"
+      ],
+      "passed": true
+    },
+    {
+      "query": "ML1.0",
+      "expected": [
+        "rm-815703-cb91f7be3de320dfd"
+      ],
+      "actual": [
+        "rm-815703-cb91f7be3de320dfd"
+      ],
+      "passed": true
+    },
+    {
+      "query": "P15.8 Hexroll",
+      "expected": [
+        "rm-1936175-017"
+      ],
+      "actual": [
+        "rm-1936175-017"
+      ],
+      "passed": true
+    },
+    {
+      "query": "P15.8 双轴承支撑",
+      "expected": [
+        "rm-1936175-018"
+      ],
+      "actual": [
+        "rm-1936175-018"
+      ],
+      "passed": true
+    },
+    {
+      "query": "P15.8",
+      "expected": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ],
+      "actual": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ],
+      "passed": true
+    },
+    {
+      "query": "Ｐ１５．８",
+      "expected": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ],
+      "actual": [
+        "rm-1936175-017",
+        "rm-1936175-018"
+      ],
+      "passed": true
+    },
+    {
+      "query": "P15.76",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "P15d8",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "ＭＧＮ７Ｃ",
+      "expected": [
+        "rm-803685-c049da45fd14f85b9",
+        "rm-803685-c179d6f6b324affc2",
+        "rm-803685-c71279e3f67520639"
+      ],
+      "actual": [
+        "rm-803685-c049da45fd14f85b9",
+        "rm-803685-c179d6f6b324affc2",
+        "rm-803685-c71279e3f67520639"
+      ],
+      "passed": true
+    },
+    {
+      "query": "MGN7CA",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "MGN7 MGN7C",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "3509 舵轮",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "ML1.00",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "803685",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "rm-803685-099",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "query": "3508 MGN7 舵轮",
+      "expected": [
+        "rm-803685-014"
+      ],
+      "actual": [
+        "rm-803685-014"
+      ],
+      "passed": true
+    },
+    {
+      "query": "Hexroll",
+      "expected": [
+        "rm-1936175-017"
+      ],
+      "actual": [
+        "rm-1936175-017"
+      ],
+      "passed": true
+    },
+    {
+      "query": "Hexroll 减速箱",
+      "expected": [
+        "rm-1936175-017"
+      ],
+      "actual": [
+        "rm-1936175-017"
+      ],
+      "passed": true
+    }
+  ],
+  "frozen_auto": {
+    "3508双电机舵轮": true,
+    "MGN7 滑轨 气弹簧": true,
+    "工程机器人底盘总装": true,
+    "串联腿装配方案2": true,
+    "全向轮悬挂": true,
+    "悬挂连接法兰": true,
+    "轮毂前夹板": true,
+    "舵步底盘": true,
+    "合工大桌面轮腿": true
+  }
+}

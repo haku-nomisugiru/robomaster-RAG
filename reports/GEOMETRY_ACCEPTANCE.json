@@ -1,0 +1,1561 @@
+{
+  "checked_at_utc": "2026-11-11T02:25:08.468453+00:00",
+  "passed": true,
+  "checks": {
+    "rotated_reference": true,
+    "scaled_reference": true,
+    "assembly_duplicate_collapse": true,
+    "native_original_cad": true,
+    "returned_cad_hashes": true,
+    "related_hub_plate": true,
+    "trimesh_glb_and_ply": true,
+    "trimesh_reranking": true,
+    "http": true
+  },
+  "rotated": {
+    "mode": "size",
+    "kind": "part",
+    "category": null,
+    "reference": {
+      "card_id": null,
+      "geometry_input": {
+        "kind": "reference_step",
+        "path": "reports/geometry-examples/suspension-plate-rotated.step",
+        "sha256": "facacf1c7993843cd5118c6a6ce481a3671d2046a96ab485365387a93aa13d76",
+        "definition_id": null,
+        "xde_label": "0:1:1:1",
+        "configuration": null
+      },
+      "geometry": {
+        "kind": "part",
+        "aabb_mm": [
+          64.48593596343684,
+          82.7518482664253,
+          59.562937752238
+        ],
+        "area_mm2": 8224.327009321725,
+        "closed_volume_mm3": 14271.856555200528,
+        "inertia_basis": "closed_volume",
+        "inertia_length_mm": 40.30798245144431,
+        "principal_moment_ratios": [
+          0.1038438577037334,
+          0.3974384039092203,
+          0.49871773838704636
+        ],
+        "face_types": {
+          "Cylinder": 31,
+          "Plane": 17
+        },
+        "face_count": 48,
+        "solid_occurrences": 1
+      }
+    },
+    "indexed_candidates": 618,
+    "surface_sample_points": 0,
+    "items": [
+      {
+        "copy_card_ids": [
+          "rm-1935523-cc08defa62bc17d10",
+          "rm-1935523-cd604a54c2b3d2bc3"
+        ],
+        "distance": 1.3548606681013523e-13,
+        "distance_components": {
+          "moments": 3.9968028886505635e-14,
+          "normalized_area": 6.661338147751028e-15,
+          "surface_types": 0.0,
+          "face_count": 0.0,
+          "solid_count": 0.0,
+          "normalized_volume": 1.6830981053318082e-14,
+          "physical_size": 7.202571872256049e-14
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-cc08defa62bc17d10",
+        "name": "悬挂连接_1-8",
+        "category": "suspension",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:8",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "悬挂连接_1-8.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:8",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            5.000000000029308,
+            96.0009403818343,
+            63.08831168580918
+          ],
+          "area_mm2": 8224.327009323524,
+          "closed_volume_mm3": 14271.856555205843,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 40.30798245144818,
+          "principal_moment_ratios": [
+            0.10384385770375555,
+            0.39743840390920143,
+            0.498717738387043
+          ],
+          "face_types": {
+            "Cylinder": 31,
+            "Plane": 17
+          },
+          "face_count": 48,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-1935523-c1b1e71f6ea9edba5",
+          "rm-1935523-c9b181202a6b929df"
+        ],
+        "distance": 0.25808790967407114,
+        "distance_components": {
+          "moments": 0.016441756309912417,
+          "normalized_area": 0.030208332183821344,
+          "surface_types": 0.018055555555555554,
+          "face_count": 0.011507282898071234,
+          "solid_count": 0.0,
+          "normalized_volume": 0.050305382147672106,
+          "physical_size": 0.13156960057903846
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-c1b1e71f6ea9edba5",
+        "name": "下臂",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:38",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "下臂.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:38",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            4.000000000001631,
+            78.69951961610211,
+            64.4457518175222
+          ],
+          "area_mm2": 5131.565989868289,
+          "closed_volume_mm3": 6556.678915941488,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 33.82240291115444,
+          "principal_moment_ratios": [
+            0.09470954864267093,
+            0.40645599843286995,
+            0.49883445292445916
+          ],
+          "face_types": {
+            "Cylinder": 20,
+            "Plane": 16
+          },
+          "face_count": 36,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-1935523-c73d0ba04dee1aa8d",
+          "rm-1935523-cb9f69b299a3f4bf9"
+        ],
+        "distance": 0.2580879096740719,
+        "distance_components": {
+          "moments": 0.016441756309914516,
+          "normalized_area": 0.030208332183820606,
+          "surface_types": 0.018055555555555554,
+          "face_count": 0.011507282898071234,
+          "solid_count": 0.0,
+          "normalized_volume": 0.05030538214767138,
+          "physical_size": 0.1315696005790386
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-c73d0ba04dee1aa8d",
+        "name": "悬挂下臂-4",
+        "category": "suspension",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:39",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "悬挂下臂-4.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:39",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            4.000000000001535,
+            78.6995196161021,
+            64.4457518175222
+          ],
+          "area_mm2": 5131.565989868301,
+          "closed_volume_mm3": 6556.678915941508,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 33.822402911154434,
+          "principal_moment_ratios": [
+            0.09470954864266982,
+            0.40645599843287045,
+            0.4988344529244599
+          ],
+          "face_types": {
+            "Cylinder": 20,
+            "Plane": 16
+          },
+          "face_count": 36,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-cef4967f118cdfebd"
+        ],
+        "distance": 0.2588218670892122,
+        "distance_components": {
+          "moments": 0.041581958508543626,
+          "normalized_area": 0.058261323550563834,
+          "surface_types": 0.021276595744680854,
+          "face_count": 0.0008421363679132905,
+          "solid_count": 0.0,
+          "normalized_volume": 0.09982439705194412,
+          "physical_size": 0.03703545586556646
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-cef4967f118cdfebd",
+        "name": "J64310机加工件",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:341",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "J64310机加工件",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:341",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            70.0000002,
+            57.0,
+            15.000000199999999
+          ],
+          "area_mm2": 9406.308199851774,
+          "closed_volume_mm3": 20272.589178179787,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 38.3658951275092,
+          "principal_moment_ratios": [
+            0.1269449457640354,
+            0.3868844463634795,
+            0.4861706078724851
+          ],
+          "face_types": {
+            "Cylinder": 29,
+            "Plane": 13,
+            "Cone": 5
+          },
+          "face_count": 47,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-c612a5755f115847b"
+        ],
+        "distance": 0.28783734454850995,
+        "distance_components": {
+          "moments": 0.08680028253535926,
+          "normalized_area": 0.07770050482129383,
+          "surface_types": 0.018055555555555554,
+          "face_count": 0.011507282898071234,
+          "solid_count": 0.0,
+          "normalized_volume": 0.07394185811135759,
+          "physical_size": 0.01983186062687249
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-c612a5755f115847b",
+        "name": "前后防撞梁支撑板",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:28",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "前后防撞梁支撑板",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:28",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            71.89999999999999,
+            83.0,
+            5.000000200000001
+          ],
+          "area_mm2": 6354.602878760673,
+          "closed_volume_mm3": 10675.033282977249,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 41.3880423047484,
+          "principal_moment_ratios": [
+            0.055621478517422676,
+            0.44559473266993505,
+            0.4987837888126423
+          ],
+          "face_types": {
+            "Plane": 16,
+            "Cylinder": 20
+          },
+          "face_count": 36,
+          "solid_occurrences": 1
+        }
+      }
+    ]
+  },
+  "scaled": {
+    "mode": "shape",
+    "kind": "part",
+    "category": null,
+    "reference": {
+      "card_id": null,
+      "geometry_input": {
+        "kind": "reference_step",
+        "path": "reports/geometry-examples/suspension-plate-scaled.step",
+        "sha256": "20c8ddedfdaa83832ae6545070db2143cd33d0409b5b18fa46117222a601318e",
+        "definition_id": null,
+        "xde_label": "0:1:1:1",
+        "configuration": null
+      },
+      "geometry": {
+        "kind": "part",
+        "aabb_mm": [
+          7.500000000044455,
+          144.00141057273,
+          94.632467528706
+        ],
+        "area_mm2": 18504.73577096761,
+        "closed_volume_mm3": 48167.515873787284,
+        "inertia_basis": "closed_volume",
+        "inertia_length_mm": 60.4619736771594,
+        "principal_moment_ratios": [
+          0.10384385770373163,
+          0.3974384039092251,
+          0.49871773838704325
+        ],
+        "face_types": {
+          "Cylinder": 31,
+          "Plane": 17
+        },
+        "face_count": 48,
+        "solid_occurrences": 1
+      }
+    },
+    "indexed_candidates": 618,
+    "surface_sample_points": 0,
+    "items": [
+      {
+        "copy_card_ids": [
+          "rm-1935523-cc08defa62bc17d10",
+          "rm-1935523-cd604a54c2b3d2bc3"
+        ],
+        "distance": 8.29170065941321e-14,
+        "distance_components": {
+          "moments": 4.3065551125209826e-14,
+          "normalized_area": 3.294586825575369e-14,
+          "surface_types": 0.0,
+          "face_count": 0.0,
+          "solid_count": 0.0,
+          "normalized_volume": 6.905587213168592e-15
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-cc08defa62bc17d10",
+        "name": "悬挂连接_1-8",
+        "category": "suspension",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:8",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "悬挂连接_1-8.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:8",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            5.000000000029308,
+            96.0009403818343,
+            63.08831168580918
+          ],
+          "area_mm2": 8224.327009323524,
+          "closed_volume_mm3": 14271.856555205843,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 40.30798245144818,
+          "principal_moment_ratios": [
+            0.10384385770375555,
+            0.39743840390920143,
+            0.498717738387043
+          ],
+          "face_types": {
+            "Cylinder": 31,
+            "Plane": 17
+          },
+          "face_count": 48,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-c3e8a101f8eefcb5e"
+        ],
+        "distance": 0.07890011914843183,
+        "distance_components": {
+          "moments": 0.03949370242646342,
+          "normalized_area": 0.0016824299005787136,
+          "surface_types": 0.004166666666666663,
+          "face_count": 0.027725887222397813,
+          "solid_count": 0.0,
+          "normalized_volume": 0.005831432932325217
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-c3e8a101f8eefcb5e",
+        "name": "转向模块固定转接座",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:91",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "转向模块固定转接座",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:91",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            55.0,
+            30.000000000000007,
+            5.000000200000001
+          ],
+          "area_mm2": 4011.658402523314,
+          "closed_volume_mm3": 5056.647158529742,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 28.24647047254299,
+          "principal_moment_ratios": [
+            0.12578480349621135,
+            0.3768562731347154,
+            0.4973589233690733
+          ],
+          "face_types": {
+            "Cylinder": 16,
+            "Plane": 8
+          },
+          "face_count": 24,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-cd1db580fb4db9479"
+        ],
+        "distance": 0.11405380499183342,
+        "distance_components": {
+          "moments": 0.04307834676984649,
+          "normalized_area": 0.0023412729528099613,
+          "surface_types": 0.0005952380952380931,
+          "face_count": 0.021559860029307477,
+          "solid_count": 0.0,
+          "normalized_volume": 0.04647908714463139
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-cd1db580fb4db9479",
+        "name": "前伸拖链活动端固定座",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:179",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "前伸拖链活动端固定座",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:179",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            22.999999999999996,
+            35.50000000000001,
+            3.0000001999999997
+          ],
+          "area_mm2": 1295.790687847368,
+          "closed_volume_mm3": 1141.9867517455168,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 16.074664112718267,
+          "principal_moment_ratios": [
+            0.12777627257586852,
+            0.37512626231862933,
+            0.497097465105502
+          ],
+          "face_types": {
+            "Plane": 10,
+            "Cylinder": 18
+          },
+          "face_count": 28,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-1935523-c1b1e71f6ea9edba5",
+          "rm-1935523-c9b181202a6b929df"
+        ],
+        "distance": 0.12651830909501321,
+        "distance_components": {
+          "moments": 0.01644175630990932,
+          "normalized_area": 0.030208332183795074,
+          "surface_types": 0.018055555555555554,
+          "face_count": 0.011507282898071234,
+          "solid_count": 0.0,
+          "normalized_volume": 0.05030538214768204
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-c1b1e71f6ea9edba5",
+        "name": "下臂",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:38",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "下臂.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:38",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            4.000000000001631,
+            78.69951961610211,
+            64.4457518175222
+          ],
+          "area_mm2": 5131.565989868289,
+          "closed_volume_mm3": 6556.678915941488,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 33.82240291115444,
+          "principal_moment_ratios": [
+            0.09470954864267093,
+            0.40645599843286995,
+            0.49883445292445916
+          ],
+          "face_types": {
+            "Cylinder": 20,
+            "Plane": 16
+          },
+          "face_count": 36,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-1935523-c73d0ba04dee1aa8d",
+          "rm-1935523-cb9f69b299a3f4bf9"
+        ],
+        "distance": 0.12651830909501383,
+        "distance_components": {
+          "moments": 0.016441756309911418,
+          "normalized_area": 0.03020833218379434,
+          "surface_types": 0.018055555555555554,
+          "face_count": 0.011507282898071234,
+          "solid_count": 0.0,
+          "normalized_volume": 0.05030538214768129
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-c73d0ba04dee1aa8d",
+        "name": "悬挂下臂-4",
+        "category": "suspension",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:39",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "悬挂下臂-4.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:39",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            4.000000000001535,
+            78.6995196161021,
+            64.4457518175222
+          ],
+          "area_mm2": 5131.565989868301,
+          "closed_volume_mm3": 6556.678915941508,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 33.822402911154434,
+          "principal_moment_ratios": [
+            0.09470954864266982,
+            0.40645599843287045,
+            0.4988344529244599
+          ],
+          "face_types": {
+            "Cylinder": 20,
+            "Plane": 16
+          },
+          "face_count": 36,
+          "solid_occurrences": 1
+        }
+      }
+    ]
+  },
+  "scaled_size_distance": 0.30409883108104646,
+  "assembly": {
+    "copy_card_ids": [
+      "rm-1935523-022",
+      "rm-1935523-c1fd96e0c700be26e"
+    ],
+    "distance": 0.0,
+    "distance_components": {
+      "moments": 0.0,
+      "normalized_area": 0.0,
+      "surface_types": 0.0,
+      "face_count": 0.0,
+      "solid_count": 0.0,
+      "normalized_volume": 0.0,
+      "physical_size": 0.0
+    },
+    "same_step_bytes_and_definition": true,
+    "id": "rm-1935523-022",
+    "name": "悬挂连接子装配",
+    "category": "suspension",
+    "cad_source": {
+      "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+      "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "extension": ".step",
+      "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+      "source_id": "bbs-1935523",
+      "source_url": "https://bbs.robomaster.com/article/1935523",
+      "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+      "snapshot_path": "raw/pages/1935523/article.txt",
+      "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+      "definition_id": "0:1:1:7",
+      "occurrence_id": null,
+      "locator_kind": "step_definition",
+      "locator_report": "reports/step-inspection.jsonl",
+      "file_available": true,
+      "definition_name": "悬挂连接_1.step",
+      "definition_kind": "assembly"
+    },
+    "geometry_input": {
+      "kind": "original_step",
+      "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+      "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "definition_id": "0:1:1:7",
+      "configuration": null
+    },
+    "geometry": {
+      "kind": "assembly",
+      "aabb_mm": [
+        74.10531058605362,
+        96.00522567889726,
+        63.24106505188229
+      ],
+      "area_mm2": 25898.337717047143,
+      "closed_volume_mm3": 37675.857279625205,
+      "inertia_basis": "closed_volume",
+      "inertia_length_mm": 51.87426240821175,
+      "principal_moment_ratios": [
+        0.23276211298843294,
+        0.32116569112302434,
+        0.44607219588854274
+      ],
+      "face_types": {
+        "Cylinder": 110,
+        "Plane": 106,
+        "Torus": 16
+      },
+      "face_count": 232,
+      "solid_occurrences": 15
+    }
+  },
+  "native": {
+    "copy_card_ids": [
+      "rm-803685-ce2bee0af698aa86a"
+    ],
+    "distance": 0.0,
+    "distance_components": {
+      "moments": 0.0,
+      "normalized_area": 0.0,
+      "surface_types": 0.0,
+      "face_count": 0.0,
+      "solid_count": 0.0,
+      "normalized_volume": 0.0,
+      "physical_size": 0.0
+    },
+    "same_step_bytes_and_definition": true,
+    "id": "rm-803685-ce2bee0af698aa86a",
+    "name": "Steering_outer.2025.10.1",
+    "category": "component",
+    "cad_source": {
+      "path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c",
+      "extension": ".sldprt",
+      "asset_id": "bbs-803685-ac8d43afad2ed818",
+      "source_id": "bbs-803685",
+      "source_url": "https://bbs.robomaster.com/article/803685",
+      "archive_path": "raw/downloads/803685/【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+      "snapshot_path": "raw/downloads/803685/说明.md",
+      "snapshot_sha256": "a26697477c2394e1d64cefeef5a6f5233c4c58454f8267bb0ff924085c3f4b73",
+      "definition_id": null,
+      "occurrence_id": null,
+      "locator_kind": "cad_file",
+      "locator_report": null,
+      "file_available": true
+    },
+    "geometry_input": {
+      "kind": "solidworks_step_export",
+      "path": "reports/interface-evidence/swerve-outer-mirror.step",
+      "sha256": "2e540acc1ceef9120c3aecc4a299665a87263f77ab8c9aabcd9b0af1d8b35062",
+      "definition_id": null,
+      "configuration": "Mirror默认",
+      "evidence_path": "catalog/interface-evidence/if-swerve-outer-mirror-frame.json"
+    },
+    "geometry": {
+      "kind": "part",
+      "aabb_mm": [
+        166.27059864222704,
+        64.0000001,
+        196.16169248176038
+      ],
+      "area_mm2": 237394.68233972896,
+      "closed_volume_mm3": 371930.1769036347,
+      "inertia_basis": "closed_volume",
+      "inertia_length_mm": 96.84121081531651,
+      "principal_moment_ratios": [
+        0.2275452313515652,
+        0.28594280188668175,
+        0.48651196676175307
+      ],
+      "face_types": {
+        "Cylinder": 531,
+        "Plane": 162,
+        "Cone": 29,
+        "Torus": 9,
+        "BSplineSurface": 5
+      },
+      "face_count": 736,
+      "solid_occurrences": 19
+    }
+  },
+  "sibling": {
+    "mode": "size",
+    "kind": "part",
+    "category": null,
+    "reference": {
+      "card_id": "rm-1935523-c1ab8d2a2c8db5352",
+      "geometry_input": {
+        "kind": "original_step",
+        "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+        "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+        "definition_id": "0:1:1:22",
+        "configuration": null
+      },
+      "geometry": {
+        "kind": "part",
+        "aabb_mm": [
+          144.0000000000004,
+          142.12494424619757,
+          2.000000000322758
+        ],
+        "area_mm2": 13674.743640095841,
+        "closed_volume_mm3": 10005.489523042515,
+        "inertia_basis": "closed_volume",
+        "inertia_length_mm": 77.60482397384895,
+        "principal_moment_ratios": [
+          0.24997324720506953,
+          0.2500821007154917,
+          0.4999446520794388
+        ],
+        "face_types": {
+          "Cylinder": 181,
+          "Plane": 68
+        },
+        "face_count": 249,
+        "solid_occurrences": 1
+      }
+    },
+    "indexed_candidates": 617,
+    "surface_sample_points": 0,
+    "items": [
+      {
+        "copy_card_ids": [
+          "rm-1935523-c2d6150f71ed3b656",
+          "rm-1935523-cdd7be764df9ebc03"
+        ],
+        "distance": 0.1607705857221064,
+        "distance_components": {
+          "moments": 1.2576807522124423e-05,
+          "normalized_area": 0.05856524245671986,
+          "surface_types": 0.0012851405622489875,
+          "face_count": 0.0009524259477487423,
+          "solid_count": 0.0,
+          "normalized_volume": 0.06399991254176012,
+          "physical_size": 0.035955287406106554
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-c2d6150f71ed3b656",
+        "name": "轮毂后夹板",
+        "category": "wheel",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:20",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "轮毂后夹板.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:20",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            144.0000000000004,
+            142.12494424619757,
+            2.00000000032283
+          ],
+          "area_mm2": 15704.241026179745,
+          "closed_volume_mm3": 11933.055326002535,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 73.97218962285784,
+          "principal_moment_ratios": [
+            0.2499802343203596,
+            0.25008068314103193,
+            0.49993908253860847
+          ],
+          "face_types": {
+            "Cylinder": 187,
+            "Plane": 68
+          },
+          "face_count": 255,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-cf3de8103a51cfff2"
+        ],
+        "distance": 0.24631395912268492,
+        "distance_components": {
+          "moments": 0.02897749221364995,
+          "normalized_area": 0.023401545227104067,
+          "surface_types": 0.010497805174185118,
+          "face_count": 0.04252422400844799,
+          "solid_count": 0.0,
+          "normalized_volume": 0.09482858226807123,
+          "physical_size": 0.04608431023122657
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-cf3de8103a51cfff2",
+        "name": "回转支承座-4mm",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:223",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "回转支承座-4mm",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:223",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            122.0,
+            113.00000000000001,
+            6.000000200000009
+          ],
+          "area_mm2": 11012.74156625035,
+          "closed_volume_mm3": 13369.012982556165,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 72.9798840994753,
+          "principal_moment_ratios": [
+            0.23438326837656812,
+            0.26618070750085276,
+            0.4994360241225791
+          ],
+          "face_types": {
+            "Cylinder": 58,
+            "Plane": 27,
+            "Cone": 1
+          },
+          "face_count": 86,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-c32e73da84603988a"
+        ],
+        "distance": 0.27486458904545497,
+        "distance_components": {
+          "moments": 0.01678379478097582,
+          "normalized_area": 0.005122990771809304,
+          "surface_types": 0.003189902467010895,
+          "face_count": 0.03453970185228737,
+          "solid_count": 0.0,
+          "normalized_volume": 0.15105485531430318,
+          "physical_size": 0.06417334385906838
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-c32e73da84603988a",
+        "name": "回转支承座-3.9mm",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:224",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "回转支承座-3.9mm",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:224",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            122.0,
+            113.00000000000001,
+            8.000000100000001
+          ],
+          "area_mm2": 11290.139356887474,
+          "closed_volume_mm3": 16472.870174319356,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 71.24076034631716,
+          "principal_moment_ratios": [
+            0.24162122191208818,
+            0.2594064311493671,
+            0.49897234693854464
+          ],
+          "face_types": {
+            "Cylinder": 77,
+            "Plane": 27,
+            "Cone": 1
+          },
+          "face_count": 105,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-1935523-c411c71ea76dc1855",
+          "rm-1935523-c846ca1789a577ea6"
+        ],
+        "distance": 0.343320099054708,
+        "distance_components": {
+          "moments": 0.0001534051891744659,
+          "normalized_area": 0.09323207912787064,
+          "surface_types": 0.0434741691561888,
+          "face_count": 0.015516358063594504,
+          "solid_count": 0.0,
+          "normalized_volume": 0.14550991118944473,
+          "physical_size": 0.04543417632843484
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-1935523-c411c71ea76dc1855",
+        "name": "轮毂中夹板",
+        "category": "wheel",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:21",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "轮毂中夹板.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:21",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            144.00000000000028,
+            142.12494424619865,
+            3.0000000003227156
+          ],
+          "area_mm2": 17589.833876267607,
+          "closed_volume_mm3": 17269.582989004306,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 73.04317378919404,
+          "principal_moment_ratios": [
+            0.2500168967148332,
+            0.250123676310825,
+            0.4998594269743419
+          ],
+          "face_types": {
+            "Cylinder": 187,
+            "Plane": 180
+          },
+          "face_count": 367,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-cdcf8806354ae67a4"
+        ],
+        "distance": 0.3650471025682789,
+        "distance_components": {
+          "moments": 0.0033595079577383945,
+          "normalized_area": 0.012728690591613355,
+          "surface_types": 0.014035087719298251,
+          "face_count": 0.05897606514520629,
+          "solid_count": 0.0,
+          "normalized_volume": 0.17578105477526793,
+          "physical_size": 0.10016669637915467
+        },
+        "same_step_bytes_and_definition": false,
+        "id": "rm-761042-cdcf8806354ae67a4",
+        "name": "Pitch1电机固定加强件",
+        "category": "gimbal",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:236",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "Pitch1电机固定加强件",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:236",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            98.0,
+            98.0,
+            12.800000200000003
+          ],
+          "area_mm2": 11016.059620043363,
+          "closed_volume_mm3": 16141.15760549123,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 67.90257754185946,
+          "principal_moment_ratios": [
+            0.2509608706012114,
+            0.25096087062920447,
+            0.4980782587695841
+          ],
+          "face_types": {
+            "Plane": 14,
+            "Cylinder": 39,
+            "Cone": 4
+          },
+          "face_count": 57,
+          "solid_occurrences": 1
+        }
+      }
+    ]
+  },
+  "sibling_rank": 1,
+  "preview": {
+    "preview": "reports/geometry-examples/suspension-plate.glb",
+    "preview_units": "m",
+    "triangles": 2704,
+    "points": "reports/geometry-examples/suspension-plate.ply",
+    "point_units": "mm",
+    "samples": 2048
+  },
+  "sampled": {
+    "mode": "size",
+    "kind": "part",
+    "category": null,
+    "reference": {
+      "card_id": null,
+      "geometry_input": {
+        "kind": "reference_step",
+        "path": "reports/geometry-examples/suspension-plate-rotated.step",
+        "sha256": "facacf1c7993843cd5118c6a6ce481a3671d2046a96ab485365387a93aa13d76",
+        "definition_id": null,
+        "xde_label": "0:1:1:1",
+        "configuration": null
+      },
+      "geometry": {
+        "kind": "part",
+        "aabb_mm": [
+          64.48593596343684,
+          82.7518482664253,
+          59.562937752238
+        ],
+        "area_mm2": 8224.327009321725,
+        "closed_volume_mm3": 14271.856555200528,
+        "inertia_basis": "closed_volume",
+        "inertia_length_mm": 40.30798245144431,
+        "principal_moment_ratios": [
+          0.1038438577037334,
+          0.3974384039092203,
+          0.49871773838704636
+        ],
+        "face_types": {
+          "Cylinder": 31,
+          "Plane": 17
+        },
+        "face_count": 48,
+        "solid_occurrences": 1
+      }
+    },
+    "indexed_candidates": 618,
+    "surface_sample_points": 512,
+    "items": [
+      {
+        "copy_card_ids": [
+          "rm-1935523-cc08defa62bc17d10",
+          "rm-1935523-cd604a54c2b3d2bc3"
+        ],
+        "distance": 0.0025559637725125115,
+        "distance_components": {
+          "moments": 3.9968028886505635e-14,
+          "normalized_area": 6.661338147751028e-15,
+          "surface_types": 0.0,
+          "face_count": 0.0,
+          "solid_count": 0.0,
+          "normalized_volume": 1.6830981053318082e-14,
+          "physical_size": 7.202571872256049e-14,
+          "surface_sample": 0.0025559637723770253
+        },
+        "same_step_bytes_and_definition": false,
+        "surface_sample_status": "sampled",
+        "id": "rm-1935523-cc08defa62bc17d10",
+        "name": "悬挂连接_1-8",
+        "category": "suspension",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:8",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "悬挂连接_1-8.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:8",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            5.000000000029308,
+            96.0009403818343,
+            63.08831168580918
+          ],
+          "area_mm2": 8224.327009323524,
+          "closed_volume_mm3": 14271.856555205843,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 40.30798245144818,
+          "principal_moment_ratios": [
+            0.10384385770375555,
+            0.39743840390920143,
+            0.498717738387043
+          ],
+          "face_types": {
+            "Cylinder": 31,
+            "Plane": 17
+          },
+          "face_count": 48,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-761042-cef4967f118cdfebd"
+        ],
+        "distance": 0.274908773985574,
+        "distance_components": {
+          "moments": 0.041581958508543626,
+          "normalized_area": 0.058261323550563834,
+          "surface_types": 0.021276595744680854,
+          "face_count": 0.0008421363679132905,
+          "solid_count": 0.0,
+          "normalized_volume": 0.09982439705194412,
+          "physical_size": 0.03703545586556646,
+          "surface_sample": 0.016086906896361844
+        },
+        "same_step_bytes_and_definition": false,
+        "surface_sample_status": "sampled",
+        "id": "rm-761042-cef4967f118cdfebd",
+        "name": "J64310机加工件",
+        "category": "component",
+        "cad_source": {
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "extension": ".step",
+          "asset_id": "bbs-761042-a0471c96d038e985",
+          "source_id": "bbs-761042",
+          "source_url": "https://bbs.robomaster.com/article/761042",
+          "archive_path": "raw/downloads/761042/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+          "snapshot_path": "raw/pages/761042/open-cad-page.html",
+          "snapshot_sha256": "ec5ef528e271824c56654022d0132c8fc7872da227446861d4e0c550c2669138",
+          "definition_id": "0:1:1:341",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "J64310机加工件",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/761042/a0471c96d038e985/RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源/三维图纸/整车V2.0.STEP",
+          "sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+          "definition_id": "0:1:1:341",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            70.0000002,
+            57.0,
+            15.000000199999999
+          ],
+          "area_mm2": 9406.308199851774,
+          "closed_volume_mm3": 20272.589178179787,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 38.3658951275092,
+          "principal_moment_ratios": [
+            0.1269449457640354,
+            0.3868844463634795,
+            0.4861706078724851
+          ],
+          "face_types": {
+            "Cylinder": 29,
+            "Plane": 13,
+            "Cone": 5
+          },
+          "face_count": 47,
+          "solid_occurrences": 1
+        }
+      },
+      {
+        "copy_card_ids": [
+          "rm-1935523-c73d0ba04dee1aa8d",
+          "rm-1935523-cb9f69b299a3f4bf9"
+        ],
+        "distance": 0.2817965736794915,
+        "distance_components": {
+          "moments": 0.016441756309914516,
+          "normalized_area": 0.030208332183820606,
+          "surface_types": 0.018055555555555554,
+          "face_count": 0.011507282898071234,
+          "solid_count": 0.0,
+          "normalized_volume": 0.05030538214767138,
+          "physical_size": 0.1315696005790386,
+          "surface_sample": 0.02370866400541959
+        },
+        "same_step_bytes_and_definition": false,
+        "surface_sample_status": "sampled",
+        "id": "rm-1935523-c73d0ba04dee1aa8d",
+        "name": "悬挂下臂-4",
+        "category": "suspension",
+        "cad_source": {
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "extension": ".step",
+          "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+          "source_id": "bbs-1935523",
+          "source_url": "https://bbs.robomaster.com/article/1935523",
+          "archive_path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+          "snapshot_path": "raw/pages/1935523/article.txt",
+          "snapshot_sha256": "dd2cb4cf8279120b47828bdeac76c4cb2a4720c144f026f965fd9138bc44a1ca",
+          "definition_id": "0:1:1:39",
+          "occurrence_id": null,
+          "locator_kind": "step_definition",
+          "locator_report": "reports/step-inspection.jsonl",
+          "file_available": true,
+          "definition_name": "悬挂下臂-4.step",
+          "definition_kind": "shape"
+        },
+        "geometry_input": {
+          "kind": "original_step",
+          "path": "assets/1935523/bccccd7be74f2ba6/a4c6124428_步兵悬挂.step",
+          "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+          "definition_id": "0:1:1:39",
+          "configuration": null
+        },
+        "geometry": {
+          "kind": "part",
+          "aabb_mm": [
+            4.000000000001535,
+            78.6995196161021,
+            64.4457518175222
+          ],
+          "area_mm2": 5131.565989868301,
+          "closed_volume_mm3": 6556.678915941508,
+          "inertia_basis": "closed_volume",
+          "inertia_length_mm": 33.822402911154434,
+          "principal_moment_ratios": [
+            0.09470954864266982,
+            0.40645599843287045,
+            0.4988344529244599
+          ],
+          "face_types": {
+            "Cylinder": 20,
+            "Plane": 16
+          },
+          "face_count": 36,
+          "solid_occurrences": 1
+        }
+      }
+    ]
+  },
+  "http": {
+    "passed": true,
+    "id": "rm-1935523-cc08defa62bc17d10",
+    "details": "/v1/models/rm-1935523-cc08defa62bc17d10"
+  }
+}

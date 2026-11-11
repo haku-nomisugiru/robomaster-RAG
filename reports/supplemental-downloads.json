@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "bbs-1935523",
+    "thread_id": 1935523,
+    "name": "步兵悬挂.step",
+    "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/9ddd687e670749e5ba091c5e916a72581783062940072/步兵悬挂.step",
+    "declared_md5": "226a8f5f46ed022b3ef624ce2ca793de",
+    "declared_bytes": 17587950,
+    "downloaded_at_utc": "2026-10-29T05:47:01.800830+00:00",
+    "authentication_used": false,
+    "status": "downloaded",
+    "bytes": 17587950,
+    "md5": "226a8f5f46ed022b3ef624ce2ca793de",
+    "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+    "asset_id": "bbs-1935523-bccccd7be74f2ba6",
+    "path": "raw/downloads/1935523/a4c6124428_步兵悬挂.step",
+    "forum_checksum_verified": true,
+    "access": "anonymous_https"
+  },
+  {
+    "source_id": "bbs-715915",
+    "thread_id": 715915,
+    "name": "25S-typeC-2.5层中心供弹拨盘.zip",
+    "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/b56ba6cedd7a4e0b979b910398d1269e1755358981270/25S-typeC-2.5层中心供弹拨盘.zip",
+    "declared_md5": "f5cc90b8982c75ab971d1ce70c902c6e",
+    "declared_bytes": 14026469,
+    "downloaded_at_utc": "2026-10-29T05:49:00.034122+00:00",
+    "authentication_used": false,
+    "status": "downloaded",
+    "bytes": 14026469,
+    "md5": "f5cc90b8982c75ab971d1ce70c902c6e",
+    "sha256": "0d9a5679f2c05178d776bbd4d296488857d15917a91b8e158a7f67f94f8a9ade",
+    "asset_id": "bbs-715915-0d9a5679f2c05178",
+    "path": "raw/downloads/715915/c9b53be068_25S-typeC-2.5层中心供弹拨盘.zip",
+    "forum_checksum_verified": true,
+    "access": "anonymous_https"
+  }
+]

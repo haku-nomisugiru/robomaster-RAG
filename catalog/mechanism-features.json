@@ -1,0 +1,813 @@
+{
+  "schema_version": "1.0",
+  "documents": {
+    "ace-mechanism-pdf": {
+      "source_id": "bbs-761042",
+      "type": "author_pdf",
+      "path": "raw/downloads/761042/RM2025-东莞理工学院-ACE-工程机器人技术文档.pdf",
+      "sha256": "b21e8eb1b7c80b976dd581f9e99b69c91f780c15a5b36b33582be36e9d286be8"
+    }
+  },
+  "cards": {
+    "rm-1883259-001": {
+      "cad_sha256": "4c2cbfbfce25ddd21ec40fe77085ade410c8e7ef8632768121e8c52014b4d61f",
+      "groups": [],
+      "search_terms": [
+        "井字梁铝管车架",
+        "前中后分仓",
+        "中心机械臂安装区",
+        "纵臂麦轮车架"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "井字形铝管底盘把机械臂安装区布置在中央，电控和电池按前中后区域分开。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 10–11 页 §3.1–3.3",
+          "scope": "source_design"
+        },
+        {
+          "kind": "application",
+          "text": "适合对照中央机械臂和两侧取放机构同时布置的工程车架。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 4、10–11 页 §1.1、§3.1–3.3",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "文档标称车架 590×590 mm，实际孔位、轮距和离地间隙应独立量测。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 10 页 §3.1",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-803685-013": {
+      "cad_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "groups": [],
+      "search_terms": [
+        "井字框架",
+        "舵轮安装车架",
+        "共面双安装区"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "车架采用井字形框架，用于布置并安装舵轮模块。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 7 页 §2.1 底盘",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者选井字形车架的理由是便于安装舵轮。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 7 页 §2.1 底盘",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-776744-009": {
+      "cad_sha256": "cde7a7015bf970a5cbed122b2c61c3fdec1ed9002db4c3010a16f9a4fdab5a0a",
+      "groups": [],
+      "search_terms": [
+        "碳板铝方管底盘",
+        "通用内嵌铝件",
+        "整腿模块拆换",
+        "方管螺纹嵌件"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "车架采用铝方管与碳板，腿部与关节电机组成可分离模块，方管内的通用铝件提供螺纹连接。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 25、43–44 页 §3.1.1、§3.4.1",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "模块化连接可单独拆出整条腿维修。通用嵌件兼作方管加强和螺纹安装。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 43–44 页 §3.4.1",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-761042-c29fea7891c6a18a8": {
+      "cad_sha256": "e278d5c71d047053dc90706aba43b83e74f4e621d9ee5bf010eb3ad296d872b7",
+      "groups": [],
+      "search_terms": [
+        "围字型车架",
+        "外框保护内井承载",
+        "角部滚轮导向",
+        "窄通道底盘"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "外围保护框与中央井字承载区分开。四角倒角处布置聚氨酯导轮，内侧布置取放机构和机械臂。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 16 页 §2.2.2.1 底盘框架",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "外围框隔离碰撞，四角导轮同时导向和吸收部分碰撞，允许车辆行进方向与通道中心线存在偏差。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 16 页 §2.2.2.1 底盘框架",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-1883259-002": {
+      "cad_sha256": "0a325e2f369aeef198497fc7c78e18d409a0e59c32ca4e34e0bb379adf853df9",
+      "groups": [],
+      "search_terms": [
+        "纵臂式独立悬挂",
+        "麦轮双减震",
+        "轴向载荷支承",
+        "夹紧联轴器直连"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "每个麦轮用纵臂式独立悬挂和两只避震器，轮组为板材夹打印件，电机与麦轮用夹紧联轴器连接。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 11 页 §3.3 轮组设计",
+          "scope": "source_design"
+        },
+        {
+          "kind": "principle",
+          "text": "推力球轴承与联轴器配合，适合查看麦轮轮轴的轴向载荷支承布置。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 11 页 §3.3 轮组设计",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者将成熟的纵臂布置和每轮两只避震器作为提高可靠性的设计选择。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 11 页 §3.3 轮组设计",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-1935523-001": {
+      "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "groups": [],
+      "search_terms": [
+        "短减速箱让位",
+        "双避震器接下臂",
+        "上下臂外形止挡",
+        "紧凑全向轮悬挂总成"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "两只避震器接下臂，上下臂外形构成机械限位，短减速箱为避震件让位。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "缩短轮组悬挂在车体方向的占用，兼顾避震器布置与轮距空间。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者指出自制辊子的低成本不代表整套悬挂低成本，减速箱和机加工件抬高整套费用。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「一、前言」",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-1935523-022": {
+      "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "groups": [],
+      "search_terms": [
+        "轮组法兰连接",
+        "轮组悬挂之间转接",
+        "机加工连接法兰"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "轮组和悬挂以机加工法兰转接，本卡定位的是连接子装配，连接板有独立 STEP 定义和接口量测。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」与 STEP 连接子装配 0:1:1:7",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者将打印法兰列为后续探索方向，替换材料后的承载能力需另核。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-1935523-023": {
+      "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "groups": [],
+      "search_terms": [
+        "上臂机械止挡",
+        "上下臂外形限位"
+      ],
+      "claims": [
+        {
+          "kind": "principle",
+          "text": "作者描述悬挂靠上下臂外形接触限位。此卡定位上臂局部，需和另一臂及整套悬挂对照。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-1935523-026": {
+      "cad_sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "groups": [],
+      "search_terms": [
+        "避震器下端安装",
+        "上下臂外形限位"
+      ],
+      "claims": [
+        {
+          "kind": "principle",
+          "text": "作者描述悬挂靠上下臂外形接触限位。此卡定位下臂局部，需和另一臂及整套悬挂对照。",
+          "ref": "tcp-suspension",
+          "locator": "原帖「二、2、悬挂设计」",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-803685-014": {
+      "cad_sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+      "groups": [
+        "suspension"
+      ],
+      "search_terms": [
+        "行走转向独立驱动",
+        "舵下直线导向",
+        "导轨气簧垂直悬挂",
+        "两片轮毂夹持胎皮",
+        "可换实心胎"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "舵向和滚动分别驱动。舵下由直线导轨与气弹簧组成垂直悬挂。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 8 页 §2.1.1 舵轮组",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "两片轮毂以螺钉夹紧实心胎，作者的设计意图是拆开轮毂后可更换胎皮。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 8 页 §2.1.1 舵轮组",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者记录初版导轨缺少侧向夹持时固定螺钉断裂，复用时需核对导轨支撑方式。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 8–9 页 §2.1.1 舵轮组",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-761042-c4c8e0dff37f4395f": {
+      "cad_sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+      "groups": [
+        "suspension"
+      ],
+      "search_terms": [
+        "单侧悬臂轮系",
+        "轮系快拆",
+        "中空轴转向直驱",
+        "正交双导轨",
+        "低轮毂高度"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "A 型舵轮在整车 STEP 中独立定位。作者把该舵轮系列描述为中空轴转向直驱、单侧悬臂和导向避震结构。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18–20 页 §2.2.2.2 舵轮及悬挂",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者采用单侧悬臂简化轮系的拆装，轮径较小以减少对上层取放机构的高度占用。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18 页 §2.2.2.2",
+          "scope": "source_family"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "偏心悬臂会产生倾覆力矩，需核对轴承和支座受力，A/B 的实际装配差异以各 STEP 定义为准。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18–19 页 §2.2.2.2",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-761042-c5cec362277a5c1d4": {
+      "cad_sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+      "groups": [
+        "suspension"
+      ],
+      "search_terms": [
+        "单侧悬臂轮系",
+        "轮系快拆",
+        "中空轴转向直驱",
+        "正交双导轨",
+        "低轮毂高度"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "B 型舵轮在整车 STEP 中独立定位。作者把该舵轮系列描述为中空轴转向直驱、单侧悬臂和导向避震结构。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18–20 页 §2.2.2.2 舵轮及悬挂",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者采用单侧悬臂简化轮系的拆装，轮径较小以减少对上层取放机构的高度占用。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18 页 §2.2.2.2",
+          "scope": "source_family"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "偏心悬臂会产生倾覆力矩，需核对轴承和支座受力，A/B 的实际装配差异以各 STEP 定义为准。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18–19 页 §2.2.2.2",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-776744-010": {
+      "cad_sha256": "0147711660ee315fa47eb19331b5c039d429c5d38c7a8421199b30ce8dfc5af7",
+      "groups": [],
+      "search_terms": [
+        "同轴嵌套差动",
+        "大小腿独立传动",
+        "中空长轴滑环防绕线",
+        "外置轴承承弯矩",
+        "链轮电机轴卸载"
+      ],
+      "claims": [
+        {
+          "kind": "principle",
+          "text": "大腿和小腿传动在同一轴线上嵌套。剖面给出薄壁交叉滚子轴承、碗组轴承、长轴和滚针轴承的布置。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 25–26 页 §3.1.2，图 40",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "长轴上的导电滑环用于腿部连续旋转时防止轮电机导线绕缠。作者另外给出用外置轴承承担链轮弯矩、让电机轴主要传递扭矩的设计。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 26、28–29 页 §3.1.2，图 40、46",
+          "scope": "source_family"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者记录链条松弛、抖动和电机轴超载问题。该卡定位方案 2，实际张紧件和支承形式需按版本确认。",
+          "ref": "rps-infantry",
+          "locator": "PDF 第 27–29 页 §3.1.2 与方案 2 文件名",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-815703-cb91f7be3de320dfd": {
+      "cad_sha256": "9da31ca3bb998a8f85b506cdb9f63a5da8efd4160105559ac8ca83cc5ea7ea5b",
+      "groups": [
+        "wheel_leg"
+      ],
+      "search_terms": [
+        "桌面串联轮腿台架",
+        "双连杆电控联调",
+        "台架验证"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "桌面串联轮腿调试平台，作者说明沿用开源轮腿构型并调整了部分参数。",
+          "ref": "hfut-desktop-leg",
+          "locator": "原帖「开源背景」「开源内容」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "application",
+          "text": "适合在桌面环境联调控制和验证关节运动。",
+          "ref": "hfut-desktop-leg",
+          "locator": "原帖「开源背景」「开源内容」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "部分连杆轴系的轴向承载有限，作者将用途限定为桌面练习。",
+          "ref": "hfut-desktop-leg",
+          "locator": "原帖「注意事项」",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-1883259-003": {
+      "cad_sha256": "b0b5ff5ca9e644ec6becef8925066462b87d4f0a3c5eedbee332758f9f85c120",
+      "groups": [],
+      "search_terms": [
+        "电机偏置",
+        "外置二级减速",
+        "大臂扭矩与转速取舍"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "作者用主臂 Joint3 说明偏置电机及追加外部减速。这里定位主机械臂的大臂装配。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 6–7 页 §2.1.2",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "增加外置减速是为了提高负载下可用扭矩，避免仅靠电机峰值参数选型。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 7 页 §2.1.2",
+          "scope": "source_family"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "追加减速会牺牲速度。文档里的关节输出估算不能当作此 CAD 的台架结果。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 7 页 §2.1.2",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-803685-015": {
+      "cad_sha256": "194664c6d63ad85a2a279b7082c4f1d628ed80a0da088b35e01a0005b666b2c4",
+      "groups": [],
+      "search_terms": [
+        "电滑环和旋转气接头分开",
+        "中空气管穿电滑环",
+        "偏置万向轴关节",
+        "非等速传动"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "J4 的电气通路和气路分别通过中空电滑环和旋转气动接头，气管穿过电滑环中心。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 13 页 §2.4 L3",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "万向轴传动把电机收在 L4 结构内，减少外凸空间。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 13 页 §2.4 L3",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "万向节有偏角时输入输出不等速，选型还要考虑背隙和相位。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 14 页 §2.4 L3",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-803685-016": {
+      "cad_sha256": "b749764c67ef30ca5f56a340474dd9846c90c0e718cc2ff0e7db2f664fc48755",
+      "groups": [],
+      "search_terms": [
+        "腕部俯仰与轮驱解耦",
+        "末端滚转共用电机",
+        "双旋转气接头"
+      ],
+      "claims": [
+        {
+          "kind": "principle",
+          "text": "腕部设计使轮驱与 J5 俯仰解耦。轮驱与 J6 滚转不同时使用，因此共用一个电机。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 14 页 §2.5 Wrist",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "两个旋转气接头让气管不用随俯仰与滚转转动。",
+          "ref": "enterprize-engineering",
+          "locator": "PDF 第 14–15 页 §2.5 Wrist",
+          "scope": "source_family"
+        },
+        {
+          "kind": "application",
+          "text": "本卡是腕部 L6 原生装配入口。整个腕部的传动与气路应结合上一级装配核对。",
+          "ref": "cad",
+          "locator": "L6_v2.2025.10.1.SLDASM",
+          "scope": "file_locator"
+        }
+      ]
+    },
+    "rm-761042-c258c0d6ef2077880": {
+      "cad_sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+      "groups": [],
+      "search_terms": [
+        "前缘抬高机械臂底座",
+        "末端真空泵近吸盘",
+        "气路侧出避免气管弯折"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "机械臂装在车架前缘并抬高底座。真空泵放在靠近吸盘的连杆上，末端气路侧出。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 25、28–29 页 §2.2.4",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者通过缩短气管降低吸附建立等待，并把气管绕开滚转关节以减少弯折。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 28–29 页 §2.2.4.5",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者报告初版俯仰同步带出现跳齿，后续改带和张紧布置。该记录属于项目迭代，不能推断其他版本的使用寿命。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 28 页 §2.2.4.5",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-761042-c2ed254897d8b3e8e": {
+      "cad_sha256": "13f509c9af5fcdf012b7bb2ccbf5081dc95927e66fcb30274d486c41cd79fa88",
+      "groups": [
+        "gripper"
+      ],
+      "search_terms": [
+        "风琴吸盘",
+        "柔性吸盘角度容差",
+        "硬托盘防摆",
+        "吸盘俯仰末端",
+        "真空吸附与托盘支撑"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "A 型是独立的线性取放装配入口。作者设计由抬升、前伸、末端俯仰及双层吸盘和托盘组成。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 20–23 页 §2.2.3",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "双层风琴吸盘通过软段形变补偿接触面角度偏差。硬托盘承托工件，减少吸附后的摆动和滑移。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 23 页 §2.2.3.4 吸盘、托盘",
+          "scope": "source_family"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "仅靠柔性吸盘时晃动可能拉开密封唇。粗糙表面的吸附稳定性需要实际工件验证。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 23–24 页 §2.2.3.4",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-761042-ce916434f1d6c55d4": {
+      "cad_sha256": "185a2e3f95f15286bebef01f6e3f0b41ad1b3a1d60a72ee4f4ab846565366326",
+      "groups": [
+        "gripper"
+      ],
+      "search_terms": [
+        "风琴吸盘",
+        "柔性吸盘角度容差",
+        "硬托盘防摆",
+        "吸盘俯仰末端",
+        "真空吸附与托盘支撑"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "B 型是独立的线性取放装配入口。作者设计由抬升、前伸、末端俯仰及双层吸盘和托盘组成。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 20–23 页 §2.2.3",
+          "scope": "source_family"
+        },
+        {
+          "kind": "advantage",
+          "text": "双层风琴吸盘通过软段形变补偿接触面角度偏差。硬托盘承托工件，减少吸附后的摆动和滑移。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 23 页 §2.2.3.4 吸盘、托盘",
+          "scope": "source_family"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "仅靠柔性吸盘时晃动可能拉开密封唇。粗糙表面的吸附稳定性需要实际工件验证。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 23–24 页 §2.2.3.4",
+          "scope": "source_family"
+        }
+      ]
+    },
+    "rm-1883259-004": {
+      "cad_sha256": "ee65893ffdda8bac5ea8dc3d0c26d638ad43dcd6cc2ae37aaf5b57e82f40e4b3",
+      "groups": [
+        "gripper"
+      ],
+      "search_terms": [
+        "15°侧取",
+        "双侧独立龙门架",
+        "齿轮齿条前伸升降",
+        "橡胶吸盘取放",
+        "气管穿前伸铝管"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "15°侧取原生入口。项目资料中两侧取放机构分别前伸和抬升，使用齿轮齿条驱动与橡胶吸盘。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 8–9 页 §2.2 龙门架设计",
+          "scope": "source_family"
+        },
+        {
+          "kind": "principle",
+          "text": "气管从前伸铝管内穿过，再通过弹簧管接气泵。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 9 页 §2.2 龙门架设计",
+          "scope": "source_family"
+        },
+        {
+          "kind": "application",
+          "text": "适合比较直取和斜向取放的布置及末端干涉边界。",
+          "ref": "cad",
+          "locator": "取放原生装配文件名",
+          "scope": "file_locator"
+        }
+      ]
+    },
+    "rm-1883259-005": {
+      "cad_sha256": "5cde705c3077707748665bba9b5871d17576642bb56d62daa6a7f1dce7f25b3f",
+      "groups": [
+        "gripper"
+      ],
+      "search_terms": [
+        "直取",
+        "双侧独立龙门架",
+        "齿轮齿条前伸升降",
+        "橡胶吸盘取放",
+        "气管穿前伸铝管"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "直取原生入口。项目资料中两侧取放机构分别前伸和抬升，使用齿轮齿条驱动与橡胶吸盘。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 8–9 页 §2.2 龙门架设计",
+          "scope": "source_family"
+        },
+        {
+          "kind": "principle",
+          "text": "气管从前伸铝管内穿过，再通过弹簧管接气泵。",
+          "ref": "cod-engineering",
+          "locator": "PDF 第 9 页 §2.2 龙门架设计",
+          "scope": "source_family"
+        },
+        {
+          "kind": "application",
+          "text": "适合比较直取和斜向取放的布置及末端干涉边界。",
+          "ref": "cad",
+          "locator": "取放原生装配文件名",
+          "scope": "file_locator"
+        }
+      ]
+    },
+    "rm-816172-019": {
+      "cad_sha256": "b47653978d733785794d443f1f86d4c043413964b2a9c6f95a5ae16c495f7003",
+      "groups": [],
+      "search_terms": [
+        "银矿末端取放",
+        "独立抓取装配",
+        "抬升取放参考"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "原生附件存在单独的银矿抓取装配。CAD 命名和保存引用不足以确定抓取原理、夹持行程或负载能力。",
+          "ref": "cad",
+          "locator": "银矿抓取.SLDASM 及保存引用入口",
+          "scope": "file_locator"
+        }
+      ]
+    },
+    "rm-1936175-017": {
+      "cad_sha256": "14a57d21d32dc32ee2c576591eb3333a3a8e6be11e1b53197fa45be45dd80247",
+      "groups": [],
+      "search_terms": [
+        "低成本轻型减速器",
+        "同孔位替换",
+        "安装高度厚度差异",
+        "大背隙取舍"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "轻型系列是现有成品减速箱的替代设计，作者称安装孔位一致。",
+          "ref": "future-gearbox",
+          "locator": "原帖「轻型减速箱／食用方式」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者将成本较低和维修较快作为轻型方案的取舍。",
+          "ref": "future-gearbox",
+          "locator": "原帖「轻型减速箱／性能」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者指出背隙偏大，高度和厚度有差异，内部齿轮也不通用。",
+          "ref": "future-gearbox",
+          "locator": "原帖「轻型减速箱／性能」「食用方式」",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-1936175-018": {
+      "cad_sha256": "ddcbb1bf3f5b5d73a592de455b978b6636681389e8ec34448df4927b1f140a19",
+      "groups": [],
+      "search_terms": [
+        "角接触与碗组轴承",
+        "重型减速器双轴承支撑",
+        "共用轻型齿轮组",
+        "粉末冶金耐磨性"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "重型系列将角接触轴承与碗组轴承组合，齿轮组沿用轻型方案。",
+          "ref": "future-gearbox",
+          "locator": "原帖「较25赛季款式主要改进方向」「重型减速箱」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "advantage",
+          "text": "作者以增强支承和整体强度为重型系列的设计目标，同时复用同帖轻型齿轮组。",
+          "ref": "future-gearbox",
+          "locator": "原帖「较25赛季款式主要改进方向」",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "粉末冶金齿轮耐磨性有限，实际背隙受加工误差影响。",
+          "ref": "future-gearbox",
+          "locator": "原帖「重型减速箱／性能」「食用方式」",
+          "scope": "source_design"
+        }
+      ]
+    },
+    "rm-761042-cc34992eadfa6db7a": {
+      "cad_sha256": "c268cb0f2cd83505f90747e8eb672604b6eb009b515340e9dacad9d913979154",
+      "groups": [],
+      "search_terms": [
+        "小轮径提速补偿",
+        "轮毂驱动减速器",
+        "268比17"
+      ],
+      "claims": [
+        {
+          "kind": "structure",
+          "text": "原 STEP 定义名标记为 268:17 减速箱，项目文档将该减速箱用于舵轮轮驱。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18 页 §2.2.2.2 与 STEP 定义 0:1:1:96",
+          "scope": "source_design"
+        },
+        {
+          "kind": "principle",
+          "text": "作者采用该减速箱提高轮端转速，补偿降低轮径造成的行驶速度损失。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18 页 §2.2.2.2",
+          "scope": "source_design"
+        },
+        {
+          "kind": "tradeoff",
+          "text": "作者提到减速箱曾损坏，因此整套轮系选择便于拆换的方案。",
+          "ref": "ace-mechanism-pdf",
+          "locator": "PDF 第 18 页 §2.2.2.2",
+          "scope": "source_design"
+        }
+      ]
+    }
+  }
+}

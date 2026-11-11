@@ -1,0 +1,194 @@
+{
+  "id": "if-swerve-frame-default-rail-b",
+  "label": "车架与舵轮对应的第二组安装面",
+  "target": {
+    "card_id": "rm-803685-c436d23f8c29cc095",
+    "path": "assets/803685/ac8d43afad2ed818/chassis/车架/Frame.2025.10.1.SLDPRT",
+    "sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f",
+    "definition_id": null,
+    "configuration": "默认"
+  },
+  "measurement_input": {
+    "kind": "solidworks_step_export",
+    "path": "reports/interface-evidence/swerve-chassis-frame.step",
+    "sha256": "b008c32945e6a6ba528eaab0d77739aab466ce0683b30f0b6c257fcef80daa7a",
+    "definition_id": null,
+    "native_configuration": "默认",
+    "native_revision": "33.4.0"
+  },
+  "selector": {
+    "face_index": 95,
+    "normal": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "area_mm2": 20721.912429976714,
+    "centroid_mm": [
+      -95.0,
+      41.0,
+      -2.9288314998854045e-14
+    ],
+    "opening_indices": [
+      16,
+      17,
+      18
+    ]
+  },
+  "contexts": [
+    {
+      "card_id": "rm-803685-013",
+      "root_card_id": "rm-803685-013",
+      "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "root_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "definition_id": null,
+      "kind": "solidworks_live",
+      "occurrence_id": "Frame.2025.10.1-1",
+      "role": "舵轮对应的车架安装面",
+      "root_configuration": "默认",
+      "path_semantics": "saved_or_unresolved_path"
+    }
+  ],
+  "limitations": [
+    "圆形开口的几何来自选定面；未验证螺纹、孔深或制造公差。",
+    "只覆盖记录中的 SolidWorks 配置与装配实例。"
+  ],
+  "schema_version": "1.0",
+  "evidence_type": "cad_geometry_measured",
+  "measured_at_utc": "2026-11-10T12:38:35.112049+00:00",
+  "method": {
+    "engine": "OCP/XCAF",
+    "ocp_version": "7.9.3.1",
+    "method": "planar face and analytic circular inner wires",
+    "numeric_geometry_tolerance_mm": 0.0001
+  },
+  "units": {
+    "length": "mm",
+    "area": "mm2"
+  },
+  "manufacturing_tolerance_mm": null,
+  "fit_to_target_verified": false,
+  "geometry": {
+    "step_definition_id": "0:1:1:1",
+    "datum": {
+      "origin_mm": [
+        -95.00000000000001,
+        41.0,
+        -190.0
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "u_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "v_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    "mounting_face": {
+      "face_index": 95,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "plane_point_mm": [
+        0.0,
+        41.0,
+        0.0
+      ],
+      "centroid_mm": [
+        -95.0,
+        41.0,
+        -2.9288314998854045e-14
+      ],
+      "area_mm2": 20721.912429976714,
+      "inner_wires": 18
+    },
+    "hole_pattern": {
+      "openings": [
+        {
+          "center_mm": [
+            -95.00000000000001,
+            41.0,
+            -215.0
+          ],
+          "diameter_mm": 6.199999999999983,
+          "id": "h16",
+          "uv_mm": [
+            0.0,
+            25.0
+          ]
+        },
+        {
+          "center_mm": [
+            -95.00000000000001,
+            41.0,
+            -165.0
+          ],
+          "diameter_mm": 6.199999999999983,
+          "id": "h17",
+          "uv_mm": [
+            0.0,
+            -25.0
+          ]
+        },
+        {
+          "center_mm": [
+            -95.00000000000001,
+            41.0,
+            -190.0
+          ],
+          "diameter_mm": 6.199999999999983,
+          "id": "h18",
+          "uv_mm": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "center_distances_mm": [
+        {
+          "from": "h16",
+          "to": "h17",
+          "distance_mm": 50.0
+        },
+        {
+          "from": "h16",
+          "to": "h18",
+          "distance_mm": 25.0
+        },
+        {
+          "from": "h17",
+          "to": "h18",
+          "distance_mm": 25.0
+        }
+      ]
+    },
+    "envelope_mm": {
+      "min": [
+        -298.00000000000006,
+        -43.00000000000001,
+        -297.00000000000006
+      ],
+      "max": [
+        298.00000000000006,
+        81.0,
+        297.00000000000006
+      ],
+      "size": [
+        596.0000000000001,
+        124.0,
+        594.0000000000001
+      ],
+      "method": "OCCT BRepBndLib.AddOptimal; static geometry"
+    }
+  }
+}

@@ -1,0 +1,2072 @@
+{
+  "http": {
+    "download": {
+      "path": "runtime/solidworks-swerve-acceptance/download/【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+      "sha256": "ac8d43afad2ed818b017863be9c39f6cd98c4051c675e79c505e1ef9dcde17b6",
+      "bytes": 504032226,
+      "cached": false
+    },
+    "case_root": "reports/solidworks-swerve-acceptance",
+    "extracted_files": 69,
+    "search_ids": {
+      "wheel": [
+        "rm-803685-014",
+        "rm-761377-cd920824e331ee228",
+        "rm-761377-c5e1dc640f6fcbc5f"
+      ],
+      "frame": [
+        "rm-803685-c436d23f8c29cc095"
+      ],
+      "chassis": [
+        "rm-803685-013",
+        "rm-1883259-001",
+        "rm-761042-c29fea7891c6a18a8",
+        "rm-716376-c1b77a7400cea97e8",
+        "rm-776744-009"
+      ]
+    },
+    "cards": {
+      "wheel": "rm-803685-014",
+      "frame": "rm-803685-c436d23f8c29cc095",
+      "chassis": "rm-803685-013",
+      "outer": "rm-803685-ce2bee0af698aa86a"
+    },
+    "files": {
+      "wheel": {
+        "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+        "sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0"
+      },
+      "frame": {
+        "path": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+        "sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f"
+      },
+      "chassis": {
+        "path": "reports/solidworks-swerve-acceptance/chassis/chassis_v2.2025.10.1.SLDASM",
+        "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0"
+      },
+      "outer": {
+        "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+        "sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c"
+      }
+    },
+    "root_copy": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+    "wheel_copy": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM"
+  },
+  "test_installation": {
+    "wheel": {
+      "name": "ReuseAcceptance_3508_Swerve-4",
+      "config": "默认",
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM",
+      "fixedAtAssembly": false,
+      "transform": [
+        -0.7071067811865476,
+        0,
+        -0.7071067811865478,
+        0,
+        1,
+        0,
+        0.7071067811865478,
+        0,
+        -0.7071067811865476,
+        -0.23628762648676083,
+        0.06090918687682975,
+        -0.14769395598183002,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "frame": {
+      "name": "Frame.2025.10.1-1",
+      "config": "默认",
+      "path": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "fixedAtAssembly": true,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "outer": {
+      "name": "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+      "config": "Mirror默认",
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "fixedAtAssembly": false,
+      "transform": [
+        -0.7071067811865476,
+        0,
+        -0.7071067811865478,
+        0,
+        1,
+        0,
+        0.7071067811865478,
+        0,
+        -0.7071067811865476,
+        -0.19,
+        0.041,
+        -0.19,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "rebuilt": false
+  },
+  "root_force_rebuild_before": false,
+  "root_load_status_before": {
+    "openError": 2,
+    "openWarning": 2,
+    "activateError": 0,
+    "resolved": 0
+  },
+  "root_force_rebuild_after": false,
+  "saved": {
+    "saved": true,
+    "error": 0,
+    "warning": 0,
+    "document": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM"
+  },
+  "reopened": {
+    "document": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+    "wheel": {
+      "name": "ReuseAcceptance_3508_Swerve-4",
+      "config": "默认",
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM",
+      "fixedAtAssembly": false,
+      "transform": [
+        -0.7071067811865476,
+        0,
+        -0.7071067811865478,
+        0,
+        1,
+        0,
+        0.7071067811865478,
+        0,
+        -0.7071067811865476,
+        -0.23628762648676083,
+        0.06090918687682975,
+        -0.14769395598183002,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "frame": {
+      "name": "Frame.2025.10.1-1",
+      "config": "默认",
+      "path": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "fixedAtAssembly": true,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "outer": {
+      "name": "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+      "config": "Mirror默认",
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "fixedAtAssembly": false,
+      "transform": [
+        -0.7071067811865476,
+        0,
+        -0.7071067811865478,
+        0,
+        1,
+        0,
+        0.7071067811865478,
+        0,
+        -0.7071067811865476,
+        -0.19,
+        0.041,
+        -0.19,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "rebuilt": null
+  },
+  "reopened_references": {
+    "occurrences": 688,
+    "suppressed": 25,
+    "active": 663,
+    "loaded_with_local_path": 294,
+    "toolbox_occurrences": 88,
+    "toolbox_paths": [
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket button head screw_iso.sldprt",
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket countersunk head screw_iso.sldprt",
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket head cap screw_iso.sldprt",
+      "[local Toolbox]/ISO/pins/parallel/parallel pin unhardened_iso.sldprt"
+    ],
+    "virtual_occurrences": 104,
+    "temporary_nonvirtual_occurrences": 176,
+    "temporary_nonvirtual_paths": [
+      "[SolidWorks temp]/IC~~/CP_Radial_D8.0mm_P3.50mm.step.SLDASM",
+      "[SolidWorks temp]/IC~~/CP_Radial_D80mm_P350mm.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/C_0603_1608Metric-4.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/C_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/D_SMC-5.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/D_SMC.step.SLDASM",
+      "[SolidWorks temp]/IC~~/D_SMF-2.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/D_SMF.step.SLDASM",
+      "[SolidWorks temp]/IC~~/Fuse_0603_1608Metric-2.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/Fuse_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/JST_BM02B_GHS_TBT.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/JST_BM07B_GHS_TBT.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/JST_GH_BM02B-GHS-TBT_1x02-1MP_P1.25mm_Vertical.step.SLDASM",
+      "[SolidWorks temp]/IC~~/JST_GH_BM07B-GHS-TBT_1x07-1MP_P1.25mm_Vertical.step.SLDASM",
+      "[SolidWorks temp]/IC~~/LED_0603_1608Metric-1.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/LED_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/R_0603_1608Metric-1.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/R_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/SOT-23.step.SLDASM",
+      "[SolidWorks temp]/IC~~/SOT_23.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/Swerve_Drive_Board.step.SLDASM",
+      "[SolidWorks temp]/IC~~/Swerve_Drive_Board_PCB.step.SLDPRT"
+    ],
+    "missing_model_documents": [],
+    "suppression_status_outside_resolved_codes": [
+      {
+        "name": "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1-1",
+        "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/GearBox/STANDARD PARTS/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1.SLDPRT",
+        "state": -1,
+        "config": "默认",
+        "resolvedPath": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/GearBox/STANDARD PARTS/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1.SLDPRT",
+        "local": true,
+        "virtualComponent": false,
+        "toolbox": false,
+        "temporary": false
+      },
+      {
+        "name": "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1-1",
+        "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/GearBox/STANDARD PARTS/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1.SLDPRT",
+        "state": -1,
+        "config": "默认",
+        "resolvedPath": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/GearBox/STANDARD PARTS/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1.SLDPRT",
+        "local": true,
+        "virtualComponent": false,
+        "toolbox": false,
+        "temporary": false
+      },
+      {
+        "name": "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1-1",
+        "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/GearBox/STANDARD PARTS/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1.SLDPRT",
+        "state": -1,
+        "config": "默认",
+        "resolvedPath": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/GearBox/STANDARD PARTS/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1.SLDPRT",
+        "local": true,
+        "virtualComponent": false,
+        "toolbox": false,
+        "temporary": false
+      }
+    ],
+    "unexpected_nonlocal_occurrences": [
+      {
+        "name": "RM_场地交互模块.2025.10.1-1",
+        "path": "assets/803685/ac8d43afad2ed818/REFEREE SYSTEAM/RM_场地交互模块.2025.10.1.SLDPRT",
+        "state": 2,
+        "config": "默认",
+        "resolvedPath": "assets/803685/ac8d43afad2ed818/REFEREE SYSTEAM/RM_场地交互模块.2025.10.1.SLDPRT",
+        "local": false,
+        "virtualComponent": false,
+        "toolbox": false,
+        "temporary": false
+      }
+    ],
+    "library_paths_in_dependency_table": [
+      {
+        "name": "Swerve_Drive_Board.step",
+        "path": "[SolidWorks temp]/IC~~/Swerve_Drive_Board.step.SLDASM|assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step"
+      },
+      {
+        "name": "MGN7C.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "STD_2-M3-10-H8-25.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/Robotic arm/CNC/STD_2-M3-10-H8-25.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "MT1256-P1210.step.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/导电滑环模型/MT1256-P1210.step.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "bearing_RA7008.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/Bearings/bearing_RA7008.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "J0_RA7008轴承外圈CNC.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/CNC/J0_RA7008轴承外圈CNC.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "J0_RA7008轴承内圈CNC.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/CNC/J0_RA7008轴承内圈CNC.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "04C_37teeth_从动轮.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/04C链条/04C_37teeth_从动轮.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "MMC182.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/导电滑环模型/MMC182.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "RM_场地交互模块.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/REFEREE SYSTEAM/RM_场地交互模块.2025.10.1.SLDPRT"
+      }
+    ]
+  },
+  "mates": {
+    "source_mate_count": 5,
+    "reattached_count": 5,
+    "checks": [
+      {
+        "original": {
+          "name": "同心8",
+          "type": "MateConcentric",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "Frame.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "同心8",
+          "type": "MateConcentric",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "Frame.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "重合33",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "重合33",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "平行7",
+          "type": "MateParallel",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "平行7",
+          "type": "MateParallel",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "重合35",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "重合35",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "重合40",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "重合40",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      }
+    ],
+    "root_mate_error_count_before": 0,
+    "root_mate_error_count_after": 0
+  },
+  "pose": {
+    "wheel": {
+      "origin_shift_mm": 0.0,
+      "max_basis_entry_change": 0.0
+    },
+    "frame": {
+      "origin_shift_mm": 0.0,
+      "max_basis_entry_change": 0
+    },
+    "outer": {
+      "origin_shift_mm": 0.0,
+      "max_basis_entry_change": 0.0
+    }
+  },
+  "holes": {
+    "native_candidate_count": {
+      "frame": 512,
+      "outer": 60
+    },
+    "expected_pairs": 6,
+    "measured_pairs": 6,
+    "match_tolerance_mm": 0.02,
+    "max_radial_offset_mm": 7.652779469160725e-14,
+    "max_face_gap_mm": 0,
+    "max_axis_angle_deg": 0.0,
+    "measured_pitch_by_rail_mm": {
+      "frame": [
+        [
+          25.0,
+          25.0
+        ],
+        [
+          25.0,
+          25.0
+        ]
+      ],
+      "outer": [
+        [
+          25.0,
+          25.0
+        ],
+        [
+          25.00000000000003,
+          25.0
+        ]
+      ]
+    },
+    "pairs": [
+      {
+        "nominal_center_mm": [
+          -215,
+          41,
+          -95
+        ],
+        "frame": {
+          "center_mm": [
+            -215,
+            41,
+            -94.99999999999999
+          ],
+          "diameter_mm": 6.199999999999973,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -215,
+            41,
+            -94.99999999999999
+          ]
+        },
+        "outer": {
+          "center_mm": [
+            -214.99999999999997,
+            41,
+            -94.99999999999997
+          ],
+          "diameter_mm": 6.199999999999994,
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "component_local_mm": [
+            -49.49747468305835,
+            0,
+            -84.85281374238568
+          ]
+        },
+        "radial_center_offset_mm": 3.1776437161565096e-14,
+        "face_gap_mm": 0,
+        "axis_angle_deg": 0.0
+      },
+      {
+        "nominal_center_mm": [
+          -190,
+          41,
+          -95
+        ],
+        "frame": {
+          "center_mm": [
+            -190,
+            41,
+            -94.99999999999999
+          ],
+          "diameter_mm": 6.199999999999973,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -190,
+            41,
+            -94.99999999999999
+          ]
+        },
+        "outer": {
+          "center_mm": [
+            -189.99999999999997,
+            41,
+            -94.99999999999997
+          ],
+          "diameter_mm": 6.200000000000007,
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "component_local_mm": [
+            -67.17514421272206,
+            0,
+            -67.17514421272199
+          ]
+        },
+        "radial_center_offset_mm": 3.1776437161565096e-14,
+        "face_gap_mm": 0,
+        "axis_angle_deg": 0.0
+      },
+      {
+        "nominal_center_mm": [
+          -165,
+          41,
+          -95
+        ],
+        "frame": {
+          "center_mm": [
+            -165,
+            41,
+            -94.99999999999999
+          ],
+          "diameter_mm": 6.199999999999973,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -165,
+            41,
+            -94.99999999999999
+          ]
+        },
+        "outer": {
+          "center_mm": [
+            -164.99999999999997,
+            41,
+            -94.99999999999999
+          ],
+          "diameter_mm": 6.200000000000003,
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "component_local_mm": [
+            -84.85281374238572,
+            0,
+            -49.49747468305829
+          ]
+        },
+        "radial_center_offset_mm": 2.842170943040401e-14,
+        "face_gap_mm": 0,
+        "axis_angle_deg": 0.0
+      },
+      {
+        "nominal_center_mm": [
+          -95,
+          41,
+          -215
+        ],
+        "frame": {
+          "center_mm": [
+            -95.00000000000001,
+            41,
+            -215
+          ],
+          "diameter_mm": 6.199999999999999,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -95.00000000000001,
+            41,
+            -215
+          ]
+        },
+        "outer": {
+          "center_mm": [
+            -94.99999999999994,
+            41,
+            -214.99999999999997
+          ],
+          "diameter_mm": 6.199999999999994,
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -49.497474683058364,
+            0,
+            84.8528137423857
+          ]
+        },
+        "radial_center_offset_mm": 7.652779469160725e-14,
+        "face_gap_mm": 0,
+        "axis_angle_deg": 0.0
+      },
+      {
+        "nominal_center_mm": [
+          -95,
+          41,
+          -190
+        ],
+        "frame": {
+          "center_mm": [
+            -95.00000000000001,
+            41,
+            -190
+          ],
+          "diameter_mm": 6.199999999999999,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -95.00000000000001,
+            41,
+            -190
+          ]
+        },
+        "outer": {
+          "center_mm": [
+            -94.99999999999997,
+            41,
+            -189.99999999999994
+          ],
+          "diameter_mm": 6.200000000000007,
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -67.17514421272206,
+            0,
+            67.17514421272199
+          ]
+        },
+        "radial_center_offset_mm": 7.105427357601002e-14,
+        "face_gap_mm": 0,
+        "axis_angle_deg": 0.0
+      },
+      {
+        "nominal_center_mm": [
+          -95,
+          41,
+          -165
+        ],
+        "frame": {
+          "center_mm": [
+            -95.00000000000001,
+            41,
+            -165
+          ],
+          "diameter_mm": 6.199999999999999,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -95.00000000000001,
+            41,
+            -165
+          ]
+        },
+        "outer": {
+          "center_mm": [
+            -94.99999999999997,
+            41,
+            -164.99999999999994
+          ],
+          "diameter_mm": 6.200000000000003,
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "component_local_mm": [
+            -84.85281374238572,
+            0,
+            49.497474683058314
+          ]
+        },
+        "radial_center_offset_mm": 7.105427357601002e-14,
+        "face_gap_mm": 0,
+        "axis_angle_deg": 0.0
+      }
+    ]
+  },
+  "interference": {
+    "before": {
+      "all_assembly": 388,
+      "involving_wheel": 90,
+      "direct_frame_to_wheel": 0,
+      "direct_frame_to_wheel_volume_mm3": 0
+    },
+    "after": {
+      "all_assembly": 388,
+      "involving_wheel": 90,
+      "direct_frame_to_wheel": 0,
+      "direct_frame_to_wheel_volume_mm3": 0
+    },
+    "virtual_pcb_display_name_normalization": "Removed the .2025.10.1 suffix only in generated RM25_Steering_Wheel_PCB virtual-component parent names, which SOLIDWORKS changes upon reopening.",
+    "entire_assembly_added_pair_counts": [],
+    "entire_assembly_removed_pair_counts": [],
+    "new_involving_wheel": [],
+    "removed_involving_wheel": [],
+    "largest_existing_wheel_overlap_volume_delta_mm3": 3.387867764104158e-11,
+    "largest_after_wheel_overlap": {
+      "participants": [
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/3DP_WHEEL_PCB_FIX.2025.10.1-1"
+      ],
+      "volume_mm3": 8330.319763561605
+    }
+  },
+  "interference_after_reopen": {
+    "before": {
+      "all_assembly": 388,
+      "involving_wheel": 90,
+      "direct_frame_to_wheel": 0,
+      "direct_frame_to_wheel_volume_mm3": 0
+    },
+    "after": {
+      "all_assembly": 364,
+      "involving_wheel": 90,
+      "direct_frame_to_wheel": 0,
+      "direct_frame_to_wheel_volume_mm3": 0
+    },
+    "virtual_pcb_display_name_normalization": "Removed the .2025.10.1 suffix only in generated RM25_Steering_Wheel_PCB virtual-component parent names, which SOLIDWORKS changes upon reopening.",
+    "entire_assembly_added_pair_counts": [],
+    "entire_assembly_removed_pair_counts": [
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-2",
+          "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/M3508_WithGear_MKIV_III_250409.2025.10.1-1/STD_M3508_Gear_MKIV_III_corrected_250409.2025.10.1-1"
+        ],
+        "count": 3
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-3",
+          "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1-1"
+        ],
+        "count": 1
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-3",
+          "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/M3508_WithGear_MKIV_III_250409.2025.10.1-1/STD_M3508_Gear_MKIV_III_corrected_250409.2025.10.1-1"
+        ],
+        "count": 4
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-2",
+          "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/M3508_WithGear_MKIV_III_250409.2025.10.1-1/STD_M3508_Gear_MKIV_III_corrected_250409.2025.10.1-1"
+        ],
+        "count": 3
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-3",
+          "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1-1"
+        ],
+        "count": 1
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-3",
+          "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/M3508_WithGear_MKIV_III_250409.2025.10.1-1/STD_M3508_Gear_MKIV_III_corrected_250409.2025.10.1-1"
+        ],
+        "count": 4
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-2",
+          "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/M3508_WithGear_MKIV_III_250409.2025.10.1-1/STD_M3508_Gear_MKIV_III_corrected_250409.2025.10.1-1"
+        ],
+        "count": 3
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-3",
+          "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_InternalSpurGear_M0.6xT77_MKIV_III_250409.2025.10.1-1"
+        ],
+        "count": 1
+      },
+      {
+        "participants": [
+          "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/#GearAssembly_250409.2025.10.1-1/STD_DualSpurGear_M0.6xT14_M0.6xT46_MKIV_III_250409.2025.10.1-3",
+          "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_inner.2025.10.1-1/Suspension_part.2025.10.1-1/5x2Wheel_with_GearBox.2025.10.1-1/#NW_GEARBOX_MKIV_III_250409.2025.10.1-1/M3508_WithGear_MKIV_III_250409.2025.10.1-1/STD_M3508_Gear_MKIV_III_corrected_250409.2025.10.1-1"
+        ],
+        "count": 4
+      }
+    ],
+    "new_involving_wheel": [],
+    "removed_involving_wheel": [],
+    "largest_existing_wheel_overlap_volume_delta_mm3": 1.0182493070942655e-08,
+    "largest_after_wheel_overlap": {
+      "participants": [
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/3DP_WHEEL_PCB_FIX.2025.10.1-1"
+      ],
+      "volume_mm3": 8330.319763561603
+    }
+  },
+  "references": {
+    "occurrences": 688,
+    "suppressed": 26,
+    "active": 662,
+    "loaded_with_local_path": 294,
+    "toolbox_occurrences": 88,
+    "toolbox_paths": [
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket button head screw_iso.sldprt",
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket countersunk head screw_iso.sldprt",
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket head cap screw_iso.sldprt",
+      "[local Toolbox]/ISO/pins/parallel/parallel pin unhardened_iso.sldprt"
+    ],
+    "virtual_occurrences": 104,
+    "temporary_nonvirtual_occurrences": 176,
+    "temporary_nonvirtual_paths": [
+      "[SolidWorks temp]/IC~~/CP_Radial_D8.0mm_P3.50mm.step.SLDASM",
+      "[SolidWorks temp]/IC~~/CP_Radial_D80mm_P350mm.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/C_0603_1608Metric-4.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/C_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/D_SMC-5.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/D_SMC.step.SLDASM",
+      "[SolidWorks temp]/IC~~/D_SMF-2.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/D_SMF.step.SLDASM",
+      "[SolidWorks temp]/IC~~/Fuse_0603_1608Metric-2.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/Fuse_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/JST_BM02B_GHS_TBT.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/JST_BM07B_GHS_TBT.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/JST_GH_BM02B-GHS-TBT_1x02-1MP_P1.25mm_Vertical.step.SLDASM",
+      "[SolidWorks temp]/IC~~/JST_GH_BM07B-GHS-TBT_1x07-1MP_P1.25mm_Vertical.step.SLDASM",
+      "[SolidWorks temp]/IC~~/LED_0603_1608Metric-1.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/LED_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/R_0603_1608Metric-1.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/R_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/SOT-23.step.SLDASM",
+      "[SolidWorks temp]/IC~~/SOT_23.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/Swerve_Drive_Board.step.SLDASM",
+      "[SolidWorks temp]/IC~~/Swerve_Drive_Board_PCB.step.SLDPRT"
+    ],
+    "missing_model_documents": [],
+    "suppression_status_outside_resolved_codes": [],
+    "unexpected_nonlocal_occurrences": [],
+    "library_paths_in_dependency_table": [
+      {
+        "name": "Swerve_Drive_Board.step",
+        "path": "[SolidWorks temp]/IC~~/Swerve_Drive_Board.step.SLDASM|assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step"
+      },
+      {
+        "name": "MGN7C.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "STD_2-M3-10-H8-25.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/Robotic arm/CNC/STD_2-M3-10-H8-25.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "MT1256-P1210.step.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/导电滑环模型/MT1256-P1210.step.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "bearing_RA7008.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/Bearings/bearing_RA7008.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "J0_RA7008轴承外圈CNC.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/CNC/J0_RA7008轴承外圈CNC.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "J0_RA7008轴承内圈CNC.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/CNC/J0_RA7008轴承内圈CNC.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "04C_37teeth_从动轮.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/04C链条/04C_37teeth_从动轮.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "MMC182.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/gimbal/导电滑环模型/MMC182.2025.10.1.SLDPRT"
+      },
+      {
+        "name": "RM_场地交互模块.2025.10.1",
+        "path": "assets/803685/ac8d43afad2ed818/REFEREE SYSTEAM/RM_场地交互模块.2025.10.1.SLDPRT"
+      }
+    ]
+  },
+  "external_feature_references": [
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+      "count": 25,
+      "modelPaths": [
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "reports/solidworks-swerve-acceptance/chassis/抬升机构/MGN9R.2025.10.1.SLDPRT",
+        "reports/solidworks-swerve-acceptance/chassis/抬升机构/MGN9R.2025.10.1.SLDPRT",
+        "reports/solidworks-swerve-acceptance/chassis/抬升机构/MGN9R.2025.10.1.SLDPRT",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM"
+      ],
+      "componentPaths": [
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "",
+        "",
+        "",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "reports/solidworks-swerve-acceptance/chassis/抬升机构/MGN9R.2025.10.1.SLDPRT",
+        "reports/solidworks-swerve-acceptance/chassis/抬升机构/MGN9R.2025.10.1.SLDPRT",
+        "reports/solidworks-swerve-acceptance/chassis/抬升机构/MGN9R.2025.10.1.SLDPRT",
+        "",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM"
+      ],
+      "features": [
+        "Core_NoDetail.step<1>",
+        "StdExtend_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Core_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "草图1  of  凸台-拉伸2",
+        "草图1  of  凸台-拉伸2",
+        "草图1  of  凸台-拉伸2",
+        "基体零件-GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N-1",
+        "GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N",
+        "GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N",
+        "GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF",
+        "基体零件-MGN7C-1",
+        "基体零件-MGN7C-1",
+        "基体零件-MGN9R-1",
+        "基体零件-MGN9R-1",
+        "基体零件-MGN9R-1",
+        "草图6  of  切除-拉伸4",
+        "草图6  of  切除-拉伸4"
+      ],
+      "dataTypes": [
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "Point",
+        "Point",
+        "Point",
+        "Solid Body",
+        "Body",
+        "Body",
+        "Body",
+        "Solid Body",
+        "Solid Body",
+        "Solid Body",
+        "Solid Body",
+        "Solid Body",
+        "Point",
+        "Point"
+      ],
+      "statuses": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        0,
+        4,
+        4,
+        4,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "entities": [
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/GFB3_SW_GearRingSeat_SlipRingSeat_V0.2<1>",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/HDW_SlipRing_MC260_V0.2<1>",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/HDW_SlipRing_MC260_V0.2<1>",
+        "Solid Body of GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N",
+        "Body of GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N",
+        "Body of GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N",
+        "Body of GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF",
+        "Solid Body of MGN7C.2025.10.1",
+        "Solid Body of MGN7C.2025.10.1",
+        "Solid Body of MGN9R.2025.10.1",
+        "Solid Body of MGN9R.2025.10.1",
+        "Solid Body of MGN9R.2025.10.1",
+        "Face of Wheel_UpperAssembly<3>/RM25_Steering_Wheel_PCB<1>/RM25_Steering_Wheel_PCB(2)^RM25_Steering_Wheel_PCB<1>/RM25_Steering_Wheel_PCB_PCB(2)^RM25_Steering_Wheel_PCB(2)_RM25_Steering_Wheel_PCB<1>",
+        "SketchEntity of Steering wheel Assembly_3.22"
+      ],
+      "featureComponents": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Wheel_UpperAssembly<3>/3DP_WHEEL_PCB_FIX<1>",
+        "Wheel_UpperAssembly<3>/3DP_WHEEL_PCB_FIX<1>"
+      ],
+      "configOptions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "configNames": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM",
+      "count": 22,
+      "modelPaths": [
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT"
+      ],
+      "componentPaths": [
+        "",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "",
+        "",
+        "",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT"
+      ],
+      "features": [
+        "草图6  of  切除-拉伸4",
+        "草图6  of  切除-拉伸4",
+        "Core_NoDetail.step<1>",
+        "StdExtend_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Core_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "草图1  of  凸台-拉伸2",
+        "草图1  of  凸台-拉伸2",
+        "草图1  of  凸台-拉伸2",
+        "基体零件-GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N-1",
+        "GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N",
+        "GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N",
+        "GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF",
+        "基体零件-MGN7C-1",
+        "基体零件-MGN7C-1"
+      ],
+      "dataTypes": [
+        "Point",
+        "Point",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "Point",
+        "Point",
+        "Point",
+        "Solid Body",
+        "Body",
+        "Body",
+        "Body",
+        "Solid Body",
+        "Solid Body"
+      ],
+      "statuses": [
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        0,
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "entities": [
+        "Face of Wheel_UpperAssembly<3>/RM25_Steering_Wheel_PCB<1>/RM25_Steering_Wheel_PCB(2)^RM25_Steering_Wheel_PCB<1>/RM25_Steering_Wheel_PCB_PCB(2)^RM25_Steering_Wheel_PCB(2)_RM25_Steering_Wheel_PCB<1>",
+        "SketchEntity of Steering wheel Assembly_3.22",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/GFB3_SW_GearRingSeat_SlipRingSeat_V0.2<1>",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/HDW_SlipRing_MC260_V0.2<1>",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/HDW_SlipRing_MC260_V0.2<1>",
+        "Solid Body of GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N",
+        "Body of GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N",
+        "Body of GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N",
+        "Body of GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF",
+        "Solid Body of MGN7C.2025.10.1",
+        "Solid Body of MGN7C.2025.10.1"
+      ],
+      "featureComponents": [
+        "Wheel_UpperAssembly<3>/3DP_WHEEL_PCB_FIX<1>",
+        "Wheel_UpperAssembly<3>/3DP_WHEEL_PCB_FIX<1>",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "configOptions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "configNames": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "count": 0,
+      "modelPaths": null,
+      "componentPaths": null,
+      "features": null,
+      "dataTypes": null,
+      "statuses": null,
+      "entities": null,
+      "featureComponents": null,
+      "configOptions": null,
+      "configNames": null
+    },
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "count": 0,
+      "modelPaths": null,
+      "componentPaths": null,
+      "features": null,
+      "dataTypes": null,
+      "statuses": null,
+      "entities": null,
+      "featureComponents": null,
+      "configOptions": null,
+      "configNames": null
+    }
+  ],
+  "external_feature_status_counts": [
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+      "statuses": {
+        "dangling": 11,
+        "out_of_context": 11,
+        "broken": 1,
+        "in_context": 2
+      }
+    },
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM",
+      "statuses": {
+        "out_of_context": 8,
+        "dangling": 11,
+        "broken": 1,
+        "in_context": 2
+      }
+    },
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "statuses": {}
+    },
+    {
+      "document": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "statuses": {}
+    }
+  ],
+  "source_fingerprints_after": {
+    "wheel": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+      "sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+      "unchanged": true,
+      "library_path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+      "library_sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+      "library_matches_download": true
+    },
+    "frame": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f",
+      "unchanged": true,
+      "library_path": "assets/803685/ac8d43afad2ed818/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "library_sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f",
+      "library_matches_download": true
+    },
+    "chassis": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/chassis_v2.2025.10.1.SLDASM",
+      "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "unchanged": true,
+      "library_path": "assets/803685/ac8d43afad2ed818/chassis/chassis_v2.2025.10.1.SLDASM",
+      "library_sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+      "library_matches_download": true
+    },
+    "outer": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c",
+      "unchanged": true,
+      "library_path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "library_sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c",
+      "library_matches_download": true
+    }
+  },
+  "staged_source_integrity": {
+    "verified_count": 69,
+    "changed_members": []
+  },
+  "original_wheel_reference_comparison": {
+    "original": {
+      "document": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+      "count": 22,
+      "modelPaths": [
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[drive D]/[source project drive]/RM25 HW/RM25_Steering_Wheel/Steering Wheel mech/#STEERINGWHEEL_V0.2.SLDASM",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT"
+      ],
+      "componentPaths": [
+        "",
+        "[source project drive]/#RM2025/Rudder Pulley/SUB ASSEMBLES_Rudder Pulley_2025/CopyDesignTemp/Steering wheel Assembly_3.22.SLDASM",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "",
+        "",
+        "",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT",
+        "[local Toolbox]/CopiedParts/GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT",
+        "assets/803685/ac8d43afad2ed818/gimbal/MGN7滑轨/MGN7C.2025.10.1.SLDPRT"
+      ],
+      "features": [
+        "草图6  of  切除-拉伸4",
+        "草图6  of  切除-拉伸4",
+        "Core_NoDetail.step<1>",
+        "StdExtend_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Core_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Core_NoDetail.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "Swerve_Drive_Board.step<1>",
+        "草图1  of  凸台-拉伸2",
+        "草图1  of  凸台-拉伸2",
+        "草图1  of  凸台-拉伸2",
+        "基体零件-GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N-1",
+        "GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N",
+        "GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N",
+        "GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF",
+        "基体零件-MGN7C-1",
+        "基体零件-MGN7C-1"
+      ],
+      "dataTypes": [
+        "Point",
+        "Point",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "STEP AP214",
+        "Point",
+        "Point",
+        "Point",
+        "Solid Body",
+        "Body",
+        "Body",
+        "Body",
+        "Solid Body",
+        "Solid Body"
+      ],
+      "statuses": [
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        0,
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "entities": [
+        "Face of Wheel_UpperAssembly<3>/RM25_Steering_Wheel_PCB<1>/RM25_Steering_Wheel_PCB(2)^RM25_Steering_Wheel_PCB<1>/RM25_Steering_Wheel_PCB_PCB(2)^RM25_Steering_Wheel_PCB(2)_RM25_Steering_Wheel_PCB<1>",
+        "SketchEntity of Steering wheel Assembly_3.22",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/StdExtend_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "[source drive]/Enterprize SolidWorks Template/Enterprize Template/HARDWARE/Core_NoDetail.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/Swerve/Swerve_Drive_Board.step",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/GFB3_SW_GearRingSeat_SlipRingSeat_V0.2<1>",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/HDW_SlipRing_MC260_V0.2<1>",
+        "Face of #SteeringWheelAssembly_V0.2<1>/#SW_UpperAssembly_V0.2<1>/HDW_SlipRing_MC260_V0.2<1>",
+        "Solid Body of GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N",
+        "Body of GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N",
+        "Body of GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N",
+        "Body of GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF",
+        "Solid Body of MGN7C.2025.10.1",
+        "Solid Body of MGN7C.2025.10.1"
+      ],
+      "featureComponents": [
+        "Wheel_UpperAssembly<3>/3DP_WHEEL_PCB_FIX<1>",
+        "Wheel_UpperAssembly<3>/3DP_WHEEL_PCB_FIX<1>",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "零件16^#STEERINGWHEEL_V0.2<1>",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "configOptions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "configNames": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "matching_status_counts": true
+  },
+  "target_references": {
+    "occurrences": 166,
+    "suppressed": 2,
+    "active": 164,
+    "loaded_with_local_path": 46,
+    "toolbox_occurrences": 22,
+    "toolbox_paths": [
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket button head screw_iso.sldprt",
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket countersunk head screw_iso.sldprt",
+      "[local Toolbox]/ISO/bolts and screws/hexagon socket head screws/socket head cap screw_iso.sldprt",
+      "[local Toolbox]/ISO/pins/parallel/parallel pin unhardened_iso.sldprt"
+    ],
+    "virtual_occurrences": 52,
+    "temporary_nonvirtual_occurrences": 44,
+    "temporary_nonvirtual_paths": [
+      "[SolidWorks temp]/IC~~/CP_Radial_D8.0mm_P3.50mm.step.SLDASM",
+      "[SolidWorks temp]/IC~~/CP_Radial_D80mm_P350mm.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/C_0603_1608Metric-4.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/C_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/D_SMC-5.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/D_SMC.step.SLDASM",
+      "[SolidWorks temp]/IC~~/D_SMF-2.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/D_SMF.step.SLDASM",
+      "[SolidWorks temp]/IC~~/Fuse_0603_1608Metric-2.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/Fuse_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/JST_BM02B_GHS_TBT.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/JST_BM07B_GHS_TBT.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/JST_GH_BM02B-GHS-TBT_1x02-1MP_P1.25mm_Vertical.step.SLDASM",
+      "[SolidWorks temp]/IC~~/JST_GH_BM07B-GHS-TBT_1x07-1MP_P1.25mm_Vertical.step.SLDASM",
+      "[SolidWorks temp]/IC~~/LED_0603_1608Metric-1.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/LED_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/R_0603_1608Metric-1.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/R_0603_1608Metric.step.SLDASM",
+      "[SolidWorks temp]/IC~~/SOT-23.step.SLDASM",
+      "[SolidWorks temp]/IC~~/SOT_23.step.SLDPRT",
+      "[SolidWorks temp]/IC~~/Swerve_Drive_Board.step.SLDASM",
+      "[SolidWorks temp]/IC~~/Swerve_Drive_Board_PCB.step.SLDPRT"
+    ],
+    "missing_model_documents": [],
+    "suppression_status_outside_resolved_codes": [],
+    "unexpected_nonlocal_occurrences": [],
+    "library_paths_in_dependency_table": []
+  },
+  "target_external_paths_in_source_archive_by_basename": {
+    "Core_NoDetail.step": 0,
+    "GB - Internal spur gear 0.6M 77T 20PA 6FW ---S77S52OD 1.0AF.SLDPRT": 0,
+    "GB - Spur gear 0.6M 136T 20PA 8FW ---S136A75H50L75.0N.SLDPRT": 0,
+    "GB - Spur gear 0.6M 14T 20PA 6.5FW ---S14A75H50L3.0N.SLDPRT": 0,
+    "GB - Spur gear 0.6M 46T 20PA 3.5FW ---S46A75H50L3.0N.SLDPRT": 0,
+    "MGN7C.2025.10.1.SLDPRT": 1,
+    "StdExtend_NoDetail.step": 0,
+    "Steering wheel Assembly_3.22.SLDASM": 0,
+    "Swerve_Drive_Board.step": 1,
+    "parallel pin unhardened_iso.sldprt": 0,
+    "socket button head screw_iso.sldprt": 0,
+    "socket countersunk head screw_iso.sldprt": 0,
+    "socket head cap screw_iso.sldprt": 0
+  },
+  "reopen_preflight": {
+    "previouslySaved": true,
+    "solidWorksSaveFlagAfterSave": true,
+    "persistedBytes": 24652870
+  },
+  "reopened_mates": {
+    "source_mate_count": 5,
+    "reattached_count": 5,
+    "checks": [
+      {
+        "original": {
+          "name": "同心8",
+          "type": "MateConcentric",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "Frame.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "同心8",
+          "type": "MateConcentric",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "Frame.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "重合33",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "重合33",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "平行7",
+          "type": "MateParallel",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "平行7",
+          "type": "MateParallel",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "重合35",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "重合35",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      },
+      {
+        "original": {
+          "name": "重合40",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "3508_3508_Swerve_drive_v2.2025.10.1-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "after": {
+          "name": "重合40",
+          "type": "MateCoincident",
+          "error": 0,
+          "warning": false,
+          "suppressed": false,
+          "participants": [
+            "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+            "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+          ]
+        },
+        "reattached": true
+      }
+    ],
+    "root_mate_error_count_before": 0,
+    "root_mate_error_count_after": 0
+  },
+  "reopened_pose": {
+    "wheel": {
+      "origin_shift_mm": 0.0,
+      "max_basis_entry_change": 0.0
+    },
+    "frame": {
+      "origin_shift_mm": 0.0,
+      "max_basis_entry_change": 0
+    },
+    "outer": {
+      "origin_shift_mm": 0.0,
+      "max_basis_entry_change": 0.0
+    }
+  },
+  "reopened_load_status": {
+    "openError": 2,
+    "openWarning": 6,
+    "activateError": 0,
+    "resolved": 0
+  },
+  "saved_assembly_sha256": "6898304242b1719b0f2a86bd6a66da0675655b884da16d85c2e117d444333375"
+}

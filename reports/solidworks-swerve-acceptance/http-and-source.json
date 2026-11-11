@@ -1,0 +1,53 @@
+{
+  "download": {
+    "path": "runtime/solidworks-swerve-acceptance/download/【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+    "sha256": "ac8d43afad2ed818b017863be9c39f6cd98c4051c675e79c505e1ef9dcde17b6",
+    "bytes": 504032226,
+    "cached": false
+  },
+  "case_root": "reports/solidworks-swerve-acceptance",
+  "extracted_files": 69,
+  "search_ids": {
+    "wheel": [
+      "rm-803685-014",
+      "rm-761377-cd920824e331ee228",
+      "rm-761377-c5e1dc640f6fcbc5f"
+    ],
+    "frame": [
+      "rm-803685-c436d23f8c29cc095"
+    ],
+    "chassis": [
+      "rm-803685-013",
+      "rm-1883259-001",
+      "rm-761042-c29fea7891c6a18a8",
+      "rm-716376-c1b77a7400cea97e8",
+      "rm-776744-009"
+    ]
+  },
+  "cards": {
+    "wheel": "rm-803685-014",
+    "frame": "rm-803685-c436d23f8c29cc095",
+    "chassis": "rm-803685-013",
+    "outer": "rm-803685-ce2bee0af698aa86a"
+  },
+  "files": {
+    "wheel": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+      "sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0"
+    },
+    "frame": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+      "sha256": "f407d539f007a4fe12044ce63dee507e34dce3824eb61783a108c8def58fd69f"
+    },
+    "chassis": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/chassis_v2.2025.10.1.SLDASM",
+      "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0"
+    },
+    "outer": {
+      "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+      "sha256": "13dce40f6639011ad652d32fcbd796982811c82d358237ec96b47ee9ccb96a0c"
+    }
+  },
+  "root_copy": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+  "wheel_copy": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM"
+}

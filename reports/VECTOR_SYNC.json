@@ -1,0 +1,16 @@
+{
+  "total": 3468,
+  "added": 0,
+  "updated": 7,
+  "removed": 0,
+  "unchanged": 3461,
+  "collection": "robomaster-cards-bge-zh-v1",
+  "model": "BAAI/bge-small-zh-v1.5",
+  "model_revision": "46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59",
+  "model_sha256": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+  "chroma_version": "1.5.9",
+  "encoder_version": "0.9.1",
+  "dimensions": 512,
+  "writer_pid": 26820,
+  "synced_at_utc": "2026-11-10T18:07:19.271180+00:00"
+}

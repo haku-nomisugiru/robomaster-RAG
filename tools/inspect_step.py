@@ -6,13 +6,14 @@ material density, manufacturing readiness, or motion reachability.
 from __future__ import annotations
 
 import argparse
+from collections import Counter, defaultdict
 import hashlib
 import json
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Any
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.1"
 SUPPORTED_EXTENSIONS = {".step", ".stp"}
 
 
@@ -78,9 +79,34 @@ def _shape_metrics(shape) -> dict[str, Any]:
     return metrics
 
 
+def read_xde(path: Path):
+    """Transfer a STEP document into a millimetre XDE document and its shape tool."""
+    from OCP.IFSelect import IFSelect_RetDone
+    from OCP.Interface import Interface_Static
+    from OCP.STEPCAFControl import STEPCAFControl_Reader
+    from OCP.TCollection import TCollection_ExtendedString
+    from OCP.TDocStd import TDocStd_Document
+    from OCP.XCAFDoc import XCAFDoc_DocumentTool
+
+    reader = STEPCAFControl_Reader()
+    reader.SetNameMode(True)
+    reader.SetColorMode(True)
+    if not Interface_Static.SetCVal_s("xstep.cascade.unit", "MM"):
+        raise RuntimeError("OCCT could not configure millimetre transfer units.")
+    status = reader.ReadFile(str(path))
+    if status != IFSelect_RetDone:
+        raise RuntimeError(f"STEP ReadFile failed: {status}")
+    reader.ChangeReader().SetSystemLengthUnit(1.0)
+    doc = TDocStd_Document(TCollection_ExtendedString("XDE"))
+    if not reader.Transfer(doc):
+        raise RuntimeError("STEP transfer to XDE failed.")
+    return doc, XCAFDoc_DocumentTool.ShapeTool_s(doc.Main())
+
+
 def inspect_step(path: Path | str, *, root: Path | str | None = None,
                  max_nodes: int = 20000, max_depth: int = 64,
-                 max_metric_definitions: int = 2000) -> dict[str, Any]:
+                 max_metric_definitions: int = 2000,
+                 world_metrics: bool = True) -> dict[str, Any]:
     """Inspect one STEP, isolating parse/geometry errors in the returned record."""
     path = Path(path).resolve()
     root = Path(root).resolve() if root is not None else path.parent
@@ -119,32 +145,16 @@ def inspect_step(path: Path | str, *, root: Path | str | None = None,
         result["sha256"] = digest.hexdigest()
         result["bytes"] = path.stat().st_size
 
+        import OCP
         from OCP.BRep import BRep_Builder
-        from OCP.IFSelect import IFSelect_RetDone
-        from OCP.Interface import Interface_Static
-        from OCP.STEPCAFControl import STEPCAFControl_Reader
-        from OCP.TCollection import TCollection_ExtendedString
         from OCP.TDF import TDF_Label, TDF_LabelSequence
-        from OCP.TDocStd import TDocStd_Document
         from OCP.TopoDS import TopoDS_Compound
-        from OCP.XCAFDoc import XCAFDoc_DocumentTool
         from OCP.gp import gp_Trsf
 
-        reader = STEPCAFControl_Reader()
-        reader.SetNameMode(True)
-        reader.SetColorMode(True)
-        if not Interface_Static.SetCVal_s("xstep.cascade.unit", "MM"):
-            raise RuntimeError("OCCT could not configure millimetre transfer units.")
-        read_status = reader.ReadFile(str(path))
-        if read_status != IFSelect_RetDone:
-            raise RuntimeError(f"STEP ReadFile failed: {read_status}")
-        # Set the system unit on the loaded model, rather than guessing from
-        # STEP file coordinates. OCCT uses millimetres as the unit factor base.
-        reader.ChangeReader().SetSystemLengthUnit(1.0)
-        doc = TDocStd_Document(TCollection_ExtendedString("XDE"))
-        if not reader.Transfer(doc):
-            raise RuntimeError("STEP transfer to XDE failed.")
-        tool = XCAFDoc_DocumentTool.ShapeTool_s(doc.Main())
+        result["parser"] = {"engine": "OCP/XCAF", "version": OCP.__version__,
+                            "report_schema": SCHEMA_VERSION}
+
+        doc, tool = read_xde(path)
         roots = TDF_LabelSequence()
         tool.GetFreeShapes(roots)
         if roots.Length() == 0:
@@ -257,21 +267,34 @@ def inspect_step(path: Path | str, *, root: Path | str | None = None,
         for index in range(1, roots.Length() + 1):
             label = roots.Value(index)
             root_shape = tool.GetShape_s(label)
-            if not root_shape.IsNull():
+            if world_metrics and not root_shape.IsNull():
                 builder.Add(root_compound, root_shape)
             if len(result["occurrences"]) >= max_nodes:
                 result["truncated"] = True
                 continue
             visit(label, None, gp_Trsf(), (), (), (), 0)
 
+        by_instance = {row["occurrence_id"]: row for row in result["occurrences"]}
+        occurrence_counts = Counter(row["definition_id"] for row in by_instance.values())
+        child_definitions = defaultdict(dict)
+        for row in by_instance.values():
+            parent = by_instance.get(row["parent_occurrence_id"])
+            if parent:
+                child_definitions[parent["definition_id"]][row["definition_id"]] = None
+        for definition_id, definition in definitions.items():
+            definition["occurrence_count"] = occurrence_counts[definition_id]
+            definition["child_definition_ids"] = list(child_definitions[definition_id])
         result["definitions"] = list(definitions.values())
         result["definition_count"] = len(definitions)
         result["occurrence_count"] = len(result["occurrences"])
         result["free_root_count"] = roots.Length()
-        result["geometry_world_mm"] = _shape_metrics(root_compound)
-        if not result["geometry_world_mm"].get("shape_present"):
-            raise RuntimeError("No transferred geometry.")
-        result["geometry_world_mm"]["aabb_scope"] = "aabb_world_mm/static_configuration"
+        if world_metrics:
+            result["geometry_world_mm"] = _shape_metrics(root_compound)
+            if not result["geometry_world_mm"].get("shape_present"):
+                raise RuntimeError("No transferred geometry.")
+            result["geometry_world_mm"]["aabb_scope"] = "aabb_world_mm/static_configuration"
+        else:
+            result["warnings"].append("World metrics omitted for hierarchy-only inspection.")
         if definitions_with_metrics < len(definitions):
             result["warnings"].append("Some definition metrics omitted by max_metric_definitions.")
         result["status"] = "partial" if result["errors"] or result["truncated"] else "ok"

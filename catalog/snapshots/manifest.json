@@ -1,0 +1,14 @@
+{
+  "library.sqlite3": {
+    "sha256": "9b5e51e70f6fafb263e6b13de22378dc96ac0570820d724c34bc2bb96c380ad1",
+    "bytes": 43778048,
+    "gzip_sha256": "db1bafd942ea13c081954dae3df5972eb66caf0e0c1233eae94cb0ef44e010ef",
+    "gzip_bytes": 6785911
+  },
+  "geometry.sqlite3": {
+    "sha256": "fee5122c34abc5bc4a63368e5a99e279b9e7cbfd30628f98b200c27a18123bec",
+    "bytes": 1499136,
+    "gzip_sha256": "871bf9eeaf704b684823323e568d7e119d93f33c96a83cafa20e52ade359b24a",
+    "gzip_bytes": 147902
+  }
+}

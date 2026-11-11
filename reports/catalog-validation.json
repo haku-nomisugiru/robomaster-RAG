@@ -1,0 +1,12 @@
+{
+  "modules_checked": 3468,
+  "cad_paths_checked": 2617,
+  "components_checked": 3468,
+  "interfaces_checked": 4,
+  "model_keys_checked": 8714,
+  "component_aliases_checked": 6598,
+  "component_specs_checked": 1290,
+  "mechanism_profiles_checked": 273,
+  "errors": [],
+  "passed": true
+}

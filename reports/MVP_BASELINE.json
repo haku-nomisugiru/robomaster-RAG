@@ -1,0 +1,274 @@
+{
+  "frozen_at_utc": "2026-11-10T12:08:33.890186+00:00",
+  "library_cards": 3468,
+  "cad_requirements": "cadquery-ocp-novtk==7.9.3.1.1",
+  "samples": [
+    {
+      "group": "A",
+      "model_id": "rm-1883259-001",
+      "name": "工程机器人底盘总装",
+      "source_url": "https://bbs.robomaster.com/article/1883259",
+      "entry": {
+        "path": "assets/1883259/567baba7c0784ef2/底盘总装.SLDASM",
+        "sha256": "4c2cbfbfce25ddd21ec40fe77085ade410c8e7ef8632768121e8c52014b4d61f",
+        "extension": ".sldasm",
+        "asset_id": "bbs-1883259-567baba7c0784ef2"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "saved_reference_baseline": {
+        "status": "snapshot_read",
+        "reference_counts": {
+          "potential_local_match": 21
+        }
+      }
+    },
+    {
+      "group": "A",
+      "model_id": "rm-1883259-002",
+      "name": "工程机器人悬挂总装",
+      "source_url": "https://bbs.robomaster.com/article/1883259",
+      "entry": {
+        "path": "assets/1883259/567baba7c0784ef2/悬挂总装.SLDASM",
+        "sha256": "0a325e2f369aeef198497fc7c78e18d409a0e59c32ca4e34e0bb379adf853df9",
+        "extension": ".sldasm",
+        "asset_id": "bbs-1883259-567baba7c0784ef2"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "saved_reference_baseline": {
+        "status": "snapshot_read",
+        "reference_counts": {
+          "potential_local_match": 19
+        }
+      }
+    },
+    {
+      "group": "B",
+      "model_id": "rm-803685-013",
+      "name": "工程机器人底盘V2",
+      "source_url": "https://bbs.robomaster.com/article/803685",
+      "entry": {
+        "path": "assets/803685/ac8d43afad2ed818/chassis/chassis_v2.2025.10.1.SLDASM",
+        "sha256": "631b05b9b4804da746c6466538606b707fab0ffa066b1135096060ecda62f3c0",
+        "extension": ".sldasm",
+        "asset_id": "bbs-803685-ac8d43afad2ed818"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "saved_reference_baseline": {
+        "status": "snapshot_read",
+        "reference_counts": {
+          "potential_local_match": 12
+        }
+      }
+    },
+    {
+      "group": "B",
+      "model_id": "rm-803685-014",
+      "name": "3508双电机舵轮模块",
+      "source_url": "https://bbs.robomaster.com/article/803685",
+      "entry": {
+        "path": "assets/803685/ac8d43afad2ed818/chassis/3508_3508舵轮模组/3508_3508_Swerve_drive_v2.2025.10.1.SLDASM",
+        "sha256": "ba9988fc4c6045bbcdd4c44d72fe7cf8a6eb6554bfa2da358e4025b9742ac2e0",
+        "extension": ".sldasm",
+        "asset_id": "bbs-803685-ac8d43afad2ed818"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "saved_reference_baseline": {
+        "status": "snapshot_read",
+        "reference_counts": {
+          "potential_local_match": 2
+        }
+      }
+    },
+    {
+      "group": "C",
+      "model_id": "rm-1935523-001",
+      "name": "全向轮悬挂总成",
+      "source_url": "https://bbs.robomaster.com/article/1935523",
+      "entry": {
+        "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+        "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+        "extension": ".step",
+        "asset_id": "bbs-1935523-bccccd7be74f2ba6"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "step_baseline": {
+        "status": "ok",
+        "definition_count": 47,
+        "occurrence_count": 87
+      }
+    },
+    {
+      "group": "C",
+      "model_id": "rm-1935523-022",
+      "name": "悬挂连接子装配",
+      "source_url": "https://bbs.robomaster.com/article/1935523",
+      "entry": {
+        "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+        "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+        "extension": ".step",
+        "asset_id": "bbs-1935523-bccccd7be74f2ba6"
+      },
+      "selection_scope": "definition",
+      "definition_id": "0:1:1:7",
+      "step_baseline": {
+        "status": "ok",
+        "definition_count": 47,
+        "occurrence_count": 87
+      }
+    },
+    {
+      "group": "C",
+      "model_id": "rm-1935523-024",
+      "name": "全向轮轮组子装配",
+      "source_url": "https://bbs.robomaster.com/article/1935523",
+      "entry": {
+        "path": "assets/1935523/bccccd7be74f2ba6/步兵悬挂.step",
+        "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+        "extension": ".step",
+        "asset_id": "bbs-1935523-bccccd7be74f2ba6"
+      },
+      "selection_scope": "definition",
+      "definition_id": "0:1:1:18",
+      "step_baseline": {
+        "status": "ok",
+        "definition_count": 47,
+        "occurrence_count": 87
+      }
+    },
+    {
+      "group": "D",
+      "model_id": "rm-1883384-007",
+      "name": "舵步底盘",
+      "source_url": "https://bbs.robomaster.com/article/1883384",
+      "entry": {
+        "path": "assets/1883384/c12065c927fd3010/RM2026COD战队哨兵舵步机器人机械开源/25赛季舵步开源图纸（气弹簧轮组）/25舵步/舵步底盘.SLDASM",
+        "sha256": "ffd70bf46c2569c1042e3f2b729be92dc82edf2066c2d4c342100cc45e34d4fe",
+        "extension": ".sldasm",
+        "asset_id": "bbs-1883384-c12065c927fd3010"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "saved_reference_baseline": {
+        "status": "snapshot_read",
+        "reference_counts": {
+          "potential_local_match": 51,
+          "ambiguous": 20
+        }
+      }
+    },
+    {
+      "group": "E",
+      "model_id": "rm-776744-010",
+      "name": "串联腿装配方案2",
+      "source_url": "https://bbs.robomaster.com/article/776744",
+      "entry": {
+        "path": "assets/776744/dbddc93678d72a49/[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队/三维模型/3D_open/串联腿装配方案2.SLDASM",
+        "sha256": "0147711660ee315fa47eb19331b5c039d429c5d38c7a8421199b30ce8dfc5af7",
+        "extension": ".sldasm",
+        "asset_id": "bbs-776744-dbddc93678d72a49"
+      },
+      "selection_scope": "file",
+      "definition_id": null,
+      "saved_reference_baseline": {
+        "status": "snapshot_read",
+        "reference_counts": {
+          "outside_asset": 46,
+          "potential_local_match": 2
+        }
+      }
+    }
+  ],
+  "retrieval": [
+    {
+      "query": "3508双电机舵轮",
+      "top_5": [
+        "rm-803685-014",
+        "rm-761377-cd920824e331ee228",
+        "rm-1936175-017",
+        "rm-1936175-018",
+        "rm-761377-c5e1dc640f6fcbc5f"
+      ]
+    },
+    {
+      "query": "MGN7 滑轨 气弹簧",
+      "top_5": [
+        "rm-803685-014"
+      ]
+    },
+    {
+      "query": "工程机器人底盘总装",
+      "top_5": [
+        "rm-1883259-001",
+        "rm-803685-013",
+        "rm-1883259-003",
+        "rm-816172-019",
+        "rm-1883259-002"
+      ]
+    },
+    {
+      "query": "串联腿装配方案2",
+      "top_5": [
+        "rm-776744-010",
+        "rm-776744-009",
+        "rm-815703-cb91f7be3de320dfd",
+        "rm-803685-013",
+        "rm-1883259-005"
+      ]
+    },
+    {
+      "query": "全向轮悬挂",
+      "top_5": [
+        "rm-1935523-001",
+        "rm-1935523-023",
+        "rm-1935523-026",
+        "rm-1883259-002",
+        "rm-1935523-022"
+      ]
+    },
+    {
+      "query": "悬挂连接法兰",
+      "top_5": [
+        "rm-1935523-022",
+        "rm-1935523-026",
+        "rm-1883259-002",
+        "rm-1935523-021",
+        "rm-1935523-023"
+      ]
+    },
+    {
+      "query": "轮毂前夹板",
+      "top_5": [
+        "rm-1935523-c00b2df8d26dc82cc",
+        "rm-1935523-025",
+        "rm-803685-014",
+        "rm-1935523-c2d6150f71ed3b656",
+        "rm-1935523-c411c71ea76dc1855"
+      ]
+    },
+    {
+      "query": "舵步底盘",
+      "top_5": [
+        "rm-1883384-007",
+        "rm-1883384-cdb36fd4f68480dbf",
+        "rm-1883384-006",
+        "rm-761042-c29fea7891c6a18a8",
+        "rm-803685-013"
+      ]
+    },
+    {
+      "query": "合工大桌面轮腿",
+      "top_5": [
+        "rm-815703-cb91f7be3de320dfd",
+        "rm-1936175-018",
+        "rm-776744-009",
+        "rm-776744-010",
+        "rm-761042-cb2d67997e9c81794"
+      ]
+    }
+  ]
+}

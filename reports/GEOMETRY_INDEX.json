@@ -1,0 +1,16 @@
+{
+  "built_at_utc": "2026-11-11T02:23:38.700205+00:00",
+  "engine": "OCP 7.9.3.1",
+  "cards": 888,
+  "unique_descriptors": 795,
+  "new_descriptors": 795,
+  "step_files": 36,
+  "native_export_cards": 2,
+  "failures": [
+    {
+      "path": "assets/803685/ac8d43afad2ed818/公布学生图纸-20241106/battery_asm.stp",
+      "definition_id": "0:1:1:60",
+      "reason": "Selected shape has no surfaces"
+    }
+  ]
+}

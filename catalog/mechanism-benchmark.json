@@ -1,0 +1,16 @@
+[
+  {"category":"chassis","query":"在窄通道里车架边角用滚轮导向，外围框保护中间机构","targets":["rm-761042-c29fea7891c6a18a8"]},
+  {"category":"chassis","query":"腿要能整套拆出维护，方管内的嵌件还能提供安装螺纹","targets":["rm-776744-009"]},
+  {"category":"suspension","query":"想缩小悬挂所占空间，把两个减振件集中到下连杆","targets":["rm-1935523-001"]},
+  {"category":"suspension","query":"独立纵臂装双避震，而且轮轴有轴向支承","targets":["rm-1883259-002"]},
+  {"category":"wheel_leg","query":"两段腿绕同一个中心转，持续回转时电机线不能缠住","targets":["rm-776744-010"]},
+  {"category":"wheel_leg","query":"在桌上先做两节腿的控制联调和运动验证","targets":["rm-815703-cb91f7be3de320dfd"]},
+  {"category":"swerve","query":"轮系从一侧就能拆换，转向动力直接从空心轴传入","targets":["rm-761042-c4c8e0dff37f4395f","rm-761042-c5cec362277a5c1d4"]},
+  {"category":"swerve","query":"只想换实心轮胎外圈，轮毂拆成两片重新夹紧","targets":["rm-803685-014"]},
+  {"category":"robotic_arm","query":"关节内藏电机，旋转时线缆和气管各走各的转接头","targets":["rm-803685-015"]},
+  {"category":"robotic_arm","query":"真空泵靠近末端，腕部滚转时气管绕开转轴避免折弯","targets":["rm-761042-c258c0d6ef2077880"]},
+  {"category":"gripper","query":"接触面角度对不准时柔软吸盘能贴合，托盘撑住工件避免晃动","targets":["rm-761042-c2ed254897d8b3e8e","rm-761042-ce916434f1d6c55d4"]},
+  {"category":"gripper","query":"两侧独立伸出和升降，末端用真空取放，气管藏在伸出的铝管里","targets":["rm-1883259-004","rm-1883259-005"]},
+  {"category":"gearbox","query":"希望沿用安装孔位，能接受减速机外形厚度和回程间隙不同","targets":["rm-1936175-017"]},
+  {"category":"gearbox","query":"轮腿减速机用两种轴承增强支承并沿用轻型版齿轮","targets":["rm-1936175-018"]}
+]

@@ -1,0 +1,179 @@
+{
+  "retrieval_checks": [
+    {
+      "query": "舵轮",
+      "expected_category": "swerve",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-803685-014",
+          "name": "3508双电机舵轮模块"
+        },
+        {
+          "id": "rm-1883384-007",
+          "name": "舵步底盘"
+        },
+        {
+          "id": "rm-1935523-001",
+          "name": "全向轮悬挂总成"
+        }
+      ]
+    },
+    {
+      "query": "机械臂",
+      "expected_category": "robotic_arm",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-1883259-003",
+          "name": "工程机器人机械臂大臂总装"
+        },
+        {
+          "id": "rm-803685-015",
+          "name": "机械臂L4关节装配"
+        },
+        {
+          "id": "rm-803685-016",
+          "name": "机械臂L6关节装配"
+        }
+      ]
+    },
+    {
+      "query": "减速箱",
+      "expected_category": "gearbox",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-1936175-017",
+          "name": "P15.8轻型减速箱改三乙"
+        },
+        {
+          "id": "rm-1936175-018",
+          "name": "P15.8重型减速箱改五丙"
+        }
+      ]
+    },
+    {
+      "query": "悬挂",
+      "expected_category": "suspension",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-1883259-002",
+          "name": "工程机器人悬挂总装"
+        },
+        {
+          "id": "rm-1935523-001",
+          "name": "全向轮悬挂总成"
+        },
+        {
+          "id": "rm-1935523-022",
+          "name": "悬挂连接子装配"
+        }
+      ]
+    },
+    {
+      "query": "轮腿",
+      "expected_category": "wheel_leg",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-776744-010",
+          "name": "串联腿装配方案2"
+        },
+        {
+          "id": "rm-1935523-001",
+          "name": "全向轮悬挂总成"
+        },
+        {
+          "id": "rm-1935523-024",
+          "name": "全向轮轮组子装配"
+        }
+      ]
+    },
+    {
+      "query": "抓取",
+      "expected_category": "gripper",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-816172-019",
+          "name": "工程机器人抓取机构"
+        },
+        {
+          "id": "rm-1883259-004",
+          "name": "工程机器人侧取抬升模块"
+        },
+        {
+          "id": "rm-1883259-005",
+          "name": "工程机器人直取抬升模块"
+        }
+      ]
+    },
+    {
+      "query": "抬升",
+      "expected_category": "lifting",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-1883259-004",
+          "name": "工程机器人侧取抬升模块"
+        },
+        {
+          "id": "rm-1883259-005",
+          "name": "工程机器人直取抬升模块"
+        }
+      ]
+    },
+    {
+      "query": "云台",
+      "expected_category": "gimbal",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-1883384-008",
+          "name": "2026哨兵鹅颈云台"
+        },
+        {
+          "id": "rm-776744-011",
+          "name": "步兵云台Yaw轴装配"
+        },
+        {
+          "id": "rm-776744-012",
+          "name": "步兵云台Pitch轴装配"
+        }
+      ]
+    },
+    {
+      "query": "底盘",
+      "expected_category": "chassis",
+      "passed": true,
+      "top_results": [
+        {
+          "id": "rm-1883259-001",
+          "name": "工程机器人底盘总装"
+        },
+        {
+          "id": "rm-1883384-006",
+          "name": "2026哨兵底盘"
+        },
+        {
+          "id": "rm-1883384-007",
+          "name": "舵步底盘"
+        }
+      ]
+    }
+  ],
+  "retrieval_passed": true,
+  "inventory_files_checked": 1754,
+  "inventory_hash_errors": [],
+  "native_assemblies": 125,
+  "saved_reference_counts": {
+    "potential_local_match": 1152,
+    "outside_asset": 114,
+    "ambiguous": 772
+  },
+  "cards_with_native_report": 17,
+  "cards_with_geometry": 9,
+  "unique_selected_cad_files": 20
+}

@@ -1,0 +1,663 @@
+{
+  "revision": "33.4.0",
+  "document": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+  "previous": "reports/solidworks-swerve-acceptance/chassis/ReuseAcceptance_Chassis.SLDASM",
+  "rebuilt": null,
+  "wheel": {
+    "name": "ReuseAcceptance_3508_Swerve-4",
+    "config": "默认",
+    "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/ReuseAcceptance_3508_Swerve.SLDASM",
+    "fixedAtAssembly": false,
+    "transform": [
+      -0.7071067811865476,
+      0,
+      -0.7071067811865478,
+      0,
+      1,
+      0,
+      0.7071067811865478,
+      0,
+      -0.7071067811865476,
+      -0.23628762648676083,
+      0.06090918687682975,
+      -0.14769395598183002,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "frame": {
+    "name": "Frame.2025.10.1-1",
+    "config": "默认",
+    "path": "reports/solidworks-swerve-acceptance/chassis/车架/Frame.2025.10.1.SLDPRT",
+    "fixedAtAssembly": true,
+    "transform": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "outer": {
+    "name": "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+    "config": "Mirror默认",
+    "path": "reports/solidworks-swerve-acceptance/chassis/3508_3508舵轮模组/Swerve/Steering_outer.2025.10.1.SLDPRT",
+    "fixedAtAssembly": false,
+    "transform": [
+      -0.7071067811865476,
+      0,
+      -0.7071067811865478,
+      0,
+      1,
+      0,
+      0.7071067811865478,
+      0,
+      -0.7071067811865476,
+      -0.19,
+      0.041,
+      -0.19,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "mates": [
+    {
+      "name": "重合1",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "距离2",
+      "type": "MateDistanceDim",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "小装甲板模块.2025.10.1-1/RM_装甲板支架.2025.10.1-1",
+        "Frame.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合14",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "小装甲板模块.2025.10.1-1",
+        "Frame.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心1",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "滑环模块.2025.10.1-1/MT1256-P1210.step.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心2",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "平行6",
+      "type": "MateParallel",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合25",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "小装甲板模块.2025.10.1-2",
+        "Frame.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合26",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "小装甲板模块.2025.10.1-1/RM_装甲板支架.2025.10.1-2",
+        "小装甲板模块.2025.10.1-2/RM_装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合27",
+      "type": "MateCoordinate",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "ReuseAcceptance_Chassis"
+      ]
+    },
+    {
+      "name": "距离4",
+      "type": "MateDistanceDim",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "小装甲板模块.2025.10.1-1/RM_装甲板支架.2025.10.1-2",
+        "小装甲板模块.2025.10.1-3/RM_装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "距离5",
+      "type": "MateDistanceDim",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "小装甲板模块.2025.10.1-4/RM_装甲板支架.2025.10.1-1",
+        "小装甲板模块.2025.10.1-2/RM_装甲板支架.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "同心3",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "MGN9R_95mm.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心4",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "MGN9R_95mm.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合30",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "MGN9R_95mm.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心5",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "MGN9R_95mm.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心6",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "MGN9R_95mm.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心7",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心8",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合33",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "平行7",
+      "type": "MateParallel",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合35",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心9",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合36",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "平行8",
+      "type": "MateParallel",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "3508_3508_Swerve_drive_v2.2025.10.1-5/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合40",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-3/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "ReuseAcceptance_3508_Swerve-4/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合42",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "滑环模块.2025.10.1-1/J0_RA7008轴承内圈CNC.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "平行9",
+      "type": "MateParallel",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "滑环模块.2025.10.1-1/J0_RA7008轴承内圈CNC.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合43",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-1/STD_2-M3-10-H8-25.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心10",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-1/STD_2-M3-10-H8-25.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心11",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-1/STD_2-M3-10-H8-25.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心12",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "3508_3508_Swerve_drive_v2.2025.10.1-1/Swerve_outer.2025.10.1-1/Steering_outer.2025.10.1-1",
+        "抬升机构.2025.10.1-1/2M_20teeth正齿条.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合44",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-2/STD_2-M3-10-H8-25.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "重合45",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-1/2M_20teeth正齿条2.2025.10.1-1",
+        "抬升机构.2025.10.1-2/2M_20teeth正齿条2.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合46",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "电池架装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心15",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "电池架装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心16",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "电池架装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合49",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "电池架装甲板支架.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "同心20",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "电池架装甲板支架.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "同心21",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "电池架装甲板支架.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "重合51",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "场地交互模块装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心28",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "场地交互模块装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心29",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "场地交互模块装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心30",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "RM_场地交互模块.2025.10.1-1",
+        "场地交互模块装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心31",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "RM_场地交互模块.2025.10.1-1",
+        "场地交互模块装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "距离6",
+      "type": "MateDistanceDim",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "RM_场地交互模块.2025.10.1-1",
+        "场地交互模块装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心34",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-2/STD_2-M3-10-H8-25.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "同心35",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "抬升机构.2025.10.1-2/STD_2-M3-10-H8-25.2025.10.1-1",
+        "MGN9C标准滑块.2025.10.1-2"
+      ]
+    },
+    {
+      "name": "重合54",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3mm_底盘G连接板.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心36",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3mm_底盘G连接板.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心37",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "3mm_底盘G连接板.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "重合55",
+      "type": "MateCoincident",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心38",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "装甲板支架.2025.10.1-1"
+      ]
+    },
+    {
+      "name": "同心39",
+      "type": "MateConcentric",
+      "error": 0,
+      "warning": false,
+      "suppressed": false,
+      "participants": [
+        "Frame.2025.10.1-1",
+        "装甲板支架.2025.10.1-1"
+      ]
+    }
+  ]
+}

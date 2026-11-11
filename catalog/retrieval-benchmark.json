@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "pairs": [
+    {"id":"A1","label":"分段布置的工程底盘","targets":["rm-1883259-001"],"function":"电控和电池沿车架前中后三段布置","model":"rm-1883259-001","locator_kind":"卡片 ID"},
+    {"id":"A2","label":"麦轮纵臂悬挂","targets":["rm-1883259-002"],"function":"麦克纳姆轮纵臂两只避震器缓冲","model":"悬挂总装.SLDASM","locator_kind":"CAD 文件名"},
+    {"id":"B1","label":"井字形舵轮底盘","targets":["rm-803685-013"],"function":"便于安装舵轮的井字形车架","model":"chassis_v2.2025.10.1.SLDASM","locator_kind":"CAD 文件名"},
+    {"id":"B2","label":"双驱动舵轮","targets":["rm-803685-014"],"function":"行走和转向分别用独立驱动","model":"3508 舵轮","locator_kind":"部件型号＋用途","expected_role":"used_component","reject_categories":["gearbox"]},
+    {"id":"B3","label":"舵下导向悬挂","targets":["rm-803685-014"],"function":"用导轨限制轮组竖直运动，气弹簧负责缓冲","model":"MGN7","locator_kind":"所用部件型号","expected_role":"used_component"},
+    {"id":"C1","label":"紧凑全向轮悬挂","targets":["rm-1935523-001"],"function":"把两只避震器布置在下臂，缩短轮组悬挂","function_refined":"把两只避震器布置在下臂，缩短轮组悬挂总成","model":"rm-1935523-001","locator_kind":"卡片 ID"},
+    {"id":"C2","label":"悬挂连接法兰","targets":["rm-1935523-022"],"function":"把轮组接到悬挂的机加工法兰","model":"rm-1935523-022","locator_kind":"STEP 子装配卡片 ID"},
+    {"id":"C3","label":"低成本自制辊子轮组","targets":["rm-1935523-024"],"function":"聚氨酯空心辊子配铜套和圆柱销","model":"rm-1935523-024","locator_kind":"STEP 子装配卡片 ID"},
+    {"id":"D","label":"气弹簧舵步底盘","targets":["rm-1883384-007"],"function":"气弹簧轮组用于舵步底盘","model":"舵步底盘.SLDASM","locator_kind":"CAD 文件名"},
+    {"id":"E","label":"同轴嵌套串联腿","targets":["rm-776744-010"],"function":"大小腿绕同一轴线回转的嵌套传动","model":"串联腿装配方案2.SLDASM","locator_kind":"CAD 文件名"},
+    {"id":"F","label":"桌面串联轮腿","targets":["rm-815703-cb91f7be3de320dfd"],"function":"桌面上做串联轮腿的电控调试和研发验证","model":"ML1.0","locator_kind":"整机型号","expected_role":"module_model"},
+    {"id":"G1","label":"轻型减速箱","targets":["rm-1936175-017"],"function":"替代 Hexroll 又受安装厚度限制的小型减速机构","model":"P15.8 Hexroll","locator_kind":"系列型号＋对照产品","expected_role":"model_family"},
+    {"id":"G2","label":"重型减速箱","targets":["rm-1936175-018"],"function":"用角接触和碗组轴承支撑轮腿减速传动","model":"P15.8 双轴承支撑","locator_kind":"系列型号＋结构","expected_role":"model_family"}
+  ],
+  "boundaries": [
+    {"query":"P15.8","expected":["rm-1936175-017","rm-1936175-018"],"note":"系列型号允许返回轻型与重型两个变体"},
+    {"query":"Ｐ１５．８","expected":["rm-1936175-017","rm-1936175-018"],"note":"全角和半角规范化"},
+    {"query":"P15.76","expected":[],"note":"近似数值拒绝"},
+    {"query":"P15d8","expected":[],"note":"FTS 内部小数编码不能作为型号别名"},
+    {"query":"MGN7","expected":["rm-803685-014"],"note":"作者文档中的导轨型号，命中使用它的装配"},
+    {"query":"ＭＧＮ７Ｃ","expected":["rm-803685-c049da45fd14f85b9","rm-803685-c179d6f6b324affc2","rm-803685-c71279e3f67520639"],"note":"独立 CAD 命名，和 MGN7 分开"},
+    {"query":"MGN7CA","expected":[],"note":"后缀变体拒绝"},
+    {"query":"MGN7 MGN7C","expected":[],"note":"多型号必须在同一卡片都有依据"},
+    {"query":"3509 舵轮","expected":[],"note":"未知型号不给出相似型号"},
+    {"query":"ML1.00","expected":[],"note":"版本字符串保持精确"},
+    {"query":"803685","expected":[],"note":"原帖编号不会从卡片 ID 中被当作型号命中"},
+    {"query":"rm-803685-099","expected":[],"note":"未知卡片 ID 不回退为数字检索"},
+    {"query":"3508 MGN7 舵轮","expected":["rm-803685-014"],"note":"同一卡片同时具备两个所用部件型号"},
+    {"query":"Hexroll","expected":["rm-1936175-017"],"note":"返回作者列为对照产品的方案，并标注关系"},
+    {"query":"Hexroll 减速箱","expected":["rm-1936175-017"],"note":"显式登记的纯字母型号或产品名可与功能词组合"}
+  ]
+}

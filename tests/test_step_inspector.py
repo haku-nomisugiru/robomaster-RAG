@@ -83,6 +83,12 @@ class StepInspectorTests(unittest.TestCase):
         self.assertAlmostEqual(result["geometry_world_mm"]["volume_mm3"], 2000, places=5)
         box_instances = [row for row in result["occurrences"] if not row["children"]]
         self.assertEqual(len({row["definition_id"] for row in box_instances}), 1)
+        self.assertEqual(result["parser"]["engine"], "OCP/XCAF")
+        definitions = {row["definition_id"]: row for row in result["definitions"]}
+        parent = definitions[result["root_definition_ids"][0]]
+        box_id = box_instances[0]["definition_id"]
+        self.assertEqual(parent["child_definition_ids"], [box_id])
+        self.assertEqual(definitions[box_id]["occurrence_count"], 2)
         self.assertEqual(sorted(row["world_transform_mm"][0][3] for row in box_instances), [0, 20])
         self.assertAlmostEqual(result["geometry_world_mm"]["aabb_mm"]["size"][0], 30, places=5)
         self.assertFalse(result["native_mates_verified"])
