@@ -2,6 +2,8 @@
 
 按功能、精确型号、结构化规格和参考 CAD 检索 RoboMaster 开源机构。每张卡保留可定位的原帖、CAD 文件和组件定义，并记录配置、接口量测及复用前要检查的条件。
 
+Windows 用户可下载 [v0.5.0 启动包](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/tag/v0.5.0)，解压后双击 `start-rag.cmd`。包内已有 SQLite、几何索引和 Chroma 持久化数据，无需重算卡片向量。需要打开 CAD 时，按下方的 [CAD 来源和下载](#cad-来源和下载) 获取原件。
+
 ## 从干净检出启动
 
 准备 Python 3.12+ 和支持 FTS5 的 SQLite。在仓库根目录执行以下命令。Windows 可直接双击 `start-rag.cmd`。
@@ -24,6 +26,45 @@ python -B examples/reuse_cad.py --query '3508 舵轮' --mode model
 
 当前快照包含 3,468 张组件卡，覆盖 2,617 个 CAD 文件入口和 851 张 STEP 定义卡。接口、SQLite/Chroma 混合召回、参考 CAD 检索及 HTTP 复用的对照结果保存在 `reports/`。首批样本的历史基线见 [第一阶段交付记录](reports/PHASE1_HANDOFF.md)。
 
+## CAD 来源和下载
+
+v0.5.0 的 3,468 张卡都保留原帖网址、CAD 相对路径和 SHA-256，归属以下 14 篇帖子。右列列出适合首批按需下载的作者附件，共 11 条不同直链，关联 1,053 张卡。这些直链在 2026-11-11 的无登录检查中均返回 HTTP 200，文件大小与记录一致。大小检查不能替代下载后的 SHA-256 校验。原帖和附件可能更新，直链失效时回原帖查看作者说明。
+
+| 来源原帖 | 作者附件与获取建议 |
+| --- | --- |
+| [青岛大学未来战队：3508 减速箱早期帖](https://bbs.robomaster.com/article/713291) | [轻型改三乙 STEP][qd-light]、[重型改五丙 STEP][qd-heavy]。这两个附件的指纹与下方 P15.8 帖对应附件一致。 |
+| [飞坡结构](https://bbs.robomaster.com/article/714486) | [飞坡 RAR][ramp]，解压后按卡片找目标文件。 |
+| [辽宁科技大学 COD：RM2025 英雄机械结构](https://bbs.robomaster.com/article/716376) | 回原帖，按卡片定位所需机械组件。 |
+| [辽宁科技大学 COD：RM2025 空中机器人机械结构](https://bbs.robomaster.com/article/723307) | 回原帖，按卡片定位所需机械组件。 |
+| [东莞理工学院 ACE：复合构型隧道工程](https://bbs.robomaster.com/article/761042) | 按原帖获取完整分卷，放在同一目录，从第 1 卷解压。 |
+| [香港科技大学 ENTERPRIZE：RM2025 舵轮相关机械结构](https://bbs.robomaster.com/article/761377) | [独立舵轮 RAR][hkust-swerve]。 |
+| [中国石油大学（华东）RPS：串联腿步兵](https://bbs.robomaster.com/article/776744) | 回原帖，按卡片定位所需机械组件。 |
+| [香港科技大学 ENTERPRIZE：轮式六轴机械臂工程](https://bbs.robomaster.com/article/803685) | [工程机械结构 ZIP][hkust-engineer]，含验收用的 3508 双电机舵轮与对应车架。 |
+| [合肥工业大学苍穹：桌面串联式轮腿调试平台](https://bbs.robomaster.com/article/815703) | [ML1.0 ZIP][hfut-wheel-leg]。 |
+| [华南理工大学华南虎：机器人项目设计流程](https://bbs.robomaster.com/article/816172) | [构型 ZIP][scut-zip]、[工程尺寸 SLDPRT][scut-part]、[构型预览 EASM][scut-preview]。需要原生可编辑文件时先看 ZIP 或 SLDPRT，EASM 用于预览。 |
+| [辽宁科技大学 COD：RM2025 工程机器人](https://bbs.robomaster.com/article/1883259) | [工程机械结构 ZIP][cod-engineer]。 |
+| [辽宁科技大学 COD：RM2026 哨兵舵步](https://bbs.robomaster.com/article/1883384) | 回原帖，按卡片定位所需机械组件。 |
+| [东北农业大学 TCP：全向轮步兵悬挂](https://bbs.robomaster.com/article/1935523) | [步兵悬挂 STEP][neau-suspension]。子组件在同一个 STEP 里。 |
+| [青岛大学未来战队：3508 P15.8 减速箱](https://bbs.robomaster.com/article/1936175) | [轻型改三乙 STEP][qd-light]、[重型改五丙 STEP][qd-heavy]，按型号和卡片选版本。 |
+
+1. **先找卡片。** 已知型号时用 `/v1/search?mode=model&q=3508`；只知道用途时用 `mode=function`。从结果进入 `reuse_href`，用 `source.url` 找原帖，用 `cad_source.archive_path` 找对应的附件。
+2. **下载后核对版本。** 用 `Get-FileHash -Algorithm SHA256 -LiteralPath '<下载文件>'` 核对 [附件记录](catalog/downloads.json) 的 `sha256`，再按 `selection.asset_relative_path` 定位并用 `cad_source.sha256` 校验目标 CAD。同一个原包里的多张卡只需下载一次。哈希不匹配时先核对作者的版本更新。
+3. **按格式复用。** STEP 子卡用 `selection.definition_id` 定位。SolidWorks 装配保留解压后的目录结构，按卡片配置打开装配副本，再核对外部引用、孔位、配合和干涉。可用 `rm-803685-014`（3508 双电机舵轮）和 `rm-803685-c436d23f8c29cc095`（对应车架）跟做 [SolidWorks 复用验收](reports/solidworks-swerve-acceptance/README.md)。
+
+Windows 启动包内置索引和来源记录，CAD 原件需另行获取。HTTP 的 `/file` 和 `/package` 只读取本地已有文件。要让服务读取手动下载的文件，按 `cad_source.path` 放置 CAD；原包按 `cad_source.archive_path` 放置，路径均相对于启动包解压后的根目录。只需打开或检查 CAD 时，可以直接在自己的工作目录解压并使用。第三方 CAD 的使用与再分发以原作者声明为准。
+
+[qd-light]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/5232871041b143a99a9f5ff358b8ddd31784030050655/%E4%BA%8C%E5%85%AD%E5%BC%8F%E8%BD%BB%E5%9E%8BP15.8%E5%87%8F%E9%80%9F%E7%AE%B1%E6%94%B9%E4%B8%89%E4%B9%99.step
+[qd-heavy]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/8778c298079347338c3a265b69bdb7481784030049519/%E4%BA%8C%E5%85%AD%E5%BC%8F%E9%87%8D%E5%9E%8BP15.8%E5%87%8F%E9%80%9F%E7%AE%B1%E6%94%B9%E4%BA%94%E4%B8%99.step
+[ramp]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/b4ecd462c4c94dad8c9cefb075c09b651745385026045/%E9%A3%9E%E5%9D%A1.rar
+[hkust-swerve]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/0a196275756b46a69bf4217ddceb7a421754559894664/2025%20HKUST%20ENTERPRIZE%20HERO%20Swerve.rar
+[hkust-engineer]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/fc0dbf41afc24563acc23a2e6783ab781759430250230/%E3%80%90RM2025-%E8%BD%AE%E5%BC%8F%E5%85%AD%E8%BD%B4%E6%9C%BA%E6%A2%B0%E8%87%82%E5%B7%A5%E7%A8%8B%E6%9C%BA%E6%A2%B0%E7%BB%93%E6%9E%84%E5%BC%80%E6%BA%90%E3%80%91%E9%A6%99%E6%B8%AF%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6-ENTERPRIZE.zip
+[hfut-wheel-leg]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/fb4352f77adc4c07b86c87319dd458e31761792825156/ML1.0.zip
+[scut-part]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1577307270a0486ab2724d18d8c1ac781761669206542/FZiRbVgOion5EUxw7f6cHomynPe/24.%E5%B7%A5%E7%A8%8B.V3.0%E5%B0%BA%E5%AF%B820240620.SLDPRT
+[scut-zip]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1577307270a0486ab2724d18d8c1ac781761669206542/LcHJbhaunof3jtxM5uQcldhKnog/%E4%B8%89%E4%BB%A3%E8%BD%A6%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1V2.0.zip
+[scut-preview]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1577307270a0486ab2724d18d8c1ac781761669206542/SalkbatWmot6yoxwjlScMQmFnlf/%E4%B8%89%E4%BB%A3%E8%BD%A6%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1V2.0.easm
+[cod-engineer]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1fc4f9f99bef4cbfb22ef3602a62bced1775104065173/RM2025%E8%BE%BD%E5%AE%81%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6COD%E6%88%98%E9%98%9F%E5%B7%A5%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9C%BA%E6%A2%B0%E5%BC%80%E6%BA%90.zip
+[neau-suspension]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/9ddd687e670749e5ba091c5e916a72581783062940072/%E6%AD%A5%E5%85%B5%E6%82%AC%E6%8C%82.step
+
 ## 使用
 
 安装依赖后，以本目录为根运行：
@@ -44,7 +85,7 @@ python -B examples/reuse_cad.py --query '3508 舵轮' --mode model
 
 - catalog/source-seeds.json：首批来源与摘要；待确认日期保持null。
 - catalog/sources.json：真实原帖与附件发现记录、快照哈希、作者说明。
-- catalog/downloads.json：每个附件的公开URL、实际大小、MD5、SHA-256、下载状态。
+- catalog/downloads.json：附件来源 URL、大小、校验值和下载状态。`url` 有时是原帖入口；同一附件的直链也可能记录在 [2025 开源采集记录](catalog/open-cad-2025.json) 或 [补充下载记录](reports/supplemental-downloads.json)，按 SHA-256 对照。
 - catalog/inventory.json：解包后CAD/说明的相对路径、类型、大小、内容指纹。
 - catalog/module-selections.json：经来源与文件清单核对的模块选取及其功能边界。
 - catalog/retrieval-notes.json：逐机构整理的原帖与附件事实、检索别名、结构关键词、复用前核验项。来源证据保存本地路径、正文或文件指纹、章节或页码。
