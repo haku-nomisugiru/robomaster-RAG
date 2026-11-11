@@ -4,7 +4,7 @@ pushd "%~dp0" || exit /b 1
 set "HF_HUB_OFFLINE=1"
 set "HF_HUB_DISABLE_TELEMETRY=1"
 set "ANONYMIZED_TELEMETRY=False"
-"_runtime\python\python.exe" -B tools\http_service.py %*
+"_runtime\python\python.exe" -B tools\portable_start.py %*
 set "rag_exit=%errorlevel%"
 popd
 if not "%rag_exit%"=="0" (

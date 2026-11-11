@@ -5,6 +5,7 @@ from hashlib import file_digest
 import json
 import os
 from pathlib import Path
+import signal
 import socket
 import sqlite3
 import subprocess
@@ -41,9 +42,11 @@ def exercise(installation, log):
         port = sock.getsockname()[1]
     base = f"http://127.0.0.1:{port}"
     system = Path(os.environ["SystemRoot"]) / "System32"
+    pid_file = log.with_suffix(".pid")
     env = dict(os.environ)
     env.update(PATH=str(system), PYTHONHOME=str(installation / "missing-python-home"),
-               PYTHONPATH=str(installation / "missing-python-path"), RAG_NO_PAUSE="1")
+               PYTHONPATH=str(installation / "missing-python-path"), RAG_NO_PAUSE="1",
+               RAG_ACCEPTANCE_PID_FILE=str(pid_file))
 
     with log.open("wb") as stream:
         process = subprocess.Popen([str(system / "cmd.exe"), "/d", "/c", "start-rag.cmd", "--port", str(port)],
@@ -83,10 +86,17 @@ def exercise(installation, log):
                 "vector_status": hybrid["vector_status"],
             }
         finally:
+            if pid_file.is_file():
+                try:
+                    os.kill(int(pid_file.read_text(encoding="ascii")), signal.SIGTERM)
+                except ProcessLookupError:
+                    pass
             if process.poll() is None:
-                subprocess.run([str(system / "taskkill.exe"), "/PID", str(process.pid), "/T", "/F"],
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-                process.wait(timeout=15)
+                try:
+                    process.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                    process.wait(timeout=10)
 
 
 def verify(archive, destination):

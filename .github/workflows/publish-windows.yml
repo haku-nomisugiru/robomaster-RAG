@@ -9,7 +9,7 @@ permissions:
 
 concurrency:
   group: publish-rag-v0.5.0
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   release:
@@ -41,9 +41,11 @@ jobs:
       - name: Build and test in clean Windows directory
         shell: pwsh
         run: |
+          git fetch --no-tags --depth=1 origin $env:SOURCE_COMMIT
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python -B release-payload/build_windows.py --checkout . --payload release-payload --installed installed --out out
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python -B release-payload/verify_windows.py --archive "out/$env:ASSET" --destination "Windows clean smoke test" --report out/RELEASE_ACCEPTANCE.json
+          python -B release-payload/verify_windows.py --archive "out/$env:ASSET" --destination "Windows 干净目录 smoke test" --report out/RELEASE_ACCEPTANCE.json
           if ($LASTEXITCODE -ne 0) {
             Get-ChildItem -Recurse -Filter 'launch-*.log' | Get-Content
             exit 1

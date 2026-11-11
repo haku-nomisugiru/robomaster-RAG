@@ -100,6 +100,7 @@ def stage(args):
 
     for filename in ("start-rag.cmd", "START-HERE.md"):
         shutil.copyfile(args.payload / filename, folder / filename)
+    shutil.copyfile(args.payload / "portable_start.py", folder / "tools/portable_start.py")
     shutil.copyfile(args.payload / "chroma-data.json", folder / "runtime/chroma-snapshot.json")
     shutil.copyfile(args.payload / "constraints-win-x64.txt", folder / "_runtime/constraints-win-x64.txt")
     model_license = folder / "_runtime/FlagEmbedding-LICENSE.txt"
