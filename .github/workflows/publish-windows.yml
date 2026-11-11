@@ -43,7 +43,14 @@ jobs:
         run: |
           git fetch --no-tags --depth=1 origin $env:SOURCE_COMMIT
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python -B release-payload/build_windows.py --checkout . --payload release-payload --installed installed --out out
+          $vswhere = Join-Path ([Environment]::GetFolderPath('ProgramFilesX86')) 'Microsoft Visual Studio\Installer\vswhere.exe'
+          $vs = & $vswhere -latest -products '*' -property installationPath
+          $redist = Get-ChildItem -LiteralPath (Join-Path $vs 'VC\Redist\MSVC') -File -Filter msvcp140_1.dll -Recurse |
+            Where-Object { $_.FullName -match '\\x64\\Microsoft\.VC\d+\.CRT\\msvcp140_1\.dll$' -and $_.Directory.Parent.Parent.Name -match '^\d+\.\d+\.\d+$' } |
+            Sort-Object @{Expression={[version]$_.Directory.Parent.Parent.Name};Descending=$true} |
+            Select-Object -First 1
+          if (-not $redist) { throw 'The Visual Studio x64 app-local CRT was not found' }
+          python -B release-payload/build_windows.py --checkout . --payload release-payload --installed installed --crt-dir $redist.Directory.FullName --out out
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python -B release-payload/verify_windows.py --archive "out/$env:ASSET" --destination "Windows 干净目录 smoke test" --report out/RELEASE_ACCEPTANCE.json
           if ($LASTEXITCODE -ne 0) {
@@ -64,18 +71,20 @@ jobs:
           $source = $env:SOURCE_COMMIT
           $existing = gh release list --repo $repo --limit 50 --json tagName,isDraft | ConvertFrom-Json
           $release = $existing | Where-Object tagName -EQ $tag
-          if ($release) {
-            if (-not $release.isDraft) { throw 'Release tag already published' }
-          } else {
+          if (-not $release) {
             gh release create $tag --repo $repo --draft --target $source --title 'RoboMaster CAD RAG v0.5.0 · Windows x64' --notes-file release-payload/notes.md
           }
           $info = gh release view $tag --repo $repo --json isDraft,targetCommitish | ConvertFrom-Json
-          if (-not $info.isDraft -or $info.targetCommitish -ne $source) { throw 'Unexpected release draft' }
+          if ($info.targetCommitish -ne $source) { throw 'Unexpected release source' }
+          if (-not $info.isDraft) {
+            $tagSha = gh api "repos/$repo/git/ref/tags/$tag" --jq '.object.sha'
+            if ($tagSha -ne $source) { throw 'Existing release tag points to the wrong commit' }
+          }
           gh release upload $tag "out/$asset" "out/$asset.sha256" out/RELEASE_ACCEPTANCE.json --repo $repo --clobber
           gh release download $tag --repo $repo --pattern "$asset" --pattern "$asset.sha256" --pattern 'RELEASE_ACCEPTANCE.json' --dir verified-assets
           foreach ($file in @($asset, "$asset.sha256", 'RELEASE_ACCEPTANCE.json')) {
             if ((Get-FileHash "out/$file").Hash -ne (Get-FileHash "verified-assets/$file").Hash) { throw "Uploaded release file differs: $file" }
           }
-          gh release edit $tag --repo $repo --draft=false --latest
+          if ($info.isDraft) { gh release edit $tag --repo $repo --draft=false --latest }
           $tagSha = gh api "repos/$repo/git/ref/tags/$tag" --jq '.object.sha'
           if ($tagSha -ne $source) { throw 'Release tag points to the wrong commit' }

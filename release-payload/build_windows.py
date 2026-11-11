@@ -15,6 +15,7 @@ COMMIT = "8a71a260bd71a4bfdf0a1eac5cfa25f8d6bd4a9d"
 NAME = "RoboMaster-CAD-RAG-v0.5.0-win-x64"
 PYTHON_URL = "https://www.python.org/ftp/python/3.14.6/python-3.14.6-embed-amd64.zip"
 PYTHON_HASH = "df901e84a896ff1ee720ad03377e0c8d8c2244fda79808aeeaff6316df1cb75c"
+CRT_FILES = ("msvcp140.dll", "msvcp140_1.dll", "vcruntime140.dll", "vcruntime140_1.dll")
 
 
 def digest(path):
@@ -64,6 +65,8 @@ def stage(args):
     fetch(PYTHON_URL, python_zip, PYTHON_HASH)
     with ZipFile(python_zip) as z:
         z.extractall(runtime)
+    for filename in CRT_FILES:
+        shutil.copyfile(args.crt_dir / filename, runtime / filename)
     (runtime / "python314._pth").write_text(
         "python314.zip\n.\nLib/site-packages\n../../tools\nimport site\n", encoding="ascii")
     packages = runtime / "Lib/site-packages"
@@ -107,6 +110,8 @@ def stage(args):
     fetch("https://raw.githubusercontent.com/FlagOpen/FlagEmbedding/master/LICENSE", model_license)
     (folder / "_runtime/NOTICE.txt").write_text(
         "CPython 3.14.6 embedded for Windows x64. See python/LICENSE.txt.\n"
+        "Microsoft Visual C++ Runtime for Windows x64, app-local deployment.\n"
+        "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files\n"
         "Python dependencies and licenses are in python/Lib/site-packages.\n"
         "BGE-small-zh-v1.5 by BAAI, ONNX build by Qdrant, MIT.\n"
         "https://huggingface.co/Qdrant/bge-small-zh-v1.5/tree/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59\n"
@@ -116,6 +121,7 @@ def stage(args):
         "source_commit": COMMIT, "version": "0.5.0", "platform": "win-x64",
         "python": "3.14.6", "cards": 3468, "persisted_embeddings": manifest["count"],
         "chroma_snapshot_sha256": manifest["archive_sha256"],
+        "app_local_msvc_sha256": {name: digest(runtime / name) for name in CRT_FILES},
     }, indent=2) + "\n", encoding="utf-8")
 
     archive = args.out / (NAME + ".zip")
@@ -133,6 +139,7 @@ def main():
     parser.add_argument("--checkout", type=Path, required=True)
     parser.add_argument("--payload", type=Path, required=True)
     parser.add_argument("--installed", type=Path, required=True)
+    parser.add_argument("--crt-dir", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--python-archive", type=Path)
     parser.add_argument("--model-cache", type=Path)

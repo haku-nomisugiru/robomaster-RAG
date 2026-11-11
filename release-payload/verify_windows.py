@@ -15,7 +15,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 from zipfile import ZipFile
 
-from build_windows import COMMIT, NAME
+from build_windows import COMMIT, CRT_FILES, NAME
 
 
 def sha(path):
@@ -115,6 +115,32 @@ def exercise(installation, log):
                     process.wait(timeout=10)
 
 
+def check_crt(installation, manifest):
+    runtime = installation / "_runtime/python"
+    for name in CRT_FILES:
+        assert sha(runtime / name) == manifest[name]
+    probe = """
+import ctypes, json
+from pathlib import Path
+import chromadb, onnxruntime
+from ctypes import wintypes
+kernel = ctypes.WinDLL("kernel32")
+kernel.GetModuleHandleW.argtypes = [wintypes.LPCWSTR]
+kernel.GetModuleHandleW.restype = wintypes.HMODULE
+kernel.GetModuleFileNameW.argtypes = [wintypes.HMODULE, wintypes.LPWSTR, wintypes.DWORD]
+kernel.GetModuleFileNameW.restype = wintypes.DWORD
+modules = {}
+for name in %r:
+    handle = kernel.GetModuleHandleW(name)
+    buffer = ctypes.create_unicode_buffer(32768)
+    assert handle and kernel.GetModuleFileNameW(handle, buffer, len(buffer)), name
+    modules[name] = str(Path(buffer.value).resolve().parent)
+print(json.dumps(modules))
+""" % (CRT_FILES,)
+    loaded = json.loads(subprocess.check_output([runtime / "python.exe", "-B", "-c", probe]))
+    assert set(loaded) == set(CRT_FILES) and all(Path(path) == runtime for path in loaded.values()), loaded
+
+
 def verify(archive, destination):
     destination.mkdir(parents=True)
     with ZipFile(archive) as z:
@@ -125,6 +151,7 @@ def verify(archive, destination):
     assert not (installation / "raw").exists()
     manifest = json.loads((installation / "release-manifest.json").read_text(encoding="utf-8"))
     assert manifest["source_commit"] == COMMIT
+    check_crt(installation, manifest["app_local_msvc_sha256"])
     catalog = installation / "catalog"
     sql = json.loads((catalog / "snapshots/manifest.json").read_text(encoding="utf-8"))
     for name, expected in sql.items():
@@ -149,6 +176,7 @@ def verify(archive, destination):
     report = {
         "status": "passed", "commit": COMMIT, "archive_sha256": sha(archive),
         "geometry_bindings": geometry, "persisted_embeddings": 3468,
+        "app_local_msvc_loaded": True,
         "unchanged_hnsw_files": True, "unchanged_chroma_data": True, "chroma_data_sha256": before,
         "sqlite_housekeeping_changed": sha(sqlite_file) != snapshot["files"][sqlite_file.name],
         "launcher_runs": runs,
