@@ -5,6 +5,7 @@ from hashlib import file_digest, sha256
 import json
 import os
 from pathlib import Path
+import re
 import signal
 import socket
 import sqlite3
@@ -52,11 +53,11 @@ def get(base, path, **params):
         return json.load(response)
 
 
-def exercise(installation, log):
+def exercise(installation, log, *, use_default):
     with socket.socket() as sock:
         sock.bind(("127.0.0.1", 0))
         port = sock.getsockname()[1]
-    base = f"http://127.0.0.1:{port}"
+    base = f"http://127.0.0.1:{port}" if not use_default else None
     system = Path(os.environ["SystemRoot"]) / "System32"
     pid_file = log.with_suffix(".pid")
     env = dict(os.environ)
@@ -65,12 +66,21 @@ def exercise(installation, log):
                RAG_ACCEPTANCE_PID_FILE=str(pid_file))
 
     with log.open("wb") as stream:
-        process = subprocess.Popen([str(system / "cmd.exe"), "/d", "/c", "start-rag.cmd", "--port", str(port)],
+        arguments = [] if use_default else ["--port", str(port)]
+        process = subprocess.Popen([str(system / "cmd.exe"), "/d", "/c", "start-rag.cmd", *arguments],
                                    cwd=installation, env=env, stdout=stream, stderr=subprocess.STDOUT)
         try:
             for _ in range(160):
                 if process.poll() is not None:
                     raise RuntimeError(f"Launcher exited {process.returncode}. See {log}")
+                if base is None:
+                    log_text = log.read_text(encoding="ascii", errors="replace")
+                    match = re.search(r"Listening on (http://127\.0\.0\.1:(\d+))", log_text)
+                    if not match:
+                        time.sleep(0.25)
+                        continue
+                    assert match[2] != "8765" and "Port 8765 is busy" in log_text
+                    base = match[1]
                 try:
                     health = get(base, "/health")
                     break
@@ -100,6 +110,7 @@ def exercise(installation, log):
                 "near_model_nonmatch": "P15.76",
                 "hybrid_top": best["id"], "hybrid_channels": best["retrieval_channels"],
                 "vector_status": hybrid["vector_status"],
+                "default_port_conflict_handled": use_default,
             }
         finally:
             if pid_file.is_file():
@@ -167,7 +178,16 @@ def verify(archive, destination):
     sqlite_file = chroma / "chroma.sqlite3"
     assert sqlite_count(sqlite_file, "embeddings") == 3468
     before = persisted_state(sqlite_file)
-    runs = [exercise(installation, destination / f"launch-{run}.log") for run in (1, 2)]
+    with socket.socket() as occupied:
+        try:
+            occupied.bind(("127.0.0.1", 8765))
+        except OSError as exc:
+            if exc.winerror != 10048:
+                raise
+        else:
+            occupied.listen()
+        runs = [exercise(installation, destination / "launch-1.log", use_default=True)]
+    runs.append(exercise(installation, destination / "launch-2.log", use_default=False))
     for path, expected in snapshot["files"].items():
         if path != sqlite_file.name:
             assert sha(chroma / path) == expected, f"Persisted HNSW index changed: {path}"

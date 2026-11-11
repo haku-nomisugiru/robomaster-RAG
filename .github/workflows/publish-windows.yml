@@ -86,5 +86,6 @@ jobs:
             if ((Get-FileHash "out/$file").Hash -ne (Get-FileHash "verified-assets/$file").Hash) { throw "Uploaded release file differs: $file" }
           }
           if ($info.isDraft) { gh release edit $tag --repo $repo --draft=false --latest }
+          gh release edit $tag --repo $repo --notes-file release-payload/notes.md
           $tagSha = gh api "repos/$repo/git/ref/tags/$tag" --jq '.object.sha'
           if ($tagSha -ne $source) { throw 'Release tag points to the wrong commit' }

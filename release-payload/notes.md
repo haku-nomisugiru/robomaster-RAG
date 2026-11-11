@@ -1,6 +1,6 @@
 ## Windows x64 便携包
 
-下载 `RoboMaster-CAD-RAG-v0.5.0-win-x64.zip`，完整解压后双击 `start-rag.cmd`。默认监听 `http://127.0.0.1:8765`。包内含 Python、SQLite 文本索引、几何索引、3,468 条 Chroma 持久向量及本地查询编码器，启动后可直接做型号精确查询和混合检索。
+下载 `RoboMaster-CAD-RAG-v0.5.0-win-x64.zip`，完整解压后双击 `start-rag.cmd`。默认监听 `http://127.0.0.1:8765`，端口占用时自动选择空闲端口，窗口显示实际地址。包内含 Python、应用本地 C++ 运行库、SQLite 文本索引、几何索引、3,468 条 Chroma 持久向量及本地查询编码器，启动后可直接做型号精确查询和混合检索。
 
 在含中文和空格的干净目录通过包内启动脚本进行了两次启动与 HTTP 验收。覆盖 `3508 舵轮`、全角 `Ｐ１５．８`、近似型号 `P15.76` 以及 SQLite 和 Chroma 共同命中的功能查询。测试前后 Chroma 数据与 HNSW 索引一致。验收记录和 ZIP SHA-256 随 Release 提供。
 
