@@ -1,0 +1,79 @@
+name: Build and publish Windows RAG v0.5.0
+
+on:
+  push:
+    branches: ["codex/publish-v0.5.0"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-rag-v0.5.0
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-2025
+    timeout-minutes: 35
+    env:
+      TAG: v0.5.0
+      SOURCE_COMMIT: 8a71a260bd71a4bfdf0a1eac5cfa25f8d6bd4a9d
+      ASSET: RoboMaster-CAD-RAG-v0.5.0-win-x64.zip
+    steps:
+      - name: Checkout publication branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 2
+
+      - name: Install build Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14.6'
+          architecture: x64
+
+      - name: Install pinned Windows packages
+        shell: pwsh
+        run: |
+          python -m pip --disable-pip-version-check install --only-binary=:all: --no-compile --target installed -c release-payload/constraints-win-x64.txt -r requirements-vector.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Build and test in clean Windows directory
+        shell: pwsh
+        run: |
+          python -B release-payload/build_windows.py --checkout . --payload release-payload --installed installed --out out
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -B release-payload/verify_windows.py --archive "out/$env:ASSET" --destination "Windows clean smoke test" --report out/RELEASE_ACCEPTANCE.json
+          if ($LASTEXITCODE -ne 0) {
+            Get-ChildItem -Recurse -Filter 'launch-*.log' | Get-Content
+            exit 1
+          }
+
+      - name: Upload draft and verify release downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          $repo = $env:GITHUB_REPOSITORY
+          $tag = $env:TAG
+          $asset = $env:ASSET
+          $source = $env:SOURCE_COMMIT
+          $existing = gh release list --repo $repo --limit 50 --json tagName,isDraft | ConvertFrom-Json
+          $release = $existing | Where-Object tagName -EQ $tag
+          if ($release) {
+            if (-not $release.isDraft) { throw 'Release tag already published' }
+          } else {
+            gh release create $tag --repo $repo --draft --target $source --title 'RoboMaster CAD RAG v0.5.0 · Windows x64' --notes-file release-payload/notes.md
+          }
+          $info = gh release view $tag --repo $repo --json isDraft,targetCommitish | ConvertFrom-Json
+          if (-not $info.isDraft -or $info.targetCommitish -ne $source) { throw 'Unexpected release draft' }
+          gh release upload $tag "out/$asset" "out/$asset.sha256" out/RELEASE_ACCEPTANCE.json --repo $repo --clobber
+          gh release download $tag --repo $repo --pattern "$asset" --pattern "$asset.sha256" --pattern 'RELEASE_ACCEPTANCE.json' --dir verified-assets
+          foreach ($file in @($asset, "$asset.sha256", 'RELEASE_ACCEPTANCE.json')) {
+            if ((Get-FileHash "out/$file").Hash -ne (Get-FileHash "verified-assets/$file").Hash) { throw "Uploaded release file differs: $file" }
+          }
+          gh release edit $tag --repo $repo --draft=false --latest
+          $tagSha = gh api "repos/$repo/git/ref/tags/$tag" --jq '.object.sha'
+          if ($tagSha -ne $source) { throw 'Release tag points to the wrong commit' }
