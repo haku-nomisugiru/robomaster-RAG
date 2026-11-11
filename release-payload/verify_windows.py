@@ -179,10 +179,11 @@ def verify(archive, destination):
     assert sqlite_count(sqlite_file, "embeddings") == 3468
     before = persisted_state(sqlite_file)
     with socket.socket() as occupied:
+        occupied.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
         try:
             occupied.bind(("127.0.0.1", 8765))
         except OSError as exc:
-            if exc.winerror != 10048:
+            if exc.winerror not in {10013, 10048}:
                 raise
         else:
             occupied.listen()
