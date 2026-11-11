@@ -1,7 +1,7 @@
 """Exercise the Windows ZIP from a clean extraction using its public launcher."""
 
 import argparse
-from hashlib import file_digest
+from hashlib import file_digest, sha256
 import json
 import os
 from pathlib import Path
@@ -27,6 +27,22 @@ def sqlite_count(path, table):
     with sqlite3.connect(path.as_uri() + "?mode=ro&immutable=1", uri=True) as db:
         assert db.execute("PRAGMA quick_check").fetchone() == ("ok",)
         return db.execute(f"SELECT count(*) FROM {table}").fetchone()[0]
+
+
+def persisted_state(path):
+    # Chroma records native write-lock acquisitions on read. Compare all other SQL data
+    # and the HNSW files so normal housekeeping does not look like an embedding change.
+    digest = sha256()
+    with sqlite3.connect(path.as_uri() + "?mode=ro&immutable=1", uri=True) as db:
+        tables = [row[0] for row in db.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name != 'acquire_write' ORDER BY name"
+        )]
+        for name in tables:
+            digest.update((name + "\n").encode("utf-8"))
+            quoted = '"' + name.replace('"', '""') + '"'
+            for row in sorted(repr(row) for row in db.execute("SELECT * FROM " + quoted)):
+                digest.update((row + "\n").encode("utf-8"))
+    return digest.hexdigest()
 
 
 def get(base, path, **params):
@@ -119,17 +135,22 @@ def verify(archive, destination):
 
     chroma = installation / "runtime/chroma"
     snapshot = json.loads((installation / "runtime/chroma-snapshot.json").read_text(encoding="utf-8"))
-    def check_vectors():
-        for path, expected in snapshot["files"].items():
-            assert sha(chroma / path) == expected, f"Persisted vector file changed: {path}"
-        assert sqlite_count(chroma / "chroma.sqlite3", "embeddings") == 3468
-
-    check_vectors()
+    for path, expected in snapshot["files"].items():
+        assert sha(chroma / path) == expected, f"Packaged Chroma file differs: {path}"
+    sqlite_file = chroma / "chroma.sqlite3"
+    assert sqlite_count(sqlite_file, "embeddings") == 3468
+    before = persisted_state(sqlite_file)
     runs = [exercise(installation, destination / f"launch-{run}.log") for run in (1, 2)]
-    check_vectors()
+    for path, expected in snapshot["files"].items():
+        if path != sqlite_file.name:
+            assert sha(chroma / path) == expected, f"Persisted HNSW index changed: {path}"
+    assert sqlite_count(sqlite_file, "embeddings") == 3468
+    assert persisted_state(sqlite_file) == before, "Persisted Chroma data changed"
     report = {
         "status": "passed", "commit": COMMIT, "archive_sha256": sha(archive),
-        "geometry_bindings": geometry, "persisted_embeddings": 3468, "unchanged_vector_files": True,
+        "geometry_bindings": geometry, "persisted_embeddings": 3468,
+        "unchanged_hnsw_files": True, "unchanged_chroma_data": True, "chroma_data_sha256": before,
+        "sqlite_housekeeping_changed": sha(sqlite_file) != snapshot["files"][sqlite_file.name],
         "launcher_runs": runs,
     }
     print(json.dumps(report, ensure_ascii=True, indent=2))
