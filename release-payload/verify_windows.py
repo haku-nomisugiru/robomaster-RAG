@@ -11,7 +11,7 @@ import socket
 import sqlite3
 import subprocess
 import time
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import urlopen
 from zipfile import ZipFile
@@ -53,6 +53,36 @@ def get(base, path, **params):
         return json.load(response)
 
 
+def verify_acquisition(installation, env, system, base, hit):
+    reuse = get(base, hit["reuse_href"])
+    plan = reuse["acquisition"]
+    assert plan["status"] == "author_download" and plan["definition_id"] == "0:1:1:7"
+    assert plan["cad_sha256"] == hit["cad_source"]["sha256"] and plan["card_id"] == hit["id"]
+    href = reuse["artifacts"]["file"]["href"]
+    try:
+        get(base, href)
+    except HTTPError as exc:
+        with exc:
+            assert exc.code == 404 and json.load(exc)["error"] == "cad_not_installed"
+    else:
+        raise AssertionError("The clean installation unexpectedly contained CAD")
+    command = [str(system / "cmd.exe"), "/d", "/c", "get-cad.cmd", hit["id"]]
+    def acquire():
+        return json.loads(subprocess.check_output(command, cwd=installation, env=env, timeout=420))
+    obtained = acquire()
+    assert obtained["verified"] and obtained["card_id"] == hit["id"] and obtained["definition_id"] == plan["definition_id"]
+    assert sha(Path(obtained["path"])) == plan["cad_sha256"]
+    assert not obtained["attachment_cached"]
+    assert acquire()["attachment_cached"]
+    with urlopen(base + href, timeout=35) as response:
+        assert response.headers["X-Content-SHA256"] == plan["cad_sha256"]
+        assert file_digest(response, "sha256").hexdigest() == plan["cad_sha256"]
+    assert get(base, hit["reuse_href"])["acquisition"]["status"] == "local"
+    return {"card_id": hit["id"], "definition_id": plan["definition_id"],
+            "attachment_sha256": plan["attachment"]["sha256"], "cad_sha256": plan["cad_sha256"],
+            "cache_reused": True, "http_verified": True}
+
+
 def exercise(installation, log, *, use_default):
     with socket.socket() as sock:
         sock.bind(("127.0.0.1", 0))
@@ -89,7 +119,7 @@ def exercise(installation, log, *, use_default):
             else:
                 raise RuntimeError(f"Launcher did not listen on port {port}. See {log}")
             assert health["models"] == 3468
-            assert get(base, "/openapi.json")["info"]["version"] == "0.5.0"
+            assert get(base, "/openapi.json")["info"]["version"] == "0.5.1"
             model = get(base, "/v1/search", q="3508 舵轮", mode="model", limit=5)
             assert model["retrieval"] == "lexical" and model["vector_status"] == "not_requested"
             top = model["items"][0]
@@ -104,6 +134,7 @@ def exercise(installation, log, *, use_default):
             best = hybrid["items"][0]
             assert best["id"] == "rm-1935523-022"
             assert {"sqlite", "chroma"} <= best["retrieval_channels"].keys()
+            cad = verify_acquisition(installation, env, system, base, best) if use_default else None
             return {
                 "health": health["models"], "model_top": top["id"],
                 "fullwidth_exact_ids": sorted(row["id"] for row in exact["items"]),
@@ -111,6 +142,7 @@ def exercise(installation, log, *, use_default):
                 "hybrid_top": best["id"], "hybrid_channels": best["retrieval_channels"],
                 "vector_status": hybrid["vector_status"],
                 "default_port_conflict_handled": use_default,
+                "cad_acquisition": cad,
             }
         finally:
             if pid_file.is_file():

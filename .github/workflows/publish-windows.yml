@@ -1,14 +1,14 @@
-name: Build and publish Windows RAG v0.5.0
+name: Build and publish Windows RAG v0.5.1
 
 on:
   push:
-    branches: ["codex/publish-v0.5.0"]
+    branches: ["codex/publish-v0.5.1"]
 
 permissions:
   contents: write
 
 concurrency:
-  group: publish-rag-v0.5.0
+  group: publish-rag-v0.5.1
   cancel-in-progress: true
 
 jobs:
@@ -16,9 +16,9 @@ jobs:
     runs-on: windows-2025
     timeout-minutes: 35
     env:
-      TAG: v0.5.0
-      SOURCE_COMMIT: 8a71a260bd71a4bfdf0a1eac5cfa25f8d6bd4a9d
-      ASSET: RoboMaster-CAD-RAG-v0.5.0-win-x64.zip
+      TAG: v0.5.1
+      SOURCE_COMMIT: e1ce19c91f48cb4445829901a6b96a6b4d37517d
+      ASSET: RoboMaster-CAD-RAG-v0.5.1-win-x64.zip
     steps:
       - name: Checkout publication branch
         uses: actions/checkout@v4
@@ -72,7 +72,7 @@ jobs:
           $existing = gh release list --repo $repo --limit 50 --json tagName,isDraft | ConvertFrom-Json
           $release = $existing | Where-Object tagName -EQ $tag
           if (-not $release) {
-            gh release create $tag --repo $repo --draft --target $source --title 'RoboMaster CAD RAG v0.5.0 · Windows x64' --notes-file release-payload/notes.md
+            gh release create $tag --repo $repo --draft --target $source --title 'RoboMaster CAD RAG v0.5.1 · Windows x64' --notes-file release-payload/notes.md
           }
           $info = gh release view $tag --repo $repo --json isDraft,targetCommitish | ConvertFrom-Json
           if ($info.targetCommitish -ne $source) { throw 'Unexpected release source' }

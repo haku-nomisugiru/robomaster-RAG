@@ -11,8 +11,8 @@ from time import sleep
 from urllib.request import urlopen
 from zipfile import ZipFile, ZIP_DEFLATED
 
-COMMIT = "8a71a260bd71a4bfdf0a1eac5cfa25f8d6bd4a9d"
-NAME = "RoboMaster-CAD-RAG-v0.5.0-win-x64"
+COMMIT = "e1ce19c91f48cb4445829901a6b96a6b4d37517d"
+NAME = "RoboMaster-CAD-RAG-v0.5.1-win-x64"
 PYTHON_URL = "https://www.python.org/ftp/python/3.14.6/python-3.14.6-embed-amd64.zip"
 PYTHON_HASH = "df901e84a896ff1ee720ad03377e0c8d8c2244fda79808aeeaff6316df1cb75c"
 CRT_FILES = ("msvcp140.dll", "msvcp140_1.dll", "vcruntime140.dll", "vcruntime140_1.dll")
@@ -118,7 +118,7 @@ def stage(args):
         "See FlagEmbedding-LICENSE.txt.\n",
         encoding="utf-8")
     (folder / "release-manifest.json").write_text(json.dumps({
-        "source_commit": COMMIT, "version": "0.5.0", "platform": "win-x64",
+        "source_commit": COMMIT, "version": "0.5.1", "platform": "win-x64",
         "python": "3.14.6", "cards": 3468, "persisted_embeddings": manifest["count"],
         "chroma_snapshot_sha256": manifest["archive_sha256"],
         "app_local_msvc_sha256": {name: digest(runtime / name) for name in CRT_FILES},
