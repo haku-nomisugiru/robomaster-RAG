@@ -32,7 +32,7 @@ section取gimbal（云台）、chassis（底盘）、wheel_or_leg（轮子或轮
 
 响应中的 source/source_url 指向原帖，entry记录CAD路径与SHA-256，verification记录解析/运动/配合等状态，dependency_scope记录已保存引用检查结果，limitations记录限制。engineering_parameters中的null表示未验证，不能当作0。downloads.model和downloads.package是相对于服务地址的路径，package_sha256用于校验原始包。下载响应也包含X-Content-SHA256及ETag。
 
-`/reuse` 的 `acquisition` 以同一卡片 ID 返回获取状态、作者入口、附件指纹和目标 CAD 指纹。首次使用时，在本机运行 `get-cad.cmd <卡片ID>`；已有同版原附件、CAD 或解压目录时加 `--from <路径>`。成功后，无需重启服务即可读取适用的 `/file` 或 `/package`。`cad_not_installed` 表示需要先准备文件，返回的 `reuse_href` 指向对应卡片。具体配置见 [工作台接入](../README.md#接入-robomaster-机械设计工作台)。
+`/reuse` 的 `acquisition` 以同一卡片 ID 返回获取状态、作者入口、附件指纹和目标 CAD 指纹。首次使用时，在本机运行 `get-cad.cmd <卡片ID>`；已有同版原附件、CAD 或解压目录时加 `--from <路径>`。成功后，无需重启服务即可读取适用的 `/file` 或 `/package`。`cad_not_installed` 表示需要先准备文件，返回的 `reuse_href` 指向对应卡片。具体配置见 [工作台接入](../README.md#接入-robomaster-工作台)。
 
 搜索使用分字段 FTS5，名称和别名优先，并核对查询中的型号词。返回的 `matches` 列出命中的字段与索引词，`exact_match` 表示整条查询命中 ID、名称、类别或关键词，`score` 综合精确匹配优先级和加权 BM25。详情和搜索结果都带 `retrieval_profile`，其中 `facts` 逐条带原帖链接和本地证据定位，`reuse_checks` 列出针对该机构的待核验项。比如查询「MGN7 滑轨 气弹簧」可定位 3508 双电机舵轮的悬挂设计和作者 PDF 第 8 页。
 
@@ -44,11 +44,11 @@ section取gimbal（云台）、chassis（底盘）、wheel_or_leg（轮子或轮
 
 型号模式的 `model_matches` 返回每个匹配型号的 `code`、`role` 和 `evidence`。`used_component` 表示该机构用了该型号，`reference_product` 表示作者把它作为对照产品，`cad_name` 表示依据为文件命名，`module_model` 和 `model_family` 分别指向机构型号和系列。没有用途词时，型号模式的 `matches` 可为空，型号依据从 `model_matches` 读取。 [功能与型号对照报告](RETRIEVAL_COMPARISON.md)
 
-`/v1/search` 支持 `alias` 精确别名和重复的 `spec` 数值过滤，可以与 `q` 组合或单独使用。型号模式需要 `q`。例如 `/v1/search?spec=opening_diameter_mm:6&spec=opening_count:9` 返回符合这两个接口条件的组件，结果中的 `component_specs` 保留每个数值的量测范围和证据，`cad_source` 给出原 CAD 入口。 [规格字段与示例](../README.md#组件目录和接口证据)
+`/v1/search` 支持 `alias` 精确别名和重复的 `spec` 数值过滤，可以与 `q` 组合或单独使用。型号模式需要 `q`。例如 `/v1/search?spec=opening_diameter_mm:6&spec=opening_count:9` 返回符合这两个接口条件的组件，结果中的 `component_specs` 保留每个数值的量测范围和证据，`cad_source` 给出原 CAD 入口。 [规格字段与示例](../docs/usage.md#组件目录和接口证据)
 
 `category` 按机构功能筛选，七个枚举见 OpenAPI。功能模式把该条件同时用于 SQLite 和 Chroma，例如 `mode=function&category=gripper` 可搜吸盘贴合、托盘承托、独立前伸等特征。返回的 `mechanism_profile` 区分有来源的优势、取舍、适用范围，以及 CAD 观察到的直接子项。作者证据附原文定位，`cad_source` 保留可打开的模型入口。 [七类机构验收](MECHANISM_ACCEPTANCE.md)
 
-`/v1/similar` 使用已入库的 `reference_id`。可选 `configuration` 指定原生导出配置，`mode=size` 比较实际尺寸，`mode=shape` 比较等比缩放下的形状，`include_reference=true` 可返回原定义及其副本。响应含排序距离、分项、原始 CAD 路径、STEP 定义和详情链接。参考本机其他 STEP 或进行表面采样时使用几何检索命令行。 [参考 CAD 使用说明](../README.md#参考-cad-相似检索)
+`/v1/similar` 使用已入库的 `reference_id`。可选 `configuration` 指定原生导出配置，`mode=size` 比较实际尺寸，`mode=shape` 比较等比缩放下的形状，`include_reference=true` 可返回原定义及其副本。响应含排序距离、分项、原始 CAD 路径、STEP 定义和详情链接。参考本机其他 STEP 或进行表面采样时使用几何检索命令行。 [参考 CAD 使用说明](../docs/usage.md#参考-cad-相似检索)
 
 `component_locator` 返回包内路径和哈希。对 STEP 子定义还返回 `definition_id`、实例数、部分实例路径及报告位置。原生装配的 `saved_reference_links` 来自保存引用快照，匹配状态和候选 ID 供查证。下载字段为 `null` 时应查看卡片定位和依赖说明。分卷归档返回本地卷清单，STEP 子定义的文件入口是完整的源 STEP。
 
