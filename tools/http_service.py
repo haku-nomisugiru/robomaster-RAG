@@ -8,6 +8,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path, PurePosixPath
 from urllib.parse import parse_qs, quote, urlsplit
 import library
+from cad_acquisition import Acquisition
 from component_metadata import component_candidates, parse_spec
 from component_scope import package_available
 from geometry_search import KINDS as GEOMETRY_KINDS, MODES as GEOMETRY_MODES, search as search_geometry
@@ -19,6 +20,7 @@ class Catalog:
         self.modules = {m["id"]: m for m in map(json.loads, (self.root / "catalog/modules.jsonl").read_text(encoding="utf-8").splitlines())}
         self.assets = {a["asset_id"]: a for a in json.loads((self.root / "catalog/downloads.json").read_text(encoding="utf-8")) if a.get("status") == "downloaded"}
         self.sources = {s["source_id"]: s for s in json.loads((self.root / "catalog/sources.json").read_text(encoding="utf-8"))}
+        self.acquisition = Acquisition(self.root, self.modules)
         self.db = self.root / "catalog/library.sqlite3"
         if not self.db.is_file(): raise ValueError("Build the catalog first")
         self.semantic = SemanticSearch(self.root, self.modules)
@@ -70,6 +72,7 @@ class Catalog:
             "id": mid, "name": card["name"], "category": card["category"],
             "details": card["reuse_href"].removesuffix("/reuse"),
             "source": card["source"], "cad_source": card["cad_source"],
+            "acquisition": self.acquisition.plan(card),
             "selection": {
                 "scope": card["selection_scope"], "definition_id": card.get("definition_id"),
                 "occurrence_path": card.get("occurrence_path"),
@@ -209,7 +212,11 @@ class Handler(BaseHTTPRequestHandler):
                 if not kind: return self.json_response(200, catalog.detail(mid))
                 if kind == "reuse":
                     return self.json_response(200, catalog.reuse(mid))
-                path, expected = catalog.file_record(mid, kind)
+                try:
+                    path, expected = catalog.file_record(mid, kind)
+                except FileNotFoundError:
+                    return self.json_response(404, {"error": "cad_not_installed",
+                                                    "reuse_href": f"/v1/models/{mid}/reuse"})
                 with path.open("rb") as stream:
                     digest = hashlib.sha256()
                     for chunk in iter(lambda: stream.read(4 * 1024 * 1024), b""): digest.update(chunk)
@@ -287,6 +294,13 @@ def openapi(port):
         "required": ["id", "selection", "artifacts", "preferred_artifact", "verification", "required_checks"],
         "properties": {
             "id": {"type": "string"},
+            "acquisition": {"type": "object", "description": "CAD identity and the available acquisition method.",
+                            "properties": {"status": {"type": "string", "enum": [
+                                "local", "cached_attachment", "author_download", "manual_import", "unavailable"]},
+                                "card_id": {"type": "string"}, "cad_path": {"type": "string"},
+                                "cad_sha256": {"type": "string"}, "definition_id": {"type": "string", "nullable": True},
+                                "source_url": {"type": "string"}, "author_url": {"type": "string", "nullable": True},
+                                "attachment": {"type": "object", "nullable": True}}},
             "selection": {"type": "object", "properties": {
                 "scope": {"type": "string"}, "definition_id": {"type": "string", "nullable": True},
                 "asset_relative_path": {"type": "string"}, "native_configurations": {"type": "object"},
@@ -304,7 +318,7 @@ def openapi(port):
     }
     return {
         "openapi": "3.0.3", "info": {
-            "title": "RoboMaster CAD Local Retrieval", "version": "0.5.0",
+            "title": "RoboMaster CAD Local Retrieval", "version": "0.5.1",
             "description": "Find CAD by function, model or reference geometry. Read the selected card's reuse "
                            "evidence before choosing an artifact. Check the download SHA-256 and preserve the "
                            "STEP definition or native configuration when reviewing the CAD.",

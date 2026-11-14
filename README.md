@@ -2,7 +2,7 @@
 
 按功能、精确型号、结构化规格和参考 CAD 检索 RoboMaster 开源机构。每张卡保留可定位的原帖、CAD 文件和组件定义，并记录配置、接口量测及复用前要检查的条件。
 
-Windows 用户可下载 [v0.5.0 启动包](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/tag/v0.5.0)，解压后双击 `start-rag.cmd`。包内已有 SQLite、几何索引和 Chroma 持久化数据，无需重算卡片向量。需要打开 CAD 时，按下方的 [CAD 来源和下载](#cad-来源和下载) 获取原件。
+Windows 用户可下载 [v0.5.1 启动包](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/tag/v0.5.1)，解压后双击 `start-rag.cmd`。SQLite、几何索引和 Chroma 已随包交付，直接使用既有卡片向量。查到组件后，在解压目录执行 `get-cad.cmd <卡片ID>`，即可从支持的作者附件获取、校验并安装对应 CAD。已有下载文件时加 `--from <路径>`，可直接核对并导入。
 
 ## 从干净检出启动
 
@@ -26,6 +26,30 @@ python -B examples/reuse_cad.py --query '3508 舵轮' --mode model
 
 当前快照包含 3,468 张组件卡，覆盖 2,617 个 CAD 文件入口和 851 张 STEP 定义卡。接口、SQLite/Chroma 混合召回、参考 CAD 检索及 HTTP 复用的对照结果保存在 `reports/`。首批样本的历史基线见 [第一阶段交付记录](reports/PHASE1_HANDOFF.md)。
 
+## 接入 RoboMaster 机械设计工作台
+
+适用于 DSH AutoRoboMaster 的 SolidWorks 侧栏和独立窗口。RAG、工作台后端和 SolidWorks 在同一台 Windows 电脑运行。
+
+1. **启动 RAG。** 解压 Windows Release，双击 `start-rag.cmd`，保留启动窗口。记下 `Listening on` 后的地址。默认是 `http://127.0.0.1:8765`，端口占用时以启动窗口为准。
+2. **配置工作台。** 在已安装工作台的根目录编辑 `settings.json`，把 `cad_library_url` 设为上一步的地址，保留原有模型 API 和 SolidWorks MCP 设置。重启工作台后，在 SolidWorks 的“工具 → 加载项”启用 RoboMaster 机械设计工作台，从右侧 RM 面板打开“机构检索”。使用独立窗口时从工作台的同名入口打开。
+3. **确认卡片与获取方式。** 在“机构检索”输入 `3508 双电机舵轮`。也可以运行下面的 HTTP 示例做精确型号查询，核对 `rm-803685-014`，再读取 `reuse_href`。查看 `acquisition.status`、`selection` 和接口证据。同一零件在不同来源中的卡片 ID 可以不同。
+4. **准备 CAD 并交给工作台。** 在 RAG 解压目录运行 `.get-cad.cmd rm-803685-014`。已有作者提供的 ZIP、CAD 或解压目录时，在命令末尾加 `--from 'D:下载原附件.zip'`，路径换成实际位置。命令成功后回到工作台，选中刚才的卡片，点击“下载选中模型包”，再点“打开已下载模型并检查”。原生装配优先用 ZIP。单文件 STEP 可以选择入口文件。当前工作台的下载按钮支持 ZIP、STEP 和常见 SolidWorks 原生入口，RAR 和分卷可保留解压目录，在 SolidWorks 中按命令返回的路径打开检查。
+5. **在目标装配副本验收。** 示例舵轮和车架共用一个 ZIP。车架卡片是 `rm-803685-c436d23f8c29cc095`；运行对应的 `get-cad.cmd` 会复用原包。先对照卡片中的配置、装配入口和接口证据，再在目标装配副本核对外部引用、孔位、配合和干涉。对于 STEP 子定义，下载得到整个 STEP，按 `selection.definition_id` 和实例路径确认组件。验收样例见 [SolidWorks 复用记录](reports/solidworks-swerve-acceptance/README.md)。
+
+~~~powershell
+# 在 RAG 解压目录执行。端口以启动窗口为准。
+$base = 'http://127.0.0.1:8765'
+Invoke-RestMethod "$base/health"
+$q = [uri]::EscapeDataString('3508 舵轮')
+$hits = Invoke-RestMethod "$base/v1/search?mode=model&q=$q"
+$card = $hits.items | Where-Object id -EQ 'rm-803685-014'
+$reuse = Invoke-RestMethod ($base + $card.reuse_href)
+$reuse.acquisition
+.\get-cad.cmd $card.id
+~~~
+
+工作台现有搜索框使用默认关键词模式。自研插件或 AI 工具可以在本机通过 [HTTP API](reports/HTTP_SERVICE.md) 调用 `/v1/search?mode=function`，看到 `retrieval=hybrid` 即表示关键词和 Chroma 已参与召回。有明确型号时用 `mode=model`。用返回的卡片 ID 调用 `/reuse` 读取定位信息，再在本机运行获取命令。文件获取成功后，现有 `/file` 和 `/package` 接口会提供适用的本地文件及 `X-Content-SHA256`，客户端下载后可再次计算文件指纹。浏览器页面若有独立来源，应通过工作台后端或本机工具调用回环地址。
+
 ## CAD 来源和下载
 
 v0.5.0 的 3,468 张卡都保留原帖网址、CAD 相对路径和 SHA-256，归属以下 14 篇帖子。右列列出适合首批按需下载的作者附件，共 11 条不同直链，关联 1,053 张卡。这些直链在 2026-11-11 的无登录检查中均返回 HTTP 200，文件大小与记录一致。大小检查不能替代下载后的 SHA-256 校验。原帖和附件可能更新，直链失效时回原帖查看作者说明。
@@ -47,11 +71,17 @@ v0.5.0 的 3,468 张卡都保留原帖网址、CAD 相对路径和 SHA-256，归
 | [东北农业大学 TCP：全向轮步兵悬挂](https://bbs.robomaster.com/article/1935523) | [步兵悬挂 STEP][neau-suspension]。子组件在同一个 STEP 里。 |
 | [青岛大学未来战队：3508 P15.8 减速箱](https://bbs.robomaster.com/article/1936175) | [轻型改三乙 STEP][qd-light]、[重型改五丙 STEP][qd-heavy]，按型号和卡片选版本。 |
 
-1. **先找卡片。** 已知型号时用 `/v1/search?mode=model&q=3508`；只知道用途时用 `mode=function`。从结果进入 `reuse_href`，用 `source.url` 找原帖，用 `cad_source.archive_path` 找对应的附件。
-2. **下载后核对版本。** 用 `Get-FileHash -Algorithm SHA256 -LiteralPath '<下载文件>'` 核对 [附件记录](catalog/downloads.json) 的 `sha256`，再按 `selection.asset_relative_path` 定位并用 `cad_source.sha256` 校验目标 CAD。同一个原包里的多张卡只需下载一次。哈希不匹配时先核对作者的版本更新。
-3. **按格式复用。** STEP 子卡用 `selection.definition_id` 定位。SolidWorks 装配保留解压后的目录结构，按卡片配置打开装配副本，再核对外部引用、孔位、配合和干涉。可用 `rm-803685-014`（3508 双电机舵轮）和 `rm-803685-c436d23f8c29cc095`（对应车架）跟做 [SolidWorks 复用验收](reports/solidworks-swerve-acceptance/README.md)。
+`/reuse` 中的 `acquisition.status` 说明如何取得对应 CAD：
 
-Windows 启动包内置索引和来源记录，CAD 原件需另行获取。HTTP 的 `/file` 和 `/package` 只读取本地已有文件。要让服务读取手动下载的文件，按 `cad_source.path` 放置 CAD；原包按 `cad_source.archive_path` 放置，路径均相对于启动包解压后的根目录。只需打开或检查 CAD 时，可以直接在自己的工作目录解压并使用。第三方 CAD 的使用与再分发以原作者声明为准。
+| 状态 | 用法 |
+| --- | --- |
+| `author_download` | 运行 `get-cad.cmd <卡片ID>`，按需下载作者附件、核对 SHA-256，再按卡片安装目标 CAD。当前涵盖 1,052 张卡。 |
+| `cached_attachment` | 同一命令使用本地原包。若是分卷，解压完整分卷后用 `--from <解压根目录>`。 |
+| `local` | CAD 已在本机。运行获取命令可复核其指纹。 |
+| `manual_import` | 到 `source_url` 获取作者提供的文件，再用 `get-cad.cmd <卡片ID> --from <原附件、CAD文件或解压根目录>`。解压根目录需保留原包内的相对路径。 |
+| `unavailable` | 仅提供检索证据和来源定位。 |
+
+同一附件支持多张卡，因此需要核对的是**卡片 ID、CAD SHA-256、包内路径，以及适用时的 STEP 定义或 SolidWorks 配置**。获取命令按现有索引路径落盘，发现版本不同会报错并保留已有文件。若作者已替换附件，请使用与卡片指纹一致的版本。第三方 CAD 的使用与再分发以原作者声明为准。
 
 [qd-light]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/5232871041b143a99a9f5ff358b8ddd31784030050655/%E4%BA%8C%E5%85%AD%E5%BC%8F%E8%BD%BB%E5%9E%8BP15.8%E5%87%8F%E9%80%9F%E7%AE%B1%E6%94%B9%E4%B8%89%E4%B9%99.step
 [qd-heavy]: https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/8778c298079347338c3a265b69bdb7481784030049519/%E4%BA%8C%E5%85%AD%E5%BC%8F%E9%87%8D%E5%9E%8BP15.8%E5%87%8F%E9%80%9F%E7%AE%B1%E6%94%B9%E4%BA%94%E4%B8%99.step

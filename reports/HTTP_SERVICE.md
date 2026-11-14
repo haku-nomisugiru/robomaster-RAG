@@ -32,6 +32,8 @@ section取gimbal（云台）、chassis（底盘）、wheel_or_leg（轮子或轮
 
 响应中的 source/source_url 指向原帖，entry记录CAD路径与SHA-256，verification记录解析/运动/配合等状态，dependency_scope记录已保存引用检查结果，limitations记录限制。engineering_parameters中的null表示未验证，不能当作0。downloads.model和downloads.package是相对于服务地址的路径，package_sha256用于校验原始包。下载响应也包含X-Content-SHA256及ETag。
 
+`/reuse` 的 `acquisition` 以同一卡片 ID 返回获取状态、作者入口、附件指纹和目标 CAD 指纹。首次使用时，在本机运行 `get-cad.cmd <卡片ID>`；已有同版原附件、CAD 或解压目录时加 `--from <路径>`。成功后，无需重启服务即可读取适用的 `/file` 或 `/package`。`cad_not_installed` 表示需要先准备文件，返回的 `reuse_href` 指向对应卡片。具体配置见 [工作台接入](../README.md#接入-robomaster-机械设计工作台)。
+
 搜索使用分字段 FTS5，名称和别名优先，并核对查询中的型号词。返回的 `matches` 列出命中的字段与索引词，`exact_match` 表示整条查询命中 ID、名称、类别或关键词，`score` 综合精确匹配优先级和加权 BM25。详情和搜索结果都带 `retrieval_profile`，其中 `facts` 逐条带原帖链接和本地证据定位，`reuse_checks` 列出针对该机构的待核验项。比如查询「MGN7 滑轨 气弹簧」可定位 3508 双电机舵轮的悬挂设计和作者 PDF 第 8 页。
 
 `mode=auto` 保留原有默认词法行为。`mode=function` 对用途、工作原理或结构描述同时使用 SQLite FTS5 和本地 Chroma。两路按 CAD 来源和定义去重，再用加权倒数排名融合。SQLite 权重为 1，Chroma 权重为 0.35，排名偏移为 4。SQLite 命中可按去重后的查询词覆盖率额外获得最多 0.12 分。整条查询精确命中 SQLite 的卡片名称或别名时优先。 [倒数排名融合论文](https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf)
