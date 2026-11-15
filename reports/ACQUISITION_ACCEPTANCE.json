@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "mode": "verified_original_archive_import",
+  "cards_verified": 3468,
+  "distinct_entry_paths": 2617,
+  "cad_files_installed": 2619,
+  "attachments": 18,
+  "download_bytes": 6242824856,
+  "failed": 0,
+  "missing_or_changed": [],
+  "cards_with_file_and_package": 3468,
+  "multipart_bundle_entries": 514,
+  "multipart_bundle_sha256": "159eca35a379c783c16672eb342a9ec95224cc045205ca343e07f3704ed86abd",
+  "multipart_http_verified": true,
+  "previously_flagged_cad_http_verified": true
+}

@@ -28,6 +28,20 @@ class HttpAcceptance(unittest.TestCase):
         self.assertEqual(len(self.get("/v1/sections")["items"]),3)
         self.assertIn("/v1/models/{model_id}/package",self.get("/openapi.json")["paths"])
 
+    def test_all_cards_have_a_download_plan_including_previous_gaps(self):
+        catalog = self.server.catalog
+        for card in catalog.modules.values():
+            with self.subTest(card=card["id"]):
+                detail = catalog.detail(card["id"])
+                self.assertTrue(detail["downloads"]["model"])
+                self.assertTrue(detail["cad_source"]["file_available"])
+                self.assertTrue(catalog.acquisition.plan(card)["author_url"])
+        mixed = self.get("/v1/models/rm-1883384-006/reuse")
+        self.assertIn("package", mixed["artifacts"])
+        self.assertFalse(mixed["verification"]["fit_to_target_verified"])
+        split = self.get("/v1/models/rm-761042-c2ed254897d8b3e8e/reuse")
+        self.assertEqual(len(split["acquisition"]["volumes"]), 3)
+
     def test_reuse_evidence_follows_the_selected_definition_and_download_policy(self):
         detail = self.get("/v1/models/rm-1935523-022")
         plan = self.get(detail["reuse_href"])

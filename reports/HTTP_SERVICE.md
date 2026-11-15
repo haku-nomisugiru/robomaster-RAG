@@ -67,7 +67,7 @@ $result.items | Select-Object id,name,retrieval_channels
 
 C#示例见 examples/CadLibraryClient.cs，引用System.Net.Http。先SearchAsync，再GetModelAsync，读取详情中的哈希后调用DownloadAsync。JSON解析可使用现有插件依赖。下载采用流式写入临时文件、客户端SHA-256校验后再落盘，不覆盖已有目标文件。示例未加入现有SolidWorks插件工程，也未在其目标框架内编译验证。
 
-原生SLDASM应优先取package以保留包内相对目录；仅下载入口SLDASM通常不足以打开装配。package是原始来源包，并不保证所有依赖已齐全。STEP子定义仍返回完整STEP，客户端需按definition_id定位。此服务不启动SolidWorks、不修改配合、不自动插入装配。
+原生 SLDASM 优先取 `package` 以保留包内相对目录。单卷来源返回原作者附件；分卷来源经 `get-cad.cmd --all` 或按卡片获取后，返回自动生成的 CAD ZIP，`downloads.package_scope` 为 `catalog_cad_bundle`。包生成前可在 `reuse.acquisition.volumes` 查看每一卷的地址与指纹。`package_sha256` 对应实际返回的下载文件。STEP 子定义仍返回完整 STEP，客户端按 `definition_id` 定位。文件获取与装配校验分别记录，下载后仍按 `required_checks` 核对引用、配置与接口。
 
 ## AI调用
 

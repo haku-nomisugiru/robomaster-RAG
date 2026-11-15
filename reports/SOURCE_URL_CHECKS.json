@@ -1,0 +1,170 @@
+{
+  "checked_at": "2026-11-15T08:08:20.396371+00:00",
+  "method": "anonymous_https_head",
+  "passed": 18,
+  "total": 18,
+  "files": [
+    {
+      "name": "RM2025辽宁科技大学COD战队空中机器人机械开源.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/9f0901ec55c44ea9a28983c5b0b5c3cf1750911355796/RM2025%E8%BE%BD%E5%AE%81%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6COD%E6%88%98%E9%98%9F%E7%A9%BA%E4%B8%AD%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9C%BA%E6%A2%B0%E5%BC%80%E6%BA%90.zip",
+      "bytes": 340813144,
+      "sha256": "cea7d10a1c9e123855a2357946ad634884d926815e3f9b03f07bd662435ff041",
+      "status": 200,
+      "content_length": 340813144,
+      "passed": true
+    },
+    {
+      "name": "二六式重型P15.8减速箱改五丙.step",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/8778c298079347338c3a265b69bdb7481784030049519/%E4%BA%8C%E5%85%AD%E5%BC%8F%E9%87%8D%E5%9E%8BP15.8%E5%87%8F%E9%80%9F%E7%AE%B1%E6%94%B9%E4%BA%94%E4%B8%99.step",
+      "bytes": 4421027,
+      "sha256": "ddcbb1bf3f5b5d73a592de455b978b6636681389e8ec34448df4927b1f140a19",
+      "status": 200,
+      "content_length": 4421027,
+      "passed": true
+    },
+    {
+      "name": "[RM2025-串联腿步兵机器人机械结构开源】中国石油大学（华东）-RPS战队.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/c0070bdfcaca4125bca9f7400d413ac01755422379149/%5BRM2025-%E4%B8%B2%E8%81%94%E8%85%BF%E6%AD%A5%E5%85%B5%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9C%BA%E6%A2%B0%E7%BB%93%E6%9E%84%E5%BC%80%E6%BA%90%E3%80%91%E4%B8%AD%E5%9B%BD%E7%9F%B3%E6%B2%B9%E5%A4%A7%E5%AD%A6%EF%BC%88%E5%8D%8E%E4%B8%9C%EF%BC%89-RPS%E6%88%98%E9%98%9F.zip",
+      "bytes": 375185506,
+      "sha256": "dbddc93678d72a49bb8183d17d9fc61adcf90dba0402d069e456c8947db5eefd",
+      "passed": true,
+      "status": 200,
+      "content_length": 375185506
+    },
+    {
+      "name": "ML1.0.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/fb4352f77adc4c07b86c87319dd458e31761792825156/ML1.0.zip",
+      "bytes": 31190709,
+      "sha256": "77a1ee1dfef0faaabf664575f15143de307daaa4846743a87081dbdaf1ca4064",
+      "passed": true,
+      "status": 200,
+      "content_length": 31190709
+    },
+    {
+      "name": "24.工程.V3.0尺寸20240620.SLDPRT",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1577307270a0486ab2724d18d8c1ac781761669206542/FZiRbVgOion5EUxw7f6cHomynPe/24.%E5%B7%A5%E7%A8%8B.V3.0%E5%B0%BA%E5%AF%B820240620.SLDPRT",
+      "bytes": 178317,
+      "sha256": "aa4f004cbd73cfe66cd31567a894329cc3f229987f3b2756b6e0c3c82ca2899d",
+      "status": 200,
+      "content_length": 178317,
+      "passed": true
+    },
+    {
+      "name": "三代车构型设计V2.0.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1577307270a0486ab2724d18d8c1ac781761669206542/LcHJbhaunof3jtxM5uQcldhKnog/%E4%B8%89%E4%BB%A3%E8%BD%A6%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1V2.0.zip",
+      "bytes": 10577337,
+      "sha256": "9e9a8671de6abeae1ffd9515d975580493aec6da947b7e68f5b6d082fa23134e",
+      "status": 200,
+      "content_length": 10577337,
+      "passed": true
+    },
+    {
+      "name": "三代车构型设计V2.0.easm",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1577307270a0486ab2724d18d8c1ac781761669206542/SalkbatWmot6yoxwjlScMQmFnlf/%E4%B8%89%E4%BB%A3%E8%BD%A6%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1V2.0.easm",
+      "bytes": 176455,
+      "sha256": "bf6fddc98552dfe65a6aad9c4302744c82757dd946074798b5d48a65f7558ed2",
+      "status": 200,
+      "content_length": 176455,
+      "passed": true
+    },
+    {
+      "name": "2025 HKUST ENTERPRIZE HERO Swerve.rar",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/0a196275756b46a69bf4217ddceb7a421754559894664/2025%20HKUST%20ENTERPRIZE%20HERO%20Swerve.rar",
+      "bytes": 87248161,
+      "sha256": "12db7b08b5a9b02a68f49978b01ebafa358276d1e41f29f918e1d8a8aa009b37",
+      "status": 200,
+      "content_length": 87248161,
+      "passed": true
+    },
+    {
+      "name": "飞坡.rar",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/b4ecd462c4c94dad8c9cefb075c09b651745385026045/%E9%A3%9E%E5%9D%A1.rar",
+      "bytes": 2269046,
+      "sha256": "c722a264d036f37163788a0b7a729936630e54b9b68af607c26f15c488415fd0",
+      "status": 200,
+      "content_length": 2269046,
+      "passed": true
+    },
+    {
+      "name": "RM2025辽宁科技大学COD战队英雄机器人机械开源.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/5605d99521b543f4aee2454b6d1834311749380728845/RM2025%E8%BE%BD%E5%AE%81%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6COD%E6%88%98%E9%98%9F%E8%8B%B1%E9%9B%84%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9C%BA%E6%A2%B0%E5%BC%80%E6%BA%90.zip",
+      "bytes": 553143109,
+      "sha256": "b0b6bbb7d44467c175b10eb4c317ba98d3086e3e26d9d6ad8ae138b931136c96",
+      "status": 200,
+      "content_length": 553143109,
+      "passed": true
+    },
+    {
+      "name": "RM2026COD战队哨兵舵步机器人机械开源.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/b9cd67bec40d4f02997f27b22b0ee95b1775879417861/RM2026COD%E6%88%98%E9%98%9F%E5%93%A8%E5%85%B5%E8%88%B5%E6%AD%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9C%BA%E6%A2%B0%E5%BC%80%E6%BA%90.zip",
+      "bytes": 1036014164,
+      "sha256": "c12065c927fd3010bbf1d0e270650170a23cc919cd604097dc5593fd9388dcba",
+      "status": 200,
+      "content_length": 1036014164,
+      "passed": true
+    },
+    {
+      "name": "二六式轻型P15.8减速箱改三乙.step",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/5232871041b143a99a9f5ff358b8ddd31784030050655/%E4%BA%8C%E5%85%AD%E5%BC%8F%E8%BD%BB%E5%9E%8BP15.8%E5%87%8F%E9%80%9F%E7%AE%B1%E6%94%B9%E4%B8%89%E4%B9%99.step",
+      "bytes": 7407413,
+      "sha256": "14a57d21d32dc32ee2c576591eb3333a3a8e6be11e1b53197fa45be45dd80247",
+      "status": 200,
+      "content_length": 7407413,
+      "passed": true
+    },
+    {
+      "name": "RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part1.rar",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/19c425b2c2274b14b6d9a80b813ffdee1755009933186/RM2025-%E4%B8%9C%E8%8E%9E%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2-ACE%E6%88%98%E9%98%9F-%E5%A4%8D%E5%90%88%E6%9E%84%E5%9E%8B%E9%9A%A7%E9%81%93%E5%B7%A5%E7%A8%8B%E5%BC%80%E6%BA%90.part1.rar",
+      "bytes": 1073741824,
+      "sha256": "a0471c96d038e9856d220cd7ae1ad67d7ea9d68b3ad94181dc38138d8c52c724",
+      "status": 200,
+      "content_length": 1073741824,
+      "passed": true
+    },
+    {
+      "name": "RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part2.rar",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/070492691a1348d8b42250e63d268d091755009983029/RM2025-%E4%B8%9C%E8%8E%9E%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2-ACE%E6%88%98%E9%98%9F-%E5%A4%8D%E5%90%88%E6%9E%84%E5%9E%8B%E9%9A%A7%E9%81%93%E5%B7%A5%E7%A8%8B%E5%BC%80%E6%BA%90.part2.rar",
+      "bytes": 1073741824,
+      "sha256": "7c44882b3b6843636c4b8e89223ef773ec3be89c03ff8b02ab7ade0cda7fcd96",
+      "status": 200,
+      "content_length": 1073741824,
+      "passed": true
+    },
+    {
+      "name": "RM2025-东莞理工学院-ACE战队-复合构型隧道工程开源.part3.rar",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/3e4be8c8e19840aab0f86f1e007e835f1755010029610/RM2025-%E4%B8%9C%E8%8E%9E%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2-ACE%E6%88%98%E9%98%9F-%E5%A4%8D%E5%90%88%E6%9E%84%E5%9E%8B%E9%9A%A7%E9%81%93%E5%B7%A5%E7%A8%8B%E5%BC%80%E6%BA%90.part3.rar",
+      "bytes": 814259386,
+      "sha256": "208a9826b805c3fbd72c69ff7f0b7a75afaebde6e30737602415695e42b968e3",
+      "status": 200,
+      "content_length": 814259386,
+      "passed": true
+    },
+    {
+      "name": "【RM2025-轮式六轴机械臂工程机械结构开源】香港科技大学-ENTERPRIZE.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/fc0dbf41afc24563acc23a2e6783ab781759430250230/%E3%80%90RM2025-%E8%BD%AE%E5%BC%8F%E5%85%AD%E8%BD%B4%E6%9C%BA%E6%A2%B0%E8%87%82%E5%B7%A5%E7%A8%8B%E6%9C%BA%E6%A2%B0%E7%BB%93%E6%9E%84%E5%BC%80%E6%BA%90%E3%80%91%E9%A6%99%E6%B8%AF%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6-ENTERPRIZE.zip",
+      "bytes": 504032226,
+      "sha256": "ac8d43afad2ed818b017863be9c39f6cd98c4051c675e79c505e1ef9dcde17b6",
+      "status": 200,
+      "content_length": 504032226,
+      "passed": true
+    },
+    {
+      "name": "RM2025辽宁科技大学COD战队工程机器人机械开源.zip",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/1fc4f9f99bef4cbfb22ef3602a62bced1775104065173/RM2025%E8%BE%BD%E5%AE%81%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6COD%E6%88%98%E9%98%9F%E5%B7%A5%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9C%BA%E6%A2%B0%E5%BC%80%E6%BA%90.zip",
+      "bytes": 310837258,
+      "sha256": "567baba7c0784ef2d8d816cc2ba2cd856df73d7aa1a2cbba063411ade947295a",
+      "passed": true,
+      "status": 200,
+      "content_length": 310837258
+    },
+    {
+      "name": "a4c6124428_步兵悬挂.step",
+      "url": "https://hz-rm-bbs-web-prod.oss-cn-hangzhou.aliyuncs.com/9ddd687e670749e5ba091c5e916a72581783062940072/%E6%AD%A5%E5%85%B5%E6%82%AC%E6%8C%82.step",
+      "bytes": 17587950,
+      "sha256": "bccccd7be74f2ba630865e77f81300c2ac1aa2a9733b57f2d81ceb679b89488b",
+      "status": 200,
+      "content_length": 17587950,
+      "passed": true
+    }
+  ]
+}

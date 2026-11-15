@@ -2,13 +2,19 @@
 
 ## 批量获取 CAD
 
-在 Windows v0.5.2 启动包的解压目录执行 `.\get-cad.cmd --all`。命令按附件指纹去重，下载当前可自动获取的 11 个作者附件，并按已有卡片路径导入 CAD。相同附件在不同来源中的卡片会分别安装到索引对应的位置。
+在 Windows v0.5.3 启动包的解压目录执行 `.\get-cad.cmd --all`。命令按附件指纹去重，下载全部 3,468 张卡片对应的 18 个文件（约 6.24 GB），包括 ACE 工程的三个 RAR 分卷，并按已有卡片路径导入 2,617 个 CAD 文件入口。相同附件在不同来源中的卡片会分别安装到索引对应的位置。
 
-每个附件处理后保存 `runtime/cad-acquisition-report.json`。失败的附件会记录错误并继续处理后续附件；再次执行同一命令会复用成功文件。全部成功返回退出码 0，有失败项返回 1。
+每个附件处理后保存 `runtime/cad-acquisition-report.json`。失败的附件会记录错误并继续处理后续附件；再次执行同一命令会复用成功文件和分卷。全部成功返回退出码 0，有失败项或卡片缺少下载来源时返回 1，并列出缺项。
+
+Windows 包内置 UnRAR，三卷下载并校验完毕后自动合并解包，并在 `runtime/cad-packages` 生成保持目录结构的 CAD ZIP。HTTP 的 `downloads.package` 会指向这个 ZIP，工作台可以照常下载模型包。单卷 ZIP/RAR 则保留原作者附件入口。仅运行 Python 源码时，分卷解包需要本机安装 UnRAR。
+
+v0.5.2 的覆盖缺口来自四个整包的过滤（1,476 张）、尚未实现的分卷导入（927 张），以及把装配引用标记混作文件可用性的 13 张卡片。v0.5.3 已补齐这些路径。下载可用性按 CAD 清单判断，装配适配状态仍由 `verification` 和引用证据表达。已有向量无需重建。
+
+[全量导入与 HTTP 验收](../reports/ACQUISITION_ACCEPTANCE.json) · [18 个来源文件的链接核对](../reports/SOURCE_URL_CHECKS.json)
 
 按功能、精确型号、结构化规格和参考 CAD 检索 RoboMaster 开源机构。每张卡保留可定位的原帖、CAD 文件和组件定义，并记录配置、接口量测及复用前要检查的条件。
 
-Windows 用户可下载 [v0.5.1 启动包](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/tag/v0.5.1)，解压后双击 `start-rag.cmd`。SQLite、几何索引和 Chroma 已随包交付，直接使用既有卡片向量。查到组件后，在解压目录执行 `get-cad.cmd <卡片ID>`，即可从支持的作者附件获取、校验并安装对应 CAD。已有下载文件时加 `--from <路径>`，可直接核对并导入。
+Windows 用户可下载 [v0.5.3 启动包](https://github.com/haku-nomisugiru/robomaster-RAG/releases/tag/v0.5.3)，解压后双击 `start-rag.cmd`。SQLite、几何索引和 Chroma 已随包交付，直接使用既有卡片向量。查到组件后，在解压目录执行 `get-cad.cmd <卡片ID>`，即可从作者附件获取、校验并安装对应 CAD。已有下载文件时加 `--from <路径>`，可直接核对并导入；分卷原包需放在同一目录，指定第一卷。
 
 ## 从干净检出启动
 

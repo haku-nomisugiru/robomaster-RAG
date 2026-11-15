@@ -10,7 +10,6 @@ from urllib.parse import parse_qs, quote, urlsplit
 import library
 from cad_acquisition import Acquisition
 from component_metadata import component_candidates, parse_spec
-from component_scope import package_available
 from geometry_search import KINDS as GEOMETRY_KINDS, MODES as GEOMETRY_MODES, search as search_geometry
 from hybrid_search import SemanticSearch, fuse
 
@@ -33,10 +32,15 @@ class Catalog:
         if asset and asset.get("volume_paths"):
             result["dependency_scope"] = dict(result["dependency_scope"],
                                                local_archive_volumes=list(asset["volume_paths"]))
-        if asset and not package_available(asset):
-            asset = None
-        file_available = result.get("component_locator", {}).get("file_available", True)
-        result["downloads"] = {"model": prefix + "/file" if file_available else None, "package": prefix + "/package" if asset and file_available else None, "package_sha256": asset.get("sha256") if asset and file_available else None, "package_name": asset.get("name") if asset and file_available else None}
+        package = self.acquisition.package_record(asset) if asset else None
+        file_available = result["entry"]["path"] in self.acquisition.files
+        result["component_locator"] = {**result.get("component_locator", {}), "file_available": file_available}
+        result["cad_source"] = {**result["cad_source"], "file_available": file_available}
+        result["downloads"] = {"model": prefix + "/file" if file_available else None,
+                               "package": prefix + "/package" if package and file_available else None,
+                               "package_sha256": package.get("sha256") if package and file_available else None,
+                               "package_name": package.get("name") if package and file_available else None,
+                               "package_scope": package.get("scope", "original_attachment") if package else None}
         result["source"] = {k: self.sources[result["source_id"]].get(k) for k in ["source_id", "url", "title", "snapshot_kind", "body_path", "page_sha256"]}
         result["usage"] = {"selection_scope": result["selection_scope"], "definition_id": result.get("definition_id"), "package_contains_dependencies": "not_verified", "ready_for_assembly": False}
         result["reuse_href"] = prefix + "/reuse"
@@ -57,7 +61,7 @@ class Catalog:
         if downloads["package"]:
             artifacts["package"] = {
                 "href": downloads["package"], "sha256": downloads["package_sha256"],
-                "filename": downloads["package_name"], "scope": "original_attachment",
+                "filename": downloads["package_name"], "scope": downloads["package_scope"],
             }
         preferred = "package" if native_assembly and "package" in artifacts else "file" if "file" in artifacts else None
         steps = []
@@ -127,8 +131,8 @@ class Catalog:
         download_key = "model" if kind == "file" else "package"
         if not m["downloads"][download_key]:
             raise KeyError(mid)
-        record = m["entry"] if kind == "file" else self.assets.get(m["entry"]["asset_id"])
-        if not record or (kind == "package" and not package_available(record)): raise KeyError(mid)
+        record = m["entry"] if kind == "file" else self.acquisition.package_record(self.assets[m["entry"]["asset_id"]])
+        if not record: raise KeyError(mid)
         path = (self.root / record["path"]).resolve()
         if not path.is_relative_to(self.root) or not path.is_file(): raise FileNotFoundError()
         return path, record["sha256"]
@@ -318,7 +322,7 @@ def openapi(port):
     }
     return {
         "openapi": "3.0.3", "info": {
-            "title": "RoboMaster CAD Local Retrieval", "version": "0.5.2",
+            "title": "RoboMaster CAD Local Retrieval", "version": "0.5.3",
             "description": "Find CAD by function, model or reference geometry. Read the selected card's reuse "
                            "evidence before choosing an artifact. Check the download SHA-256 and preserve the "
                            "STEP definition or native configuration when reviewing the CAD.",

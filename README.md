@@ -10,7 +10,7 @@
 
 ### Windows 启动
 
-1. 下载 [Windows x64 启动包](https://github.com/haku-nomisugiru/robomaster-RAG/releases/download/v0.5.2/RoboMaster-CAD-RAG-v0.5.2-win-x64.zip)，完整解压。
+1. 下载 [Windows x64 启动包](https://github.com/haku-nomisugiru/robomaster-RAG/releases/download/v0.5.3/RoboMaster-CAD-RAG-v0.5.3-win-x64.zip)，完整解压。
 2. 双击 `start-rag.cmd`，保持启动窗口打开。
 3. 浏览器访问窗口显示地址后的 `/health`。默认地址为 [http://127.0.0.1:8765/health](http://127.0.0.1:8765/health)。
 
@@ -28,13 +28,13 @@
 
 ### 获取对应 CAD
 
-在 RAG 解压目录打开 PowerShell，一次下载并导入全部可自动获取的作者附件。
+在 RAG 解压目录打开 PowerShell，一次下载并导入全部 3,468 张卡片对应的作者附件。
 
 ~~~powershell
 .\get-cad.cmd --all
 ~~~
 
-当前共 **11 个不同附件，约 976 MB**。重复运行会复用已下载文件；失败项记录在 `runtime/cad-acquisition-report.json`，可用同一命令重试。
+当前共 **18 个文件，约 6.24 GB**，包含 ACE 工程机器人的三个 RAR 分卷，自动解包后对应 **2,617 个 CAD 文件入口**。重复运行会复用已下载文件；结果记录在 `runtime/cad-acquisition-report.json`，失败时可用同一命令重试。现有卡片与向量直接复用。
 
 也可以使用检索结果中的卡片 ID 获取单个组件。
 

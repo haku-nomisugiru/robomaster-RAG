@@ -30,12 +30,3 @@ def excluded_component(thread_id, member):
         or any(RESTRICTED_NAME.search(folder) for folder in path.parts[:-1])
         or (thread_id in MIXED_THREADS and bool(COMPOSITE.fullmatch(path.stem.strip())))
     )
-
-
-def package_available(asset):
-    thread_id = asset.get("thread_id")
-    name = asset.get("name", "")
-    standalone_swerve = thread_id == 761377 and name.casefold() == "2025 hkust enterprize hero swerve.rar"
-    return (not asset.get("volume_paths") and not asset.get("omitted_members")
-            and thread_id not in EXCLUDED_THREADS
-            and (thread_id not in MIXED_THREADS or standalone_swerve))

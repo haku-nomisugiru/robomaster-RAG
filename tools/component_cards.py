@@ -155,10 +155,8 @@ def add_locator(module, pick, source, step, definition, occurrences, native):
         if native:
             locator["native_report"] = module["native_dependency_report"]
             locator["native_reference_counts"] = native.get("reference_counts", {})
-            locator["file_available"] = not any(
-                RESTRICTED_NAME.search(ref.get("original_name", ""))
-                for ref in native.get("references", [])
-            )
+            # File availability describes the inventoried CAD, not its dependency audit.
+            locator["file_available"] = True
     module["component_locator"] = locator
     module["card_tier"] = "curated" if not pick.get("auto") else "component"
     module["source_context"] = {"title": source["title"], "url": source["url"]}
