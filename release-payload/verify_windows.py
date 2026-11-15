@@ -16,7 +16,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 from zipfile import ZipFile
 
-from build_windows import COMMIT, CRT_FILES, NAME
+from build_windows import COMMIT, CRT_FILES, NAME, UNRAR_HASH
 
 
 def sha(path):
@@ -119,7 +119,7 @@ def exercise(installation, log, *, use_default):
             else:
                 raise RuntimeError(f"Launcher did not listen on port {port}. See {log}")
             assert health["models"] == 3468
-            assert get(base, "/openapi.json")["info"]["version"] == "0.5.2"
+            assert get(base, "/openapi.json")["info"]["version"] == "0.5.3"
             model = get(base, "/v1/search", q="3508 舵轮", mode="model", limit=5)
             assert model["retrieval"] == "lexical" and model["vector_status"] == "not_requested"
             top = model["items"][0]
@@ -197,6 +197,8 @@ def verify(archive, destination):
                    cwd=installation, check=True, timeout=90)
     manifest = json.loads((installation / "release-manifest.json").read_text(encoding="utf-8"))
     assert manifest["source_commit"] == COMMIT
+    assert sha(installation / "_runtime/unrar/UnRAR.exe") == manifest["unrar_sha256"] == UNRAR_HASH
+    assert (installation / "_runtime/unrar/license.txt").is_file()
     check_crt(installation, manifest["app_local_msvc_sha256"])
     catalog = installation / "catalog"
     sql = json.loads((catalog / "snapshots/manifest.json").read_text(encoding="utf-8"))
@@ -213,6 +215,9 @@ def verify(archive, destination):
     sqlite_file = chroma / "chroma.sqlite3"
     assert sqlite_count(sqlite_file, "embeddings") == 3468
     before = persisted_state(sqlite_file)
+    subprocess.run([str(installation / "_runtime/python/python.exe"), "-B", "-m", "unittest",
+                    "discover", "-s", "tests", "-p", "test_http_service.py"],
+                   cwd=installation, check=True, timeout=180)
     with socket.socket() as occupied:
         occupied.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
         try:
@@ -234,6 +239,7 @@ def verify(archive, destination):
         "geometry_bindings": geometry, "persisted_embeddings": 3468,
         "app_local_msvc_loaded": True,
         "bulk_acquisition_regressions_passed": True,
+        "full_catalog_http_plans_passed": True, "unrar_bundled_and_verified": True,
         "unchanged_hnsw_files": True, "unchanged_chroma_data": True, "chroma_data_sha256": before,
         "sqlite_housekeeping_changed": sha(sqlite_file) != snapshot["files"][sqlite_file.name],
         "launcher_runs": runs,

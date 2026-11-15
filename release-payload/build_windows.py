@@ -11,11 +11,14 @@ from time import sleep
 from urllib.request import urlopen
 from zipfile import ZipFile, ZIP_DEFLATED
 
-COMMIT = "1b7021a60164204589fbbe27a5390c74ae165046"
-NAME = "RoboMaster-CAD-RAG-v0.5.2-win-x64"
+COMMIT = "d1f3df013c9a2fdec7afdf13ac9087e6fdaeb7b4"
+NAME = "RoboMaster-CAD-RAG-v0.5.3-win-x64"
 PYTHON_URL = "https://www.python.org/ftp/python/3.14.6/python-3.14.6-embed-amd64.zip"
 PYTHON_HASH = "df901e84a896ff1ee720ad03377e0c8d8c2244fda79808aeeaff6316df1cb75c"
 CRT_FILES = ("msvcp140.dll", "msvcp140_1.dll", "vcruntime140.dll", "vcruntime140_1.dll")
+UNRAR_URL = "https://www.rarlab.com/rar/unrarw64.exe"
+UNRAR_ARCHIVE_HASH = "89276cb1155b70ce8a1678311b78ce72485c9bebe7127882358da7ed48b85a9c"
+UNRAR_HASH = "ad9f3ae3210f987fed43fbc7dc343ee95e9ce6b03ce24c635bb8d3162f0b9308"
 
 
 def digest(path):
@@ -67,6 +70,13 @@ def stage(args):
         z.extractall(runtime)
     for filename in CRT_FILES:
         shutil.copyfile(args.crt_dir / filename, runtime / filename)
+    reader = folder / "_runtime/unrar"
+    reader.mkdir()
+    unrar_archive = args.out / "unrarw64.exe"
+    fetch(UNRAR_URL, unrar_archive, UNRAR_ARCHIVE_HASH)
+    command("tar.exe", "-xf", unrar_archive, "-C", reader)
+    if digest(reader / "UnRAR.exe") != UNRAR_HASH or not (reader / "license.txt").is_file():
+        raise ValueError("UnRAR reader or license differs from the release receipt")
     (runtime / "python314._pth").write_text(
         "python314.zip\n.\nLib/site-packages\n../../tools\nimport site\n", encoding="ascii")
     packages = runtime / "Lib/site-packages"
@@ -118,10 +128,11 @@ def stage(args):
         "See FlagEmbedding-LICENSE.txt.\n",
         encoding="utf-8")
     (folder / "release-manifest.json").write_text(json.dumps({
-        "source_commit": COMMIT, "version": "0.5.2", "platform": "win-x64",
+        "source_commit": COMMIT, "version": "0.5.3", "platform": "win-x64",
         "python": "3.14.6", "cards": 3468, "persisted_embeddings": manifest["count"],
         "chroma_snapshot_sha256": manifest["archive_sha256"],
         "app_local_msvc_sha256": {name: digest(runtime / name) for name in CRT_FILES},
+        "unrar_sha256": UNRAR_HASH, "unrar_source": UNRAR_URL,
     }, indent=2) + "\n", encoding="utf-8")
 
     archive = args.out / (NAME + ".zip")

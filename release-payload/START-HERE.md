@@ -1,10 +1,10 @@
-# RoboMaster CAD RAG v0.5.2 Windows x64
+# RoboMaster CAD RAG v0.5.3 Windows x64
 
 1. 解压整个 ZIP 到普通可写目录。
 2. 双击 `start-rag.cmd`。窗口出现 `Listening on` 后，按显示的地址访问 `/health`。默认地址是 [本机健康检查](http://127.0.0.1:8765/health)。
 3. 保持启动窗口打开。结束时按 Ctrl+C。
 
-需要一次准备全部作者附件时，在本目录打开 PowerShell，执行 `.\get-cad.cmd --all`。当前共 11 个不同附件，约 976 MB。命令自动导入对应 CAD，重复运行可复用已下载文件。
+在本目录打开 PowerShell，执行 `.\get-cad.cmd --all`，即可获取全部 3,468 张卡片对应的 18 个文件，约 6.24 GB。包含 ACE 工程的三个 RAR 分卷，包内 UnRAR 自动完成解包。命令按现有卡片路径导入 CAD，重复运行会复用已下载文件；不需要重新向量化。
 
 包内提供 Python、SQLite 文本与几何索引、3,468 条 Chroma 向量和查询编码器。首次功能查询会载入本地模型，并为本次查询生成向量。现有卡片向量直接从 Chroma 读取。
 
