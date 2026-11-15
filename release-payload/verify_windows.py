@@ -215,8 +215,15 @@ def verify(archive, destination):
     sqlite_file = chroma / "chroma.sqlite3"
     assert sqlite_count(sqlite_file, "embeddings") == 3468
     before = persisted_state(sqlite_file)
-    subprocess.run([str(installation / "_runtime/python/python.exe"), "-B", "-m", "unittest",
-                    "discover", "-s", "tests", "-p", "test_http_service.py"],
+    # Use the launcher's relative Chroma path when testing in a Unicode directory.
+    http_tests = """
+import sys, unittest, hybrid_search, portable_start
+hybrid_search.open_collection = portable_start.open_portable_collection
+suite = unittest.defaultTestLoader.discover('tests', pattern='test_http_service.py')
+result = unittest.TextTestRunner().run(suite)
+sys.exit(not result.wasSuccessful())
+"""
+    subprocess.run([str(installation / "_runtime/python/python.exe"), "-B", "-c", http_tests],
                    cwd=installation, check=True, timeout=180)
     with socket.socket() as occupied:
         occupied.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
