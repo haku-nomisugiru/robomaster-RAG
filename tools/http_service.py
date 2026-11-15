@@ -318,7 +318,7 @@ def openapi(port):
     }
     return {
         "openapi": "3.0.3", "info": {
-            "title": "RoboMaster CAD Local Retrieval", "version": "0.5.1",
+            "title": "RoboMaster CAD Local Retrieval", "version": "0.5.2",
             "description": "Find CAD by function, model or reference geometry. Read the selected card's reuse "
                            "evidence before choosing an artifact. Check the download SHA-256 and preserve the "
                            "STEP definition or native configuration when reviewing the CAD.",

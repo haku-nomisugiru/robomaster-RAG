@@ -1,5 +1,11 @@
 # 详细使用文档
 
+## 批量获取 CAD
+
+在 Windows v0.5.2 启动包的解压目录执行 `.\get-cad.cmd --all`。命令按附件指纹去重，下载当前可自动获取的 11 个作者附件，并按已有卡片路径导入 CAD。相同附件在不同来源中的卡片会分别安装到索引对应的位置。
+
+每个附件处理后保存 `runtime/cad-acquisition-report.json`。失败的附件会记录错误并继续处理后续附件；再次执行同一命令会复用成功文件。全部成功返回退出码 0，有失败项返回 1。
+
 按功能、精确型号、结构化规格和参考 CAD 检索 RoboMaster 开源机构。每张卡保留可定位的原帖、CAD 文件和组件定义，并记录配置、接口量测及复用前要检查的条件。
 
 Windows 用户可下载 [v0.5.1 启动包](https://github.com/haku-nomisugiru/robotmaster-RAG/releases/tag/v0.5.1)，解压后双击 `start-rag.cmd`。SQLite、几何索引和 Chroma 已随包交付，直接使用既有卡片向量。查到组件后，在解压目录执行 `get-cad.cmd <卡片ID>`，即可从支持的作者附件获取、校验并安装对应 CAD。已有下载文件时加 `--from <路径>`，可直接核对并导入。

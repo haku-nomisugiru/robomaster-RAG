@@ -194,13 +194,13 @@ class Acquisition:
         others = self.cad_groups[row["asset_id"]] if row["extension"] == ".sldasm" else ()
         return [row, *(item for item in others if item is not row)]
 
-    def from_zip(self, path, row):
+    def from_zip(self, path, rows):
         with ZipFile(path, metadata_encoding="gbk") as archive:
             members = defaultdict(list)
             for member in archive.infolist():
                 if not member.is_dir():
                     members[member.filename.replace("\\", "/")].append(member)
-            for item in self.group(row):
+            for item in rows:
                 name = member_path(item)
                 options = members[name]
                 if len(options) != 1:
@@ -218,6 +218,85 @@ class Acquisition:
             source = checked_path(directory, member_path(item))
             if source.is_file():
                 install(lambda: source.open("rb"), checked_path(self.root, item["path"]), item)
+
+    def install_archive(self, archive, asset, rows):
+        if not matches(archive, asset):
+            raise ValueError(f"Original attachment SHA-256 differs: {archive}")
+        if archive.suffix.lower() == ".zip":
+            self.from_zip(archive, rows)
+        elif archive.suffix.lower() == ".rar":
+            for item in rows:
+                rar_member(archive, member_path(item), checked_path(self.root, item["path"]), item)
+        else:
+            for item in rows:
+                install(lambda: archive.open("rb"), checked_path(self.root, item["path"]), item)
+
+    def acquire_all(self):
+        groups = defaultdict(list)
+        cards_by_asset = defaultdict(list)
+        for card in self.cards.values():
+            if card["entry"]["path"] in self.files:
+                cards_by_asset[card["entry"]["asset_id"]].append(card["id"])
+        for asset_id in sorted(cards_by_asset.keys() & self.urls.keys()):
+            asset = self.assets[asset_id]
+            groups[asset["sha256"]].append(asset)
+
+        report = {
+            "status": "running", "attachments_total": len(groups),
+            "download_bytes": sum(assets[0]["bytes"] for assets in groups.values()),
+            "cards_total": sum(len(cards_by_asset[asset["asset_id"]])
+                               for assets in groups.values() for asset in assets),
+            "attachments": [],
+        }
+        report_path = checked_path(self.root, "runtime/cad-acquisition-report.json")
+
+        def save_report():
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            with NamedTemporaryFile(mode="w", encoding="utf-8", dir=report_path.parent,
+                                    suffix=".part", delete=False) as stream:
+                temporary = Path(stream.name)
+                json.dump(report, stream, ensure_ascii=False, indent=2)
+                stream.write("\n")
+            try:
+                temporary.replace(report_path)
+            finally:
+                temporary.unlink(missing_ok=True)
+
+        save_report()
+        for index, (fingerprint, assets) in enumerate(groups.items(), 1):
+            primary = assets[0]
+            result = {"name": primary["name"], "sha256": fingerprint,
+                      "asset_ids": [asset["asset_id"] for asset in assets],
+                      "status": "failed", "cad_files_installed": 0}
+            print(f"[{index}/{len(groups)}] {primary['name']}", file=sys.stderr, flush=True)
+            try:
+                cached = next((checked_path(self.root, asset["path"]) for asset in assets
+                               if matches(checked_path(self.root, asset["path"]), asset)), None)
+                if cached is None:
+                    cached = checked_path(self.root, primary["path"])
+                    if cached.exists():
+                        raise ValueError(f"Existing attachment has a different fingerprint: {cached}")
+                    download(self.urls[primary["asset_id"]], cached, primary)
+                    result["downloaded"] = True
+                else:
+                    result["downloaded"] = False
+                for asset in assets:
+                    archive = checked_path(self.root, asset["path"])
+                    install(lambda: cached.open("rb"), archive, asset)
+                    rows = self.cad_groups[asset["asset_id"]]
+                    self.install_archive(archive, asset, rows)
+                    result["cad_files_installed"] += len(rows)
+                result["status"] = "complete"
+            except (KeyError, OSError, ValueError, BadZipFile, DownloadError, HTTPException) as exc:
+                result["error"] = str(exc)
+                print(f"  Failed: {exc}", file=sys.stderr, flush=True)
+            report["attachments"].append(result)
+            save_report()
+        report["failed"] = sum(item["status"] == "failed" for item in report["attachments"])
+        report["status"] = "partial" if report["failed"] else "complete"
+        report["cad_files_installed"] = sum(item["cad_files_installed"] for item in report["attachments"])
+        save_report()
+        return {**report, "report_path": str(report_path)}
 
     def acquire(self, card_id, supplied=None):
         card = self.cards[card_id]
@@ -247,15 +326,7 @@ class Acquisition:
                 if not target.exists():
                     raise ValueError("Extract all volumes locally and use --from with the extracted directory")
             else:
-                if not matches(archive, asset):
-                    raise ValueError(f"Original attachment SHA-256 differs: {archive}")
-                if archive.suffix.lower() == ".zip":
-                    self.from_zip(archive, row)
-                elif archive.suffix.lower() == ".rar":
-                    for item in self.group(row):
-                        rar_member(archive, member_path(item), checked_path(self.root, item["path"]), item)
-                else:
-                    install(lambda: archive.open("rb"), target, row)
+                self.install_archive(archive, asset, self.group(row))
         if not target.exists():
             raise ValueError(f"Get the original CAD from {plan['source_url']} and pass it with --from")
         if not matches(target, row):
@@ -268,17 +339,25 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("card_id", help="Exact card ID returned by HTTP search")
+    parser.add_argument("card_id", nargs="?", help="Exact card ID returned by HTTP search")
+    parser.add_argument("--all", action="store_true", help="Download and install every available author attachment")
     parser.add_argument("--from", dest="supplied", type=Path, help="Local original attachment, CAD file, or extracted directory")
     parser.add_argument("--root", type=Path, default=ROOT)
     args = parser.parse_args()
+    if args.all and (args.card_id or args.supplied):
+        parser.error("--all cannot be combined with a card ID or --from")
+    if not args.all and not args.card_id:
+        parser.error("Supply a card ID or --all")
     try:
         cards = {card["id"]: card for line in (args.root / "catalog/modules.jsonl").read_text(encoding="utf-8").splitlines()
                  if (card := json.loads(line))}
-        result = Acquisition(args.root, cards).acquire(args.card_id, args.supplied)
+        acquisition = Acquisition(args.root, cards)
+        result = acquisition.acquire_all() if args.all else acquisition.acquire(args.card_id, args.supplied)
     except (KeyError, OSError, ValueError, BadZipFile, DownloadError) as exc:
         parser.exit(2, f"CAD acquisition failed: {exc}\n")
     print(json.dumps(result, ensure_ascii=False, indent=2))
+    if args.all and result["failed"]:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
