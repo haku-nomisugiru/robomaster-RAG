@@ -119,7 +119,7 @@ def exercise(installation, log, *, use_default):
             else:
                 raise RuntimeError(f"Launcher did not listen on port {port}. See {log}")
             assert health["models"] == 3468
-            assert get(base, "/openapi.json")["info"]["version"] == "0.5.1"
+            assert get(base, "/openapi.json")["info"]["version"] == "0.5.2"
             model = get(base, "/v1/search", q="3508 舵轮", mode="model", limit=5)
             assert model["retrieval"] == "lexical" and model["vector_status"] == "not_requested"
             top = model["items"][0]
@@ -192,6 +192,9 @@ def verify(archive, destination):
     assert not (installation / "assets").exists()
     assert not (installation / ".venv").exists()
     assert not (installation / "raw").exists()
+    subprocess.run([str(installation / "_runtime/python/python.exe"), "-B", "-m", "unittest",
+                    "discover", "-s", "tests", "-p", "test_cad_acquisition.py"],
+                   cwd=installation, check=True, timeout=90)
     manifest = json.loads((installation / "release-manifest.json").read_text(encoding="utf-8"))
     assert manifest["source_commit"] == COMMIT
     check_crt(installation, manifest["app_local_msvc_sha256"])
@@ -230,6 +233,7 @@ def verify(archive, destination):
         "status": "passed", "commit": COMMIT, "archive_sha256": sha(archive),
         "geometry_bindings": geometry, "persisted_embeddings": 3468,
         "app_local_msvc_loaded": True,
+        "bulk_acquisition_regressions_passed": True,
         "unchanged_hnsw_files": True, "unchanged_chroma_data": True, "chroma_data_sha256": before,
         "sqlite_housekeeping_changed": sha(sqlite_file) != snapshot["files"][sqlite_file.name],
         "launcher_runs": runs,

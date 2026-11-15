@@ -1,8 +1,10 @@
-# RoboMaster CAD RAG v0.5.1 Windows x64
+# RoboMaster CAD RAG v0.5.2 Windows x64
 
 1. 解压整个 ZIP 到普通可写目录。
 2. 双击 `start-rag.cmd`。窗口出现 `Listening on` 后，按显示的地址访问 `/health`。默认地址是 [本机健康检查](http://127.0.0.1:8765/health)。
 3. 保持启动窗口打开。结束时按 Ctrl+C。
+
+需要一次准备全部作者附件时，在本目录打开 PowerShell，执行 `.\get-cad.cmd --all`。当前共 11 个不同附件，约 976 MB。命令自动导入对应 CAD，重复运行可复用已下载文件。
 
 包内提供 Python、SQLite 文本与几何索引、3,468 条 Chroma 向量和查询编码器。首次功能查询会载入本地模型，并为本次查询生成向量。现有卡片向量直接从 Chroma 读取。
 
@@ -12,4 +14,4 @@
 - 打开检索结果的 `reuse_href` 查看获取状态，再在本目录运行 `get-cad.cmd <卡片ID>`。已有作者附件、CAD 或解压目录时加 `--from "路径"`。命令核对文件指纹并按卡片路径安装，直接使用现有索引。第三方 CAD 由原作者提供。
 - 几何相似检索会校验来源 CAD 与测量 STEP，原生 CAD 用于量测的 STEP 导出需要按卡片记录另行准备。
 
-服务只绑定本机地址。RoboMaster 工作台的配置和复用示例见 [README](README.md#接入-robomaster-机械设计工作台) 和 [HTTP 服务说明](reports/HTTP_SERVICE.md)。
+服务只绑定本机地址。RoboMaster 工作台的配置和复用示例见 [README](README.md#接入-robomaster-工作台) 和 [HTTP 服务说明](reports/HTTP_SERVICE.md)。
